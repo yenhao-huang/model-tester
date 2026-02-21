@@ -1,0 +1,26 @@
+{
+  "model": "nightmedia/Huihui-Qwen3-30B-A3B-Instruct-2507-abliterated-dwq4-mlx",
+  "load_seconds": 6.31,
+  "total_seconds": 12.44,
+  "created_at": "2026-02-21T11:09:11.402681",
+  "results": [
+    {
+      "test": "English",
+      "prompt": "You are a concise assistant. In one sentence, describe Taipei in winter.",
+      "seconds": 3.15,
+      "output": "Taipei in winter is mild and damp, with cool mornings, occasional drizzle, and bustling streets lined with steaming street food stalls and vibrant night markets."
+    },
+    {
+      "test": "Chinese",
+      "prompt": "用一句話描述台北的冬天。",
+      "seconds": 1.22,
+      "output": "台北的冬天，溫潤微涼，偶有細雨輕拂，街頭飄著滷味與紅茶的香氣，彷彿一場不急不躁的夢。"
+    },
+    {
+      "test": "Reasoning",
+      "prompt": "What is 7 * 13 + 29? Show your work briefly.",
+      "seconds": 1.44,
+      "output": "First, multiply 7 and 13:\n\n7 × 13 = 91\n\nThen, add 29:\n\n91 + 29 = 120\n\n**Final answer: 120** ✅"
+    }
+  ]
+}
