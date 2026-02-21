@@ -1,0 +1,5 @@
+huggingface_hub>=0.24.0
+transformers>=4.44.0
+torch>=2.3.0
+python-dotenv>=1.0.1
+pydantic>=2.8.2
