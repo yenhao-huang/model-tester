@@ -60,4 +60,18 @@ chmod +x run.sh
 ./run.sh local
 ```
 
-以上即可完成最基本的安裝與評測流程。
+### 4) 互動式問答（Interactive Chat）
+
+```bash
+# 直接啟動互動問答（backend 可選 hf_api / local）
+./run.sh chat hf_api prompts/system_v1.txt
+# 或
+python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
+```
+
+互動模式支援指令：
+- `/exit` 或 `/quit`：離開
+- `/reset`：清空當前對話歷史（保留 system prompt）
+- `/history`：查看目前 turn 數
+
+以上即可完成最基本的安裝、評測與互動測試流程。

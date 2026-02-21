@@ -18,6 +18,19 @@ fi
 
 source .venv/bin/activate
 
+if [[ "$MODE" == "chat" ]]; then
+  BACKEND="${2:-hf_api}"
+  CHAT_PROMPT="${3:-prompts/system_v1.txt}"
+  export INFERENCE_BACKEND="$BACKEND"
+
+  echo "[info] mode=chat"
+  echo "[info] backend=$INFERENCE_BACKEND"
+  echo "[info] prompt=$CHAT_PROMPT"
+
+  python -m src.gpt_oss20b_eval.chat --prompt "$CHAT_PROMPT"
+  exit 0
+fi
+
 export INFERENCE_BACKEND="$MODE"
 
 echo "[info] backend=$INFERENCE_BACKEND"
