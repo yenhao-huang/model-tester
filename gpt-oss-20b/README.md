@@ -1,15 +1,18 @@
 # gpt-oss-20b-dev
 
-Lightweight development scaffold for testing and iterating `gpt-oss-20b` with Hugging Face.
+`gpt-oss-20b-dev` 是一個用來快速測試與迭代 **gpt-oss-20b** 的輕量開發專案，支援 Hugging Face API 與本地推論。
 
-## What this includes (v0)
-- Dataset schema (`jsonl`)
-- Prompt template management
-- Model client wrapper (Hugging Face Inference API)
-- Guardrail checks (basic)
-- Evaluation runner + metrics output
+## 專案介紹
 
-## Quick start (HF API)
+這個專案主要提供：
+- 評測資料集（JSONL）
+- Prompt 模板管理
+- 模型呼叫封裝（HF API / local）
+- 基本檢查與報告輸出
+
+適合用來做 smoke test、prompt 調整與基本評估流程驗證。
+
+## 安裝
 
 ```bash
 cd gpt-oss-20b-dev
@@ -17,57 +20,44 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
-# INFERENCE_BACKEND=hf_api
+```
+
+可在 `.env` 設定：
+- `MODEL_NAME`（預設：`openai/gpt-oss-20b`）
+- `INFERENCE_BACKEND`（`hf_api` 或 `local`）
+- `HF_TOKEN`（使用私有/受限模型時需要）
+- `DEVICE`（local 模式可用：`cpu`/`mps`/`cuda:0`）
+
+## 使用方式
+
+### 1) Hugging Face API
+
+```bash
 python -m src.gpt_oss20b_eval.runner \
   --dataset eval/datasets/smoke.jsonl \
   --prompt prompts/system_v1.txt \
   --out reports/smoke_report.json
 ```
 
-## Quick start (Local Transformers)
+> 請先確認 `.env` 內 `INFERENCE_BACKEND=hf_api`。
+
+### 2) 本地 Transformers
 
 ```bash
-cd gpt-oss-20b-dev
-source .venv/bin/activate
-# set in .env: INFERENCE_BACKEND=local, DEVICE=cpu (or mps/cuda:0)
 python -m src.gpt_oss20b_eval.runner \
   --dataset eval/datasets/smoke.jsonl \
   --prompt prompts/system_v1.txt \
   --out reports/local_smoke_report.json
 ```
 
-## Env vars
-- `HF_TOKEN` (optional for public models; needed for gated/private access)
-- `MODEL_NAME` (default: `openai/gpt-oss-20b`)
-- `INFERENCE_BACKEND` (`hf_api` or `local`, default `hf_api`)
-- `DEVICE` (`cpu` / `mps` / `cuda:0`, used in local mode)
+> 請先確認 `.env` 內 `INFERENCE_BACKEND=local`，並設定 `DEVICE`。
 
-## Dataset format
-Each line is JSON:
-
-```json
-{
-  "id": "q1",
-  "category": "core",
-  "prompt": "Explain what overfitting is in one paragraph.",
-  "expected": "Optional expected answer or keywords",
-  "checks": ["non_empty", "max_len_1200"]
-}
-```
-
-## One-command runner
+### 3) 一鍵執行腳本
 
 ```bash
-cd gpt-oss-20b-dev
 chmod +x run.sh
 ./run.sh hf_api
 ./run.sh local
-# custom: ./run.sh local eval/datasets/smoke.jsonl prompts/system_v1.txt reports/local.json
 ```
 
-## Next milestones
-1. Add pairwise A/B benchmark mode
-2. Add async/concurrency load test
-3. Add safety red-team suite
-4. Add dashboard export (CSV + markdown)
-```
+以上即可完成最基本的安裝與評測流程。
