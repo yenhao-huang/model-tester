@@ -9,8 +9,9 @@ from mlx_lm.sample_utils import make_sampler
 from huggingface_hub import model_info
 
 MODEL_ID = "nightmedia/Huihui-Qwen3-30B-A3B-Instruct-2507-abliterated-dwq4-mlx"
-OUT_DIR = Path("/Users/yenhaohuang/Desktop/model-tester/Huihui-Qwen3-30B-A3B-Instruct-2507-abliterated-dwq4-mlx")
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUTS_DIR = BASE_DIR / "outputs"
+OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def save_json(path: Path, obj: dict):
@@ -20,7 +21,6 @@ def save_json(path: Path, obj: dict):
 def main():
     t0 = time.time()
 
-    # 1) Hub metadata
     info = model_info(MODEL_ID)
     meta = {
         "modelId": info.id,
@@ -35,9 +35,8 @@ def main():
         "tags": info.tags,
         "timestamp": datetime.now().isoformat(),
     }
-    save_json(OUT_DIR / "model_info.json", meta)
+    save_json(OUTPUTS_DIR / "model_info.json", meta)
 
-    # 2) Load model
     load_start = time.time()
     model, tokenizer = mlx_lm.load(MODEL_ID)
     load_sec = time.time() - load_start
@@ -81,15 +80,7 @@ def main():
         "results": results,
     }
 
-    save_json(OUT_DIR / "results.json", summary)
-    (OUT_DIR / "README.md").write_text(
-        f"# {MODEL_ID}\n\n"
-        f"- Load time: {summary['load_seconds']}s\n"
-        f"- Total time: {summary['total_seconds']}s\n"
-        f"- Output file: `results.json`\n",
-        encoding="utf-8",
-    )
-
+    save_json(OUTPUTS_DIR / "results.json", summary)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
