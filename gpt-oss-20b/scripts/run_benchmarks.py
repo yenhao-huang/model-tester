@@ -89,13 +89,21 @@ def score_code(response: str, meta: dict) -> bool:
     test_code = meta.get("test", "")
     entry_point = meta.get("entry_point", "")
 
-    # Clean response: strip markdown fences
-    code = response.strip()
-    code = re.sub(r'^```(?:python)?\n?', '', code)
-    code = re.sub(r'\n?```$', '', code)
+    # Clean response: remove markdown fences only (keep indentation semantics)
+    code = response or ""
+    code = re.sub(r'^\s*```(?:python)?\s*\n?', '', code, flags=re.IGNORECASE)
+    code = re.sub(r'\n?```\s*$', '', code)
+
+    # If model returns full function, use as-is; otherwise treat as function body.
+    if re.search(r'^\s*def\s+\w+\s*\(', code, flags=re.MULTILINE):
+        candidate_code = code.strip() + "\n"
+    else:
+        body = textwrap.dedent(code).strip("\n")
+        indented_body = textwrap.indent(body, "    ") if body else "    pass"
+        candidate_code = prompt_code + indented_body + "\n"
 
     # Build full program
-    full_code = prompt_code + code + "\n\n" + test_code + f"\n\ncheck({entry_point})\n"
+    full_code = candidate_code + "\n" + test_code + f"\n\ncheck({entry_point})\n"
 
     try:
         with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
@@ -115,6 +123,48 @@ def score_ifeval(response: str, meta: dict) -> bool:
     """Basic IFEval scoring: check non-empty response (full eval needs instruction parser)."""
     # Simplified: just check response is substantial
     return len(response.strip()) > 20
+
+
+def normalize_humaneval_response(response: str) -> str:
+    """Best-effort indentation repair for function-body style outputs.
+
+    Heuristic: if no top-level `def` is present, reduce the common positive
+    indentation from non-empty lines while preserving relative nested blocks.
+    """
+    if not response:
+        return response
+
+    # If model returned full function, do not touch here.
+    if re.search(r'^\s*def\s+\w+\s*\(', response, flags=re.MULTILINE):
+        return response
+
+    lines = response.splitlines()
+    expanded = [ln.expandtabs(4) for ln in lines]
+
+    positive_indents = []
+    for ln in expanded:
+        if ln.strip() == "":
+            continue
+        indent = len(ln) - len(ln.lstrip(" "))
+        if indent > 0:
+            positive_indents.append(indent)
+
+    if not positive_indents:
+        return "\n".join(expanded).strip("\n")
+
+    base = min(positive_indents)
+    normalized = []
+    for ln in expanded:
+        if ln.strip() == "":
+            normalized.append("")
+            continue
+        indent = len(ln) - len(ln.lstrip(" "))
+        if indent >= base:
+            normalized.append(ln[base:])
+        else:
+            normalized.append(ln.lstrip(" "))
+
+    return "\n".join(normalized).strip("\n")
 
 
 # ── Main Runner ─────────────────────────────────────────────────────────
@@ -144,6 +194,8 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
 
     for i, case in enumerate(cases):
         response = call_model(client, system_prompt, case["prompt"])
+        response_used = response
+        syntax_repaired = False
 
         if response.startswith("[ERROR]"):
             errors += 1
@@ -152,6 +204,14 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
             passed = score_mcq(response, case.get("expected", ""))
         elif name == "humaneval":
             passed = score_code(response, case.get("meta", {}))
+            if not passed:
+                repaired = normalize_humaneval_response(response)
+                if repaired != response:
+                    reparsed_passed = score_code(repaired, case.get("meta", {}))
+                    if reparsed_passed:
+                        passed = True
+                        syntax_repaired = True
+                        response_used = repaired
         elif name == "ifeval":
             passed = score_ifeval(response, case.get("meta", {}))
         else:
@@ -164,6 +224,8 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
             "id": case["id"],
             "passed": passed,
             "response": response,
+            "response_used": response_used,
+            "syntax_repaired": syntax_repaired,
         })
 
         # Progress
