@@ -96,8 +96,22 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 - Accuracy: `100.0%`
 - Syntax repaired and passed: `11`
 
-## 評估
-### HumanEval
+## 評估結果（GSM8K）
+
+> 評估規則：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
+
+- Report: `reports/gsm8k_20260222_224244.json`
+- Dataset: `~/Desktop/datasets/common-text-gen-evalset/math-reasoning/gsm8k/test.jsonl`
+- Total: `50`
+- Scored total: `15`
+- Skipped (402): `35`
+- Errors (non-402): `0`
+- Correct: `14`
+- Accuracy: `93.3%`
+- Elapsed: `26.9s`
+
+## 評估過程
+### code-generation: HumanEval
 ```py
 data = load("eval/humaneval.jsonl")
 model_output = llm(data["prompt"])
