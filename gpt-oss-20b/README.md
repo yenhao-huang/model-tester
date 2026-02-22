@@ -83,11 +83,20 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 
 以上即可完成最基本的安裝、評測與互動測試流程。
 
+## 評估使用規範
+
+- 評估資料請優先使用 `eval/datasets/*.jsonl`，外部資料集請在 README 記錄完整路徑與版本。
+- 統一使用固定 system prompt 與主要參數（如 `temperature`、`max_tokens`），避免不同 run 不可比。
+- 執行結果需保存完整 report（含逐題 response）到 `reports/`，檔名帶時間戳。
+- 若 API 回傳 `402 Payment Required`，該題標記為 `skipped`，不納入 accuracy 分母。
+- 報告至少揭露：`total`、`scored_total`、`skipped`、`errors`、`correct`、`accuracy`。
+- 每次新增評估後，同步更新本 README 的「評估結果」章節。
+
 ## 評估結果
 
 > 評估規則（共用）：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
 
-### HumanEval（Random sample 20 題）
+### HumanEval
 - Report: `reports/humaneval_sample20_20260222_222029.json`
 - Total: `20`
 - Scored total: `16`
