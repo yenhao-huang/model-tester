@@ -83,14 +83,61 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 
 以上即可完成最基本的安裝、評測與互動測試流程。
 
-## 評估使用規範
+## CLI 評估方式（自己跑）
 
-- 評估資料請優先使用 `eval/datasets/*.jsonl`，外部資料集請在 README 記錄完整路徑與版本。
-- 統一使用固定 system prompt 與主要參數（如 `temperature`、`max_tokens`），避免不同 run 不可比。
-- 執行結果需保存完整 report（含逐題 response）到 `reports/`，檔名帶時間戳。
-- 若 API 回傳 `402 Payment Required`，該題標記為 `skipped`，不納入 accuracy 分母。
-- 報告至少揭露：`total`、`scored_total`、`skipped`、`errors`、`correct`、`accuracy`。
-- 每次新增評估後，同步更新本 README 的「評估結果」章節。
+### 0) 進入環境
+```bash
+cd ~/Desktop/model-tester/gpt-oss-20b
+source ~/Desktop/python-venvs/gpt-oss/bin/activate
+```
+
+### 1) 跑內建 benchmark（HumanEval / MMLU / HellaSwag / IFEval / TruthfulQA）
+```bash
+python scripts/run_benchmarks.py
+```
+執行後會在 `reports/` 產生 `benchmark_YYYYMMDD_HHMMSS.json`。
+
+### 2) 只跑 HumanEval（全量）
+```bash
+python - <<'PY'
+from pathlib import Path
+from dotenv import load_dotenv
+from scripts.run_benchmarks import build_client, run_benchmark, PROMPT_PATH
+
+load_dotenv(Path('.env'))
+client = build_client()
+system_prompt = PROMPT_PATH.read_text(encoding='utf-8')
+res = run_benchmark('humaneval', client, system_prompt)
+print(res['accuracy_pct'], res['correct'], '/', res['scored_total'])
+PY
+```
+
+### 3) HumanEval 隨機 20 題
+```bash
+python - <<'PY'
+from pathlib import Path
+from dotenv import load_dotenv
+import scripts.run_benchmarks as rb
+
+load_dotenv(Path('.env'))
+rb.SAMPLE_SIZES['humaneval'] = 20
+client = rb.build_client()
+system_prompt = rb.PROMPT_PATH.read_text(encoding='utf-8')
+res = rb.run_benchmark('humaneval', client, system_prompt)
+print(res['accuracy_pct'], res['correct'], '/', res['scored_total'], 'skipped=', res['skipped'])
+PY
+```
+
+### 4) GSM8K（外部資料集）
+```bash
+python scripts/eval_gsm8k.py \
+  --dataset ~/Desktop/datasets/common-text-gen-evalset/math-reasoning/gsm8k/test.jsonl
+```
+
+### 5) 402 Payment Required 規則
+- 若回傳包含 `402 Payment Required`：該題視為 `skipped`
+- 不納入 accuracy 分母（`scored_total`）
+- 不計入一般 `errors`
 
 ## 評估結果
 
@@ -116,7 +163,7 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 - Accuracy: `93.3%`
 - Elapsed: `26.9s`
 
-## 評估過程
+## 評估細節
 ### code-generation: HumanEval
 ```py
 data = load("eval/humaneval.jsonl")
