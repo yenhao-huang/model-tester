@@ -87,25 +87,7 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 
 > 評估規則：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
 
-### Full set（164 題）
-- Report: `reports/humaneval_20260222_220338.json`
-- Total: `164`
-- Scored total: `33`
-- Skipped (402): `131`
-- Correct: `25`
-- Accuracy: `15.2%`
-- Syntax repaired and passed: `16`
-
-### Random sample（20 題）Run #1
-- Report: `reports/humaneval_sample20_20260222_221800.json`
-- Total: `20`
-- Scored total: `16`
-- Skipped (402): `4`
-- Correct: `14`
-- Accuracy: `87.5%`
-- Syntax repaired and passed: `9`
-
-### Random sample（20 題）Run #2
+### Random sample（20 題）
 - Report: `reports/humaneval_sample20_20260222_222029.json`
 - Total: `20`
 - Scored total: `16`
