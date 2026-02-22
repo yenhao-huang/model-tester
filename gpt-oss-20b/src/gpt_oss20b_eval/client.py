@@ -2,25 +2,45 @@ import os
 from typing import Any
 
 from huggingface_hub import InferenceClient
-from transformers import pipeline
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 class LocalPipelineClient:
     def __init__(self, model: str, device: str = "cpu") -> None:
-        device_arg: Any
-        if device == "cpu":
-            device_arg = -1
-        elif device == "mps":
-            device_arg = "mps"
-        else:
-            # e.g. cuda:0
-            device_arg = device
+        self.device = self._normalize_device(device)
+        self.torch_dtype = "auto"
 
-        self.pipe = pipeline(
-            task="text-generation",
-            model=model,
-            device=device_arg,
+        self.tokenizer = AutoTokenizer.from_pretrained(model)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model,
+            torch_dtype=self.torch_dtype,
         )
+        self.model.to(self.device)
+        self.model.eval()
+
+    @staticmethod
+    def _normalize_device(device: str) -> str:
+        if device.startswith("cuda") and torch.cuda.is_available():
+            return device
+        if device == "mps" and torch.backends.mps.is_available():
+            return "mps"
+        if device == "cpu":
+            return "cpu"
+
+        if torch.cuda.is_available():
+            return "cuda:0"
+        if torch.backends.mps.is_available():
+            return "mps"
+        return "cpu"
+
+    @staticmethod
+    def _pick_dtype(device: str):
+        if device.startswith("cuda"):
+            return torch.float16
+        if device == "mps":
+            return torch.float16
+        return torch.float32
 
 
 def build_client() -> Any:
@@ -28,8 +48,10 @@ def build_client() -> Any:
     model = os.getenv("MODEL_NAME", "openai/gpt-oss-20b")
 
     if backend == "local":
+        model_path = os.path.expanduser(os.getenv("LOCAL_MODEL_PATH", "").strip())
+        model_or_path = model_path or model
         device = os.getenv("DEVICE", "cpu")
-        return LocalPipelineClient(model=model, device=device)
+        return LocalPipelineClient(model=model_or_path, device=device)
 
     token = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACEHUB_API_TOKEN")
     return InferenceClient(model=model, token=token)
@@ -66,16 +88,19 @@ def run_chat_inference(client: Any, messages: list[dict[str, str]]) -> str:
 
     if isinstance(client, LocalPipelineClient):
         prompt = _build_local_chat_prompt(messages)
-        out = client.pipe(
-            prompt,
-            max_new_tokens=max_tokens,
-            temperature=temperature,
-            do_sample=temperature > 0,
-            return_full_text=False,
-        )
-        if out and isinstance(out, list):
-            return (out[0].get("generated_text") or "").strip()
-        return ""
+        inputs = client.tokenizer(prompt, return_tensors="pt").to(client.device)
+
+        with torch.no_grad():
+            output_ids = client.model.generate(
+                **inputs,
+                max_new_tokens=max_tokens,
+                temperature=temperature,
+                top_p=float(os.getenv("TOP_P", "0.9")),
+                do_sample=temperature > 0,
+            )
+
+        generated = output_ids[0][inputs["input_ids"].shape[-1] :]
+        return client.tokenizer.decode(generated, skip_special_tokens=True).strip()
 
     resp = client.chat_completion(
         messages=messages,

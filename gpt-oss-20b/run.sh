@@ -6,17 +6,10 @@ DATASET="${2:-eval/datasets/smoke.jsonl}"
 PROMPT="${3:-prompts/system_v1.txt}"
 OUT="${4:-reports/${MODE}_report.json}"
 
-if [[ ! -f ".env" ]]; then
-  echo "[error] .env not found. Copy .env.example to .env first."
-  exit 1
-fi
+source ../../python-venvs/gpt-oss/bin/activate
 
-if [[ ! -d ".venv" ]]; then
-  echo "[error] .venv not found. Create it first: python3 -m venv .venv"
-  exit 1
-fi
-
-source .venv/bin/activate
+# Allow MPS to fall back to CPU for ops not yet supported (e.g. histc on Int)
+export PYTORCH_ENABLE_MPS_FALLBACK=1
 
 if [[ "$MODE" == "chat" ]]; then
   BACKEND="${2:-hf_api}"

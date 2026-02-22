@@ -1,0 +1,832 @@
+{
+  "benchmark": "humaneval",
+  "total": 164,
+  "correct": 1,
+  "errors": 138,
+  "accuracy": 0.0061,
+  "accuracy_pct": "0.6%",
+  "elapsed_sec": 71.6,
+  "avg_latency_ms": 437,
+  "results": [
+    {
+      "id": "humaneval_0",
+      "passed": false,
+      "response": "if len(numbers) < 2:\n        return False\n    sorted_nums = sorted(numbers)\n    for i in range(len(sorted_nums) - 1):\n        if abs(sorted_nums[i + 1] - sorted_nums[i]) < threshold:\n            return True\n    return False"
+    },
+    {
+      "id": "humaneval_1",
+      "passed": false,
+      "response": "s = paren_string.replace(\" \", \"\")\n    groups = []\n    current = []\n    depth = 0\n    for ch in s:\n        if ch not in \"()\":\n            continue\n        if depth == 0 and ch == '(':\n            current = []\n        current.append(ch)\n        if ch == '(':\n            depth"
+    },
+    {
+      "id": "humaneval_2",
+      "passed": false,
+      "response": "import math\nreturn math.modf(number)[0]"
+    },
+    {
+      "id": "humaneval_3",
+      "passed": false,
+      "response": "balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False"
+    },
+    {
+      "id": "humaneval_4",
+      "passed": false,
+      "response": "if not numbers:\n        return 0.0\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)"
+    },
+    {
+      "id": "humaneval_5",
+      "passed": false,
+      "response": "result: List[int] = []\n    for i, num in enumerate(numbers):\n        result.append(num)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result"
+    },
+    {
+      "id": "humaneval_6",
+      "passed": false,
+      "response": "groups = paren_string.split()\n    depths = []\n    for group in groups:\n        depth = 0\n        max_depth = 0\n        for ch in group:\n            if ch == '(':\n                depth += 1\n                if depth > max_depth:\n                    max_depth = depth\n            elif ch == ')':\n                depth -= 1\n        depths.append(max_depth)\n    return depths"
+    },
+    {
+      "id": "humaneval_7",
+      "passed": false,
+      "response": "return [s for s in strings if substring in s]"
+    },
+    {
+      "id": "humaneval_8",
+      "passed": false,
+      "response": "total_sum = sum(numbers)\n    product = 1\n    for n in numbers:\n        product *= n\n    return total_sum, product"
+    },
+    {
+      "id": "humaneval_9",
+      "passed": false,
+      "response": "max_so_far = None\n    result: List[int] = []\n    for num in numbers:\n        if max_so_far is None or num > max_so_far:\n            max_so_far = num\n        result.append(max_so_far)\n    return result"
+    },
+    {
+      "id": "humaneval_10",
+      "passed": false,
+      "response": ""
+    },
+    {
+      "id": "humaneval_11",
+      "passed": false,
+      "response": "if len(a) != len(b):\n        raise ValueError(\"Input strings must be of equal length\")\n    return ''.join('1' if x != y else '0' for x, y in zip(a, b))"
+    },
+    {
+      "id": "humaneval_12",
+      "passed": false,
+      "response": "if not strings:\n        return None\n    return max(strings, key=len)"
+    },
+    {
+      "id": "humaneval_13",
+      "passed": false,
+      "response": "a, b = abs(a), abs(b)\n    while b:\n        a, b = b, a % b\n    return a"
+    },
+    {
+      "id": "humaneval_14",
+      "passed": false,
+      "response": "return [string[:i] for i in range(1, len(string) + 1)]"
+    },
+    {
+      "id": "humaneval_15",
+      "passed": false,
+      "response": "return ' '.join(str(i) for i in range(n+1))"
+    },
+    {
+      "id": "humaneval_16",
+      "passed": false,
+      "response": "return len(set(string.lower()))"
+    },
+    {
+      "id": "humaneval_17",
+      "passed": true,
+      "response": "def parse_music(music_string: str) -> List[int]:\n    mapping = {\"o\": 4, \"o|\": 2, \".|\": 1}\n    return [mapping[token] for token in music_string.split()]"
+    },
+    {
+      "id": "humaneval_18",
+      "passed": false,
+      "response": "if not substring or not string:\n        return 0\n    count = 0\n    sub_len = len(substring)\n    for i in range(len(string) - sub_len + 1):\n        if string[i:i+sub_len] == substring:\n            count += 1\n    return count"
+    },
+    {
+      "id": "humaneval_19",
+      "passed": false,
+      "response": "mapping = {\n        'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4,\n        'five': 5, 'six': 6, 'seven': 7, 'eight': 8, 'nine': 9\n    }\n    if not numbers:\n        return ''\n    words = numbers.split()\n    sorted_words = sorted(words, key=lambda w: mapping[w])\n    return ' '.join(sorted_words)"
+    },
+    {
+      "id": "humaneval_20",
+      "passed": false,
+      "response": "sorted_nums = sorted(numbers)\n    min_diff = float('inf')\n    closest_pair = (sorted_nums[0], sorted_nums[1])\n    for i in range(len(sorted_nums) - 1):\n        a, b = sorted_nums[i], sorted_nums[i + 1]\n        diff = b - a\n        if diff < min_diff:\n            min_diff = diff\n            closest_pair = (a, b)\n    return closest_pair"
+    },
+    {
+      "id": "humaneval_21",
+      "passed": false,
+      "response": "if not numbers:\n        return []\n    min_val = min(numbers)\n    max_val = max(numbers)\n    if max_val == min_val:\n        return [0.0 for _ in numbers]\n    return [(x - min_val) / (max_val - min_val) for x in numbers]"
+    },
+    {
+      "id": "humaneval_22",
+      "passed": false,
+      "response": "return [x for x in values if isinstance(x, int) and not isinstance(x, bool)]"
+    },
+    {
+      "id": "humaneval_23",
+      "passed": false,
+      "response": "return len(string)"
+    },
+    {
+      "id": "humaneval_24",
+      "passed": false,
+      "response": "if n <= 1"
+    },
+    {
+      "id": "humaneval_25",
+      "passed": false,
+      "response": "if n <= 1:\n        return []\n    factors: List[int] = []\n    # handle factor 2\n    while n % 2 == 0:\n        factors.append(2)\n        n //= 2\n    # handle odd factors\n    i = 3\n    while i * i <= n:\n        while n % i == 0:\n            factors.append(i)\n            n //= i\n        i += 2\n    if n > 1:\n        factors.append(n)\n    return factors"
+    },
+    {
+      "id": "humaneval_26",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0704-0ff7ca1a61b5ac150707d8ca;4b66495e-ce21-492c-b134-649088667803)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_27",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0704-461ed88d7e026ccc36482749;f1414dcc-d560-4c97-b5ff-0755228476cc)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_28",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0705-6142dd020b3e9d4a7e2e4a28;7b995cc1-c91c-4448-ae21-6df90b52906d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_29",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0705-48b1c25a387785f55255b85c;adab1556-95d9-4284-9200-cad9d0125310)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_30",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0705-630e73142aff4fed5389f864;f2adad15-4ed6-4bf4-a9ef-c0ce015c30a9)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_31",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0705-4e493c765c68cc5a60f836c8;2d620e26-6811-4104-a077-3563785cb742)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_32",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0706-74e18e0a0b58309053a83c53;76912eda-3db9-4bb7-b27d-7915af63882f)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_33",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0706-13da8bbd0aa01c0872bf610f;e03fbce7-17bb-4beb-b974-ee63bb1664b5)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_34",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0706-0b2921cb58e071e27556b656;e36dc4ad-7195-471e-a4d2-1d2d490f0e04)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_35",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0707-0169f3775ce4de0f676e1414;e62af7fb-a4ec-4a0a-8d84-d66807073e4d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_36",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0707-4951749f709c7c214232acf4;6cf31100-3443-4269-b6fc-273fd16e0b9b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_37",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0707-73abef406b13401d308927a4;5230e59b-aa19-4d75-9eea-9dbbc0e19717)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_38",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0707-156fad2335f7820e564e94a3;fc35e7dc-bc64-4a50-ac3e-c431dc082653)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_39",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0708-3fb447fe6c39e6ac41050dcc;14079da7-dfdd-4079-93a8-7cbfd2472681)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_40",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0708-21b51a4b78b2f5824792148c;5bc2c0b0-1007-4e34-951e-abe1840cbcca)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_41",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0708-258a897c242399647b0d0ea3;ea909e19-37d5-46ba-b63c-f16fd48f6f8a)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_42",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0709-6f8dd95d321e7aae285dc8df;ea20050a-0218-4719-a22b-ba816c7ec8ab)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_43",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0709-12b9f9f11c537da52c5cd978;ae68f1a8-eadf-40d9-bfc9-7a8ce7d5be23)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_44",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0709-1fefa8070dc198653bf8cb8e;bfacc6b2-23ba-434f-8441-6d439dd55e93)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_45",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070a-158ad2cd3b86b52e6d37ad89;860b7486-d5a4-4163-b94f-f2219af50d75)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_46",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070a-486aaf6c3711474438ef78bc;de6286d3-660a-4026-8539-a8d569b4f85e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_47",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070a-31681577499901170d1608f5;ff13f58c-501b-4979-8df9-803912410a33)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_48",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070b-720e21177a0fa1a233fca273;bf081099-fe70-485d-8f2f-a38f0ee293e1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_49",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070b-490e6a380a03c57e0382f208;a65ae782-76e7-433c-aa35-8bae2b56d601)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_50",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070b-09cf51ed42fe5d6f07690a9c;f26d50b5-0f6b-4cfe-9cf9-64e1b18b2741)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_51",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070b-327633705c706f61387bad57;fc1e2fdd-f8b3-40e7-b5e1-13b43fc587a8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_52",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070c-0671e7e8241b5ac0061e94bf;29353865-6675-4860-8af0-68958b6c51ed)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_53",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070c-0afd401528f82e6f540d01f4;c06a4b75-f981-46ee-a822-34a773a2b8cf)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_54",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070c-53719a1f7ecba6ac35f0eef5;81c83e2d-88ea-4376-a6a8-da150a96eef6)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_55",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070d-269fac3350c2e5e72da0cee3;927e3aa1-5272-4cbd-a843-708295b454c9)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_56",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070d-2970a98f08502ac142ab2cd5;0d17887c-7b44-438c-9910-dab818846d82)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_57",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070d-137d92857a59f6d35856af55;9119fa04-6760-4f1f-9994-ed3dd67b0ec5)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_58",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070e-5221510d586ca6ad783e4d81;ae277941-a7ae-4502-9883-8c85ef389aa2)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_59",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070e-593128ed6cc8794f2756d41f;8fe62e6d-66f2-440c-95d7-12d2f5743e4d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_60",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070e-7f72c092491cab973e14f1a6;8a120701-2d67-4122-81f8-ce58547f65e2)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_61",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070e-7c199c3451c9b44030c5d14f;9f6f63cf-514d-429a-8f1b-352e93fdb024)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_62",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070f-7785389675cfda874385d8aa;a6ab7f2a-ae0b-4aa5-8e09-731d539ca085)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_63",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b070f-49e96fb54441c62541de3683;b5a78145-b2dc-4f76-9649-00c833ebbec1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_64",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0710-2e7fff013188f4ad2406ed99;63853806-caa6-4ab6-bdce-f1d24dd19477)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_65",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0710-2a534d147d3f85f00ebf45b0;c9255a5a-5dab-4b40-a5d7-d0ddcc8345c5)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_66",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0710-2caf4cb628d78b1705aefbd1;2dbfffd4-0ae7-4440-8be9-b16cb9cf94ae)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_67",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0710-3a8fd79842c93d6a24c9743d;d9454d5e-d05e-472b-8d53-f59346e72ccd)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_68",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0711-585630640f6b4bf158cc1044;5e114f76-613b-4bf6-bc26-ab2e25545f77)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_69",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0711-52a464481136805050dec22d;5c5090f3-3ef9-474b-88c1-38e1cbdec013)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_70",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0711-6a0988747b6f104e48c21c9c;08fe5f4a-6303-4402-80df-f9ee5f7b9c2d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_71",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0712-3eccef874a4b8db533fd05b9;78e36e3a-b3e3-4936-87c7-b450d87fa95b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_72",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0712-0f44f63a643936b44c9b83bb;4c1c1940-efea-438a-bcaf-643f4b37ff14)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_73",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0713-0eec53a11bd05af5412fa940;bdac2193-992c-44ab-a4e2-ebc2ec5740de)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_74",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0713-5b434e3f6b2724b155479014;f66fb6fd-6b7b-4ad2-ac99-ee3fb37873fa)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_75",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0713-52fc9b4818c81cd207f6e95f;e96a7aba-c14f-4f71-ab50-012a08905c8d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_76",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0713-76d2ef8460279e584ad9859e;348f6980-c8ea-4ccc-991c-8f8acdee67be)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_77",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0714-139ee48b1d1d35a34319b1b6;dee8cc07-cedb-4036-ac01-e7629426beda)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_78",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0714-67fcef5a7bf2c10e1d0af06b;32a46431-3082-4c8d-abb2-4e8dea6b94b4)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_79",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0715-1af5d4174c06ed512cae70a0;189891bb-a739-47f0-b770-ce451b042be7)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_80",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0715-2268b4ef720d3de7181ee1bf;36d11422-1a7a-4d04-a445-c90db94d7a8d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_81",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0716-6b26bd801df4487722cd74bc;a14fb34e-dabf-4fdf-aab4-1c86514654c4)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_82",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0716-60001ae40fba944432ab7641;02581a41-ce23-4eef-bb74-85f57997bc2e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_83",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0716-3300018661fa782354767937;ae4babab-7519-4629-962d-f0aded476acc)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_84",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0717-36fb77e068c1c44d61cc96e8;27d79916-fccb-47ac-9caf-c30f9e68e4a2)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_85",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0717-0a4928077fbeb91800ba8a02;cfe2bcdd-d86b-4ad7-b0ef-e3ec40345672)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_86",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0717-2477c8d14f85cfa9441e7e16;ac6cae28-d161-4ec4-8cbe-3d424cb15f5e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_87",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0718-320840854612780b71b27a72;ae28e49d-8fd4-4e4f-9734-e35e5c6546db)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_88",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0718-3894ea6758c085214f8c893b;ba315880-b491-48d8-a14d-5eeca5c0a76b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_89",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071b-4dd40e2c037323ab3fcf80a8;792dec48-5c7e-4cd2-8eb9-a34876ec844e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_90",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071c-02fb329e675819594093cfa3;0aa1594d-3eb7-41c6-85a5-2a32222e7880)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_91",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071c-3b40708033ab62d56ae1e627;2ff23490-0bcc-4d3e-b43b-33409f137b0a)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_92",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071c-7cb5589a32be7c13090f7407;687a0b2a-6973-4d50-941c-3d17f28779ba)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_93",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071d-65809e2e17ea07933a8b0394;be95c90e-3c82-4c36-8c08-6228747e56a9)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_94",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071d-5d6c83804cd998837a2662d4;831130af-a857-4902-8911-0b855b56453b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_95",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071e-356c266645eb017629aad03c;ea5dfd71-809c-4311-b49e-546416b13729)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_96",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071e-5f6c113c13a21ce963a69ac0;402fb5d7-ce6e-44c3-8b40-4100319d34f1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_97",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071e-3c738d2d1254bd4f39d0fee7;da26f4e0-0584-4338-90c8-ebc96a428b8c)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_98",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b071f-40ad37a26671765f21e97240;000d1452-5f03-45e0-ad78-cae83a9471a1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_99",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0720-36637b172eac0f8979251f58;1dfc58d9-05a1-4e6f-8f90-41136caf32cd)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_100",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0720-0fda781c729cae4a60af8024;8aaffebf-e048-4494-a14e-01c2a8d43808)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_101",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0720-406fac4d33700ed0612ab762;b456975d-50f8-4c36-81ef-4c7243d5b4f1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_102",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0720-0a0d2eae68ef7f1e33a9b703;e6cd5962-91c6-42a9-a5d5-27d81faeb172)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_103",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0721-6a0ae9a05499008201bcebdb;ddc2aa6c-1cab-437c-9193-162ef33dc6cd)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_104",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0721-1b43c8455036490e58c3dec0;1cf53be5-7a44-4b4c-b570-6760080ffe59)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_105",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0721-1923ccb47f9a08ee08efdad3;123f2edd-040a-45dd-9abf-210f33d006f8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_106",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0722-5163926c79a7444e67ad6e3b;b1e96fe5-f8de-4c3d-8c94-41a7019571fe)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_107",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0722-0b7f0a27478ef2ef429d2da5;6afb82fc-800d-4bd5-bad0-719feb26907d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_108",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0723-0a11a6ab2a90a4d65a598ab0;5cefc0f0-ab11-4a2b-84e1-1129173b5e6d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_109",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0723-433d984b4ca15c487afeaab5;5501734a-6914-4b43-9ed9-8120c43acb45)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_110",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0724-6133678b4ebd41ae16f51bd7;67763745-83f2-46c0-9498-2b2ba2b40500)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_111",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0724-7b3f01fd1a5ab8d8740410c6;f3ddb77a-91ae-4f60-82de-e64fbc88abf6)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_112",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0725-42b6eb7a611677473eae0e03;e592ebdc-df38-4056-8c8e-a724b5ad861d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_113",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0725-658470f97a5effa9070af87a;3d753e96-ec30-4309-8df9-c4ae78fe1a61)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_114",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0726-5b0c6b380a7956281dc55453;44d789cf-0e33-4d5e-9931-e6522a6ae0c4)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_115",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0726-61c7da95217190e82a2b7364;b32fb37a-b2a5-4ade-95d9-965fb9c2745c)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_116",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0726-3ec92e36773d006b19809fcc;d54efd11-b8dd-4632-ace7-f384d69d03c1)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_117",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0727-56ccfc4271e1975d41755e48;cd7f9749-0675-49dd-ab47-fc74ec313492)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_118",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0727-5a8017211dfe84d06c6d4595;678f6557-8eb3-46e7-acb7-c965a0523c7c)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_119",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0728-10728bd503b4e9090f2de9de;8f02e18c-69ee-4104-b6de-bbc1ca67ac82)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_120",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0728-667ae98c4b72fa787e9ea455;bc2bc967-f7dd-4a79-9a86-fd9dc89b9a1c)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_121",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0728-2f950f6a79454daf7e2a5213;f26eb0c1-fcce-4970-9324-3a731b979f0b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_122",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0729-665a50372bdf2b523ef10609;3fe57be5-b1fb-4188-8fb5-cd26e7d81b5e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_123",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0729-014a0989347f6d7d53be3120;3ea34948-ca0f-40e2-8434-49e21910aa7a)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_124",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0729-125b25c54195712344d5640a;4d6f27e2-3018-4294-befc-f808b690898b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_125",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072a-2d2b7d58524a9dfe60cb9ef5;89e21a68-0836-4053-b901-95438b114f5f)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_126",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072a-0f110ea01ca21fe355929273;8c5d98cb-de51-4f7f-b56b-60bbe9dc4e3e)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_127",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072a-69a0f8a67ff2987118648cca;ccbd0055-20bb-4d43-85c0-e5046cec911b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_128",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072b-590db7490ff3479e21aa228b;3ac81a5d-8d5e-4a26-97b9-435a939734f8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_129",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072b-4eb5ed9e6f158fad05133567;6d9346f2-9591-4e18-894e-01ef40cff0bb)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_130",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072b-2f61adf564a48af35fad1b56;f441f965-8ec1-437c-84da-06210b8e01d8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_131",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072c-75dea0860630ec87053cee02;c7a96646-6866-4727-a3bb-6d3f7e6140c3)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_132",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072c-2e989291077530e2567490da;8b1df83b-351c-42f6-b243-90d5f7b7ddde)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_133",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072c-4f972ce630205f312202e3f3;6f1318fc-8850-4b25-8231-b18774b81ade)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_134",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072c-3e1604fb0c70bdb862f71d5b;eb6e4fd9-b328-4117-99df-fb48b05076b8)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_135",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072d-717205ed43c30a162d14c7bb;4da2d25d-58e0-4ec0-83be-798544f0163a)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_136",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072d-3aa9726525eb5dc00503d530;3541e541-ffc4-4210-b883-b088d5fb0b48)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_137",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072e-09b9ad5a6e42a6fb1b2051f9;de23af91-cf56-4377-8564-d5ba7af3319d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_138",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072e-734d1d5011fdfb6853aaf137;c317974d-93e2-4599-ae71-4559181155f7)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_139",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072e-034ff3f256f1db8173085d21;aae47925-43fc-43ef-a272-c3640f662c34)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_140",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072f-5fb77a2d05395a6a419c2545;3af8639c-99b7-4351-ae55-c14018555b52)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_141",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072f-5842cbdb56fcbf0e759a378f;05e30473-8bdf-4cd2-8e36-3116d52b27d0)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_142",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b072f-76babc907db237a243fd3235;3ea3615b-93e9-4686-8b3e-6101c9af9116)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_143",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0730-02c3e1c2685a408554eb68ea;ab4aba59-9615-41fe-9f33-819cb6f363a7)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_144",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0730-5d00996d35da27206a72816b;fbe95717-0916-409d-8ad8-d6cb759f08ff)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_145",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0730-72681bdb78ec54022988e77b;9d79f8bc-c2d3-4778-8f0d-db6aa36ef563)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_146",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0730-76eaff2f070d349b5d3562b1;30ff4354-a907-4e53-af0d-89ba01139cc7)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_147",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0731-481bc3d547591730121288fe;ad4c3bb2-9d7c-4ed5-a275-f52dacaa06d3)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_148",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0731-4753bb7a1cc571251b192c2b;11ce7ef7-bdeb-4187-8c9d-c4b373f102a9)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_149",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0732-7c76da4e13af5fa96ac8ca70;9e775818-2704-4046-833e-42da9660f780)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_150",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0732-41885bc326d6a5275da10f26;0be2bd43-9b87-44dd-8bca-b4f661d57d70)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_151",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0732-38b0c87d63f0b6db53153288;55f7dfb0-648a-4b66-85fb-0eab3f658dd6)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_152",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0733-52316885621fe0fc4b2e43a8;dc28100a-70bf-4cff-9c2c-1e6a0eae1289)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_153",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0733-5c223f862916a90b758bd51f;94d01a9f-92b4-45b5-9a4e-4e31f5d99c09)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_154",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0733-08dcdea07ee80f570575cb2e;89e7122c-b125-4866-87c2-2acce812fe57)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_155",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0733-627d6a195f5ca16f706c69a3;246bee87-239b-45de-b020-20d34edbd014)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_156",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0734-3ed0a2f36889523a501a2d7b;0e48e10f-9e4a-4aa3-861e-4f289ab19f54)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_157",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0734-68a7207c10d744c72c5a694c;01a7f6b7-6185-47d6-8af9-9acd3942107d)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_158",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0735-0829a9666860635b6824f856;cf1dc5c9-5469-4377-ab6a-97e0d3430138)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_159",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0735-4162375239716a0d572b546c;3e6a967e-6eeb-48b4-b570-0c1d789b3a1b)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_160",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0735-4b8cf3ce79321ab33511cf57;402b8727-1ac0-430e-80ae-aab7a3ba82dd)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_161",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0736-0d0acf1a27c562e31ecba464;135de5f8-708a-4f5d-9bc0-31704a738183)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_162",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0736-4e70339f0e8feb38226952cd;1d460bd0-a690-4aa1-9b9c-735ea8dde2de)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    },
+    {
+      "id": "humaneval_163",
+      "passed": false,
+      "response": "[ERROR] Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-699b0736-2069562b058a20834c8d5a68;14703915-b09c-4dcc-865b-d0b34a7164be)\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402\n\nCredit balance is depleted: purchase pre-paid credits to continue using Inference Providers with your account. Alternatively, subscribe to PRO to get 20x more included usage."
+    }
+  ]
+}
