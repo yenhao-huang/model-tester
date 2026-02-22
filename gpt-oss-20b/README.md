@@ -1,6 +1,6 @@
 # gpt-oss-20b-dev
 
-`gpt-oss-20b-dev` 是一個用來快速測試與迭代 **gpt-oss-20b** 的輕量開發專案，支援 Hugging Face API 與本地推論。
+`gpt-oss-20b-dev` 是一個用來快速測試與迭代 **gpt-oss-20b** 的輕量開發專案，支援 Hugging Face API 與本地推論（`AutoTokenizer/AutoModelForCausalLM.from_pretrained`）。
 
 ## 專案介紹
 
@@ -15,18 +15,20 @@
 ## 安裝
 
 ```bash
-cd gpt-oss-20b-dev
-python3 -m venv .venv
-source .venv/bin/activate
+cd gpt-oss-20b
+python3 -m venv ../python-venvs/.gpt-oss
+source ../python-venvs/gpt-oss/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 ```
 
 可在 `.env` 設定：
 - `MODEL_NAME`（預設：`openai/gpt-oss-20b`）
+- `LOCAL_MODEL_PATH`（local 模式優先使用；例如 `/Users/yenhaohuang/Desktop/models/llama3-8b`）
 - `INFERENCE_BACKEND`（`hf_api` 或 `local`）
 - `HF_TOKEN`（使用私有/受限模型時需要）
 - `DEVICE`（local 模式可用：`cpu`/`mps`/`cuda:0`）
+- `TOP_P`（local 生成可選，預設 `0.9`）
 
 ## 使用方式
 
@@ -44,13 +46,18 @@ python -m src.gpt_oss20b_eval.runner \
 ### 2) 本地 Transformers
 
 ```bash
+# 1) 先下載到本機
+huggingface-cli download <model-name> \
+  --local-dir ~/Desktop/models/<model-name-abbr> \
+  --local-dir-use-symlinks False
+
+# 2) 跑評測
 python -m src.gpt_oss20b_eval.runner \
   --dataset eval/datasets/smoke.jsonl \
   --prompt prompts/system_v1.txt \
   --out reports/local_smoke_report.json
 ```
-
-> 請先確認 `.env` 內 `INFERENCE_BACKEND=local`，並設定 `DEVICE`。
+> 請先確認 `.env` 內 `INFERENCE_BACKEND=local`。
 
 ### 3) 一鍵執行腳本
 
@@ -75,3 +82,46 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 - `/history`：查看目前 turn 數
 
 以上即可完成最基本的安裝、評測與互動測試流程。
+
+## 評估結果（Humaneval）
+
+> 評估規則：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
+
+### Full set（164 題）
+- Report: `reports/humaneval_20260222_220338.json`
+- Total: `164`
+- Scored total: `33`
+- Skipped (402): `131`
+- Correct: `25`
+- Accuracy: `15.2%`
+- Syntax repaired and passed: `16`
+
+### Random sample（20 題）Run #1
+- Report: `reports/humaneval_sample20_20260222_221800.json`
+- Total: `20`
+- Scored total: `16`
+- Skipped (402): `4`
+- Correct: `14`
+- Accuracy: `87.5%`
+- Syntax repaired and passed: `9`
+
+### Random sample（20 題）Run #2
+- Report: `reports/humaneval_sample20_20260222_222029.json`
+- Total: `20`
+- Scored total: `16`
+- Skipped (402): `4`
+- Correct: `16`
+- Accuracy: `100.0%`
+- Syntax repaired and passed: `11`
+
+## 評估
+### HumanEval
+```py
+data = load("eval/humaneval.jsonl")
+model_output = llm(data["prompt"])
+full_code = data["prompt_code"] + model_output
+exec(full_code, namespace)     # 定義 function
+exec(test_code, namespace)     # 定義 check()
+
+namespace["check"](namespace["has_close_elements"])
+```
