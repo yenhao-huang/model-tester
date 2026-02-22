@@ -187,6 +187,8 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
         cases = random.sample(cases, sample_size)
 
     total = len(cases)
+    scored_total = 0
+    skipped = 0
     correct = 0
     errors = 0
     results = []
@@ -196,10 +198,17 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
         response = call_model(client, system_prompt, case["prompt"])
         response_used = response
         syntax_repaired = False
+        skipped_case = False
 
         if response.startswith("[ERROR]"):
-            errors += 1
-            passed = False
+            # User policy: 402 Payment Required should not count as wrong.
+            if "402 Payment Required" in response:
+                skipped += 1
+                skipped_case = True
+                passed = False
+            else:
+                errors += 1
+                passed = False
         elif name in ("mmlu", "hellaswag", "truthfulqa"):
             passed = score_mcq(response, case.get("expected", ""))
         elif name == "humaneval":
@@ -217,8 +226,10 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
         else:
             passed = len(response.strip()) > 0
 
-        if passed:
-            correct += 1
+        if not skipped_case:
+            scored_total += 1
+            if passed:
+                correct += 1
 
         results.append({
             "id": case["id"],
@@ -226,25 +237,28 @@ def run_benchmark(name: str, client, system_prompt: str) -> dict:
             "response": response,
             "response_used": response_used,
             "syntax_repaired": syntax_repaired,
+            "skipped": skipped_case,
         })
 
         # Progress
         if (i + 1) % 50 == 0 or i == total - 1:
-            pct = correct / (i + 1) * 100
-            print(f"  [{name}] {i+1}/{total} — running accuracy: {pct:.1f}%")
+            pct = (correct / scored_total * 100) if scored_total else 0
+            print(f"  [{name}] {i+1}/{total} — running accuracy: {pct:.1f}% (scored={scored_total}, skipped={skipped})")
 
     elapsed = time.time() - t0
-    accuracy = correct / total if total else 0
+    accuracy = correct / scored_total if scored_total else 0
 
     return {
         "benchmark": name,
         "total": total,
+        "scored_total": scored_total,
+        "skipped": skipped,
         "correct": correct,
         "errors": errors,
         "accuracy": round(accuracy, 4),
         "accuracy_pct": f"{accuracy * 100:.1f}%",
         "elapsed_sec": round(elapsed, 1),
-        "avg_latency_ms": round(elapsed / total * 1000) if total else 0,
+        "avg_latency_ms": round(elapsed / scored_total * 1000) if scored_total else 0,
         "results": results,
     }
 
