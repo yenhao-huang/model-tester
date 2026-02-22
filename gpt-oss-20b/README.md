@@ -83,7 +83,7 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 
 以上即可完成最基本的安裝、評測與互動測試流程。
 
-## CLI 評估方式（自己跑）
+## CLI 評估方式
 
 ### 0) 進入環境
 ```bash
@@ -97,22 +97,7 @@ python scripts/run_benchmarks.py
 ```
 執行後會在 `reports/` 產生 `benchmark_YYYYMMDD_HHMMSS.json`。
 
-### 2) 只跑 HumanEval（全量）
-```bash
-python - <<'PY'
-from pathlib import Path
-from dotenv import load_dotenv
-from scripts.run_benchmarks import build_client, run_benchmark, PROMPT_PATH
-
-load_dotenv(Path('.env'))
-client = build_client()
-system_prompt = PROMPT_PATH.read_text(encoding='utf-8')
-res = run_benchmark('humaneval', client, system_prompt)
-print(res['accuracy_pct'], res['correct'], '/', res['scored_total'])
-PY
-```
-
-### 3) HumanEval 隨機 20 題
+### ２) HumanEval 隨機 20 題
 ```bash
 python - <<'PY'
 from pathlib import Path
@@ -128,22 +113,17 @@ print(res['accuracy_pct'], res['correct'], '/', res['scored_total'], 'skipped=',
 PY
 ```
 
-### 4) GSM8K（外部資料集）
+### ３) GSM8K（外部資料集）
 ```bash
 python scripts/eval_gsm8k.py \
   --dataset ~/Desktop/datasets/common-text-gen-evalset/math-reasoning/gsm8k/test.jsonl
 ```
 
-### 5) 402 Payment Required 規則
-- 若回傳包含 `402 Payment Required`：該題視為 `skipped`
-- 不納入 accuracy 分母（`scored_total`）
-- 不計入一般 `errors`
-
 ## 評估結果
 
 > 評估規則（共用）：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
 
-### HumanEval
+### Code Generation: HumanEval
 - Report: `reports/humaneval_sample20_20260222_222029.json`
 - Total: `20`
 - Scored total: `16`
@@ -152,7 +132,7 @@ python scripts/eval_gsm8k.py \
 - Accuracy: `100.0%`
 - Syntax repaired and passed: `11`
 
-### GSM8K
+### Math Reasoning: GSM8K
 - Report: `reports/gsm8k_20260222_224244.json`
 - Dataset: `~/Desktop/datasets/common-text-gen-evalset/math-reasoning/gsm8k/test.jsonl`
 - Total: `50`
@@ -162,6 +142,26 @@ python scripts/eval_gsm8k.py \
 - Correct: `14`
 - Accuracy: `93.3%`
 - Elapsed: `26.9s`
+
+### Knowledge: MMLU（sample 200）
+- Report: `reports/mmlu_truthfulqa_20260222_225955.json`
+- Total: `200`
+- Scored total: `30`
+- Skipped (402): `170`
+- Errors (non-402): `0`
+- Correct: `27`
+- Accuracy: `90.0%`
+- Elapsed: `81.6s`
+
+### Truthfulness: TruthfulQA
+- Report: `reports/mmlu_truthfulqa_20260222_225955.json`
+- Total: `817`
+- Scored total: `67`
+- Skipped (402): `750`
+- Errors (non-402): `0`
+- Correct: `53`
+- Accuracy: `79.1%`
+- Elapsed: `325.9s`
 
 ## 評估細節
 ### code-generation: HumanEval
