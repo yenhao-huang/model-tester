@@ -83,11 +83,11 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 
 以上即可完成最基本的安裝、評測與互動測試流程。
 
-## 評估結果（Humaneval）
+## 評估結果
 
-> 評估規則：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
+> 評估規則（共用）：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
 
-### Random sample（20 題）
+### HumanEval（Random sample 20 題）
 - Report: `reports/humaneval_sample20_20260222_222029.json`
 - Total: `20`
 - Scored total: `16`
@@ -96,10 +96,7 @@ python -m src.gpt_oss20b_eval.chat --prompt prompts/system_v1.txt
 - Accuracy: `100.0%`
 - Syntax repaired and passed: `11`
 
-## 評估結果（GSM8K）
-
-> 評估規則：`402 Payment Required` 視為配額/計費限制，標記為 `skipped`，不納入 accuracy 分母。
-
+### GSM8K
 - Report: `reports/gsm8k_20260222_224244.json`
 - Dataset: `~/Desktop/datasets/common-text-gen-evalset/math-reasoning/gsm8k/test.jsonl`
 - Total: `50`
