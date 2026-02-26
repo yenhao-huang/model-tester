@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-02-21T06:42:34.990612+00:00",
+  "model_id": "MiniMaxAI/MiniMax-M2.5",
+  "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "Darwin 25.2.0 (arm64)",
+  "huggingface_hub_version": "1.4.1",
+  "hf_token_present": false,
+  "model_exists": true,
+  "private_or_gated": false,
+  "downloads": 123344,
+  "likes": 809,
+  "pipeline_tag": "text-generation",
+  "inference_attempted": true,
+  "inference_success": true,
+  "inference_output": "I am working and ready to help you.",
+  "inference_error": null
+}
