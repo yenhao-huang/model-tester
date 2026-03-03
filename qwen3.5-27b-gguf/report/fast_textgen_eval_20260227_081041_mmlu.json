@@ -1,0 +1,170 @@
+{
+  "benchmark": "mmlu",
+  "total": 20,
+  "correct": 14,
+  "accuracy": 0.7,
+  "accuracy_pct": "70.0%",
+  "elapsed_sec": 49.91,
+  "results": [
+    {
+      "idx": 1,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "response": "B"
+    },
+    {
+      "idx": 2,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 3,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "response": "D"
+    },
+    {
+      "idx": 4,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "response": "B"
+    },
+    {
+      "idx": 5,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "response": "B"
+    },
+    {
+      "idx": 6,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "response": "A"
+    },
+    {
+      "idx": 7,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "response": "A"
+    },
+    {
+      "idx": 8,
+      "gold": "D",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 9,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "response": "B"
+    },
+    {
+      "idx": 10,
+      "gold": "C",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "response": "D"
+    },
+    {
+      "idx": 11,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 12,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 13,
+      "gold": "A",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "response": "D"
+    },
+    {
+      "idx": 14,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "response": "B"
+    },
+    {
+      "idx": 15,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 16,
+      "gold": "B",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 17,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "response": "C"
+    },
+    {
+      "idx": 18,
+      "gold": "C",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "response": "D"
+    },
+    {
+      "idx": 19,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "response": "D"
+    },
+    {
+      "idx": 20,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "response": "A"
+    }
+  ]
+}

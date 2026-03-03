@@ -1,0 +1,170 @@
+{
+  "benchmark": "gsm8k",
+  "total": 20,
+  "correct": 18,
+  "accuracy": 0.9,
+  "accuracy_pct": "90.0%",
+  "elapsed_sec": 1487.21,
+  "results": [
+    {
+      "idx": 1,
+      "gold": "18",
+      "pred": "18",
+      "passed": true,
+      "skipped": false,
+      "response": "To find out how much money Janet makes every day at the farmers' market, we need to determine how many eggs she has left to sell after her personal consumption and baking.\n\n1.  **Calculate total eggs laid per day:**\n    Janet's ducks lay 16 eggs per day.\n\n2.  **Calculate total eggs used by Janet:**\n    *   Eggs eaten for breakfast: 3\n    *   Eggs used for muffins: 4\n    *   Total used = $3 + 4 = 7$ eggs.\n\n3.  **Calculate the number of eggs remaining for sale:**\n    *   Remaining eggs = Total eggs - Total used\n    *   Remaining eggs = $16 - 7 = 9$ eggs.\n\n4.  **Calculate the daily revenue:**\n    *   Price per egg: $2\n    *   Total revenue = Remaining eggs $\\times$ Price per egg\n    *   Total revenue = $9 \\times 2 = 18$ dollars.\n\nJanet makes $18 every day at the farmers' market.\n\n#### 18"
+    },
+    {
+      "idx": 2,
+      "gold": "3",
+      "pred": "3",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total number of bolts required for the robe, we need to determine the amount of blue fiber and white fiber separately and then add them together.\n\n1.  **Blue Fiber**: The problem states that the robe takes **2** bolts of blue fiber.\n2.  **White Fiber**: The problem states that the robe takes \"half that much\" white fiber. \"That much\" refers to the amount of blue fiber (2 bolts).\n    *   Calculation: $2 / 2 = 1$ bolt of white fiber.\n3.  **Total Bolts**: Add the blue fiber and white fiber together.\n    *   Calculation: $2 \\text{ (blue)} + 1 \\text{ (white)} = 3$ bolts.\n\nThe total number of bolts is 3.\n\n#### 3"
+    },
+    {
+      "idx": 3,
+      "gold": "70000",
+      "pred": "70000",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the profit Josh made, we need to determine the total cost of the project and the final selling price of the house.\n\n**Step 1: Calculate the total cost.**\nJosh's total investment includes the purchase price and the repair costs.\n*   Purchase Price: $80,000\n*   Repair Costs: $50,000\n*   Total Cost = $80,000 + $50,000 = $130,000\n\n**Step 2: Calculate the increase in value.**\nThe problem states that the repairs increased the value of the house by 150%. This percentage increase applies to the original value of the house (the purchase price).\n*   Original Value: $80,000\n*   Percentage Increase: 150%\n*   Increase Amount = $80,000 \\times 1.50 = $120,000\n\n**Step 3: Calculate the new value of the house.**\nThe new value is the original value plus the increase.\n*   New Value = Original Value + Increase Amount\n*   New Value = $80,000 + $120,000 = $200,000\n\n**Step 4: Calculate the profit.**\nProfit is the difference between the final value (selling price) and the total cost.\n*   Profit = New Value - Total Cost\n*   Profit = $200,000 - $130,000 = $70,000\n\nJosh made a profit of $70,000.\n\n#### 70000"
+    },
+    {
+      "idx": 4,
+      "gold": "540",
+      "pred": "540",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total number of meters James runs in a week, we can break the problem down into steps:\n\n1.  **Calculate the distance per session:**\n    James runs 3 sprints, and each sprint is 60 meters.\n    $$3 \\text{ sprints} \\times 60 \\text{ meters/sprint} = 180 \\text{ meters per session}$$\n\n2.  **Calculate the total distance per week:**\n    He runs these sessions 3 times a week.\n    $$180 \\text{ meters/session} \\times 3 \\text{ sessions/week} = 540 \\text{ meters}$$\n\nJames runs a total of 540 meters a week.\n\n#### 540"
+    },
+    {
+      "idx": 5,
+      "gold": "20",
+      "pred": "20",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the number of cups of feed needed for the final meal, we follow these steps:\n\n1.  **Calculate the total daily feed requirement for the entire flock:**\n    *   Number of chickens: 20\n    *   Feed per chicken per day: 3 cups\n    *   Total feed needed = $20 \\text{ chickens} \\times 3 \\text{ cups/chicken} = 60 \\text{ cups}$.\n\n2.  **Calculate the total feed already given in the morning and afternoon:**\n    *   Morning feed: 15 cups\n    *   Afternoon feed: 25 cups\n    *   Total feed given so far = $15 + 25 = 40 \\text{ cups}$.\n\n3.  **Calculate the feed needed for the final meal:**\n    *   Final meal feed = Total feed needed - Total feed given so far\n    *   Final meal feed = $60 - 40 = 20 \\text{ cups}$.\n\nWendi needs to give her chickens 20 cups of feed in the final meal.\n\n#### 20"
+    },
+    {
+      "idx": 6,
+      "gold": "64",
+      "pred": "64",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total cost, let's break down the pricing structure and the number of glasses Kylar is buying.\n\n1.  **Identify the pricing pattern**:\n    *   The first glass in a pair costs the full price: $5.\n    *   The second glass in a pair costs 60% of the full price.\n    *   This pattern repeats for every two glasses.\n\n2.  **Calculate the cost of the discounted glass**:\n    *   Full price = $5\n    *   Discounted price = $5 \\times 0.60 = $3$\n\n3.  **Determine the cost for a pair of glasses**:\n    *   Cost of one pair (1 full price + 1 discounted) = $5 + $3 = $8$\n\n4.  **Calculate the number of pairs**:\n    *   Total glasses needed = 16\n    *   Since the pattern applies to every second glass, we divide the total number of glasses by 2 to find the number of pairs.\n    *   $16 / 2 = 8$ pairs\n\n5.  **Calculate the total cost**:\n    *   Total cost = Number of pairs $\\times$ Cost per pair\n    *   Total cost = $8 \\times 8 = 64$\n\nKylar needs to pay $64.\n\n#### 64"
+    },
+    {
+      "idx": 7,
+      "gold": "260",
+      "pred": "260",
+      "passed": true,
+      "skipped": false,
+      "response": "Let's break down the problem step by step:\n\n1.  **Identify the number of sheep in Seattle:**\n    The problem states that Seattle has 20 sheep.\n    $$S = 20$$\n\n2.  **Calculate the number of sheep in Charleston:**\n    Charleston has 4 times as many sheep as Seattle.\n    $$C = 4 \\times S$$\n    $$C = 4 \\times 20 = 80$$\n\n3.  **Calculate the number of sheep in Toulouse:**\n    Toulouse has twice as many sheep as Charleston.\n    $$T = 2 \\times C$$\n    $$T = 2 \\times 80 = 160$$\n\n4.  **Calculate the total number of sheep:**\n    Add the number of sheep in all three cities together.\n    $$\\text{Total} = S + C + T$$\n    $$\\text{Total} = 20 + 80 + 160$$\n    $$\\text{Total} = 100 + 160 = 260$$\n\nThe total number of sheep is 260.\n\n#### 260"
+    },
+    {
+      "idx": 8,
+      "gold": "160",
+      "pred": "160",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total time it takes for Carla to download the file, we need to break the process down into three distinct phases: the initial partial download, the restart delay, and the full re-download.\n\n**Phase 1: The initial partial download**\n*   Total file size: 200 GB\n*   Download speed: 2 GB/minute\n*   Progress before restart: 40% of the file\n*   Amount downloaded: $200 \\text{ GB} \\times 0.40 = 80 \\text{ GB}$\n*   Time taken for this phase: $\\frac{80 \\text{ GB}}{2 \\text{ GB/min}} = 40 \\text{ minutes}$\n\n**Phase 2: The restart delay**\n*   Time taken for Windows updates and restart: 20 minutes\n\n**Phase 3: The full re-download**\n*   Since the download restarts from the beginning, Carla must download the entire 200 GB again.\n*   Amount to download: 200 GB\n*   Time taken for this phase: $\\frac{200 \\text{ GB}}{2 \\text{ GB/min}} = 100 \\text{ minutes}$\n\n**Total Time Calculation**\n*   Total Time = (Time for Phase 1) + (Time for Phase 2) + (Time for Phase 3)\n*   Total Time = $40 \\text{ minutes} + 20 \\text{ minutes} + 100 \\text{ minutes}$\n*   Total Time = $160 \\text{ minutes}$\n\n#### 160"
+    },
+    {
+      "idx": 9,
+      "gold": "45",
+      "pred": "",
+      "passed": false,
+      "skipped": false,
+      "response": ""
+    },
+    {
+      "idx": 10,
+      "gold": "460",
+      "pred": "460",
+      "passed": true,
+      "skipped": false,
+      "response": "To find Eliza's total earnings for the week, we need to calculate her regular pay and her overtime pay separately, then add them together.\n\n**Step 1: Calculate Regular Pay**\nEliza's regular hourly rate is $10.\nShe works 40 regular hours per week.\n$$ \\text{Regular Pay} = 40 \\text{ hours} \\times \\$10/\\text{hour} = \\$400 $$\n\n**Step 2: Calculate Overtime Hours**\nEliza worked a total of 45 hours this week.\nOvertime hours are any hours worked beyond the first 40.\n$$ \\text{Overtime Hours} = 45 \\text{ total hours} - 40 \\text{ regular hours} = 5 \\text{ hours} $$\n\n**Step 3: Calculate Overtime Rate**\nThe overtime rate is 1.2 times her regular hourly rate.\n$$ \\text{Overtime Rate} = 1.2 \\times \\$10 = \\$12/\\text{hour} $$\n\n**Step 4: Calculate Overtime Pay**\n$$ \\text{Overtime Pay} = 5 \\text{ hours} \\times \\$12/\\text{hour} = \\$60 $$\n\n**Step 5: Calculate Total Earnings**\n$$ \\text{Total Earnings} = \\text{Regular Pay} + \\text{Overtime Pay} $$\n$$ \\text{Total Earnings} = \\$400 + \\$60 = \\$460 $$\n\n#### 460"
+    },
+    {
+      "idx": 11,
+      "gold": "366",
+      "pred": "366",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total number of downloads over the three months, let's break down the problem month by month.\n\n**Step 1: Calculate downloads for the first month.**\nThe problem states there were 60 downloads in the first month.\n$$ \\text{Month 1} = 60 $$\n\n**Step 2: Calculate downloads for the second month.**\nThe number of downloads in the second month was three times as many as the first month.\n$$ \\text{Month 2} = 3 \\times \\text{Month 1} $$\n$$ \\text{Month 2} = 3 \\times 60 = 180 $$\n\n**Step 3: Calculate downloads for the third month.**\nThe downloads in the third month were reduced by 30% compared to the second month. This means the third month had 70% of the second month's downloads (since $100\\% - 30\\% = 70\\%$).\n$$ \\text{Month 3} = \\text{Month 2} \\times (1 - 0.30) $$\n$$ \\text{Month 3} = 180 \\times 0.70 $$\n$$ \\text{Month 3} = 126 $$\n\nAlternatively, you can calculate the reduction amount first:\n$$ \\text{Reduction} = 180 \\times 0.30 = 54 $$\n$$ \\text{Month 3} = 180 - 54 = 126 $$\n\n**Step 4: Calculate the total downloads.**\nAdd the downloads from all three months together.\n$$ \\text{Total} = \\text{Month 1} + \\text{Month 2} + \\text{Month 3} $$\n$$ \\text{Total} = 60 + 180 + 126 $$\n$$ \\text{Total} = 240 + 126 $$\n$$ \\text{Total} = 366 $$\n\nThe program had a total of 366 downloads over the three months.\n\n#### 366"
+    },
+    {
+      "idx": 12,
+      "gold": "694",
+      "pred": "694",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total cost, we need to calculate the cost for each type of pastry and then sum them up.\n\n1.  **Donuts:**\n    *   Quantity: 3 dozen\n    *   Price per dozen: $68\n    *   Cost: $3 \\times 68 = 204$\n\n2.  **Mini Cupcakes:**\n    *   Quantity: 2 dozen\n    *   Price per dozen: $80\n    *   Cost: $2 \\times 80 = 160$\n\n3.  **Mini Cheesecakes:**\n    *   Quantity: 6 dozen\n    *   Price per dozen: $55\n    *   Cost: $6 \\times 55 = 330$\n\n4.  **Total Cost:**\n    *   Sum of all costs: $204 + 160 + 330$\n    *   $204 + 160 = 364$\n    *   $364 + 330 = 694$\n\nThe total cost is $694.\n\n#### 694"
+    },
+    {
+      "idx": 13,
+      "gold": "13",
+      "pred": "",
+      "passed": false,
+      "skipped": false,
+      "response": ""
+    },
+    {
+      "idx": 14,
+      "gold": "18",
+      "pred": "18",
+      "passed": true,
+      "skipped": false,
+      "response": "Let $x$ be the total number of vacuum cleaners Melanie started with.\n\n1.  **First Sale (Green House):**\n    She sold $\\frac{1}{3}$ of her vacuum cleaners.\n    Amount sold: $\\frac{1}{3}x$\n    Amount remaining: $x - \\frac{1}{3}x = \\frac{2}{3}x$\n\n2.  **Second Sale (Red House):**\n    She sold 2 more vacuum cleaners.\n    Amount remaining: $\\frac{2}{3}x - 2$\n\n3.  **Third Sale (Orange House):**\n    She sold half of what was left.\n    Amount sold: $\\frac{1}{2} \\times (\\frac{2}{3}x - 2)$\n    Amount remaining: The other half of what was left, which is also $\\frac{1}{2} \\times (\\frac{2}{3}x - 2)$.\n\n4.  **Final Condition:**\n    We are told she has 5 vacuum cleaners left.\n    So, the remaining amount after the orange house sale equals 5.\n    $$ \\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right) = 5 $$\n\n5.  **Solve for $x$:**\n    Multiply both sides by 2:\n    $$ \\frac{2}{3}x - 2 = 10 $$\n    Add 2 to both sides:\n    $$ \\frac{2}{3}x = 12 $$\n    Multiply both sides by $\\frac{3}{2}$:\n    $$ x = 12 \\times \\frac{3}{2} $$\n    $$ x = 6 \\times 3 $$\n    $$ x = 18 $$\n\n**Verification:**\n- Start with 18.\n- Green house: Sell $\\frac{1}{3}$ of 18 = 6. Remaining: $18 - 6 = 12$.\n- Red house: Sell 2. Remaining: $12 - 2 = 10$.\n- Orange house: Sell half of 10 = 5. Remaining: $10 - 5 = 5$.\n- The final amount is 5, which matches the problem statement.\n\n#### 18"
+    },
+    {
+      "idx": 15,
+      "gold": "60",
+      "pred": "60",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the percentage of students enrolled in hip-hop dance, we can break down the problem step-by-step:\n\n1.  **Calculate the number of students in contemporary dance:**\n    The total number of students is 20.\n    20% enrolled in contemporary dance.\n    $$20 \\times 0.20 = 4 \\text{ students}$$\n\n2.  **Calculate the remaining number of students:**\n    $$20 - 4 = 16 \\text{ students}$$\n\n3.  **Calculate the number of students in jazz dance:**\n    25% of the *remaining* students enrolled in jazz dance.\n    $$16 \\times 0.25 = 4 \\text{ students}$$\n\n4.  **Calculate the number of students in hip-hop dance:**\n    The rest enrolled in hip-hop dance.\n    $$16 - 4 = 12 \\text{ students}$$\n\n5.  **Calculate the percentage of the entire class enrolled in hip-hop dance:**\n    We need to find what percentage 12 is of the original 20 students.\n    $$\\frac{12}{20} \\times 100\\% = 0.6 \\times 100\\% = 60\\%$$\n\nAlternatively, using percentages directly:\n- Contemporary: 20%\n- Remaining: $100\\% - 20\\% = 80\\%$\n- Jazz: 25% of the remaining 80% = $0.25 \\times 80\\% = 20\\%$\n- Hip-hop: The rest = $100\\% - (20\\% + 20\\%) = 60\\%$\n\nBoth methods yield 60%.\n\n#### 60"
+    },
+    {
+      "idx": 16,
+      "gold": "125",
+      "pred": "125",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the maximum profit, we need to calculate the potential profit for each purchase plan and compare them.\n\n**Plan 1: Jewelry**\n*   Initial Value: $5,000\n*   Expected Growth Rate: 2.5%\n*   Profit Calculation: $5,000 \\times 0.025$\n*   Profit = $125\n\n**Plan 2: Electronic Gadgets**\n*   Initial Value: $8,000\n*   Expected Growth Rate: 1.2%\n*   Profit Calculation: $8,000 \\times 0.012$\n*   Profit = $96\n\n**Comparison**\n*   Jewelry Profit: $125\n*   Electronic Gadgets Profit: $96\n\nSince the merchant wants to maximize profit, they would choose the jewelry plan. The profit from this choice is $125.\n\n#### 125"
+    },
+    {
+      "idx": 17,
+      "gold": "230",
+      "pred": "230",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the total distance covered by each train, we simply need to add the distance traveled on the first day to the distance traveled on the second day.\n\n1.  **Distance on Day 1**: The trains travel westward for 80 miles.\n2.  **Distance on Day 2**: The trains travel northward for 150 miles.\n\nThe direction of travel (westward vs. northward) does not affect the calculation of the total *distance* covered, only the displacement (straight-line distance from the start). Since the question asks for the distance covered, we sum the magnitudes of the travel for both days.\n\n$$ \\text{Total Distance} = \\text{Distance Day 1} + \\text{Distance Day 2} $$\n$$ \\text{Total Distance} = 80 \\text{ miles} + 150 \\text{ miles} $$\n$$ \\text{Total Distance} = 230 \\text{ miles} $$\n\nBoth trains cover the same distance.\n\n#### 230"
+    },
+    {
+      "idx": 18,
+      "gold": "57500",
+      "pred": "57500",
+      "passed": true,
+      "skipped": false,
+      "response": "To find Jill's annual salary, we need to calculate her earnings from both jobs separately and then sum them up.\n\n**Step 1: Calculate annual earnings as a teacher.**\n*   Hourly rate: $20\n*   Hours per week: 35\n*   Weeks per year: 50\n*   Weekly earnings as a teacher: $20 \\times 35 = \\$700$\n*   Annual earnings as a teacher: $\\$700 \\times 50 = \\$35,000$\n\n**Step 2: Calculate annual earnings as a cheerleading coach.**\n*   Hourly rate: $30\n*   Hours per week: 15\n*   Weeks per year: 50\n*   Weekly earnings as a coach: $30 \\times 15 = \\$450$\n*   Annual earnings as a coach: $\\$450 \\times 50 = \\$22,500$\n\n**Step 3: Calculate total annual salary.**\n*   Total Salary = Annual Teacher Earnings + Annual Coach Earnings\n*   Total Salary = $\\$35,000 + \\$22,500 = \\$57,500$\n\n#### 57500"
+    },
+    {
+      "idx": 19,
+      "gold": "7",
+      "pred": "7",
+      "passed": true,
+      "skipped": false,
+      "response": "To solve this problem, we need to determine the total number of eggs Claire eats in 4 weeks and then convert that number into dozens.\n\n**Step 1: Calculate the total number of days in 4 weeks.**\nThere are 7 days in a week.\n$$4 \\text{ weeks} \\times 7 \\text{ days/week} = 28 \\text{ days}$$\n\n**Step 2: Calculate the total number of eggs eaten.**\nClaire eats 3 eggs every morning.\n$$28 \\text{ days} \\times 3 \\text{ eggs/day} = 84 \\text{ eggs}$$\n\n**Step 3: Convert the total number of eggs into dozens.**\nOne dozen equals 12 items.\n$$84 \\text{ eggs} \\div 12 \\text{ eggs/dozen} = 7 \\text{ dozens}$$\n\nClaire will eat 7 dozens of eggs in 4 weeks.\n\n#### 7"
+    },
+    {
+      "idx": 20,
+      "gold": "6",
+      "pred": "6",
+      "passed": true,
+      "skipped": false,
+      "response": "To find the required speed for the remaining distance, we need to determine the total time allowed for the hike and subtract the time already spent.\n\n**Step 1: Determine the total time required.**\nThe goal is to have an average speed of 4 miles per hour for the entire 12-mile trail.\nUsing the formula $\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}}$:\n$$ \\text{Total Time} = \\frac{12 \\text{ miles}}{4 \\text{ mph}} = 3 \\text{ hours} $$\n\n**Step 2: Calculate the time already spent.**\nMarissa walked the first 4 miles in 1 hour.\nShe walked the next 2 miles in 1 hour.\n$$ \\text{Time Spent} = 1 \\text{ hour} + 1 \\text{ hour} = 2 \\text{ hours} $$\n\n**Step 3: Calculate the remaining distance.**\nThe total trail is 12 miles.\nDistance covered so far = $4 \\text{ miles} + 2 \\text{ miles} = 6 \\text{ miles}$.\n$$ \\text{Remaining Distance} = 12 \\text{ miles} - 6 \\text{ miles} = 6 \\text{ miles} $$\n\n**Step 4: Calculate the remaining time available.**\n$$ \\text{Remaining Time} = \\text{Total Time} - \\text{Time Spent} $$\n$$ \\text{Remaining Time} = 3 \\text{ hours} - 2 \\text{ hours} = 1 \\text{ hour} $$\n\n**Step 5: Calculate the required speed.**\nNow we need to cover the remaining 6 miles in the remaining 1 hour.\n$$ \\text{Required Speed} = \\frac{\\text{Remaining Distance}}{\\text{Remaining Time}} $$\n$$ \\text{Required Speed} = \\frac{6 \\text{ miles}}{1 \\text{ hour}} = 6 \\text{ mph} $$\n\nMarissa needs to walk at 6 miles per hour for the remaining distance.\n\n#### 6"
+    }
+  ]
+}

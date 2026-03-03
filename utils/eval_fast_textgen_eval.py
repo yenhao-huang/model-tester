@@ -30,7 +30,7 @@ from pathlib import Path
 from urllib import request as urllib_request
 
 
-ALL_BENCHMARKS = ["mmlu", "gsm8k", "humaneval"]
+ALL_BENCHMARKS = ["mmlu", "geo-mmlu-high-school", "law-mmlu-professional", "gsm8k", "humaneval"]
 _DEFAULT_DATASET_ROOT = "/Users/yenhaohuang/Desktop/datasets/fast-textgen-evalset"
 _DEFAULT_OUT_DIR = str(Path(__file__).resolve().parent.parent / "reports")
 
@@ -130,7 +130,7 @@ def _run_humaneval_case(
         candidate_src = prompt + body + "\n"
         try:
             compile(candidate_src, "<string>", "exec")
-        except IndentationError:
+        except SyntaxError:
             body = _dedent4(code)
             candidate_src = prompt + body + "\n"
             syntax_repaired = True
@@ -148,8 +148,8 @@ def _run_humaneval_case(
 # Benchmark scorers
 # ---------------------------------------------------------------------------
 
-def score_mmlu(cfg: dict) -> dict:
-    rows = read_jsonl(cfg["dataset_root"] / "mmlu" / "test.jsonl")[: cfg["n"]]
+def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
+    rows = read_jsonl(cfg["dataset_root"] / dataset_subdir / "test.jsonl")[: cfg["n"]]
     correct, results = 0, []
     t0 = time.time()
     for i, row in enumerate(rows, 1):
@@ -165,11 +165,11 @@ def score_mmlu(cfg: dict) -> dict:
         pred = m.group(0) if m else ""
         ok = pred == gold
         correct += int(ok)
-        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "response": out})
-        print(f"  mmlu {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
+        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out})
+        print(f"  {benchmark} {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
     acc = correct / len(rows) if rows else None
     return {
-        "benchmark": "mmlu",
+        "benchmark": benchmark,
         "total": len(rows),
         "correct": correct,
         "accuracy": acc,
@@ -177,6 +177,18 @@ def score_mmlu(cfg: dict) -> dict:
         "elapsed_sec": round(time.time() - t0, 2),
         "results": results,
     }
+
+
+def score_mmlu(cfg: dict) -> dict:
+    return _score_mmlu_like(cfg, "mmlu", "mmlu")
+
+
+def score_geo_mmlu_high_school(cfg: dict) -> dict:
+    return _score_mmlu_like(cfg, "geo-mmlu-high-school", "geo-mmlu-high-school")
+
+
+def score_law_mmlu_professional(cfg: dict) -> dict:
+    return _score_mmlu_like(cfg, "law-mmlu-professional", "law-mmlu-professiona")
 
 
 def score_gsm8k(cfg: dict) -> dict:
@@ -190,7 +202,7 @@ def score_gsm8k(cfg: dict) -> dict:
         pred = _extract_last_number(out) or ""
         ok = pred == gold
         correct += int(ok)
-        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "response": out})
+        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out})
         print(f"  gsm8k {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
     acc = correct / len(rows) if rows else None
     return {
@@ -225,6 +237,7 @@ def score_humaneval(cfg: dict) -> dict:
             "passed": ok,
             "skipped": False,
             "syntax_repaired": repaired,
+            "prompt": query,
             "response": out,
             "error": err,
         })
@@ -248,6 +261,8 @@ def _extract_last_number(text: str) -> str | None:
 
 SCORERS = {
     "mmlu": score_mmlu,
+    "geo-mmlu-high-school": score_geo_mmlu_high_school,
+    "law-mmlu-professional": score_law_mmlu_professional,
     "gsm8k": score_gsm8k,
     "humaneval": score_humaneval,
 }
@@ -302,21 +317,44 @@ def main() -> None:
         },
     }
 
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+
     for bench in args.benchmarks:
+        existing = sorted(out_dir.glob(f"*{bench}.json"))
+        if existing:
+            cached_path = existing[-1]
+            print(f"\n[{bench}] skipping — cache found: {cached_path.name}")
+            report[bench] = json.loads(cached_path.read_text(encoding="utf-8"))
+            r = report[bench]
+            print(f"  => {r.get('accuracy_pct', 'N/A')} ({r['correct']}/{r['total']})")
+            continue
+
         print(f"\n[{bench}]")
-        report[bench] = SCORERS[bench](cfg)
+        try:
+            report[bench] = SCORERS[bench](cfg)
+        except Exception as e:
+            report[bench] = {"benchmark": bench, "error": f"{type(e).__name__}: {e}"}
+            print(f"  ERROR: {e}")
+            continue
+
+        bench_path = out_dir / f"fast_textgen_eval_{ts}_{bench}.json"
+        bench_path.write_text(json.dumps(report[bench], ensure_ascii=False, indent=2), encoding="utf-8")
+        r = report[bench]
+        print(f"  => {r.get('accuracy_pct', 'N/A')} ({r['correct']}/{r['total']})  saved: {bench_path.name}")
 
     report["meta"]["elapsed_sec"] = round(time.time() - t0, 2)
 
-    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
-    out_path = out_dir / f"fast_textgen_eval_{ts}.json"
-    out_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    all_path = out_dir / f"fast_textgen_eval_{ts}_all.json"
+    all_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print("\n--- results ---")
     for bench in args.benchmarks:
         r = report[bench]
-        print(f"  {bench:12s}  {r.get('accuracy_pct', 'N/A'):>7s}  ({r['correct']}/{r['total']})")
-    print(f"\nSaved: {out_path}")
+        if "error" in r:
+            print(f"  {bench:12s}  ERROR: {r['error']}")
+        else:
+            print(f"  {bench:12s}  {r.get('accuracy_pct', 'N/A'):>7s}  ({r['correct']}/{r['total']})")
+    print(f"\nConsolidated: {all_path}")
 
 
 if __name__ == "__main__":

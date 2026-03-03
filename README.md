@@ -21,10 +21,9 @@
 ### Benchmarks
 | Benchmark | 題型 | 評分方式 |
 |---|---|---|
-| MMLU | 四選一選擇題 | 字母完全匹配 |
-| GSM8K | 數學應用題 | 最後數字匹配 |
-| TruthfulQA | 事實問答 | 答案字串包含比對 |
-| HumanEval | Python 程式補全 | `exec()` 執行測試通過 |
+| MMLU | 數學題 (大學) | 字母完全匹配 |
+| GSM8K | 數學題 (高中) | 最後數字匹配 |
+| HumanEval | 程市題 | `exec()` 執行測試通過 |
 
 ### 快速使用
 ```bash
@@ -57,3 +56,30 @@ python utils/eval_fast_textgen_eval.py \
 | `--out-dir` | `<repo>/reports` | 報告輸出目錄 |
 
 Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。
+
+## Results
+gpt-oss-20b-gguf
+--- results ---
+  mmlu            90.0%  (18/20)
+  geo-mmlu-high-school    85.0%  (17/20)
+  law-mmlu-professional    55.0%  (11/20)
+  gsm8k           95.0%  (19/20)
+  humaneval       95.0%  (19/20)
+
+
+qwen3.5-27b
+--- results ---
+  mmlu            70.0%  (14/20)
+  geo-mmlu-high-school    90.0%  (18/20)
+  law-mmlu-professional    85.0%  (17/20)
+  gsm8k           90.0%  (18/20)
+  humaneval       95.0%  (19/20)
+
+
+glm-4.7-flash-fp4
+--- results ---
+  mmlu            40.0%  (8/20)
+  geo-mmlu-high-school    70.0%  (14/20)
+  law-mmlu-professional    45.0%  (9/20)
+  gsm8k           90.0%  (18/20)
+  humaneval        5.0%  (1/20)
