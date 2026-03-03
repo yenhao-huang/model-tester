@@ -107,6 +107,12 @@ def _dedent4(code: str) -> str:
     return "\n".join(line[4:] if line.startswith("    ") else line for line in code.split("\n"))
 
 
+def _normalize_indent(code: str) -> str:
+    """Best-effort indentation repair for model-generated Python code."""
+    code = code.replace("\t", "    ")
+    return _dedent4(code)
+
+
 def _run_humaneval_case(
     prompt: str, entry_point: str, test_code: str, response: str
 ) -> tuple[bool, str | None, bool]:
@@ -123,23 +129,36 @@ def _run_humaneval_case(
         return False, "empty response", False
 
     syntax_repaired = False
-    if f"def {entry_point}(" in code:
-        candidate_src = code
-    else:
-        body = code
-        candidate_src = prompt + body + "\n"
-        try:
-            compile(candidate_src, "<string>", "exec")
-        except SyntaxError:
-            body = _dedent4(code)
-            candidate_src = prompt + body + "\n"
+
+    def _build_candidate(src: str) -> str:
+        if f"def {entry_point}(" in src:
+            return src
+        return prompt + src + "\n"
+
+    candidate_src = _build_candidate(code)
+    try:
+        compile(candidate_src, "<string>", "exec")
+    except IndentationError:
+        repaired = _normalize_indent(code)
+        if repaired != code:
             syntax_repaired = True
+        candidate_src = _build_candidate(repaired)
 
     program = candidate_src + "\n" + test_code + f"\ncheck({entry_point})\n"
     g: dict = {}
     try:
         exec(program, g, g)  # noqa: S102
         return True, None, syntax_repaired
+    except IndentationError:
+        repaired = _normalize_indent(code)
+        candidate_src = _build_candidate(repaired)
+        program = candidate_src + "\n" + test_code + f"\ncheck({entry_point})\n"
+        g = {}
+        try:
+            exec(program, g, g)  # noqa: S102
+            return True, None, True
+        except Exception as e:
+            return False, f"{type(e).__name__}: {e}", True
     except Exception as e:
         return False, f"{type(e).__name__}: {e}", syntax_repaired
 
