@@ -91,6 +91,15 @@ qwen3.5-27b
   humaneval       95.0%  (19/20)
 
 
+qwen3.5_35b_a3b
+--- results ---
+  mmlu            55.0%  (11/20)
+  geo-mmlu-high-school    95.0%  (19/20)
+  law-mmlu-professional    85.0%  (17/20)
+  gsm8k           95.0%  (19/20)
+  humaneval       95.0%  (19/20)
+
+
 glm-4.7-flash-fp4
 --- results ---
   mmlu            40.0%  (8/20)
