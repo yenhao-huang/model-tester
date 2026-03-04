@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "timestamp_utc": "2026-03-04T05:10:53.296419+00:00",
+    "model": "glm47",
+    "base_url": "http://127.0.0.1:3172/v1",
+    "dataset_root": "/Users/yenhaohuang/Desktop/datasets/fast-textgen-evalset",
+    "max_cases_per_benchmark": 20,
+    "max_tokens": 4096,
+    "benchmarks": [
+      "humaneval"
+    ],
+    "elapsed_sec": 7.0
+  },
+  "humaneval": {
+    "benchmark": "humaneval",
+    "error": "SyntaxError: 'return' outside function (<string>, line 12)"
+  }
+}

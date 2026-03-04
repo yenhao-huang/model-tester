@@ -55,9 +55,24 @@ python utils/eval_fast_textgen_eval.py \
 | `--dataset-root` | `~/Desktop/datasets/fast-textgen-evalset` | 資料集根目錄 |
 | `--out-dir` | `<repo>/reports` | 報告輸出目錄 |
 
-Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。
+Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 
 ## Results
+### Speed
+qwen3.5-27b
+--- results ---
+prompt eval time =  275075.89 ms / 15057 tokens (   18.27 ms per token,    54.74 tokens per second)
+       eval time =   28220.04 ms /   112 tokens (  251.96 ms per token,     3.97 tokens per second)
+      total time =  303295.93 ms / 15169 tokens
+
+glm-4.7-flash-fp4
+--- results ---
+prompt eval time =  138437.94 ms / 14785 tokens (    9.36 ms per token,   106.80 tokens per second)
+       eval time =    6395.09 ms /    83 tokens (   77.05 ms per token,    12.98 tokens per second)
+      total time =  144833.02 ms / 14868 tokens
+
+
+### Accuracy
 gpt-oss-20b-gguf
 --- results ---
   mmlu            90.0%  (18/20)
@@ -81,5 +96,5 @@ glm-4.7-flash-fp4
   mmlu            40.0%  (8/20)
   geo-mmlu-high-school    70.0%  (14/20)
   law-mmlu-professional    45.0%  (9/20)
-  gsm8k           90.0%  (18/20)
-  humaneval        5.0%  (1/20)
+  gsm8k           90.0%  (18/20)ß
+  humaneval       95.0%  (19/20)
