@@ -94,12 +94,15 @@ def _run_humaneval_case(prompt: str, entry_point: str, test_code: str, response:
     def _build_candidate(src: str) -> str:
         if f"def {entry_point}(" in src:
             return src
+        body_lines = src.splitlines()
+        if any(line.strip() and not line.startswith((" ", "\t")) for line in body_lines):
+            src = "\n".join(("    " + line) if line.strip() else line for line in body_lines)
         return prompt + src + "\n"
 
     candidate_src = _build_candidate(code)
     try:
         compile(candidate_src, "<string>", "exec")
-    except IndentationError:
+    except SyntaxError:
         repaired = _normalize_indent(code)
         if repaired != code:
             syntax_repaired = True
