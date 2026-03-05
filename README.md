@@ -58,52 +58,17 @@ python utils/eval_fast_textgen_eval.py \
 Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 
 ## Results
+
 ### Speed
-qwen3.5-27b
---- results ---
-prompt eval time =  275075.89 ms / 15057 tokens (   18.27 ms per token,    54.74 tokens per second)
-       eval time =   28220.04 ms /   112 tokens (  251.96 ms per token,     3.97 tokens per second)
-      total time =  303295.93 ms / 15169 tokens
-
-glm-4.7-flash-fp4
---- results ---
-prompt eval time =  138437.94 ms / 14785 tokens (    9.36 ms per token,   106.80 tokens per second)
-       eval time =    6395.09 ms /    83 tokens (   77.05 ms per token,    12.98 tokens per second)
-      total time =  144833.02 ms / 14868 tokens
-
+| Model | Prompt Eval Time | Prompt Tokens | Prompt ms/token | Prompt tok/s | Eval Time | Eval Tokens | Eval ms/token | Eval tok/s | Total Time | Total Tokens |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| qwen3.5-27b | 275075.89 ms | 15057 | 18.27 | 54.74 | 28220.04 ms | 112 | 251.96 | 3.97 | 303295.93 ms | 15169 |
+| glm-4.7-flash-fp4 | 138437.94 ms | 14785 | 9.36 | 106.80 | 6395.09 ms | 83 | 77.05 | 12.98 | 144833.02 ms | 14868 |
 
 ### Accuracy
-gpt-oss-20b-gguf
---- results ---
-  mmlu            90.0%  (18/20)
-  geo-mmlu-high-school    85.0%  (17/20)
-  law-mmlu-professional    55.0%  (11/20)
-  gsm8k           95.0%  (19/20)
-  humaneval       95.0%  (19/20)
-
-
-qwen3.5-27b
---- results ---
-  mmlu            70.0%  (14/20)
-  geo-mmlu-high-school    90.0%  (18/20)
-  law-mmlu-professional    85.0%  (17/20)
-  gsm8k           90.0%  (18/20)
-  humaneval       95.0%  (19/20)
-
-
-qwen3.5_35b_a3b
---- results ---
-  mmlu            55.0%  (11/20)
-  geo-mmlu-high-school    95.0%  (19/20)
-  law-mmlu-professional    85.0%  (17/20)
-  gsm8k           95.0%  (19/20)
-  humaneval       95.0%  (19/20)
-
-
-glm-4.7-flash-fp4
---- results ---
-  mmlu            40.0%  (8/20)
-  geo-mmlu-high-school    70.0%  (14/20)
-  law-mmlu-professional    45.0%  (9/20)
-  gsm8k           90.0%  (18/20)ß
-  humaneval       95.0%  (19/20)
+| Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval |
+|---|---:|---:|---:|---:|---:|
+| gpt-oss-20b-gguf | 90.0% (18/20) | 85.0% (17/20) | 55.0% (11/20) | 95.0% (19/20) | 95.0% (19/20) |
+| qwen3.5-27b | 70.0% (14/20) | 90.0% (18/20) | 85.0% (17/20) | 90.0% (18/20) | 95.0% (19/20) |
+| qwen3.5_35b_a3b | 55.0% (11/20) | 95.0% (19/20) | 85.0% (17/20) | 95.0% (19/20) | 95.0% (19/20) |
+| glm-4.7-flash-fp4 | 40.0% (8/20) | 70.0% (14/20) | 45.0% (9/20) | 90.0% (18/20) | 95.0% (19/20) |
