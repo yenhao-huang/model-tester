@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__dart__create_task",
+      "mcp__dart__update_task",
+      "mcp__dart__list_tasks",
+      "mcp__dart__get_config",
+      "mcp__dart__get_task"
+    ]
+  }
+}
