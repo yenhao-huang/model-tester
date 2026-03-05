@@ -74,3 +74,19 @@ Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 | qwen3.5_35b_a3b | 55.0% (11/20) | 95.0% (19/20) | 85.0% (17/20) | 95.0% (19/20) | 95.0% (19/20) |
 | glm-4.7-flash-fp4 | 40.0% (8/20) | 70.0% (14/20) | 45.0% (9/20) | 90.0% (18/20) | 95.0% (19/20) |
 | lfm2-24b | 45.0% (9/20) | 80.0% (16/20) | 55.0% (11/20) | 90.0% (18/20) | 100.0% (20/20) |
+
+### Accuracy (Latest conservative run, 2026-03-05)
+> Target was 100 questions per benchmark, but current dataset caps are: MMLU=50, Geo=20, Law=20, GSM8K=50, HumanEval=50 (max total = 190/model).
+
+| Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| gpt-oss-20b-gguf | 46/50 | 18/20 | 13/20 | 50/50 | 48/50 | **175/190** |
+| qwen3.5_35b_a3b | 28/50 | 19/20 | 17/20 | 49/50 | 47/50 | **160/190** |
+| lfm2-24b | 24/50 | 16/20 | 11/20 | 46/50 | 46/50 | **143/190** |
+| glm-4.7-flash-fp4 | 22/50 | 14/20 | 9/20 | 43/50 | 46/50 | **134/190** |
+
+Run folders:
+- `/Users/yenhaohuang/Desktop/model-tester/lfm2-24b/runs/20260305_142353_500q`
+- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260305_143033_500q`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260305_154017_500q`
+- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260305_154017_500q`
