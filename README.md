@@ -67,16 +67,9 @@ Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 | lfm2-24b | 2354.28 ms | 511 | 4.61 | 217.05 | 4984.87 ms | 180 | 27.69 | 36.11 | 7339.15 ms | 691 |
 
 ### Accuracy
-| Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval |
-|---|---:|---:|---:|---:|---:|
-| gpt-oss-20b-gguf | 90.0% (18/20) | 85.0% (17/20) | 55.0% (11/20) | 95.0% (19/20) | 95.0% (19/20) |
-| qwen3.5-27b | 70.0% (14/20) | 90.0% (18/20) | 85.0% (17/20) | 90.0% (18/20) | 95.0% (19/20) |
-| qwen3.5_35b_a3b | 55.0% (11/20) | 95.0% (19/20) | 85.0% (17/20) | 95.0% (19/20) | 95.0% (19/20) |
-| glm-4.7-flash-fp4 | 40.0% (8/20) | 70.0% (14/20) | 45.0% (9/20) | 90.0% (18/20) | 95.0% (19/20) |
-| lfm2-24b | 45.0% (9/20) | 80.0% (16/20) | 55.0% (11/20) | 90.0% (18/20) | 100.0% (20/20) |
 
-### Accuracy (Latest conservative run, 2026-03-05)
-> Target was 100 questions per benchmark, but current dataset caps are: MMLU=50, Geo=20, Law=20, GSM8K=50, HumanEval=50 (max total = 190/model).
+#### all
+> Latest conservative run (2026-03-05). Target was 100 questions per benchmark, but current dataset caps are: MMLU=50, Geo=20, Law=20, GSM8K=50, HumanEval=50 (max total = 190/model).
 
 | Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -90,3 +83,12 @@ Run folders:
 - `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260305_143033_500q`
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260305_154017_500q`
 - `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260305_154017_500q`
+
+#### fast
+| Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval |
+|---|---:|---:|---:|---:|---:|
+| gpt-oss-20b-gguf | 90.0% (18/20) | 85.0% (17/20) | 55.0% (11/20) | 95.0% (19/20) | 95.0% (19/20) |
+| qwen3.5-27b | 70.0% (14/20) | 90.0% (18/20) | 85.0% (17/20) | 90.0% (18/20) | 95.0% (19/20) |
+| qwen3.5_35b_a3b | 55.0% (11/20) | 95.0% (19/20) | 85.0% (17/20) | 95.0% (19/20) | 95.0% (19/20) |
+| glm-4.7-flash-fp4 | 40.0% (8/20) | 70.0% (14/20) | 45.0% (9/20) | 90.0% (18/20) | 95.0% (19/20) |
+| lfm2-24b | 45.0% (9/20) | 80.0% (16/20) | 55.0% (11/20) | 90.0% (18/20) | 100.0% (20/20) |
