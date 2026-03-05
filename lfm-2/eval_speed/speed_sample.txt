@@ -1,0 +1,3 @@
+prompt eval time =    2354.28 ms /   511 tokens (    4.61 ms per token,   217.05 tokens per second)
+eval time        =    4984.87 ms /   180 tokens (   27.69 ms per token,    36.11 tokens per second)
+total time       =    7339.15 ms /   691 tokens
