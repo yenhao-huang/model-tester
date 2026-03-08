@@ -1,0 +1,12 @@
+==== [lfm2-24b] launch: /Users/yenhaohuang/Desktop/llama-bash/lfm2.sh (port 3176) ====
+server_pid=90131
+[lfm2-24b] server ready. start eval...
+\n[lfm2-24b] speed sample lines:
+prompt eval time =     655.58 ms /   246 tokens (    2.66 ms per token,   375.24 tokens per second)
+       eval time =    2254.78 ms /    82 tokens (   27.50 ms per token,    36.37 tokens per second)
+      total time =    2910.36 ms /   328 tokens
+prompt eval time =     430.49 ms /    89 tokens (    4.84 ms per token,   206.74 tokens per second)
+       eval time =    5006.32 ms /   180 tokens (   27.81 ms per token,    35.95 tokens per second)
+      total time =    5436.81 ms /   269 tokens
+[lfm2-24b] eval done. stop server...
+==== [lfm2-24b] finished ====

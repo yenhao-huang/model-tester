@@ -1,0 +1,4 @@
+server_pid=81499
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152832_fasttextgenevalset2_mmlu

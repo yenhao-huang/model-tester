@@ -1,0 +1,4 @@
+server_pid=83057
+server ready; eval gsm8k start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155337_fasttextgenevalset2_gsm8k

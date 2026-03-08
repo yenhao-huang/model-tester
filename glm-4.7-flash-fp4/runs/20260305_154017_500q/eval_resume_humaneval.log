@@ -1,0 +1,58 @@
+
+[humaneval]
+  humaneval 1/50  HumanEval/0 OK [repaired]
+  humaneval 2/50  HumanEval/1 OK [repaired]
+  humaneval 3/50  HumanEval/2 OK
+  humaneval 4/50  HumanEval/3 OK [repaired]
+  humaneval 5/50  HumanEval/4 OK [repaired]
+  humaneval 6/50  HumanEval/5 OK [repaired]
+  humaneval 7/50  HumanEval/6 FAIL [repaired]
+  humaneval 8/50  HumanEval/7 OK
+  humaneval 9/50  HumanEval/8 OK [repaired]
+  humaneval 10/50  HumanEval/9 OK [repaired]
+  humaneval 11/50  HumanEval/10 OK [repaired]
+  humaneval 12/50  HumanEval/11 OK
+  humaneval 13/50  HumanEval/12 OK [repaired]
+  humaneval 14/50  HumanEval/13 OK [repaired]
+  humaneval 15/50  HumanEval/14 OK
+  humaneval 16/50  HumanEval/15 OK
+  humaneval 17/50  HumanEval/16 OK
+  humaneval 18/50  HumanEval/17 OK
+  humaneval 19/50  HumanEval/18 OK [repaired]
+  humaneval 20/50  HumanEval/19 OK [repaired]
+  humaneval 21/50  HumanEval/20 OK [repaired]
+  humaneval 22/50  HumanEval/21 OK [repaired]
+  humaneval 23/50  HumanEval/22 OK
+  humaneval 24/50  HumanEval/23 OK
+  humaneval 25/50  HumanEval/24 OK [repaired]
+  humaneval 26/50  HumanEval/25 OK [repaired]
+  humaneval 27/50  HumanEval/26 FAIL [repaired]
+  humaneval 28/50  HumanEval/27 OK
+  humaneval 29/50  HumanEval/28 OK
+  humaneval 30/50  HumanEval/29 OK
+  humaneval 31/50  HumanEval/30 OK
+  humaneval 32/50  HumanEval/31 OK [repaired]
+  humaneval 33/50  HumanEval/32 FAIL
+  humaneval 34/50  HumanEval/33 OK [repaired]
+  humaneval 35/50  HumanEval/34 OK
+  humaneval 36/50  HumanEval/35 OK
+  humaneval 37/50  HumanEval/36 OK [repaired]
+  humaneval 38/50  HumanEval/37 OK [repaired]
+  humaneval 39/50  HumanEval/38 FAIL [repaired]
+  humaneval 40/50  HumanEval/39 OK
+  humaneval 41/50  HumanEval/40 OK [repaired]
+  humaneval 42/50  HumanEval/41 OK
+  humaneval 43/50  HumanEval/42 OK
+  humaneval 44/50  HumanEval/43 OK [repaired]
+  humaneval 45/50  HumanEval/44 OK [repaired]
+  humaneval 46/50  HumanEval/45 OK
+  humaneval 47/50  HumanEval/46 OK [repaired]
+  humaneval 48/50  HumanEval/47 OK [repaired]
+  humaneval 49/50  HumanEval/48 OK
+  humaneval 50/50  HumanEval/49 OK
+  => 92.0% (46/50)  saved: fast_textgen_eval_20260305_093245_humaneval.json
+
+--- results ---
+  humaneval       92.0%  (46/50)
+
+Consolidated: /Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260305_154017_500q/fast_textgen_eval_20260305_093245_all.json

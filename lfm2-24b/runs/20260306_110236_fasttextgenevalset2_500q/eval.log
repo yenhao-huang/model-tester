@@ -1,0 +1,24 @@
+
+[mmlu]
+  ERROR: HTTP Error 503: Service Unavailable
+
+[geo-mmlu-high-school]
+  ERROR: HTTP Error 503: Service Unavailable
+
+[law-mmlu-professional]
+  ERROR: HTTP Error 503: Service Unavailable
+
+[gsm8k]
+  ERROR: HTTP Error 503: Service Unavailable
+
+[humaneval]
+  ERROR: HTTP Error 503: Service Unavailable
+
+--- results ---
+  mmlu          ERROR: HTTPError: HTTP Error 503: Service Unavailable
+  geo-mmlu-high-school  ERROR: HTTPError: HTTP Error 503: Service Unavailable
+  law-mmlu-professional  ERROR: HTTPError: HTTP Error 503: Service Unavailable
+  gsm8k         ERROR: HTTPError: HTTP Error 503: Service Unavailable
+  humaneval     ERROR: HTTPError: HTTP Error 503: Service Unavailable
+
+Consolidated: /Users/yenhaohuang/Desktop/model-tester/lfm2-24b/runs/20260306_110236_fasttextgenevalset2_500q/fast_textgen_eval_20260306_030238_all.json

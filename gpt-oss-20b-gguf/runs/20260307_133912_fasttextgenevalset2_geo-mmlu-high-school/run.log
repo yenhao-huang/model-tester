@@ -1,0 +1,4 @@
+server_pid=75746
+server ready; eval geo-mmlu-high-school start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_133912_fasttextgenevalset2_geo-mmlu-high-school

@@ -1,0 +1,6 @@
+usage: eval_fast_textgen_eval.py [-h] [--benchmarks BENCH [BENCH ...]]
+                                 --model MODEL [--base-url BASE_URL]
+                                 [--api-key API_KEY] [--n N]
+                                 [--max-tokens MAX_TOKENS] [--out-dir OUT_DIR]
+                                 [--dataset-root DATASET_ROOT]
+eval_fast_textgen_eval.py: error: argument --benchmarks: invalid choice: 'truthfulqa' (choose from mmlu, geo-mmlu-high-school, law-mmlu-professional, gsm8k, humaneval)

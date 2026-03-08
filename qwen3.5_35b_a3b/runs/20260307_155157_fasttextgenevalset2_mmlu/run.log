@@ -1,0 +1,4 @@
+server_pid=82917
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155157_fasttextgenevalset2_mmlu

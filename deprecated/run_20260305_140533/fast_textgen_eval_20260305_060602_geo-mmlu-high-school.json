@@ -1,0 +1,190 @@
+{
+  "benchmark": "geo-mmlu-high-school",
+  "total": 20,
+  "correct": 16,
+  "accuracy": 0.8,
+  "accuracy_pct": "80.0%",
+  "elapsed_sec": 9.03,
+  "results": [
+    {
+      "idx": 1,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe main factor preventing subsistence economies from advancing economically is the lack of\n\nChoices:\nA. a currency.\nB. a well-connected transportation infrastructure.\nC. government activity.\nD. a banking service.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 2,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe tendency for a population to continue to grow long after replacement fertility has been achieved is called\n\nChoices:\nA. zero population growth.\nB. rapid growth rate.\nC. homeostatic plateau.\nD. demographic momentum.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 3,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe tendency for migration to decrease with distance is called\n\nChoices:\nA. push factors.\nB. pull factors.\nC. distance decay.\nD. migration selectivity.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 4,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich zone contains low-income slums, ethnic ghettos, and general deterioration in Burgess's concentric zone model of urban form?\n\nChoices:\nA. First\nB. Second\nC. Third\nD. Fourth\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 5,
+      "gold": "D",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following statements is TRUE concerning women in the labor force?\n\nChoices:\nA. Most women work in agriculture\nB. The percentage of women economically active in the labor force declined worldwide\nC. The percentage of women in the total labor force declined\nD. Women spend more hours per day working than men in all regions except Anglo America and Australia\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 6,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nAll the following factors can be considered pull factors of migration EXCEPT\n\nChoices:\nA. safety.\nB. better climate.\nC. better schools.\nD. overcrowding.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 7,
+      "gold": "D",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following countries does NOT have a well-known example of a relict boundary?\n\nChoices:\nA. Vietnam\nB. United Kingdom\nC. Germany\nD. Bolivia\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 8,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich form of migration below are farm workers from another country most likely to be practicing during the year?\n\nChoices:\nA. Chain migration\nB. Cluster migration\nC. Circular migration\nD. International migration\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 9,
+      "gold": "A",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is a centrifugal force in a country?\n\nChoices:\nA. Religious differences\nB. A national holiday\nC. An attack by another country\nD. A charismatic national leader\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 10,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nEarly settlements and high population density along coastlines and rivers are best attributed to which of the following?\n\nChoices:\nA. Mediterranean climate\nB. Limited forest cover\nC. Growth of manufacturing\nD. Access to trade routes\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 11,
+      "gold": "A",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nThe first stage of the demographic transition exhibits\n\nChoices:\nA. high birth rates with high but fluctuating death rates.\nB. declining birth rates with continuing high death rates.\nC. low birth rates with continuing high death rates.\nD. high birth rates with declining death rates.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 12,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat is the population statistic that tells us the level of fertility at which a population will have just enough births to replace parents and compensate for early deaths?\n\nChoices:\nA. Crude birth rate\nB. Replacement level\nC. Mortality rate\nD. Total fertility rate\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 13,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat is the most rapidly growing religion in the United States today?\n\nChoices:\nA. Islam\nB. Christianity\nC. Hinduism\nD. Buddhism\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 14,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe outlying area serviced by a urban center is referred to as a\n\nChoices:\nA. redline area.\nB. threshold.\nC. range.\nD. hinterland.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 15,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe best definition of an urban area is\n\nChoices:\nA. the central city and its developed areas.\nB. the central city and its surrounding suburbs.\nC. the central city and its hinterlands.\nD. the central city and the adjacent counties.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 16,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following religions developed first?\n\nChoices:\nA. Buddhism\nB. Christianity\nC. Islam\nD. Hinduism\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 17,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the following is NOT a characteristic of world cities?\n\nChoices:\nA. World cities contain the headquarters of many transnational corporations.\nB. World cities are well connected to secondary-level world cities.\nC. World cities contain many offices of multinational organizations.\nD. World cities are found only in the northern and western hemispheres.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 18,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich type of transportation system created the star-shaped city pattern?\n\nChoices:\nA. Highways to airports that link cities\nB. Interstate highways that link cities\nC. Beltways around cities\nD. Streetcar and trolley lines extending from the CBD\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 19,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn which urban US setting below would you expect to find planned communities?\n\nChoices:\nA. Ghettos\nB. Suburbs\nC. CBDs\nD. Transition zones\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 20,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe latitude and longitude coordinates of a place are an example of\n\nChoices:\nA. a formal region.\nB. a functional region.\nC. an absolute location.\nD. a relative location.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    }
+  ]
+}

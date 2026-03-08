@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "timestamp_utc": "2026-03-06T03:02:38.515700+00:00",
+    "model": "lfm2",
+    "base_url": "http://127.0.0.1:3176/v1",
+    "dataset_root": "/Users/yenhaohuang/Desktop/datasets/fast-textgen-evalset2",
+    "max_cases_per_benchmark": 100,
+    "max_tokens": 4096,
+    "benchmarks": [
+      "mmlu",
+      "geo-mmlu-high-school",
+      "law-mmlu-professional",
+      "gsm8k",
+      "humaneval"
+    ],
+    "elapsed_sec": 0.02
+  },
+  "mmlu": {
+    "benchmark": "mmlu",
+    "error": "HTTPError: HTTP Error 503: Service Unavailable"
+  },
+  "geo-mmlu-high-school": {
+    "benchmark": "geo-mmlu-high-school",
+    "error": "HTTPError: HTTP Error 503: Service Unavailable"
+  },
+  "law-mmlu-professional": {
+    "benchmark": "law-mmlu-professional",
+    "error": "HTTPError: HTTP Error 503: Service Unavailable"
+  },
+  "gsm8k": {
+    "benchmark": "gsm8k",
+    "error": "HTTPError: HTTP Error 503: Service Unavailable"
+  },
+  "humaneval": {
+    "benchmark": "humaneval",
+    "error": "HTTPError: HTTP Error 503: Service Unavailable"
+  }
+}

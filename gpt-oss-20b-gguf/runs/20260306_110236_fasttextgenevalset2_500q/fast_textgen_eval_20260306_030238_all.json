@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "timestamp_utc": "2026-03-06T03:02:38.613314+00:00",
+    "model": "gptoss20b",
+    "base_url": "http://127.0.0.1:3172/v1",
+    "dataset_root": "/Users/yenhaohuang/Desktop/datasets/fast-textgen-evalset2",
+    "max_cases_per_benchmark": 100,
+    "max_tokens": 4096,
+    "benchmarks": [
+      "mmlu",
+      "geo-mmlu-high-school",
+      "law-mmlu-professional",
+      "gsm8k",
+      "humaneval"
+    ],
+    "elapsed_sec": 5.22
+  },
+  "mmlu": {
+    "benchmark": "mmlu",
+    "error": "RemoteDisconnected: Remote end closed connection without response"
+  },
+  "geo-mmlu-high-school": {
+    "benchmark": "geo-mmlu-high-school",
+    "error": "URLError: <urlopen error [Errno 61] Connection refused>"
+  },
+  "law-mmlu-professional": {
+    "benchmark": "law-mmlu-professional",
+    "error": "URLError: <urlopen error [Errno 61] Connection refused>"
+  },
+  "gsm8k": {
+    "benchmark": "gsm8k",
+    "error": "URLError: <urlopen error [Errno 61] Connection refused>"
+  },
+  "humaneval": {
+    "benchmark": "humaneval",
+    "error": "URLError: <urlopen error [Errno 61] Connection refused>"
+  }
+}

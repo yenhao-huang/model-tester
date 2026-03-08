@@ -1,0 +1,4 @@
+server_pid=70491
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_120539_fasttextgenevalset2_mmlu

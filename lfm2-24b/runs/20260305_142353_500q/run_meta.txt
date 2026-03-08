@@ -1,0 +1,8 @@
+model_dir=lfm2-24b
+script_name=lfm2.sh
+port=3176
+model_name=lfm2-24b
+run_dir=/Users/yenhaohuang/Desktop/model-tester/lfm2-24b/runs/20260305_142353_500q
+resumed=0
+exit_code=0
+finished_at=2026-03-05T14:30:32+08:00

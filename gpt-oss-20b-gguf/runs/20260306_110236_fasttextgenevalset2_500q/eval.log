@@ -1,0 +1,24 @@
+
+[mmlu]
+  ERROR: Remote end closed connection without response
+
+[geo-mmlu-high-school]
+  ERROR: <urlopen error [Errno 61] Connection refused>
+
+[law-mmlu-professional]
+  ERROR: <urlopen error [Errno 61] Connection refused>
+
+[gsm8k]
+  ERROR: <urlopen error [Errno 61] Connection refused>
+
+[humaneval]
+  ERROR: <urlopen error [Errno 61] Connection refused>
+
+--- results ---
+  mmlu          ERROR: RemoteDisconnected: Remote end closed connection without response
+  geo-mmlu-high-school  ERROR: URLError: <urlopen error [Errno 61] Connection refused>
+  law-mmlu-professional  ERROR: URLError: <urlopen error [Errno 61] Connection refused>
+  gsm8k         ERROR: URLError: <urlopen error [Errno 61] Connection refused>
+  humaneval     ERROR: URLError: <urlopen error [Errno 61] Connection refused>
+
+Consolidated: /Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260306_110236_fasttextgenevalset2_500q/fast_textgen_eval_20260306_030238_all.json

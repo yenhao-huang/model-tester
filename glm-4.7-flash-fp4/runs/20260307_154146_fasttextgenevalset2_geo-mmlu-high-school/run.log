@@ -1,0 +1,4 @@
+server_pid=82267
+server ready; eval geo-mmlu-high-school start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154146_fasttextgenevalset2_geo-mmlu-high-school

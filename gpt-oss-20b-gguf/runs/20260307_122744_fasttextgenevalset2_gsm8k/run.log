@@ -1,0 +1,4 @@
+server_pid=71790
+server ready; eval gsm8k start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_122744_fasttextgenevalset2_gsm8k

@@ -1,0 +1,6 @@
+==== [lfm2-24b] launch: /Users/yenhaohuang/Desktop/llama-bash/lfm2.sh (port 3176) ====
+server_pid=86623
+[lfm2-24b] server ready. start eval...
+\n[lfm2-24b] speed sample lines:
+[lfm2-24b] eval done. stop server...
+==== [lfm2-24b] finished ====

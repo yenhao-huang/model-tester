@@ -1,0 +1,4 @@
+server_pid=84930
+server ready; eval humaneval start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162542_fasttextgenevalset2_humaneval

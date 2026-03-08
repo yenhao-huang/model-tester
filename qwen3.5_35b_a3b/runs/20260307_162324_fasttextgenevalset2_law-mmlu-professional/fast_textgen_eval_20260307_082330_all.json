@@ -1,0 +1,924 @@
+{
+  "meta": {
+    "timestamp_utc": "2026-03-07T08:23:30.378980+00:00",
+    "model": "qwen3.5-a3b",
+    "base_url": "http://127.0.0.1:3172/v1",
+    "dataset_root": "/Users/yenhaohuang/Desktop/datasets/fast-textgen-evalset2",
+    "max_cases_per_benchmark": 100,
+    "max_tokens": 4096,
+    "benchmarks": [
+      "law-mmlu-professional"
+    ],
+    "elapsed_sec": 132.3
+  },
+  "law-mmlu-professional": {
+    "benchmark": "law-mmlu-professional",
+    "total": 100,
+    "correct": 68,
+    "accuracy": 0.68,
+    "accuracy_pct": "68.0%",
+    "elapsed_sec": 132.28,
+    "results": [
+      {
+        "idx": 1,
+        "gold": "A",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA driver was having trouble finding a place to park his car near a store at which he needed to make a quick stop to purchase something. He decided to just park along the road next to the store, even though there was not really a lane or space there intended for parking. The driver pulled his car as far off the roadway as he could and figured that it would be fine because he would only be in the store for a few minutes. While the driver was in the store, a car driven by a woman approached the spot where the driver had left his car. When the woman saw the driver's car and realized it was partially obstructing the road, she tried to avoid hitting it but crashed into it. The accident caused $5,000 worth of damage to the driver's car and $1,000 worth of damage to the woman's car. Assume that the jurisdiction follows traditional contributory negligence rules and that the woman had the last clear chance to avoid the collision. How much, if anything, could the driver recover in a lawsuit against the woman for negligence?\n\nChoices:\nA. $5,000, or the full amount of damages to his car.\nB. $4,000, or the full amount of his damages, minus the woman's damages.\nC. $2,500, or half of his damages.\nD. Nothing, because the driver was contributorily negligent for parking his car so that part of it stuck out into the street.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 2,
+        "gold": "B",
+        "pred": "A",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA state enacted a statute that authorized the payment of state funds to any private institution of higher learning within the state that meets certain minimum criteria and refrains from awarding only seminarian or theological degrees. The aid is in the form of annual subsidies to qualified institutions. The grants are non-categorical but may not, under an added provision, be utilized by the institutions for sectarian purposes. A state agency determines the eligibility of applicant institutions. Eight state taxpayers, all avowed atheists, bring suit in federal court to enjoin the payments of subsidies under the statute to all church-affiliated institutions in the state. The federal district court will most likely\n\nChoices:\nA. dismiss the action for lack of standing.\nB. uphold the validity of the statute as nonviolative of the establishment clause.\nC. invalidate the statute as violative of the establishment clause.\nD. uphold the validity of the statute as a valid exercise of the state's power to subsidize education.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 3,
+        "gold": "D",
+        "pred": "B",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nLandowner's property was landlocked. He had to go to court to ask the court to compel the adjacent landowner to give him an easement of necessity for ingress and egress to the highway. The court granted the easement of necessity to Landowner. Over a decade later, another access route to the highway opened up through public improvements. The adjacent landowner sued to stop Landowner from continuing to use his land for ingress and egress. What will the court most likely rule in this case?\n\nChoices:\nA. The holder of the easement has a right to insist on its uninterrupted continuance.\nB. The easement continues because its purpose of access to the property still exists.\nC. The easement is terminated because it cannot exceed five years in length, without being formally renewed by both parties.\nD. The equities favor the termination of the easement where another route is available.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 4,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA police officer received a call from a friend who owned a business. The friend told him that a former employee, who was a \"hothead\", was making harassing phone calls and threats. He faxed the officer a oneparagraph summary of the matter. The officer questioned the prior employee, who became verbally abusive and vehemently denied making the calls. The officer arrested him for criminal harassment and wrongful use of a communications device, stating, \"I'm going to teach you a lesson.\" The criminal case was thrown out, however, at the preliminary hearing when the police could not produce proof that the former employee made any phone calls to the business. The former employee then sued the police officer and the business owner for the tort of malicious prosecution. Leaving aside any considerations of immunity for the officer, can the former employee allege facts sufficient to support a malicious prosecution case?\n\nChoices:\nA. No, because the officer received enough facts from the owner to establish the elements of the criminal charges that he filed against the former employee.\nB. Yes, there were sufficient facts for the former employee to establish the basic elements of the malicious prosecution tort.\nC. No, because the business owner knew that it was the former employee who made the calls even if he could not prove it.\nD. Yes, the officer committed abuse of legal process when he improperly initiated the case.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 5,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nBuyer purchases an item from a merchant that turns out to be unfit, defective and unsafe for its ordinary purposes. Assuming no other warranties, which of the following can be invoked by the buyer?\n\nChoices:\nA. Express warranty\nB. Implied warranty\nC. Warranty of title\nD. Warranty of merchantability\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 6,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA pharmacist was employed by a drug store. A long-time customer of the drug store presented a prescription to the pharmacist for the medication Clinoril, which was prescribed by her physician to treat her arthritic condition. The pharmacist was in a rush that day because of a backlog of prescriptions to fill, and he misread the customer's prescription. He filled her prescription with Clinitest, a caustic substance not for internal use. He labeled the container with the instructions for Clinoril: \"Take one tablet twice a day. \"The customer followed the instructions, consumed the Clinitest, and suffered severe injuries to her stomach and esophagus. If the customer brings a strict liability in tort action against the pharmacist, what is his best defense?\n\nChoices:\nA. It was the cashier and not he who personally received the money for the medication.\nB. He was not a seller of the product upon whom strict liability may be imposed.\nC. He exercised reasonable care under the circumstances.\nD. The drug store was not the manufacturer upon whom ultimate liability falls.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 7,
+        "gold": "C",
+        "pred": "B",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nWilshire Street is a public thoroughfare, designated as a one-way street for northbound traffic. Wilshire and Figueroa Streets intersect at right angles. The intersection is controlled by traffic lights. A businessman was driving his car east on Figueroa Street and did not see the traffic light. He entered the intersection at a time when the light was red for eastbound traffic and green for northbound traffic. A woman, in violation of statute, was proceeding south on Wilshire Street, and she entered the intersection without looking for any cross traffic and struck the businessman's car. The businessman suffered damages in the amount of $5,000. The woman, on the other hand, suffered damages in the amount of $1,000. The businessman brought suit against the woman to recover his damages. The woman denied liability and filed a counterclaim against the businessman for her damages. Both drivers were negligent with 30 percent of the negligence attributable to the woman and 70 percent of the negligence attributable to the businessman. A statute in the jurisdiction provides: \"A failure to exercise ordinary care, which contributes to personal injury or property damage, shall not bar recovery of damages by the injured party, but damages shall be diminished in proportion to the amount of negligence attributable to the person injured. There shall be no set-off of damages between the respective parties. \" Which of the following is the appropriate judgment in the case?\n\nChoices:\nA. The businessman recovers $5,000 from the woman, and the woman recovers $1,000 from the businessman.\nB. The businessman recovers $3,500 from the woman, and the woman recovers $300 from the businessman.\nC. The businessman recovers $1,500 from the woman, and the woman recovers $700 from the businessman.\nD. The businessman recovers $800 from the woman, and the woman recovers nothing from the businessman.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 8,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA patient filed a medical malpractice action against a hospital in federal court, alleging that hospital staff had failed to diagnose the patient's cancer based on an X-ray that had been taken at the hospital. The patient's cancer was diagnosed six months later, based on the same X-ray, when the patient sought a second opinion. In the interim, the cancer had spread. Fact and expert discovery have been completed in the action. The hospital has moved for summary judgment. In support of its motion, the hospital has submitted a memorandum identifying facts that it claims are not in dispute. It has also cited and attached supporting exhibits, including a report from the hospital's radiologist, who found no signs of cancer on the X-ray. What is the best way for the patient to raise a genuine dispute of material fact?\n\nChoices:\nA. Submit a report from the patient's expert radiologist contradicting the findings in the report of the hospital's radiologist.\nB. Submit an affidavit from the patient's attorney detailing his conversations with the patient's expert radiologist.\nC. Submit an affidavit from the patient's expert radiologist with findings that contradict the report of the hospital's radiologist.\nD. Submit the patient's medical records showing the patient's current cancer diagnosis.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 9,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA seller signed an agreement to sell a residential parcel to a prospective purchaser. The agreement required her to convey good and marketable title. The title search revealed an open mortgage from a previous owner to a local bank. It was recorded 25 years ago. The mortgagor could not be found and the bank lost its records. The purchase agreement gave the seller 90 days extra in such a situation to clear title by bringing a quiet title action. The seller did not follow that provision and went to settlement with the bad title and demanded more extra time to file a quiet title action. The buyer decided not to wait and demanded her down payment be returned and that the deal be rescinded. Will litigation most likely favor the buyer's position?\n\nChoices:\nA. Yes, because the seller breached the agreement by not following the procedure stated in the purchase agreement.\nB. No, because the seller always has the right to bring an action for adverse possession against the holder of the open mortgage.\nC. Yes, because the open mortgage is so old that it would be declared void by all courts.\nD. No, because the buyer did not act in good faith when it refused to give the seller additional time at the closing.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 10,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nIn which of the following situations does the best evidence rule generally not apply?\n\nChoices:\nA. Collateral matters\nB. Public records\nC. When it's not offered to prove the contents of the document\nD. All of the above.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 11,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA pilot was flying his small plane when he experienced engine trouble and was forced to make an emergency landing. He landed the plane safely in a large yard behind a home located in a relatively remote area. Unfortunately, when he disembarked from the plane, he was attacked and injured by two large dogs kept by the homeowner to discourage trespassers. The homeowner, who had seen the plane land, had ordered the dogs to attack. Several months earlier, the homeowner had posted large signs around the perimeter of the yard warning of the dogs. Does the pilot have a viable claim against the homeowner for battery?\n\nChoices:\nA. No, because the homeowner had provided adequate warning.\nB. No, because the pilot was a trespasser.\nC. Yes, because the pilot can invoke the privilege of necessity.\nD. Yes, because the pilot could not reasonably have been expected to see the warning signs posted by the homeowner.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 12,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nIn which of the following situations would the defendant's intoxication NOT be able to negate his criminal culpability?\n\nChoices:\nA. A defendant had consumed a fifth of bourbon. Later that same day, he approached a victim and, brandishing a knife, told her to accompany him or he would stab her. He led the victim to his car and then ordered her to disrobe. As the victim was removing her pantyhose, she kicked the defendant in the head, temporarily dazing him. The victim then safely ran from the car. The defendant is arrested and charged with the crime of assault with the intent to commit rape.\nB. A defendant attended a wedding reception at a hotel, where he drank several vodka daiquiris. Following the reception, the defendant engaged in a violent argument with the hotel's parking lot attendant. The defendant took a tire iron from his car and threw it at the attendant. The tire iron missed the attendant and hit a victim as he was entering the hotel. The defendant is arrested and charged with assault with the intent to commit battery.\nC. A defendant had been drinking liquor all evening at a bar with three of his buddies. An undercover detective overheard the defendant and his buddies plot to rob the bar after closing hours. When the defendant attempted to draw a gun from his coat, he was quickly disarmed and placed under arrest by the detective. The defendant is charged with the crime of conspiracy to commit robbery.\nD. At his law school graduation party, a defendant drank two six-packs of beer. Around midnight, the defendant was approached by a girl, who asked him to drive her home. Although the girl was only 15 years old, she had the appearance of a woman in her mid-to-late twenties. The defendant, who had had his eye on the girl all night, quickly agreed, and he showed her the way to his car. Once inside, they engaged in sexual intercourse. The age of consent in this jurisdiction is 17 years old for females. The defendant is subsequently arrested and charged with statutory rape.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 13,
+        "gold": "A",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nThe local jurisdiction has a modified comparative negligence statutein effect that provides:\"Contributory negligence shall not bar recovery in any action by any person or his legal representative to recover damages for negligence resulting in death or injury to person or property, if such negligence was not as great as the negligence of the person against whom recovery is sought, but any damages allowed shall be diminished in proportion to the amount of negligence attributable to the person for whose injury, damage, or death recovery is made. \"In addition, this jurisdiction follows joint and several liability for joint tortfeasors. A buyer recently purchased an undeveloped beachfront lot in the jurisdiction. He hired a building contractor to construct a new house on the property. Thereafter, the contractor employed a subcontractor to provide on-site maintenance. The contractor contracted with a cement company to supply concrete for the foundation of the structure. After excavation started, an employee of the cement company delivered a load of concrete to the construction site. To facilitate delivery, the contractor and the subcontractor had built an access ramp extending from the street to the lot. As the employee was driving over the ramp, it suddenly collapsed and caused the truck to overturn, seriously injuring the employee. A subsequent investigation determined that the contractor and the subcontractor negligently used substandard materials in constructing the ramp. In addition, the employee was partially at fault for driving while intoxicated. The employee brought suit against the contractor and the subcontractor to recover damages for his injuries. A special trial was held on the issue of negligence, and it was adjudged that each party was contributorily negligent as follows:PARTY DEGREE OF NEGLIGENCEPlaintiff: (the EE) 40%Defendant: (the contractor) 35%Defendant: (the subcontractor) 25%The employee, who suffered damages in the amount of $100,000, brings a personal injury action against the contractor individually. He will most likely\n\nChoices:\nA. recover nothing, because he was more at fault than the contractor.\nB. recover $100,000.\nC. recover $55,000.\nD. recover $35,000.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 14,
+        "gold": "B",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA retiree was the record title owner in fee simple absolute of a 100-acre farm. In 1998, the retiree devised the property to his daughter and his friend as joint tenants with right of survivorship. The next year, the daughter executed a deed to a co-worker as follows:\"I hereby convey all of my right, title, and interest in the northeast quarter of the farm to the co-worker and his heirs. \"Thereafter, the daughter borrowed $100,000 from a lender, and a promissory note was executed as evidence of the debt. In 2008, the daughter defaulted on the loan, and the lender, as judgment creditor, levied upon and sold to his nephew on execution sale all of \"(the daughter's) right, title and interest in the south half of the farm. \" In December 2009, the daughter died intestate, leaving her husband as her sole surviving heir. Who owns the farm?\n\nChoices:\nA. The friend and the co-worker are tenants in common of the northeast quarter of the farm; the friend and the husband are tenants in common of the northwest quarter of the farm; and the friend and the nephew are tenants in common of the south half of the farm.\nB. The friend and the co-worker are tenants in common of the northeast quarter of the farm; the friend is the owner in fee of the northwest quarter of the farm; and the friend and the nephew are tenants in common of the south half of the farm.\nC. The friend and the co-worker are tenants in common of the northeast quarter of the farm; the friend and the husband are tenants in common of the northwest quarter of the farm; and the nephew is the owner in fee of the south half of the farm.\nD. The friend and the co-worker are tenants in common of the northeast quarter of the farm; and the friend is the owner in fee of the remaining three-quarters of the farm.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 15,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA defendant who is an accountant has been charged with fraud for allegedly helping a client file false income tax returns by shifting substantial medical expenses from one year to another. The defendant has pleaded not guilty, claiming that he made an honest mistake as to the date the expenses were paid. At trial, the prosecutor offers evidence of the defendant's involvement in an earlier scheme to help a different client falsify tax returns in the same way. Is the evidence of the defendant's involvement in the earlier scheme admissible?\n\nChoices:\nA. No, because it is impermissible character evidence.\nB. No, because it is not relevant to the issues in this case.\nC. Yes, to show absence of mistake.\nD. Yes, to show the defendant's propensity to commit the crime.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 16,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA land-development company was the owner of a400-acre tract of land in the Southwest. Over the course of time, the land-development company developed two residential subdivisions of the land, an eastern tract and a western tract, each of which contained 150 acres. These subdivisions were created by separate plats that made no reference to each other. The restrictions in the plats were, however, substantially identical. The plats and each deed provided that \"the use of the land herein conveyed is restricted to single-family dwellings only, and this covenant is intended to apply to each and every lot in the subdivision and runs with the land, binding every lot owner, his heirs, and assigns. \"After all but four lots in each subdivision had been sold by the land-development company, it sold 50 acres of the remaining 100 acres of land to a country club by a deed containing the following provisions:\"This deed is executed and accepted with the understanding that the property above described is hereby restricted so that(1) said property may be used as a country club, with a golf course, pool, tennis courts, club house, eating facilities, and other improvements appropriate to a country club. (2) said property may also be subdivided and platted as a residential subdivision similar to the eastern tract and the property shall thereafter be used in accordance with and conveyed subject to residential restrictions that shall conform with those restrictions in force against the eastern tract. (3) the restrictions herein contained shall be deemed covenants running with the land, and for breach of any covenant herein, the land-development company, its successors and assigns may, at its option, re-enter and terminate the estate conveyed hereby. \"At the time of this conveyance, the land- development company retained title to the remaining 50 acres in the original 400-acre tract. Thereafter, the land-development company developed an exclusive shopping center on 25 acres of the retained land. In February 2001, the land-development company sold the remaining eight residential lots in the eastern tract and the western tract. The next month, the land-development company executed the following instrument to the country club:\"The land-development company, for itself, its successors, and assigns, does hereby release,surrender and quitclaim all rights, title, or other property interest in that certain acres owned by the country club. \"At the time this instrument was executed, the country club had built a club house, golf course, and tennis courts on a portion of its land, and it had 25 acres of vacant land remaining. The country club wishes to commence construction of a new high- rise complex (containing a hotel, shopping mall, apartments, etc. ) on the 25 acres of vacant land it possesses. In an action by one of the homeowners in the western tract to enjoin construction of the complex, plaintiff will most likely\n\nChoices:\nA. succeed, because the homeowner (or any other landowner in the eastern tract or the western tract) as assignee of the land development company could re-enter the land upon breach of condition subsequent.\nB. succeed, because a common development scheme had been established for the entire 400-acre tract, and the country club's proposed complex would constitute a non-conforming use.\nC. not succeed, because the land development company's instrument of March 2001 effectuated an abrogation of the deed restrictions on the country club's use of its property.\nD. not succeed, because in accordance with deed restriction (b), only a homeowner in the eastern tract would have standing to challenge the country club's proposed construction plan.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 17,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nDoug Dogman had a domesticated golden retriever named Rover. Rover was a good, friendly dog who loved to run and chase cars but had never hurt anyone. One dark evening before the street lights turned on, Rover was chasing cars in the street, and Ginny Grandmother, aged 85, swerved to avoid hitting the dog. As she swerved, Ginny hit a parked car and suffered a head injury. If Ginny brings suit against Doug Dogman under a strict liability theory, the court will likely find for\n\nChoices:\nA. Ginny, because Doug's dog was a cause in fact of Ginny's injuries.\nB. Doug, because Retriever is a domesticated animal.\nC. Doug, unless a statute or ordinance bans unleashed dogs on public streets.\nD. Doug, because the strict liability rule for dogs would not include dogs not displaying vicious propensities.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 18,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nThe police suspected a woman of dealing in stolen credit cards. An undercover police officer knocked on the woman's door and told her that he was willing to pay for usable credit cards. When the woman asked if he was a police officer, the officer replied, \"No,\" giving her a false name and saying, \"You can call Harvey he'll vouch for me.\" The woman admitted him to her house. After she left the room to call Harvey, the officer lifted some papers off a desk and underneath discovered three credit cards bearing different names. He seized the cards, and when the woman returned, he arrested her. The woman has moved to suppress the evidence seized on the ground that her Fourth Amendment rights were violated. Should the court grant the motion to suppress?\n\nChoices:\nA. No, because it was immediately apparent that the cards were stolen.\nB. No, because the woman assumed the risk that the officer would seize items in plain sight.\nC. Yes, because the woman's rights were violated when the officer lifted the papers.\nD. Yes, because the woman's rights were violated when the officer obtained entry by deceit.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 19,
+        "gold": "B",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA patient in a hospital was placed in a wheelchair with his broken leg extended straight out in front of him. As a nurse employed by the hospital was pushing the wheelchair through a set of automatic doors at a normal pace, the doors closed on the patient's foot, injuring it. The nurse attempted to pull the wheelchair back through the doors. This action caused the doors to close more tightly on the patient's foot, injuring it further. The patient sued the hospital, alleging improper maintenance of the doors. The patient has produced no evidence of specific conduct or neglect on the part of the hospital that would have caused the automatic doors to malfunction. The hospital has moved for summary judgment. Should the court grant the hospital's motion?\n\nChoices:\nA. No, because a jury could find that there was a latent defect in the doors.\nB. No, because a jury could find the hospital liable for negligence based on res ipsa loquitur.\nC. Yes, because proof of an accident, by itself, does not establish that an injured person was a victim of negligence.\nD. Yes, because the nurse's action was a superseding cause of the injury. \n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 20,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA store owner noticed that an expensive electronic device was missing from the store. He assumed that a shoplifter had taken it. Later that day, the store owner was cleaning up the small room in the back of the store that the employees of the store used to store their personal items while they were at work. The store owner was straightening up the coat rack in the back room, when he accidentally knocked one of the employee's coats off the hanger. As the coat fell onto the floor, the missing electronic device fell out of the pocket of the coat. It was still in its original packaging, and the store owner checked the serial number on the package to confirm that it was the device missing from the store's shelves. The store owner knew that the coat belonged to a woman who worked as a cashier in the store. The store owner felt bad, but decided that he had no choice but to call the police. Two police officers arrived at the store. They gathered information from the store owner, who signed a criminal complaint against the woman. The officers then discussed the matter with the woman. Although she denied stealing anything, the officers arrested her and informed her that they would need to take her to the police station. After the police took the woman away, another employee of the store found out that the woman had been arrested. That employee immediately went to the store owner and admitted that he was actually the one who had stolen the device, and that he had hidden it in the woman's coat, intending to retrieve it later before the end of the woman's work shift. The store owner promptly called the police and told them that there had been a mistake and that the theft charge against the woman was invalid. The police released the woman, who spent a total of approximately 30 minutes in police custody. If the woman asserts a claim for false imprisonment against the arresting officers, will the woman prevail?\n\nChoices:\nA. Yes, because the woman had not committed a crime at the time she was arrested.\nB. Yes, because the woman was arrested and held in custody.\nC. No, because the woman was detained for only 30 minutes.\nD. No, because the officers had probable cause to arrest the woman based on the store owner's complaint and honest belief that the woman had stolen the device.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 21,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nAn art collector attended a party on March 15. At the party, the art collector was describing his collection to a woman in attendance. When the art collector described a painting by a well-known artist, the woman indicated she might like to buy that painting. The art collector said, \"I'll sell you the painting for $10,000. I'll give you 30 days to decide whether you want the painting. \" On March 25, the art collector wrote to the woman and stated that the offer of March 15 was withdrawn. The woman received the March 25 letter on March 26. On March 27, the woman wrote the art collector the following letter:\"Please be advised that I hereby accept your offer of March 15. \" The art collector received this letter on March28. Thereafter, the art collector and the woman engaged in several telephone discussions. On April 10, the woman, in a telephone conversation, told the art collector that she would pay $15,000 if the painting was delivered on or before April 15. The art collector agreed to deliver the painting for $15,000. On April 15, the art collector tendered the painting, but the woman refused to pay more than $10,000. If the art collector asserts a claim against the woman for breach of contract, which of the following is the most accurate statement?\n\nChoices:\nA. The art collector is obligated to sell the woman the painting for $10,000, because the woman, as offeree, had the right to accept the initial offer within the 30-day period.\nB. Since the art collector, as offeror, had the power to revoke the original offer before acceptance, the woman is obligated under the terms of their April 10 agreement.\nC. Since the parties entered into a subsequent modification, the woman is obligated to pay the art collector $15,000 for the painting.\nD. An enforceable contract does not exist between the parties, because of mutual mistake of fact.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 22,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA football player was the star fulllack for the local college football team. After missing two practices, the football player was dropped from the team by the head football coach. Following his dismissal, the football player met with the coach and asked if he could rejoin the team. The coach said that the football player was despised by the other players and under no circumstances could he return to the team. As the football player was leaving the coach's office, feeling very dejected, the coach then said to him, \"Hope you decide to transfer, because everybody hates your guts around here. \"Later that same evening, the football player wrote a suicide note in which he stated, \"The coach is responsible for my despondency. If I can't play football, I don't want to live. \" After swallowing a bottle of Quaalude barbiturates, the football player fell unconscious in his dormitory room. Moments later, the football player's roommate entered the room and saw his limp body on the floor. The roommate read the suicide note and then attempted to administer aid. Failing to revive him, the roommate picked up the football player and carried him to the college's first aid center. The football player received prompt medical attention and soon recovered from his drug overdose. If the football player asserts a claim against the coach based on intentional infliction of emotional distress, the football player will most likely\n\nChoices:\nA. prevail, because the coach intended to cause him to suffer emotional distress.\nB. prevail, because the coach's remark did, in fact, cause the football player to suffer emotional distress.\nC. not prevail, because the football player's drug overdose resulted from his own voluntary act.\nD. not prevail, because the coach acted reasonably under the circumstances, since everyone on the team hated the football player.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 23,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nIn which of the following situations would criminal liability LEAST likely be imposed on the defendant?\n\nChoices:\nA. A defendant is an operator of a telephone answering service with positive knowledge that one of his clients was using his service to facilitate the illegal distribution of cocaine.\nB. A defendant is a service station attendant who knew that the buyer of gasoline was using his product to make explosives for illegal use.\nC. A defendant is a hotel registration clerk who knew that one of his regular guests was using her room for purposes of prostitution.\nD. A defendant is the owner of a car that he permits a friend, whom he knows to have been drinking that night, to drive. As a consequence, the friend is involved in an accident that causes a victim's death.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 24,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nIn which one of the following situations would the defendant most likely be found guilty of felony murder?\n\nChoices:\nA. A baseball fan traveled all night to the stadium, planning to purchase tickets from a scalper at the stadium. However, the fan arrived at the stadium after the game had started, and no tickets were available. He proceeded to sneak around the guard at the entrance gate and illegally entered the stadium. He watched the remainder of the game in the standing room only section. The fan became so enraged when the opposition took the lead in the ninth inning that he pulled out a gun from under his jacket and aimed it at the section of spectators in front of him. Before he could be subdued he had fired three shots, killing one person and severely injuring another.\nB. A customer was in a bank filling out a deposit slip when a robber entered. The robber went to the teller's window and quietly slipped a note to the teller, demanding everything in the cash drawer. The customer, who was unaware of the robbery taking place, went to the adjoining teller's window and made his deposit. Upon obtaining his receipt, the customer suddenly collapsed and died of a heart attack. When the robber saw this, he panicked and left the bank before the teller could comply with his demand.\nC. Two men planned to rob a luncheonette during the noontime rush. At 12:30 p. m. , as planned, one of the men entered the luncheonette and pointed a gun at the cashier, who handed over the money. The man left to meet the other man outside as he was standing guard as a lookout. As soon as the man ran out of the door, a police officer tried to grab him. The man evaded the officer for a brief moment. Thinking that the other man had double-crossed him and informed the police of their plans, he fatally shot the other man.\nD. A man and a woman had been feuding for years. In order to show him a thing or two, the woman decided to set fire to the man's house. Before dawn one morning, the woman went to the man's house and lit a match to gasoline she had poured at the man's front door. The house caught fire and quickly spread to the man's bedroom, where the man was able to leap out of the window without injury. A police officer who was driving by saw the woman running away one block from the man's house. The police officer pulled his car up to the woman to determine if she was involved in setting the fire. Upon seeing the officer, the woman starts to flee the scene. As she is running away, the woman pulled out a revolver and started shooting indiscriminately behind her. The police officer was struck by one of the shots and was killed.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 25,
+        "gold": "D",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nDefendant was arrested on February 1 and released one month later on March 1 after being charged with a felony. On December 1 of the same year as his arrest, he filed a motion to discharge since no trial or other action had occurred to that point. The court held a hearing 3 days after the motion was filed. Defendant should be\n\nChoices:\nA. discharged because more than 175 days passed between arrest and the filing of the motion to discharge.\nB. discharged because more than 175 days passed between his release from jail and the filing of the motion to discharge.\nC. brought to trial within 90 days of the filing of the motion to discharge.\nD. brought to trial within 10 days of the hearing on the motion to discharge.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 26,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA homeowner had a beautiful beach house overlooking the bay. Although the homeowner and his family lived in the beach house during the summer months, the house was left unoccupied for the remainder of the year. In order to protect the beach house from vandalism while it was vacant, the homeowner installed an automatic spring-gun device. The spring-gun was connected to the front door and calculated to automatically fire at chest level when the door was opened. No warnings were placed on the premises. A local man, knowing that the homeowner's beach house was unoccupied, decided to burglarize the home one evening. When the local man forced open the front door and was about to enter the premises, the spring-gun automatically discharged, killing him instantly. If the homeowner is subsequently prosecuted and charged with the local man's death, the most serious crime for which the homeowner will be found guilty is\n\nChoices:\nA. voluntary manslaughter.\nB. involuntary manslaughter.\nC. murder.\nD. assault with a deadly weapon.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 27,
+        "gold": "B",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA large man with red hair robbed a liquor store. Thereafter, a defendant was arrested and charged with the armed robbery. At the defendant's trial, several eyewitnesses testified that they had seen a large redheaded man pull out a gun and rob the owner of the liquor store. The defendant appeared at trial with a shaven head. The prosecution calls a corrections officer to testify that the defendant had red hair when he was first brought to jail. The defendant's counsel objects. The trial judge should rule the correction officer's testimony\n\nChoices:\nA. admissible as a prior identification.\nB. admissible, for the limited purpose of clarifying the discrepancy in the witnesses' testimony.\nC. inadmissible as hearsay not within any recognized exception.\nD. inadmissible, because it is opinion testimony.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 28,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA plaintiff sued a utility company that owns a reservoir that is open to the public for recreation pursuant to a license from a federal agency. The plaintiff was severely injured in the reservoir when he dove from a boat into what he thought was deep water and hit an unmarked submerged island. The plaintiff alleges that the company was negligent in failing to mark the submerged island. At trial, the plaintiff has called an engineer and qualified him as plaintiff has called an engineer and qualified him as an expert in managing reservoirs. Which of the following opinions by the plaintiff's expert is the court most likely to admit?\n\nChoices:\nA. \"The accident probably occurred in the manner shown by this computer-animated film I made.\"\nB. \"The company could have marked the island in a day and at a cost of $300.\"\nC. \"The company was required by federal law to mark the island.\"\nD. \"The plaintiff was not contributorily negligent.\"\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 29,
+        "gold": "A",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nAn orange grove and a vineyard are adjoining tracts of land located in a county. In 2006, a farmer purchased the orange grove, a 10-acre tract, in fee simple absolute. The vineyard, a 20-acre tract situated to the north of the orange grove, was owned by a rancher in fee simple absolute. A remote predecessor of the farmer had granted to a shepherd a way for egress and ingress across the orange grove under such terms and circumstances that an easement appurtenant to the vineyard was created. This right-of-way was executed by deed and properly recorded. The shepherd, however, never made any actual use of the right-of-way. In 2010, the rancher conveyed the vineyard to the farmer. The next year, the farmer conveyed the vineyard by deed to an investor for a consideration of $200,000, receipt of which was acknowledged. Neither the rancher farmer deed nor the farmer  investor deed contained any reference to the easement for right-of-way. The investor has now claimed that she has a right-of-way across the orange grove. The farmer, on the other hand, has informed the investor that no such easement exists. Assume that the orange grove abuts a public highway. The only access to that public highway for the vineyard is across the orange grove. If the investor initiates an appropriate action to determine her right to use the right-of-way across the orange grove, she should\n\nChoices:\nA. prevail, because an easement by implication arose from the farmer's conveyance to the investor.\nB. prevail, because once an easement is properly recorded, it remains in effect ad finem until expressly released.\nC. not prevail, because any easements were extinguished by merger when the farmer acquired a fee simple in the vineyard.\nD. not prevail, because the deed of conveyance from the farmer to the investor failed to contain any mention of the right-of-way.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 30,
+        "gold": "D",
+        "pred": "B",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nOn September 1, a manufacturer of portable drinking fountains mailed to a drinking fountain retailer a signed offer that stated: \"Have 200 drinking fountains available at $100 each for October delivery. Be advised that this offer will remain open until October 1. \"On September 30, the retailer mailed the following letter, which was received by the manufacturer on October 1: \"Your offer is hereby accepted, but request delivery of 100 drinking fountains in October and 100 in November. \"However, on September 29, the manufacturer sent a fax to the retailer revoking its offer, which was received the same day. This revocation is\n\nChoices:\nA. valid, because the retailer had not changed its position in reliance on the September 1 offer.\nB. valid, because there was no consideration to support an option contract.\nC. not valid, because the retailer had 90 days in which to accept.\nD. not valid, because the manufacturer gave assurance that the offer would remain open until October 1.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 31,
+        "gold": "B",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA collector owned a rare 16th-century tapestry. The collector contracted in writing to sell the tapestry to a tapestry dealer for $100,000. The contract stipulated that delivery would be \"F. O. B. at the dealer's shop,\" with payment to be made one week after tender. When the dealer received the tapestry, he noticed that it had been damaged in transit. The dealer immediately contacted the collector and notified him that he was rejecting the tapestry because it had ripped apart and was becoming unwoven. The collector told the dealer that he would get back to him with re-shipping instructions. The collector did not make any further contact with the dealer. After four weeks, the dealer then sold the tapestry to a buyer for $120,000. If the collector sues the dealer for damages, the collector should recover\n\nChoices:\nA. $120,000, for conversion.\nB. $108,000, because the dealer is entitled to a reasonable sum not exceeding 10% on the resale.\nC. $100,000, which is the contract price.\nD. $20,000, which covers the difference between the contract price and the sale price.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 32,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nAt a no-reserve auction, the auctioneer put up a painting that was unsigned and apparently quite old. A woman made the highest bid, which was $100, and the auctioneer slammed the gavel down, completing the transaction. Before the day's auction ended, an art historian told the auctioneer in private during a break that the piece was an original by Claude Monet, worth about $1 million. The auctioneer quickly told the successful bidder that the amount was rejected by the seller and that the piece would be withdrawn from the sale that day. The woman sued the auctioneer, claiming that there was a binding contract and requesting specific performance. Based strictly on the rules of offer and acceptance, is the auctioneer in danger of losing the painting to the successful bidder and, if so, why?\n\nChoices:\nA. No, the auctioneer can always reject an offer made by a bidder at a public auction sale.\nB. No, the auctioneer is the offeree at a no-reserve auction and, as such, the offeree has the absolute power to reject the offer if it is not accepted by the owner.\nC. Yes, in a no-reserve auction there is a binding contract based on the highest amount offered by the winning bidder.\nD. Yes, in a no-reserve auction there is a binding contract as soon as the bidding starts, with each bid being a new binding contract.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 33,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA man entered a store with a gun, planning to rob the store. He was unfamiliar with guns and thought that the safety lock was on. When the store manager refused to give him any money, the man shook the gun at her to scare her into cooperating. The gun fired, killing the manager. A clerk ran in from the back stockroom. The man fired a shot into the air to scare the clerk. Unbeknownst to the man, the clerk had a heart condition, and the fright caused her to suffer a fatal heart attack. Can the man properly be convicted of felony murder?\n\nChoices:\nA. No.\nB. Yes, but only for the death of the store manager.\nC. Yes, but only for the death of the clerk.\nD. Yes, for the deaths of both the manager and the clerk.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 34,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA used car dealer needs to disclaim any implied warranty of merchantability. Which of the following is not considered an effective way of making a full disclaimer of the implied warranty?\n\nChoices:\nA. By stating in the contract that there is no \"implied warranty of merchantability.\nB. By stating in writing that the vehicle is sold \"as is.\"\nC. By setting forth an express disclaimer that is clear, on the point, and conspicuous.\nD. By limiting the amount to the value of the vehicle sold.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 35,
+        "gold": "C",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA boat owner was sailing his boat at sea when a storm advisory was suddenly issued. The boat owner was navigating his craft toward shore when heavy rain and wind gusts began to rock the boat. Unable to reach his own slip, the boat owner docked his boat on a pier owned by a resident who lived in a nearby house. The resident objected to the boat owner's entry onto his private property. The boat owner explained that due to the storm it would be highly dangerous to be at sea. He requested permission to temporarily dock his boat until the storm subsided. The resident refused and cut the rope tying the boat to the dock. As a result, the boat drifted out to sea. The boat was battered by the rocky waves and high winds. Trying to prevent the boat from capsizing, the boat owner fell and broke his leg. The boat was extensively damaged in the storm, as well. The boat owner has sued the resident, seeking to recover damages for his personal injury, as well as damage to the boat. The boat owner should\n\nChoices:\nA. recover for the damage to the boat, but not recover for his personal injury.\nB. recover for his personal injury, but not recover for the damage to the boat.\nC. recover both for damage to the boat and for his personal injury.\nD. not recover for either damage to the boat or his personal injury.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 36,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA woman leased a condo from the owner for a period of one year. After six months, the owner gave the woman a written option to purchase the condo for $100,000 before the expiration of the lease. With the owner's approval, the woman spent $10,000 to have the kitchen remodeled to her personal specifications. One month before the end of the lease, the owner notified the woman that he was revoking the option to purchase the condo. One week later, the woman delivered a written notice of acceptance of the option, but the owner refused to sell. If the woman initiates suit for breach of contract, which of the following is her strongest argument that an enforceable contract was formed between her and the owner?\n\nChoices:\nA. Because the woman had until the expiration of the lease to accept the offer, the owner's revocation would be ineffective.\nB. Because the owner was a merchant, the written offer was irrevocable for a period not exceeding three months.\nC. Because the owner's offer invited a return promise as acceptance, the woman manifested her intent to accept by remodeling the kitchen.\nD. After the woman paid to have the kitchen remodeled, an option contract resulted, because the owner knew the woman was relying on the offer to her detriment.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 37,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA man was in an accident while driving his car on July 3. The other driver sent him a notice of injuries and demanded damages. The man notified his insurance carrier but was told that his policy had lapsed on July 2. He had earlier received a renewal notice with a bill listing a due date of June 28 and an expiration date of the policy on July 2. The notice welcomed payment by mail, and did not say that renewal was conditioned on actual physical receipt of the check. He had put the check and form in the U.S. mail on June 28, but the insurer did not receive it until July 5. The insurer reinstated the policy as of July 5, leaving a coverage gap from July 2 through July 5, according to the company. Will the courts likely hold that the policy was still effective on July 3, the date of the accident?\n\nChoices:\nA. Yes, because the renewal premium was placed in the mailbox before the date of expiration, and the notice did not say that the check had to be received physically before there could be a renewal.\nB. Yes, because a policy cannot be lapsed for nonpayment without a final 30 day notice of impending lapse being sent.\nC. No, the man knew that the policy would not be renewed if did not get the payment into the insurer's possession by the due date of June 28.\nD. No, because the mail box rule is not applicable in a situation where an insurance policy must be renewed.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 38,
+        "gold": "A",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nAt 10:00p. m. onNovember 14, a driver was operating his automobile along Main Street. As the driver was approaching the intersection of Main Street and First Avenue, a motorist, who was driving straight through a red light, suddenly appeared before him. Trying to avoid the motorist, the driver veered his car onto the sidewalk. The car landed in a deep hole in the sidewalk. This hole had been dug by a construction company, which had been repairing a water main break earlier in the day. The construction company had been hired by the local municipal water department. Although the' construction company had erected a warning sign advising pedestrians about the hole, there was no fence or barrier surrounding it. When the driver's car fell into the hole, it ruptured the water main, engulfing the car with water. Within a short time, the driver, unable to escape, drowned in his car, which rapidly filled with water. In a wrongful death action by the driver's estate against the municipal water department, the estate will most probably\n\nChoices:\nA. prevail, because sovereign immunity would not attach to non-delegable duties, which are proprietary in nature.\nB. prevail, because the city government would be strictly liable for failing to ensure the water main repair work was done properly.\nC. not prevail, because the municipal water department would not be liable for the negligence of its independent contractor.\nD. not prevail, because sovereign immunity attaches to functions that are governmental in nature.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 39,
+        "gold": "B",
+        "pred": "A",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA general contractor about to bid on a construction job for an office building invited a carpenter and several others to bid on the carpentry work. The carpenter agreed to bid if the general contractor would agree to give the carpenter the job provided that his bid was lowest and the general contractor was awarded the main contract. The general contractor so agreed. The carpenter, incurring time and expense in preparing his bid, submitted the lowest carpentry bid. The general contractor used the carpenter's bid in calculating its own bid, which was successful. Which of the following best supports the carpenter's position that the general contractor is obligated to position that the general contractor is obligated to award the carpentry subcontract to the carpenter?\n\nChoices:\nA. The carpenter detrimentally relied on the general contractor's conditional promise in preparing his bid.\nB. The carpenter gave consideration for the general contractor's conditional promise to award the carpentry subcontract to the carpenter.\nC. The general contractor has an implied duty to deal fairly and in good faith with all bidders whose bids the general contractor used in calculating its main bid to the building owner.\nD. The general contractor has an obligation to the owner of the building to subcontract with the carpenter because the carpenter's bid was used in calculating the general contractor's bid, and the carpenter is an intended beneficiary of that obligation.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 40,
+        "gold": "A",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA newly elected mayor was charged with tax fraud. The prosecutor served a trial subpoena directing the mayor's attorney to produce private bank records that the mayor delivered to the attorney. The attorney refused the request. The prosecutor in a hearing then sought to compel compliance with the subpoena. The court should\n\nChoices:\nA. compel production, because it would not violate the attorney-client privilege.\nB. compel production, because there is no element of confidentiality.\nC. not compel production, because it would violate the mayor's privilege against self- incrimination.\nD. not compel production, because it would violate the attorney-client privilege.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 41,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA taxicab driver stopped at a convenience store to buy a snack. While he was handing his money to the store clerk at the cash register, a police officer entered the store. The taxi driver had received several traffic tickets from the police officer, and he felt that the police officer had been very rude to him. Seeking to gain some revenge, the taxi driver immediately began to taunt and berate the police officer, calling him a variety of profane and insulting names. The police officer was going through a series of personal difficulties and was feeling very emotionally fragile. As the taxi driver's insults rained down on him, the police officer suddenly snapped. He whipped out his gun and fired a shot at the taxi driver. The bullet missed the taxi driver but hit the store clerk, who was standing behind the taxi driver. The clerk survived the shooting but suffered a gunshot wound to his shoulder. In an action by the injured clerk against the taxi driver to recover for his personal injuries, plaintiff will most likely\n\nChoices:\nA. recover, because the taxi driver's conduct was the proximate cause of the clerk's injuries.\nB. recover, because it was foreseeable that the taxi driver's conduct would result in the clerk being shot.\nC. not recover, because the shooting was not a foreseeable consequence of the taxi driver's conduct.\nD. not recover, because the police officer intended to shoot the taxi driver, not the store clerk.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 42,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA husband and wife had a stormy relationship. The husband, who was an alcoholic, frequently beat his wife when he became drunk. One day, the husband had been drinking beer while watching football on television. After his favorite team lost a close game, the husband went into a violent rage. As he was storming around the apartment, he suddenly grabbed his wife and led her outside to their car. He then ordered her to get inside the vehicle. The husband was driving around aimlessly when he negligently collided with another car. The other driver, who was injured in the accident, brought suit against the husband to recover damages. Thereafter, the husband retained an attorney to represent him. At his first consultation with the attorney, the husband was accompanied by his wife. During the conference, the attorney's secretary took notes of the meeting. Two weeks later, the wife separated from the husband. She then hired a lawyer to represent her in a suit against the husband for battery and false imprisonment. At the trial between the husband and the other driver, the other driver's attorney calls the wife to testify. She proposes to testify that her husband was intoxicated at the time of the accident. Upon objection by the husband's attorney, the wife's proposed testimony will most likely be\n\nChoices:\nA. admissible as a proper lay opinion.\nB. inadmissible, under the attorney-clientprivilege.\nC. inadmissible, under the marital privilege.\nD. inadmissible, because the wife is biased.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 43,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA furniture store had a truck that an employee of the store used to deliver furniture to the store's customers. One afternoon while the employee was driving the truck to deliver a chair to a customer, the employee negligently ran through a stop sign and hit a car. The driver of the car suffered a leg injury and succeeded in suing the furniture store, recovering $25,000. Assume that all of these events occur in a jurisdiction that has statutes permitting defendants to bring claims for contribution and indemnity. In the event that the furniture store brings suit against its employee (the truck driver) to recover for its losses, the furniture store will recover\n\nChoices:\nA. nothing, because the furniture store was primarily liable for the entire amount of damages.\nB. $12,500, because the employer and employee bear equal shares of responsibility for the plaintiff's injuries.\nC. $25,000, because the employee was at fault in causing the accident.\nD. $25,000, unless the furniture store was fully insured against such losses.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 44,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA woman sued her former employer in state court, asserting age and sex discrimination claims under both state and federal law. The woman's attorney had recently been embarrassed in court by the judge to whom the case was assigned. Wishing to avoid difficulties with the judge, the woman's attorney promptly removed the case to federal court on the basis of federal-question jurisdiction. The employer's attorney has timely moved to remand. How is the federal court likely to proceed?\n\nChoices:\nA. Remand the entire case.\nB. Remand the state claims but keep the federal claims.\nC. Retain the case to avoid the risk of bias and impropriety in having it proceed before a judge who has shown clear hostility toward the woman's attorney.\nD. Retain the case, because it was timely removed and the woman alleges federal claims.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 45,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA woman was driving home after attending a concert. While talking on her cellphone, she momentarily took her eyes off the road. The woman then drove through a red light and struck a police car driven by a police officer, injuring him. At the time of the accident, the police officer was returning from an emergency dispatch. The police officer sued the woman to recover damages suffered in the auto accident. At trial, the police officer presented evidence that he was returning from an emergency scene when the woman drove through a red light and struck his patrol car. At the conclusion of the plaintiff's presentation of evidence, the woman moved for a summary judgment claiming the \"firefighter's rule\" barred recovery. The motion for summary judgment should be\n\nChoices:\nA. granted, because the accident would not have occurred but for the emergency.\nB. granted, because the police officer assumed the risk of injury by answering the emergency call.\nC. denied, because the police officer's injury was not related to any special danger of his job.\nD. denied, because the firefighter's rule does not apply to police officers.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 46,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA man and a woman are adjoining landowners in an area of large estates located in the \"chateau\" region of southeastern Louisiana. In 2000, the man inherited his estate from his father, whose family had owned the property continuously since 1812. The woman purchased her estate in 2008. The man had a stable, which housed many valuable racing horses, on his property. The stable, built in 2002, stood on a portion of the man's land located only 10 feet from the border of the woman's property. Not infrequently, putrid stenches arose from the man's property, caused by large accumulations of horse manure, which were left unattended. The woman had often complained to the man of the noises and odors emanating from the stable. The woman brought an appropriate action to enjoin the man's use of the stables. Judgment is likely to be for whom?\n\nChoices:\nA. The man, because the woman moved onto her property after the stable had been built.\nB. The man, because a homeowner is entitled to make reasonable use of his property.\nC. The woman, because the noise, coupled with the odors, substantially interfered with the use and enjoyment of her land.\nD. The woman, because the man was negligent in permitting the manure to be left unattended.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 47,
+        "gold": "C",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA homeowner gave his friend a mortgage on his property to secure a loan from the friend to the homeowner in the amount of $100,000. The homeowner then gives an investor a mortgage on the property to secure a loan from the investor to the homeowner in the amount of $80,000. The friend then records his mortgage. The homeowner then gives a bank a mortgage on the property to secure a loan from the bank to the homeowner in the amount of $50,000. The investor then records. The bank then records. The homeowner lost his job and was unable to pay the mortgages on the property. In a foreclosure proceeding in which the friend, the investor, and the bank were parties, the property sold for $160,000. The recording statute in this jurisdiction provided \"unless recorded, all written instruments affecting title to land are void as to subsequent purchasers who paid value and without notice. \"What dollar amount, if any, should go to the friend?\n\nChoices:\nA. $0. 00\nB. $30,000. 00\nC. $80,000. 00\nD. $100,000. 00\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 48,
+        "gold": "B",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA lawyer owned a 70-acre tract of land. In 1989, the lawyer sold 15 acres of the tract to a friend. The deed of conveyance contained the following clause:\"The parties hereby covenant that if the grantor (the lawyer) proposes to sell any or all of the remaining 55 acres of the tract during (the friend's) lifetime, then the grantee shall have the right of first refusal to purchase said parcel on the same terms and conditions as proposed; and, in the alternative, if grantee (the friend) proposes to sell any or all of the 15 acres of his parcel during (the lawyer's) lifetime, then (the lawyer) shall have the reciprocal right of first refusal. \"The friend was approached by a co-worker who offered to purchase his 15-acre parcel for $100,000. The friend did not afford the lawyer an opportunity to exercise his right of first refusal, and he went ahead and sold the property to the co-worker. After the co-worker took possession, the lawyer then learned about the sale. The lawyer immediately brought suit against the friend and the co-worker to enforce the right of first refusal in the deed. Based on the facts as presented, the lawyer will\n\nChoices:\nA. win, because the friend has a reciprocal right of first refusal.\nB. win, because the lawyer's right of first refusal does not violate the Rule against Perpetuities because it is limited to his lifetime.\nC. lose, because the rights of first refusal are unreasonable restraints on alienation.\nD. lose, because the rights of first refusal relate only to land that is not conveyed by deed.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 49,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nCo-defendants were dealers at a casino. They had been employed by the casino for four years. One day, they were unexpectedly fired by the casino's new manager. Apparently, the casino hired the new manager to get rid of some of the old-time employees and replace them with new personnel at a lower wage. Angered by their firing, the codefendants vowed to get back at the casino. As their revenge, they decided to plant a bomb in the casino and demand $1,000,000. After receiving the money, they would then reveal the location of the bomb and provide details for defusing it. The co-defendants agreed that the casino should be given adequate warning so that nobody would be injured. In accordance with their plan, one of the co-defendants, who was an electronics expert, built the bomb himself. He alone then drove to the casino where he placed the bomb in a hallway closet. Shortly thereafter, the other co-defendant phoned the casino and made a demand for the money. He said a bomb was in the casino and that it would explode in 24 hours unless the money was paid. The casino treated their demand as a crank call and refused to make any payment. With their plans having gone awry, the codefendants agreed that one of them should return to the casino and defuse the bomb. As one of the co-defendants was driving back to the casino, the bomb exploded, killing 30 people. A subsequent investigation revealed that a faulty wire caused the bomb to detonate prematurely. A state statute provides that detonating or attempting to detonate a bomb or explosive device in or near a building or dwelling is a felony. If the co-defendants are charged with violating the aforementioned statute, which of the following statements is correct?\n\nChoices:\nA. Both are guilty, because each participated in the planning of the crime.\nB. The co-defendant who built the bomb is guilty, because he built and transported the bomb, but the other co-defendant is not guilty, because his phone call was not a substantial step in the furtherance of the crime.\nC. Neither is guilty, because the casino's gross negligence in failing to heed the telephone warning constituted an independent intervening cause of the explosion.\nD. Neither is guilty, because they did not intend for anyone to be killed, but the bomb exploded prematurely.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 50,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA man entered a local retail store and approached the proprietor. The man explained that he was participating in a local run for charity and wondered if the proprietor would be interested in sponsoring him. The proprietor believed the publicity would be good for his business and agreed, provided the man would wear a shirt with the retail store's logo on it during the run. The man readily agreed. The proprietor thought that sponsorship meant paying a set fee for every mile covered during the charity run. However, the man expected the proprietor, in addition to paying the fee for each mile coverÃ§d during the run, to also pay his entrance fee and be in attendance at the finish line to greet the man when he finished the charity run. Assume that the man and the proprietor entered into an enforceable contract. Which of the following, if true, would not help to establish that the manifestations of the parties were operative according to the meaning adjudged by the proprietor?\n\nChoices:\nA. The customary practice of the other chrity runs in the community is the same as the proprietor's understanding, that the sponsor be responsible for paying only a set fee for each mile covered during the charity run.\nB. A reasonably objective individual would have attached the same meaning to the manifestations of the parties as did the proprietor.\nC. At the time the agreement was entered into, the man had reason to know the proprietor's understanding of what the parties meant, although the proprietor did not know the man's understanding was different from his.\nD. The proprietor subjectively believed that the man understood that the proprietor would only be obligated to pay a set fee for each mile covered during the charity run.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 51,
+        "gold": "B",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA city has adopted the following ordinance which provides:\"Section 1: It shall be unlawful for any person, group, or organization to hold a meeting of 50 persons or more in any city park without first securing a city permit;Section 2: The application shall specify the day and hours for which the permit is sought. The fee shall be $10 per hour, with a maximum fee of $50;Section 3: Permits shall be issued on a first come basis; provided that the chief of police shall deny any application if, after hearing the applicant, it is his considered judgment that the meeting would create serious traffic congestion. \"An anarchist planned to hold an antigovernment protest demonstration at a city square. Although his previous antigovernment protest rallies attracted fewer than 15 demonstrators, he decided to apply for a permit pursuant to the city ordinance. After meeting with the anarchist, the chief of police denied his permit application because he believed that the demonstration would incite the protestors and threaten imminent violence or serious disorder. On October 4, the anarchist and his fellow demonstrators staged their antigovemment protest at a city park. The rally attracted only about 17 protestors and was conducted peacefully. As the anarchist was making his final remarks to the gathering, the city police arrived at the park and arrested him and his fellow demonstrators, charging them with violating the city ordinance. In a subsequent action by the anarchist in state court challenging the constitutionality of Sections 1 and 2 of the city ordinance, the court will most likely rule these sections\n\nChoices:\nA. constitutional, because a state may regulate the communicative impact of speech related conduct.\nB. constitutional, because the aforementioned sections are within the ambit of the state's police power.\nC. unconstitutional, because the statute is vague and overbroad.\nD. unconstitutional, because the statute is a content based regulation ofspeech.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 52,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA state statute made it a crime to be addicted to the use of narcotic drugs. A man was arrested and charged with the crime of drug addiction. Two officers testified that they examined \"track\" marks on the defendant's arms and wrists, and that he admitted to past drug usage. The accused testified that he was not an addict and the marks were from an allergic reaction. The trial court instructed the jury that it could find him guilty on proof that he was an addict, without proof of drug usage. The jury did not believe the defendant's denials, and found him guilty based on the observed track marks. The court sentenced him to six months imprisonment. He appealed, claiming cruel and unusual punishment prohibited by the Eighth and Fourteenth Amendments of the United States Constitution. Will the conviction likely be reversed on appeal?\n\nChoices:\nA. No, because the arrest is based on the regular use of illegal narcotics and is a proper concern of the criminal law.\nB. No, because the state has the power to forbid the use of narcotics within its borders and that's what this statute does.\nC. Yes, because the statute makes it criminal to use illegal drugs, which constitutes cruel and unusual punishment.\nD. Yes, because the statute punishes having the illness of drug addiction, which is like punishing someone for having a cold, and it is thus cruel and unusual punishment.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 53,
+        "gold": "B",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA customer went into a bar to have a drink. The bar was crowded because a championship boxing match was being shown on the television sets in the bar, and many people had gone to the bar to watch it. During the second round of the boxing match, someone bumped into the customer, causing him to spill a drink on his pants. \"Hey, watch what you're doing, jerk!\" the customer said. The person who had bumped the customer was an employee of the bar hired as a bouncer to deal with unruly customers. Angered by the customer's statement, the employee immediately turned around and punched the customer in the mouth. If the customer asserts a battery claim against the owner of the bar, the customer will most likely\n\nChoices:\nA. prevail, because it was reasonably foreseeable that fights would occur in a crowd of people who were drinking a lot of alcohol.\nB. prevail, because the person who punched the customer was employed as a bouncer.\nC. not prevail, because the owner did not touch the customer.\nD. not prevail, because the owner should not be responsible for the intentional acts of the employee.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 54,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA tenant's four-year old daughter fell from a second-floor outdoor stairway at their apartment building. The tenant sued the landlord for negligent construction and maintenance of the stairway, steps, and railing. The stairs were built on a dangerously steep incline, the steps were loose, and the railing was insufficient to keep the baby from falling over the side. The jury found that the landlord was negligent in the design and construction of the stairs and in failing to maintain the stairs, steps and railing in a safe condition. The landlord appealed on the basis of immunity from suit and the failure of the tenant to assert any exception to landlord immunity. Under the modern rule, will the appellate court affirm the jury's verdict against the landlord?\n\nChoices:\nA. Yes, the landlord is strictly liable for the abnormally dangerous condition that he knowingly allowed to exist.\nB. Yes, the modern rule is that the landlord, like anyone else, has a duty to use due care to protect its tenants and others from injury caused by a foreseeable risk of harm.\nC. No, because the landlord still enjoys the common law protection of the doctrine of \"lessee beware,\" and residential property is generally still rented \"as is.\"\nD. No, because a landlord cannot be held liable for negligent design or maintenance, even under the modern rule.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 55,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA purchaser filed a federal diversity action against a seller, alleging breach of contract. The seller answered the complaint and included as a separate defense an allegation that the purchaser had brought and lost a similar contract claim against a different seller three years earlier, and that this history represented a pattern of filing frivolous lawsuits. The purchaser believes that the earlier lawsuit was factually completely different from the current one and is therefore irrelevant. What is the purchaser's best response to the seller's answer?\n\nChoices:\nA. File a reply that includes a denial of the separate defense.\nB. Move for sanctions against the seller for asserting a frivolous defense.\nC. Move to amend the complaint to add allegations about the differences between the lawsuits.\nD. Move to strike the separate defense as irrelevant.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 56,
+        "gold": "D",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA retiree, advancing in age, realizes that he is no longer able to farm his 1,000 acres and therefore decides to sell some of the farmland in parcels of 250 acres. The president of a development company is interested in purchasing three of the four parcels. The president buys the three parcels from the retiree and begins formulating plans for constructing single- family dwelling units. The original deed between the retiree and the development company contains a provision expressly binding \"upon all subsequent grantees, their heirs, and assigns,\" stipulating that any further subdivisions by any such persons shall be restricted to minimum two-acre lots to be used for single-family dwelling units only. The development company immediately subdivided two of the parcels into lots of three, four, and five acres, and began construction of homes thereon. The original deed restrictions were enumerated within the special warranty deeds and were given to the purchasers of the homes in the new development, called tract I. Two years later, the president sold the remaining 250-acre parcel, which had not been included in the tract 1 subdivision plan, to a contractor. The deed between the president and the contractor included the same restriction as was in the original deed between the retiree and the president. The contractor, in turn, drafted a subdivision plan for the last 250-acre parcel, dividing it into one-acre lots. The contractor then commenced construction of single- family dwelling units in the new development, to be known as tract 2. There was no mention of the restriction for two-acre minimum lots in the deeds to the purchasers of the new homes in tract 2. In a subsequent action to enjoin the contractor from subdividing the parcel into one-acre lots by any of the present owners of lots in the tract 1 development, the most probable judicial determination would be\n\nChoices:\nA. that the action should be dismissed because the owners lack standing to sue.\nB. that the action should be dismissed because there is no privity of estate between the owners of the lots in tract 1 and the contractor.\nC. that the action would be successful if tract 2 were considered by the court as part of a common development scheme.\nD. that the action would be successful because the restrictions in the original deed between the retiree and the president will be enforceable.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 57,
+        "gold": "A",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA doctor was the owner of 1,500 acres of undeveloped timberland. In September 1989, the doctor executed a warranty deed conveying the timberland property to a dentist in fee simple. The dentist recorded immediately in the Grantor Grantee Index. Then in April 1990, the dentist conveyed the same tract to a buyer in fee simple by warranty deed. The buyer paid full market value and recorded the deed at once in the Grantor Grantee Index. The land in question had never been occupied, fenced, or cleared except that between the years 1986 2010, a mining company, one mile from the property, regularly drove trucks over a cleared path pursuant to a 1986 agreement with the doctor. The agreement, which was duly recorded, provided that \"the parties expressly agree and the doctor promises that the doctor and his successors shall refrain from obstructing the said described pathway across the doctor's land, which the mining company and its successors may perpetually use as a road, in consideration of which the mining company and its successors will pay the sum of $700 per annum. \"In 1990, after the conveyance from the dentist, the buyer informed the mining company that he would no longer honor the 1986 agreement permitting the mining company to use the pathway. The mining company brought an action for specific performance. Judgment should be for\n\nChoices:\nA. the mining company, because their property interest would \"run with the land. \"\nB. the mining company, because the possessor of a servient interest would prevail against subsequent owners.\nC. the buyer, because the mining company's interest was extinguished by the subsequent conveyance.\nD. the buyer, because there was no privity of estate between the buyer and the mining company.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 58,
+        "gold": "B",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nFor the last 20 years, a husband and wife had taken a vacation during the first week in July. They would fly from their home to the city and spend the week at a hotel in the most luxurious suite. On March 1, the husband mailed a letter to the hotel, reserving the suite for the first week in July. The hotel then sent back a confirmation notice stating that it was reserving the suite for the husband and wife for the first week in July \"for the weekly rental of $25,000. \"When the husband and wife arrived at the hotel on July 1, the hotel, without legal excuse, informed the man and his wife that the hotel had rented the suite to another couple for the first week in July. Quite apologetic, the manager of the hotel offered the husband and wife the hotel's next best accommodation at a weekly rental of $20,000. The manager informed the husband and wife that the other suite was beautifully furnished, \"but not quite as luxurious as the suite they reserved. \" Visibly upset, the husband and wife rejected the manager's offer and relocated to another hotel, where they rented the other hotel's most luxurious suite for the first week in July at a cost of $25,000. If the husband and wife now sue the first hotel for breach of contract, they will most likely\n\nChoices:\nA. prevail, because the hotel knew that for the past 20 years the husband and wife always stayed in the most luxurious suite.\nB. prevail, because the substitute accommodations offered by the hotel were not comparable to the suite they reserved.\nC. not prevail, because the hotel did offer substitute accommodations at a $5,000 savings.\nD. not prevail, because the husband and wife sustained no legal damages in renting a comparable suite at another hotel for the same rental.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 59,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA construction company was doing repairs and replacing portions of a sidewalk and railing next to a lake. The construction crew started tearing out the old sidewalk and railing, but stopped work when it started to get dark. The construction crew left without putting up a warning sign or barrier around the work area. A few hours later, a jogger came along the sidewalk. Not realizing the construction work was in progress there, the jogger stumbled and fell at the spot where the construction crew had torn up the sidewalk and railing. The jogger fell into the lake. As the jogger was attempting to stay afloat, he began screaming, \"Help! Help! I can't swim. I'm drowning. \" His screams attracted the attention of a person who was passing on his bicycle. The cyclist immediately hurried to assist the jogger. As the cyclist was leaning over the edge of the lake, trying to help the jogger get out of the water, he lost his balance and fell into the lake. Both the jogger and cyclist suffered serious bodily injuries before they were pulled out of the water by police. In a negligence action by the cyclist to recover for his personal injuries, the construction company will most probably\n\nChoices:\nA. be held liable, because the cyclist's attempt to rescue the jogger was foreseeable.\nB. be held liable, because the construction company would be strictly liable to anyone injured by the failure to put adequate warnings or barriers around the site of the sidewalk repairs.\nC. not be held liable, because the cyclist assumed the risk by leaning over the edge of the lake.\nD. not be held liable, because the construction company could not foresee that anyone would be hurt while trying to rescue someone from the lake.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 60,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA defendant incurred heavy gambling losses to a bookie. Short of cash, the defendant sought help from his uncle. When the uncle refused to lend his irresponsible nephew any money, the defendant decided to get even. One morning, as the housekeeper was preparing his uncle's breakfast, the defendant stealthily entered the kitchen and, unnoticed, dropped arsenic into the teapot from which his uncle was always served his tea. The defendant then hurriedly left the house and went to play golf. Shortly thereafter, the housekeeper served the uncle the poisoned tea, thus causing his unfortunate death. The defendant's culpability for his uncle's death would most probably be as\n\nChoices:\nA. an accessory before the fact.\nB. a principal in the first degree.\nC. a principal in the second degree.\nD. an accomplice.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 61,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA teenage male was on trial on charges of illegally entering an owner's property and stealing a car. The witness can only confirm for the prosecution that a car was stolen, the model and type of car, and that it was missing from the property on a certain date. The defense asks witness \"isn't it possible that my client did not steal the car, that someone else did it, and that the police are lying about the charges against him? The prosecution objected to the question. Will the court likely sustain the objection?\n\nChoices:\nA. Yes, because this is an objectionable question based on pure speculation.\nB. Yes, because it is not permissible to question the credibility of the police without substantial supporting evidence.\nC. No, questioning about the possibility of other perpetrators, or about police misconduct, is always permissible.\nD. No, because the witness may know something that he is not revealing and for that reason, a cross-examiner is given wide latitude in questioning.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 62,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nAn employee was hired under a written contract to work for an employer for five years at a monthly salary of $1,500. In addition, the employment contract provided that the employer would pay the employee an annual bonus \"to be determined by the employer within two weeks after the year's profits have been ascertained. \"At the end of the first year, the business showed a net profit of $50,000. Accordingly, the employer and the employee agreed that the employee should receive a bonus of $5,000. This amount was subsequently paid to the employee. At the end of the second year, the business realized a net profit of $10,000. Once the profit had been calculated, the employer telephoned the employee and offered him a second-year bonus of $1,000. The employee refused and demanded a bonus of $2,000. The employer refused the employee's demand and immediately terminated his employment. Following his dismissal, the employee brought suit for breach of contract against the employer. Which of the following is the most accurate statement?\n\nChoices:\nA. The employee has a cause of action against the employer to recover a bonus for the second year in an amount to be determined by the court.\nB. The employer is excused for his obligation to pay a bonus, because of the unforeseen downtum in business during the second year.\nC. The employee is not entitled to any recovery, because employment contracts are generally terminable at will.\nD. The employee is not entitled to a bonus, but the employee can sue for loss of wages.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 63,
+        "gold": "A",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA truck driver was making deliveries for his employer. After telling his employer by phone that he was going for lunch and getting approval, he pulled into the entrance of a restaurant where he intended to have his usual 30- minute lunch break. While entering the parking lot, the driver carelessly ran over and seriously injured a pedestrian. The injured person sued the driver and the driver's employer for negligence in causing her injuries. Is the employer liable?\n\nChoices:\nA. Yes, because of the doctrine of vicarious liability.\nB. Yes, because the employer owned the truck.\nC. No, because the employee was not within the scope of his employment.\nD. No, because liability cannot be imputed from one person to another.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 64,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA lady owns a house in fee simple absolute, which she devises to her cousin, in trust for her grandchild, for her grandchild's life, and then to the children appointed in a will by her grandchild. If there is no such appointment in a will, in equal shares to any surviving children of her grandchild. When the grandchild dies, she is in debt. Can the creditors attach the house?\n\nChoices:\nA. Yes, because of the rule in Shelly's case.\nB. No, because when property is put in a trust through a donee's special power of appointment, creditors cannot reach the funds.\nC. Yes, because the will is invalidated by the rule of sequential appointments, and the grandchild does not take at all.\nD. No, because the will as written violates the rule against perpetuities, and reconstructed, the funds revert to the original owner or her heirs.v\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 65,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA farm and an orchard are adjoining tracts of land located in a county. In 2006, a farmer purchased the farm, a 10-acre tract, in fee simple absolute. The orchard, a 20-acre tract situated to the north of the farm, was owned by a rancher in fee simple absolute. A remote predecessor of the farmer had granted to a shepherd a way for egress and ingress across the farm under such terms and circumstances that an easement appurtenant to the orchard was created. This right-of-way was executed by deed and properly recorded. The shepherd, however, never made any actual use of the right-of-way. In 2010, the rancher conveyed the orchard to the farmer. The next year, the farmer conveyed the orchard by deed to an investor for a consideration of $250,000, receipt of which was acknowledged. Neither the rancher farmer deed nor the farmer  investor deed contained any reference to the easement for right-of-way. The investor has now claimed that she has a right-of-way across the farm. The farmer, on the other hand, has informed the investor that no such easement exists. Assume that both the farm and the orchard abut a public highway and that ingress and egress are afforded the investor by that highway. In an appropriate action by the investor to determine her right to use the right-of-way across the farm, she should\n\nChoices:\nA. lose, because the easement was extinguished by merger when the farmer acquired the orchard from the rancher.\nB. lose, because the right-of-way was abandoned inasmuch as there never was any actual use made.\nC. win, because the farmer had constructive notice of the easement.\nD. win, because the investor acquired an easement by implication.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 66,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nThe authorities arrested a man without a warrant and held him imprisoned for 14 days without a determination of probable cause. He finally saw a public defender who filed a motion to dismiss alleging an unconstitutional detention in violation of due process. The prosecution countered that the state's rules allowed for detention without a probable cause hearing for up to 30 days, and that the procedure was constitutional. Will the court most likely decide that this detention is unconstitutional?\n\nChoices:\nA. No, because the Supreme Court has ruled that detentions can properly last up to 30 days without a probable cause determination.\nB. No, because each case must be decided on its own facts and there may be many good reasons why the state has not yet provided a probable cause determination.\nC. Yes, because when the state arrests someone without a warrant it must provide a prompt probable cause determination.\nD. No, because it is constitutional to hold someone for up to 15 days without a probable cause determination.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 67,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA state has recently enacted a statute wherein aliens are forbidden from owning more than 10 acres of land within the state. Subsequent to the statute a resident alien enters into a contract to buy 50 acres of land located in the state. Assume that the statute empowers the state to bring an ejectment action against any alien who owns more than 10 acres of land. If the resident alien brings an action in federal court to enjoin the state from enforcing the statute against him, his best argument is\n\nChoices:\nA. the statute violates the privileges or immunities clause of the Fourteenth Amendment.\nB. the statute violates the contract clause.\nC. the statute violates the commerce clause in that it interferes with land ownership.\nD. the statute violates the equal protection clause of the Fourteenth Amendment.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 68,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nBase Electric Co. has entered an agreement to buy its actual requirements of copper wiring for six months from the Seymour Metal Wire Company and Seymour Metal has agreed to sell all the copper wiring Base will require for six months. The agreement between the two companies is\n\nChoices:\nA. Unenforceable because it is too indefinite as to quantity.\nB. Unenforceable because it lacks mutuality of obligation.\nC. Unenforceable because of lack of consideration.\nD. Valid and enforceable.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 69,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA man and a woman agreed that the woman would rob a bank and that the man would steal a car beforehand for the woman to use as a getaway vehicle. The man stole a car and parked it two blocks from the bank. He left the car key under the floor mat with a note saying that he wanted nothing more to do with the scheme. The next day, the woman robbed the bank and ran to the spot where the man had said he would leave the stolen car. She then escaped in the car and disappeared. She never shared any of the money with the man. In a jurisdiction that has adopted the bilateral requirement for conspiracy, can the man properly be convicted of conspiring with the woman to rob the bank?\n\nChoices:\nA. No, because the man received no benefit from the robbery.\nB. No, because the man withdrew from the conspiracy.\nC. Yes, because the robbery was successful due in part to the man's actions.\nD. Yes, because there was an agreement to rob the bank and an overt act in furtherance of the agreement.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 70,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA company operates passenger buses to all the major cities on the east coast. This service is authorized under a certificate of convenience and necessity issued by the Interstate Commerce Commission, pursuant to federal statute. The certificate does not, however, specify particular highways, streets, or locations for the bus service. The company's advertising stresses that it picks up and delivers passengers at the center of each city that it serves. The company's management regards this as a particularly effective advertising point in competition with the airlines and the railroads, because short-haul traffic supplies a major part of the bus company's revenues. One of the major cities on the east coast, acting to relieve traffic congestion and air pollution, has recently enacted an ordinance that prohibits (a) the operation of all trucks and buses in a five- square- mile central business area, known as center city, between the hours of 10:00 A. M. and 4:00 P. M. on weekdays, and (b) all on-street parking of passenger automobiles in center city between the same weekday hours. The company's bus station in this city is located in the heart of the center city area. According to its transportation schedules, more than 75 buses either enter or leave this station between the hours of 10:00 A. M. and 4:00 P. M. each weekday. If the company brings suit challenging the constitutionality of the city ordinance, the court will most likely declare the ordinance\n\nChoices:\nA. constitutional, because it is within the city's police power to regulate transportation services in the center city business district.\nB. constitutional, because it is a valid exercise of municipal regulation in the area of intrastate commerce.\nC. unconstitutional, because it violates the dormant commerce clause.\nD. unconstitutional, because the ordinance is discriminatory per Se.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 71,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nWhich of the following constitutional provisions is applicable to corporations?\n\nChoices:\nA. The privileges and immunities clause of the Fourteenth Amendment.\nB. The comity clause of Article IV.\nC. The Fifth Amendment's prohibition against compulsory self-incrimination.\nD. The equal protection clause of the Fourteenth Amendment.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 72,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nAn investor and a developer own adjoining lots in the central portion of a city. Each of their lots had an office building on it. The developer decided to raze the existing building on her lot and to erect a building of greater height. The developer has received all governmental approvals required to pursue her project. There is no applicable statute or ordinance (other than those dealing with various approvals for zoning, building, etc. ). After the developer had torn down the existing building, she proceeded to excavate deeper. The developer used shoring that met all local, state, and federal safety regulations, and the shoring was placed in accordance with those standards. The investor notified the developer that cracks were developing in the building situated on the investor's lot. The developer took the view that any subsidence suffered by the investor was due to the weight of the investor's building and correctly asserted that none would have occurred had the investor's land been in its natural state. The developer continued to excavate. The building on the investor's lot did suffer extensive damage, requiring the expenditure of $750,000 to remedy the defects. Which of the following is the best comment concerning the investor's action to recover damages from the developer?\n\nChoices:\nA. The developer is liable, because she removed necessary support for the investor's lot.\nB. The developer cannot be held liable simply upon proof that support was removed, but may be held liable if negligence is proved.\nC. Once land is improved with a building, the owner cannot invoke the right of lateral support.\nD. The developer's only obligation was to satisf' all local, state, and federal safety regulations.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 73,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA criminal defendant was convicted at a jury trial of several counts of fraud. At sentencing the court made additional factual findings, based on a preponderance of the evidence, that resulted in the addition of a 10-year enhancement to the sentence, which was over and above the maximum provided for by the jury's verdict. Defense counsel objected that the judge-made enhancement was unconstitutional and denied his right to a jury trial on that issue. Does counsel have a valid constitutional argument?\n\nChoices:\nA. No, sentencing laws widely authorize the sentencing court to engage in fact-finding that is based on a preponderance of the evidence.\nB. No, it has never been decided that a defendant has a right to be judged on proof beyond a reasonable doubt.\nC. Yes, judicial fact-finding that increases the maximum sentence over what the jury's verdict allows is unconstitutional.\nD. Yes, it is unconstitutional for a court to use its discretion to fashioning a defendant's sentence.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 74,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA suspected drug dealer was arrested after selling three grams of cocaine to undercover police agents. He was subsequently convicted in state court of possession with intent to distribute narcotics. Following his conviction, the drug dealer was sentenced to a prison term of 10 years. After being sentenced, the drug dealer's attorney appealed the conviction, citing jury misconduct. While his appeal was pending, the drug dealer was then indicted by both a federal and a state grand jury for conspiracy to distribute the same cocaine. The drug dealer's attorney filed motions to dismiss each of the new indictments on the grounds that they violate double jeopardy. In all likelihood, double jeopardy requires the dismissal of\n\nChoices:\nA. both indictments.\nB. the state indictment, but not the federal indictment.\nC. the federal indictment, but not the state indictment.\nD. neither of the indictments.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 75,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA defendant was being prosecuted on a charge of manslaughter in the first degree for causing the death of a 15-year-old girl on whom he had allegedly performed an abortion in his private clinic. A witness for the defendant testified to the defendant's non-culpability at the grand jury proceeding. The witness was later called as a defense witness at the trial. During his direct examination, defendant's attorney asked him, \"Is it not true that the defendant could not have performed the abortion on the decedent since he was assisting you in another abortion at the time?\" The witness answers in the negative and states that the defendant did, in fact, perform the abortion on the girl. The defendant's attorney then assails the witness's testimony as a recent fabrication, and asks the witness if he had not stated to a grand jury that the defendant was not guilty of performing the abortion, thus causing the death of the girl. The prosecutor objects to this question. The trial judge should rule that this question is\n\nChoices:\nA. objectionable, because the defendant's attorney did not lay a proper foundation for impeaching his own witness.\nB. objectionable, because a party may not impeach his own witness.\nC. unobjectionable, because a witness's testimony before a grand jury is more reliable because it occurred shortly after the abortion was allegedly performed.\nD. unobjectionable, because a party can impeach his own witness by a prior inconsistent statement.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 76,
+        "gold": "C",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA law bookstore entered into a written contract to purchase from the publisher 100 copies of the latest edition of a certain casebook for $10 per book. Three days after the contract was formed, but prior to delivery of the casebooks, the publisher called the owner of the law bookstore and informed him that, because of a calculation error, the price for the casebooks should have been $11 per book, and the shipment could not be delivered unless the owner promised to pay that amount. The owner reluctantly agreed. The owner's agreement to pay $11 per book is\n\nChoices:\nA. enforceable, because it was not supported by any new consideration.\nB. enforceable, under the principle of promissory estoppel.\nC. unenforceable, because it is violative of the statute of frauds.\nD. unenforceable, because the error resulted from the publisher's computational error.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 77,
+        "gold": "C",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA well-established paper mill and a logging company signed a written contract in which the mill agreed to buy from the company all the logs the mill would need for one year. The company was unable to keep up with the mill's needs, and its log deliveries fell short by 10% to 15% in each of the four quarters of the year. The mill paid the company on time for all delivered logs. The mill paid an attorney $2,000 for advice concerning its options in enforcing the contract. It paid a broker a reasonable fee of $5,000 to find additional logs to make up for the company's shortfall. The mill also incurred reasonable costs of $25,000 to transport the additional logs to its facility. Despite the mill's efforts to mitigate damages, it sustained $200,000 in losses because of the company's failure to timely deliver enough logs. The mill has sued the company for breach of contract. If the court finds for the mill, how much should it award in damages?\n\nChoices:\nA. $205,000.00\nB. $225,000.00\nC. $230,000.00\nD. $232,000.00\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 78,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA farmer owns a large farm on which he allows his friends to hunt during quail-hunting season. He does not provide his friends with any instructions about gun safety. The neighbor who owns property adjacent to the farm knows of the friends' use of the property during the hunting season. One day during the hunting season, without the farmer's knowledge or permission, the neighbor took a shortcut across the farm to visit an acquaintance. The neighbor was wounded by a shot fired by one of the farmer's friends, who was shooting at quail and carelessly failed to see the neighbor. Traditional rules of landowners' and occupiers' liability apply. In an action by the neighbor against the farmer to recover for the injuries, will the neighbor be likely to prevail?\n\nChoices:\nA. No, because the farmer is not responsible for his friends' conduct.\nB. No, because the neighbor was trespassing.\nC. Yes, because the careless friend was permitted to hunt without safety training.\nD. Yes, because the use of firearms is an abnormally dangerous activity.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 79,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA man, his nephew, and his son are the owners of three contiguous lots in the city. A downward slope exists from the man's land to the son's land. The man's and the nephew's lots were in an unimproved natural state. The son, however, had lived for 10 years in a house that he had built on his property. In 2009, the man planted trees and shrubbery on his land along the boundary of the nephew's lot. In 2010, the nephew, in preparation for building a house on his lot, carefully excavated an area eight feet deep for the purpose of building a basement. The side of the excavation closest to the man  nephew boundary suddenly collapsed, and a quantity of the man's soil, trees, and shrubbery fell into the hole. The nephew hauled away the debris. In an appropriate action by the man against the nephew to recover for the damage to his land, judgment should be for whom?\n\nChoices:\nA. The nephew, if he was conducting the excavation work non-negligently.\nB. The nephew, because he was under no duty to support the man's land in its improved state.\nC. The man, because a landowner is entitled to support of his land in its natural condition.\nD. The man, because a landowner has an absolute right to have his land supported by the neighboring land.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 80,
+        "gold": "C",
+        "pred": "D",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA landlord owned an apartment which he leased to a college senior for a three-year term beginning December 1, 2007, for a monthly rental of $1,000 to be payable on the first of each month. After the college senior resided in the apartment for six months, he assigned his interest in the premises to a college junior on June 1,2008. The college junior paid the rental on the apartment for two months and then assigned his interest to a college sophomore. The sophomore took possession on August 1, 2008 and paid the rental for August but did not pay the rental for the next three months of occupancy. Then on December 1, 2008 the college sophomore assigned the premises to a college freshman who took possession but didn't pay any rental to the landlord during the period of his occupancy from December 1,2008 to April 1,2009. On April 5, 2009, the landlord brings an action against the college freshman to recover the outstanding rent that is due on the premises. The freshman is most likely liable for\n\nChoices:\nA. $8,000. 00\nB. $7,000. 00\nC. $5,000. 00\nD. $4,000. 00\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 81,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA buyer purchased a shovel at a local hardware store. The shovel had a metal blade and a wooden handle. While the buyer was using the shovel to dig out a tree stump in his back yard, the handle broke in half, causing the buyer to fall and injure his back. The buyer brought a negligence claim against the manufacturer of the shovel. He proved that the shovel broke because of a manufacturing defect that made the handle too weak and that the manufacturer acted unreasonably in allowing this to happen. While conceding that the handle had a defect that caused it to break, the manufacturer established that if the buyer had been using the shovel carefully, he would not have fallen down and would not have been injured when the shovel broke. Assume that the case is governed by the law of a jurisdiction that follows traditional contributory negligence rules. Who is most likely to prevail?\n\nChoices:\nA. The buyer, because the manufacturer conceded that the shovel was defective.\nB. The buyer, because the manufactuter failed to exercise reasonable care in the production and inspection of its product.\nC. The manufacturer, because the manufacturer did not guarantee that the shovel would never break.\nD. The manufacturer, because the buyer's negligence in the way he used the shovel was one of the causes of his injury.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 82,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA plaintiff alleges in a lawsuit against a store that he purchased a hot dog with chili that gave him food poisoning and caused him excruciating pain. The store offers into evidence certified copies of court proceedings revealing that the plaintiff has filed three similar lawsuits in the last 18 months against other convenience stores, claiming food poisoning resulting from the purchase of food from those stores. These copies should be ruled\n\nChoices:\nA. inadmissible, because of the best evidence rule.\nB. inadmissible, because they are irrelevant to the present claim.\nC. inadmissible, because there is the danger of undue prejudice to the plaintiff, which outweighs the probative value of the evidence.\nD. admissible, because they establish a pattern of similar actions.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 83,
+        "gold": "D",
+        "pred": "B",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA prominent judge lived next door to a father. Recently, the judge had sentenced the father's son to six months in prison on a narcotics charge. One afternoon while the judge was mowing his lawn, the father decided to avenge his son's conviction. The father set up his water sprinkler behind some shrubbery separating their adjoining properties. As the judge was mowing his lawn and came within reach of the water sprinkler, the father turned on the sprinkling device. The judge did not see the water coming toward him. The water hit the judge in the back and drenched him. The judge would be able to recover against the father for which of the following tort or torts?\n\nChoices:\nA. Negligence and battery.\nB. Battery and assault.\nC. Negligence and assault.\nD. Battery and trespass to land.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 84,
+        "gold": "D",
+        "pred": "B",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA farmer conveyed 100 acres of his farm to a landscaper. The deed contained the following covenants: (1) seisin, (2) right to convey, and (3) against encumbrances. Subsequently, the landscaper conveyed the property to a buyer by warranty deed. However, the buyer is later evicted by a woman because of paramount title. The buyer now brings suit against the farmer for breach of covenants in the deed. Judgment should be for\n\nChoices:\nA. the buyer, because the covenants contained inthe deed run with the land.\nB. the farmer, because no privity of estate existsbetween the buyer and the farmer.\nC. the buyer, but only for the covenants of seisinand right to convey.\nD. the farmer, because the covenants are personalin nature and do not run with the land.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 85,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA plaintiff sued a department store for injuries she sustained when she slipped and fell in the store. At trial, the plaintiff proposes to testify that, when the store manager rushed to the scene, he said to the plaintiff, \"I'm so sorry about the water on the floor there, but don't worry the store will pay for the ambulance and your hospital bill.\" The store's attorney objects. How should the court rule on the admissibility of the store manager's testimony?\n\nChoices:\nA. The testimony is admissible in its entirety as the statement of an opposing party.\nB. The testimony about the water is an admissible statement of an opposing party, but the rest of the testimony is inadmissible as an offer to pay medical expenses.\nC. The testimony is inadmissible in its entirety, because it is hearsay not within any exception.\nD. The testimony is inadmissible in its entirety, because the manager's statement is in the context of an offer to pay medical expenses.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 86,
+        "gold": "B",
+        "pred": "B",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA defendant and his friend were walking down the street when they ran into a victim. The friend turned to the defendant and said that the victim owed him some money. The friend then stopped the victim and demanded the money. The victim refused to pay the money. The friend suddenly said to the defendant, \"Give me your gun. I'm going to blow this lowlife away. \" The defendant gave his friend his gun, and the friend shot the victim to death. As the friend and the defendant were about to leave, the defendant turned to his friend and said, \"Let me have my gun back. I think the creep's still alive. \" The defendant then fired two more shots into the victim's body. Unknown to the defendant, the victim was already dead. Which of the following is the most serious crime that the defendant can be convicted of?\n\nChoices:\nA. Attempted murder.\nB. Murder.\nC. Assault with a deadly weapon.\nD. Concealment of a deadly weapon.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 87,
+        "gold": "B",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA rancher is the owner of a ranch that is situated upon the top of a mountain. Located below the ranch is an estate that is owned by a millionaire. A stream is a non-navigable watercourse that originates at the top of the mountain and runs all the way down into a valley. Both the ranch and the estate are within the watershed of the stream. When the millionaire purchased the estate in 1956, he started taking water from the stream and used it to irrigate the southern half of his property, which he has used as a farm. Prior to 1956, the southern half of the estate had been cleared and placed in cultivation, while the northern half remained wooded and virtually unused. The millionaire continued this established pattern of use and has never stopped using the water in this way. In 1986, the rancher built a home on the ranch and started talcing water from the stream for domestic purposes. During that year there was heavy rainfall, and this caused the stream to run down the mountain at a high water level. However, in 1987, a drought caused the stream to flow at a very low level. Consequently, there was only enough water to irrigate the millionaire's farmland or, in the alternative, to supply all of the rancher's domestic water needs and one-quarter of the millionaire's irrigation requirements. The mountain is located in a jurisdiction where the period of prescription is 15 years. The rancher is continuing to take water for his personal needs and there is insufficient water to irrigate the estate. The millionaire then brings an appropriate action in 1996 to declare that his water rights to the stream are superior to those of the rancher. In addition, the millionaire moves to have the full flow of the stream passed to him, notwithstanding the effect it might have on the rancher. If this state follows the common law of riparian rights, but does not follow the doctrine of prior appropriation, judgment should be for whom?\n\nChoices:\nA. The rancher, because as an upstream landowner, he would have superior rights to the water than a downstream owner.\nB. The rancher, because domestic use is superior to and is protected against an agricultural use.\nC. The millionaire, because he obtained an easement by prescription to remove as much water as he may need.\nD. The millionaire, because he put the water to a beneficial use prior to the rancher's use and has continuously used the water.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 88,
+        "gold": "D",
+        "pred": "B",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA woman is engaged in the retail sale of widgets throughout the United States. On March 7, the woman sent the following purchase order to a manufacturer of widgets:\"Promptly ship 1,000 widgets, catalogue #B4-IEU, at the current wholesale price to our warehouse. Thank you for your attention to this matter. \"This order was received by the manufacturer on March 9. The next day, the manufacturer replied by fax:\"Your order has been received. Shipment date will be March 12. Price $50 for each widget delivered. Be advised that these are the last widgets, under catalogue #B4-IEU, that we can deliver, since this variety is no longer being manufactured. \"Upon receipt of the fax, the woman immediately sent the following fax:\"Cancel our previous order for 1,000 widgets under catalogue #B4-IEU. Price too high. \"Assume $50 per widget was the current wholesale market price. Was an enforceable contract in effect between the woman and the manufacturer?\n\nChoices:\nA. No, because the woman's order was too indefinite to constitute an offer, since it didn't contain a price term.\nB. No, because even if the woman's order was a valid offer, it was effectively revoked prior to acceptance.\nC. Yes, because the woman's order created a valid option contract.\nD. Yes, because the manufacturer's fax of March 10 constituted an acceptance of the woman's offer.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "B"
+      },
+      {
+        "idx": 89,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA home security protection company provided protection services to property owners in the immediate area. The owner of a summer cottage in the area hired the company to provide 24- hour protection during the winter months when his home was unoccupied. According to the security arrangement, the company's uniformed guards would periodically patrol the property and, if necessary, provide an \"armed response\" to any unauthorized individuals who were found trespassing on the property. The company provided security protection to the owner's property for two years. The owner then notified the company that he was planning to sell the cottage. As a result, he requested that the company discontinue its home-protection service, effective immediately. Two weeks later, a burglar broke into the cottage and was ransacking it. As the burglar was exiting from the owner's house carrying a portable television set, he was seen by a security guard working for the company. The security guard, who was driving past the home on security patrol, had not been informed that the owner had discontinued protection services. The security guard suddenly stopped his patrol vehicle and ran toward the burglar shouting, \"Stop! Don't move or I'll shoot!\" Startled, the burglar dropped the television set and began to flee. Believing that the suspected burglar was about to escape, the security guard pulled out his service revolver and fired a bullet at the burglar. The shot struck the burglar in the leg, seriously wounding him. If the burglar asserts a claim against the owner for negligently failing to supervise those providing security services for the owner's property, the burglar will probably\n\nChoices:\nA. prevail, because the burglar was unarmed when he was shot.\nB. prevail, because the owner knew or had reason to know that the company provided an \"armed response\" to suspected trespassers.\nC. not prevail, because the owner was not present when the shooting occurred.\nD. not prevail, because the owner had discontinued protection services from the company when the shooting occurred.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 90,
+        "gold": "D",
+        "pred": "C",
+        "passed": false,
+        "skipped": false,
+        "prompt": "Question:\nA laboratory manufactures nitroglycerin (a heavy, oily, explosive, poisonous liquid used chiefly in making dynamite) at its main plant. An artist who specialized in making delicate glass sculptures had a studio two blocks away from the laboratory's plant. Late one evening, there was an explosion at the laboratory's plant. The force of the explosion caused the artist's studio to be shaken, which resulted in the destruction of valuable artwork in the studio. The artist now asserts a tort action against the laboratory to recover damages. Which of the following, if established, would furnish the laboratory with its best possible defense?\n\nChoices:\nA. The laboratory used extraordinary care in the manufacture and storage of nitroglycerin and was not guilty of any negligence that was causally connected with the explosion.\nB. The laboratory has a contract with the federal government whereby all the nitroglycerin manufactured at its plant is used in U. S. military weapons systems.\nC. The explosion was caused when lightning (an act of God) struck the plant during an electrical storm.\nD. The harm that the artist suffered would not have resulted but for the abnormal fragility of the artist's work.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 91,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nOne afternoon, police officers observed a man and a14-year-old girl smoking marijuana together. They arrested the man and charged him with the separate offenses of (1) possession of a controlled dangerous substance, and (2) contributing to the delinquency of a minor. The girl was also arrested and charged with being an accomplice to the crime of contributing to the delinquency of a minor. At trial, the girl's best defense is that\n\nChoices:\nA. smoking marijuana does not necessarily make her an accomplice to the crime.\nB. the man, the adult principal, must be convicted before any prosecution can be maintained against a minor.\nC. a minor cannot be prosecuted for an adult crime.\nD. since the statute was designed to protect minors, the girl cannot be prosecuted as an accomplice.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 92,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nAt trial in a criminal prosecution for theft, the defendant calls a witness to testify that he formerly knew the defendant as an army supply sergeant and that the defendant had turned down many opportunities for black marketeering. Is the witness's testimony admissible?\n\nChoices:\nA. No, because it is irrelevant to the present charge.\nB. No, because the defendant may not prove his good character by specific instances of good conduct.\nC. Yes, because a criminal defendant may prove his good character as a basis for inferring conduct.\nD. Yes, because, by accusing the defendant of being a thief, the prosecution has put his character in issue.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 93,
+        "gold": "C",
+        "pred": "C",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA painter working for a construction company was working with a group of construction co-workers on a house construction when a section of the house fell down on the owner. The painter declared, \"I knew they should have reinforced the standing wall better than they did! It is all their fault!\" It turned out that he was referring to co-workers employed by the same construction company. The owner filed suit for damages against the construction business. He tried to put the statement from the painter into evidence but the defendant objected. Will the court sustain the company's objection to the admission of the painter's statements?\n\nChoices:\nA. Yes, because the painter is not qualified to make such statements regarding non-painting duties.\nB. Yes, because the painter is not a participant as a negligent party in the catastrophic mistake that occurred.\nC. No, because the painter works for the same company as the negligent workers, and he made his statements within the scope and course of his employment.\nD. No, because the painter may testify as a subcontractor to what he observed while on the location.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "C"
+      },
+      {
+        "idx": 94,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA state has recently enacted a statute prohibiting the sale of computer printer ink cartridges in plastic bags. In accordance with the new law, all ink cartridges within the state must be sold in paper cartons that are recyclable. Before the passage of the law, approximately 28% of all ink cartridges used in the state was packaged in plastic bags. Of that total, 75% of the ink cartridges was packaged outside the state, while 25% was packaged by companies in-state. The legislature passed the bill at the strong urging of the paper industry. It was estimated that one paper company alone spent over $5,000,000 in its lobbying campaign for the passage of the bill. Ironically, the new law even received strong support from environmentalists who believed that recyclable paper would help prevent littering. Assume that the state Supreme Court adjudges the law to be unconstitutional on the grounds that it violates the contracts clauses of both the federal and the state Constitutions. The contracts clause of the state Constitution is similar to the one in the federal Constitution. The court so held because, in its judgment, the statute retroactively impairs the ability of plastic bag packagers to honor their existing contracts for the sale of ink cartridges packaged in plastic bags. The state attorney general now seeks review of this decision in the U. S. Supreme Court. How should the U. S. Supreme Court rule on this case?\n\nChoices:\nA. Refuse to review this case on the merits because there is an adequate and independent state ground for the decision rendered below.\nB. Reverse the decision on the merits with respect to the state constitutional issue because the federal constitutional holding rendered below makes such a state constitutional decision unnecessary.\nC. Affirm the decision on the merits with respect to the federal constitutional issue and abstain from reviewing the state constitutional issue.\nD. Affirm the decision on the merits with respect to both the federal and state constitutional issues because the state constitution must substantially conform with the federal constitution on this issue.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 95,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA defendant was arrested and charged with burglarizing a home. At trial, the main issue of contention centered on the identity of the burglar. The state called the homeowner to testify, but his identification testimony was inconclusive. The homeowner testified that he was asleep during the burglary and awoke as the burglar was fleeing the premises. The homeowner admitted that he didn't see the face of the burglar and couldn't even tell whether the person was male or female. Thereafter, the prosecution offers evidence that at the time of the burglary, the defendant needed money to defend himself against other burglary charges. This proffered evidence should be\n\nChoices:\nA. admitted without restriction as probative evidence of motive.\nB. admitted, provided the court instructs the jury to limit use of the evidence to the defendant's motive to burglarize.\nC. excluded as lacking any probative value.\nD. excluded as substantially more unfairly prejudicial than probative.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 96,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA train pulled into a busy station. Some passengers got off the train, and others got on. A few moments later, a train conductor shouted, \"All aboard!\" to indicate that the train was about to depart the station. At that moment, a man, carrying a large cardboard box, came running through the station toward the train \"Wait for me!\" he shouted as he ran toward the train. The man with the box reached the edge of the platform, next to the train, just as the train started to move. The man hesitated, unsure of whether he should give up or go ahead and jump onto the train even though it was moving. A railroad worker, who happened to be standing next to the train, decided to be helpful. He said, \"You can make it,\" and gave the man a shove toward the open door of the train. The man stumbled and dropped the box that he was carrying. Instantly, the box made a loud screeching noise. The box contained powerful fireworks, and the impact of the box hitting the ground had caused a large rocket to ignite. The rocket flew out of the box and shot across the train station, glancing off the ceiling and finally crashing into a wall of a small coffee shop on the far side of the train station, about 150 feet from the train. The rocket's collision caused a shelf on the wall to fall. A large container of coffee that was on the shelf fell and hit a customer who was sitting in the shop and enjoying a cup of coffee. The coffee shop customer suffered an injury to her shoulder as a result of being hit by the container of coffee. If the coffee shop customer asserts a negligence claim against the railroad, which of the following elements of her claim will the plaintiff be unable to satisfy?\n\nChoices:\nA. Duty.\nB. Breach.\nC. Cause-in-fact.\nD. Proximate or legal causation.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 97,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA drug to combat high cholesterol was approved by the FDA and marketed by its manufacturer. Reports of the drug being tied to cases of premature dementia surfaced, and a number of lawsuits were filed by injured consumers, alleging strict liability for a defective product. At trial, the manufacturer proved that thorough testing was done but that new scientific discoveries, not then available, now show a vulnerability in certain people to the drug. Is the company strictly liable to the victims even though the medical knowledge was not available when the product was developed and put on the market?\n\nChoices:\nA. Yes, strict liability applies to pharmaceutical companies and questions of knowledge of defects is irrelevant.\nB. Yes, the manufacturer must assume the cost of compensating those innocent victims who took the defective drug.\nC. No, the company has no duty to conduct research to determine a product's safety.\nD. No, when the medical or scientific information regarding a defect has not yet been discovered, the company will not be held strictly liable for putting that product on the market.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 98,
+        "gold": "A",
+        "pred": "A",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nWhich of the following is not a warrantless search exception?\n\nChoices:\nA. Cold pursuit\nB. Incident to a lawful arrest\nC. Plain view\nD. Stop and frisk\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "A"
+      },
+      {
+        "idx": 99,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nAfter a party where the adults all drank alcohol, with everyone having at least six beers, they started up a game of baseball. The host supplied the bats, balls and gloves. An argument arose at home plate after a controversial call by the umpire, who was inebriated like all of the other participants. The host of the party became enraged at the umpire's decision and hit him in the face, breaking his nose. The umpire pressed charges when he became sober, and the authorities charged the host with criminal battery. At trial, the defense raised the defense of voluntary intoxication, arguing that the host lacked the mentality to form an intent to commit a criminal battery. Will the defense of voluntary intoxication be successful under these facts?\n\nChoices:\nA. Yes, criminal battery is a specific intent crime to which voluntary intoxication may be asserted as a defense.\nB. Yes, voluntary intoxication is always at least a partial defense to any crime that requires mens rea.\nC. No, the host was grossly negligent in allowing a group of drunk men to play a dangerous game of hardball, which precluded him from the benefit of the defense.\nD. No, criminal battery in this case is a general intent crime and the defense of voluntary intoxication is not available.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      },
+      {
+        "idx": 100,
+        "gold": "D",
+        "pred": "D",
+        "passed": true,
+        "skipped": false,
+        "prompt": "Question:\nA landlord orally leased a commercial building to a tenant for a 10-year term, which ended one year ago. At the beginning of the lease term, the tenant installed numerous appliances in the building as well as a large air-conditioning system. The tenant alone paid for these items; they were installed with the landlord's permission and were used for the tenant's commercial enterprise. At the end of the lease term, the tenant failed to vacate the premises in a timely manner and continued to pay rent while remaining in possession for another four months. Before vacating the building at the end of the fourth month, the tenant removed the appliances and the air-conditioning system that he had installed, causing no damage to the building. Was the removal by the tenant proper?\n\nChoices:\nA. No, because he was a holdover tenant.\nB. No, because the lease was oral.\nC. Yes, because they were accessions.\nD. Yes, because they were trade fixtures.\n\nAnswer with only one letter: A, B, C, or D.",
+        "response": "D"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+==== [gpt-oss-20b-gguf] launch: /Users/yenhaohuang/Desktop/llama-bash/gptoss20b.sh (port 3172) ====
+server_pid=86644
+[gpt-oss-20b-gguf] server ready. start eval...
+\n[gpt-oss-20b-gguf] speed sample lines:
+[gpt-oss-20b-gguf] eval done. stop server...
+==== [gpt-oss-20b-gguf] finished ====

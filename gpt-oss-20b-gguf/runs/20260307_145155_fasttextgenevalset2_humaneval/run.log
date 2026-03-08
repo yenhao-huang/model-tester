@@ -1,0 +1,4 @@
+server_pid=79555
+server ready; eval humaneval start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_145155_fasttextgenevalset2_humaneval

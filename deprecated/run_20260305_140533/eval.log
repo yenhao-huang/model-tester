@@ -1,0 +1,124 @@
+
+[mmlu]
+  mmlu 1/20  gold=B pred=B OK
+  mmlu 2/20  gold=C pred=A FAIL
+  mmlu 3/20  gold=D pred=D OK
+  mmlu 4/20  gold=B pred=C FAIL
+  mmlu 5/20  gold=B pred=B OK
+  mmlu 6/20  gold=A pred=C FAIL
+  mmlu 7/20  gold=A pred=C FAIL
+  mmlu 8/20  gold=D pred=C FAIL
+  mmlu 9/20  gold=B pred=B OK
+  mmlu 10/20  gold=C pred=D FAIL
+  mmlu 11/20  gold=C pred=C OK
+  mmlu 12/20  gold=C pred=C OK
+  mmlu 13/20  gold=A pred=A OK
+  mmlu 14/20  gold=C pred=B FAIL
+  mmlu 15/20  gold=C pred=B FAIL
+  mmlu 16/20  gold=B pred=C FAIL
+  mmlu 17/20  gold=C pred=D FAIL
+  mmlu 18/20  gold=C pred=D FAIL
+  mmlu 19/20  gold=D pred=D OK
+  mmlu 20/20  gold=A pred=A OK
+  => 45.0% (9/20)  saved: fast_textgen_eval_20260305_060602_mmlu.json
+
+[geo-mmlu-high-school]
+  geo-mmlu-high-school 1/20  gold=B pred=B OK
+  geo-mmlu-high-school 2/20  gold=D pred=D OK
+  geo-mmlu-high-school 3/20  gold=C pred=C OK
+  geo-mmlu-high-school 4/20  gold=A pred=A OK
+  geo-mmlu-high-school 5/20  gold=D pred=A FAIL
+  geo-mmlu-high-school 6/20  gold=D pred=D OK
+  geo-mmlu-high-school 7/20  gold=D pred=A FAIL
+  geo-mmlu-high-school 8/20  gold=C pred=C OK
+  geo-mmlu-high-school 9/20  gold=A pred=C FAIL
+  geo-mmlu-high-school 10/20  gold=D pred=D OK
+  geo-mmlu-high-school 11/20  gold=A pred=D FAIL
+  geo-mmlu-high-school 12/20  gold=B pred=B OK
+  geo-mmlu-high-school 13/20  gold=A pred=A OK
+  geo-mmlu-high-school 14/20  gold=D pred=D OK
+  geo-mmlu-high-school 15/20  gold=B pred=B OK
+  geo-mmlu-high-school 16/20  gold=D pred=D OK
+  geo-mmlu-high-school 17/20  gold=D pred=D OK
+  geo-mmlu-high-school 18/20  gold=D pred=D OK
+  geo-mmlu-high-school 19/20  gold=B pred=B OK
+  geo-mmlu-high-school 20/20  gold=C pred=C OK
+  => 80.0% (16/20)  saved: fast_textgen_eval_20260305_060602_geo-mmlu-high-school.json
+
+[law-mmlu-professional]
+  law-mmlu-professional 1/20  gold=C pred=C OK
+  law-mmlu-professional 2/20  gold=B pred=D FAIL
+  law-mmlu-professional 3/20  gold=D pred=D OK
+  law-mmlu-professional 4/20  gold=C pred=C OK
+  law-mmlu-professional 5/20  gold=B pred=A FAIL
+  law-mmlu-professional 6/20  gold=A pred=A OK
+  law-mmlu-professional 7/20  gold=B pred=B OK
+  law-mmlu-professional 8/20  gold=A pred=A OK
+  law-mmlu-professional 9/20  gold=C pred=B FAIL
+  law-mmlu-professional 10/20  gold=C pred=D FAIL
+  law-mmlu-professional 11/20  gold=A pred=D FAIL
+  law-mmlu-professional 12/20  gold=A pred=A OK
+  law-mmlu-professional 13/20  gold=A pred=A OK
+  law-mmlu-professional 14/20  gold=B pred=A FAIL
+  law-mmlu-professional 15/20  gold=D pred=D OK
+  law-mmlu-professional 16/20  gold=C pred=C OK
+  law-mmlu-professional 17/20  gold=C pred=C OK
+  law-mmlu-professional 18/20  gold=A pred=D FAIL
+  law-mmlu-professional 19/20  gold=C pred=A FAIL
+  law-mmlu-professional 20/20  gold=A pred=C FAIL
+  => 55.0% (11/20)  saved: fast_textgen_eval_20260305_060602_law-mmlu-professional.json
+
+[gsm8k]
+  gsm8k 1/20  gold=18 pred=18 OK
+  gsm8k 2/20  gold=3 pred=3 OK
+  gsm8k 3/20  gold=70000 pred=70000 OK
+  gsm8k 4/20  gold=540 pred=540 OK
+  gsm8k 5/20  gold=20 pred=140 FAIL
+  gsm8k 6/20  gold=64 pred=64 OK
+  gsm8k 7/20  gold=260 pred=260 OK
+  gsm8k 8/20  gold=160 pred=120 FAIL
+  gsm8k 9/20  gold=45 pred=45 OK
+  gsm8k 10/20  gold=460 pred=460 OK
+  gsm8k 11/20  gold=366 pred=366 OK
+  gsm8k 12/20  gold=694 pred=694 OK
+  gsm8k 13/20  gold=13 pred=13 OK
+  gsm8k 14/20  gold=18 pred=18 OK
+  gsm8k 15/20  gold=60 pred=60 OK
+  gsm8k 16/20  gold=125 pred=125 OK
+  gsm8k 17/20  gold=230 pred=230 OK
+  gsm8k 18/20  gold=57500 pred=57500 OK
+  gsm8k 19/20  gold=7 pred=7 OK
+  gsm8k 20/20  gold=6 pred=6 OK
+  => 90.0% (18/20)  saved: fast_textgen_eval_20260305_060602_gsm8k.json
+
+[humaneval]
+  humaneval 1/20  HumanEval/0 OK
+  humaneval 2/20  HumanEval/1 OK
+  humaneval 3/20  HumanEval/2 OK
+  humaneval 4/20  HumanEval/3 OK [repaired]
+  humaneval 5/20  HumanEval/4 OK
+  humaneval 6/20  HumanEval/5 OK
+  humaneval 7/20  HumanEval/6 OK
+  humaneval 8/20  HumanEval/7 OK
+  humaneval 9/20  HumanEval/8 OK
+  humaneval 10/20  HumanEval/9 OK [repaired]
+  humaneval 11/20  HumanEval/10 OK
+  humaneval 12/20  HumanEval/11 OK
+  humaneval 13/20  HumanEval/12 OK
+  humaneval 14/20  HumanEval/13 OK
+  humaneval 15/20  HumanEval/14 OK
+  humaneval 16/20  HumanEval/15 OK
+  humaneval 17/20  HumanEval/16 OK
+  humaneval 18/20  HumanEval/17 OK [repaired]
+  humaneval 19/20  HumanEval/18 OK
+  humaneval 20/20  HumanEval/19 OK
+  => 100.0% (20/20)  saved: fast_textgen_eval_20260305_060602_humaneval.json
+
+--- results ---
+  mmlu            45.0%  (9/20)
+  geo-mmlu-high-school    80.0%  (16/20)
+  law-mmlu-professional    55.0%  (11/20)
+  gsm8k           90.0%  (18/20)
+  humaneval      100.0%  (20/20)
+
+Consolidated: /Users/yenhaohuang/Desktop/model-tester/lfm2-24b/run_20260305_140533/fast_textgen_eval_20260305_060602_all.json

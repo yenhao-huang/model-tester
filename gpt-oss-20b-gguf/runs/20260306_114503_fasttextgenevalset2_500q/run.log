@@ -1,0 +1,3 @@
+==== [gpt-oss-20b-gguf] launch: /Users/yenhaohuang/Desktop/llama-bash/gptoss20b.sh (port 3172) ====
+server_pid=91041
+[gpt-oss-20b-gguf] server ready. start eval...

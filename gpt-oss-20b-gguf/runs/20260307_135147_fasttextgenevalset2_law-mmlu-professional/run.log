@@ -1,0 +1,4 @@
+server_pid=76447
+server ready; eval law-mmlu-professional start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_135147_fasttextgenevalset2_law-mmlu-professional

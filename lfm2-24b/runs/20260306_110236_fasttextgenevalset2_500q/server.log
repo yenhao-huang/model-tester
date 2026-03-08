@@ -1,0 +1,228 @@
+ggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_init: loaded in 0.019 sec
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_device_init: GPU family: MTLGPUFamilyCommon3 (3003)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 26800.60 MB
+main: n_parallel is set to auto, using n_parallel = 4 and kv_unified = true
+build: 8140 (39fb81f87) with AppleClang 17.0.0.17000604 for Darwin arm64
+system info: n_threads = 4, n_threads_batch = 4, total_threads = 10
+
+system_info: n_threads = 4 (n_threads_batch = 4) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | REPACK = 1 | 
+
+Running without SSL
+init: using 9 threads for HTTP server
+start: binding port with default address family
+main: loading model
+srv    load_model: loading model '/Users/yenhaohuang/Desktop/models/lfm2-24b/LFM2-24B-A2B-Q8_0.gguf'
+common_init_result: fitting params to device memory, for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on
+llama_params_fit_impl: projected to use 24477 MiB of device memory vs. 25556 MiB of free device memory
+llama_params_fit_impl: will leave 1079 >= 1024 MiB of free device memory, no changes needed
+llama_params_fit: successfully fit params to free device memory
+llama_params_fit: fitting params to free memory took 0.05 seconds
+llama_model_load_from_file_impl: using device MTL0 (Apple M4) (unknown id) - 25558 MiB free
+llama_model_loader: loaded meta data with 32 key-value pairs and 428 tensors from /Users/yenhaohuang/Desktop/models/lfm2-24b/LFM2-24B-A2B-Q8_0.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = lfm2moe
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Ef218A605E23739A1302869B9B3618C8B3F7Eb0D
+llama_model_loader: - kv   3:                         general.size_label str              = 64x1.3B
+llama_model_loader: - kv   4:                        lfm2moe.block_count u32              = 40
+llama_model_loader: - kv   5:                     lfm2moe.context_length u32              = 128000
+llama_model_loader: - kv   6:                   lfm2moe.embedding_length u32              = 2048
+llama_model_loader: - kv   7:                lfm2moe.feed_forward_length u32              = 11776
+llama_model_loader: - kv   8:               lfm2moe.attention.head_count u32              = 32
+llama_model_loader: - kv   9:            lfm2moe.attention.head_count_kv arr[i32,40]      = [0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, ...
+llama_model_loader: - kv  10:                     lfm2moe.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  11:   lfm2moe.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  12:                       lfm2moe.expert_count u32              = 64
+llama_model_loader: - kv  13:                  lfm2moe.expert_used_count u32              = 4
+llama_model_loader: - kv  14:         lfm2moe.expert_feed_forward_length u32              = 1536
+llama_model_loader: - kv  15:          lfm2moe.leading_dense_block_count u32              = 2
+llama_model_loader: - kv  16:                 lfm2moe.expert_gating_func u32              = 2
+llama_model_loader: - kv  17:                         lfm2moe.vocab_size u32              = 65536
+llama_model_loader: - kv  18:                  lfm2moe.shortconv.l_cache u32              = 3
+llama_model_loader: - kv  19:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  20:                         tokenizer.ggml.pre str              = lfm2
+llama_model_loader: - kv  21:                      tokenizer.ggml.tokens arr[str,65536]   = ["<|pad|>", "<|startoftext|>", "<|end...
+llama_model_loader: - kv  22:                  tokenizer.ggml.token_type arr[i32,65536]   = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  23:                      tokenizer.ggml.merges arr[str,63683]   = ["Ċ Ċ", "Ċ ĊĊ", "ĊĊ Ċ", "Ċ �...
+llama_model_loader: - kv  24:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  25:                tokenizer.ggml.eos_token_id u32              = 7
+llama_model_loader: - kv  26:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  27:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  28:               tokenizer.ggml.add_sep_token bool             = false
+llama_model_loader: - kv  29:                    tokenizer.chat_template str              = {{- bos_token -}}\n{%- set keep_past_t...
+llama_model_loader: - kv  30:               general.quantization_version u32              = 2
+llama_model_loader: - kv  31:                          general.file_type u32              = 7
+llama_model_loader: - type  f32:  207 tensors
+llama_model_loader: - type q8_0:  221 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q8_0
+print_info: file size   = 23.61 GiB (8.51 BPW) 
+load: 0 unused tokens
+load: printing all EOG tokens:
+load:   - 2 ('<|endoftext|>')
+load:   - 7 ('<|im_end|>')
+load: special tokens cache size = 509
+load: token to piece cache size = 0.3759 MB
+print_info: arch                  = lfm2moe
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 128000
+print_info: n_embd                = 2048
+print_info: n_embd_inp            = 2048
+print_info: n_layer               = 40
+print_info: n_head                = 32
+print_info: n_head_kv             = [0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0, 8, 0]
+print_info: n_rot                 = 64
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: n_embd_head_k         = 64
+print_info: n_embd_head_v         = 64
+print_info: n_gqa                 = [0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0, 4, 0]
+print_info: n_embd_k_gqa          = [0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0]
+print_info: n_embd_v_gqa          = [0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0, 0, 0, 512, 0]
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-05
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: n_ff                  = 11776
+print_info: n_expert              = 64
+print_info: n_expert_used         = 4
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = 0
+print_info: rope type             = 2
+print_info: rope scaling          = linear
+print_info: freq_base_train       = 1000000.0
+print_info: freq_scale_train      = 1
+print_info: n_ctx_orig_yarn       = 128000
+print_info: rope_yarn_log_mul     = 0.0000
+print_info: rope_finetuned        = unknown
+print_info: model type            = 8B.A1B
+print_info: model params          = 23.84 B
+print_info: general.name          = Ef218A605E23739A1302869B9B3618C8B3F7Eb0D
+print_info: n_ff_exp              = 1536
+print_info: expert_gating_func    = sigmoid
+print_info: vocab type            = BPE
+print_info: n_vocab               = 65536
+print_info: n_merges              = 63683
+print_info: BOS token             = 1 '<|startoftext|>'
+print_info: EOS token             = 7 '<|im_end|>'
+print_info: EOT token             = 2 '<|endoftext|>'
+print_info: PAD token             = 0 '<|pad|>'
+print_info: LF token              = 708 'Ċ'
+print_info: EOG token             = 2 '<|endoftext|>'
+print_info: EOG token             = 7 '<|im_end|>'
+print_info: max token length      = 30
+load_tensors: loading model tensors, this can take a while... (mmap = true, direct_io = false)
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 503
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 503
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 503
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 503
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 503
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 503
+
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 39 repeating layers to GPU
+load_tensors: offloaded 41/41 layers to GPU
+load_tensors:   CPU_Mapped model buffer size =   136.00 MiB
+load_tensors:  MTL0_Mapped model buffer size = 24175.23 MiB
+....................................................................................................
+common_init_result: added <|endoftext|> logit bias = -inf
+common_init_result: added <|im_end|> logit bias = -inf
+llama_context: constructing llama_context
+llama_context: n_seq_max     = 4
+llama_context: n_ctx         = 8192
+llama_context: n_ctx_seq     = 8192
+llama_context: n_batch       = 2048
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = auto
+llama_context: kv_unified    = true
+llama_context: freq_base     = 1000000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_seq (8192) < n_ctx_train (128000) -- the full capacity of the model will not be utilized
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M4
+ggml_metal_init: picking default device: Apple M4
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+llama_context:        CPU  output buffer size =     1.00 MiB
+llama_kv_cache:       MTL0 KV buffer size =   160.00 MiB
+llama_kv_cache: size =  160.00 MiB (  8192 cells,  10 layers,  4/1 seqs), K (f16):   80.00 MiB, V (f16):   80.00 MiB
+llama_memory_recurrent:       MTL0 RS buffer size =     1.88 MiB
+llama_memory_recurrent: size =    1.88 MiB (     4 cells,  40 layers,  4 seqs), R (f32):    1.88 MiB, S (f32):    0.00 MiB
+sched_reserve: reserving ...
+sched_reserve: Flash Attention was auto, set to enabled
+sched_reserve:       MTL0 compute buffer size =   140.20 MiB
+sched_reserve:        CPU compute buffer size =    24.01 MiB
+sched_reserve: graph nodes  = 2147
+sched_reserve: graph splits = 2
+sched_reserve: reserve took 16.05 ms, sched copies = 1
+common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+srv    load_model: initializing slots, n_slots = 4
+common_speculative_is_compat: the target context does not support partial sequence removal
+srv    load_model: speculative decoding not supported by this context
+slot   load_model: id  0 | task -1 | new slot, n_ctx = 8192
+slot   load_model: id  1 | task -1 | new slot, n_ctx = 8192
+slot   load_model: id  2 | task -1 | new slot, n_ctx = 8192
+slot   load_model: id  3 | task -1 | new slot, n_ctx = 8192
+srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+srv    load_model: use `--cache-ram 0` to disable the prompt cache
+srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+init: chat template, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+'
+srv          init: init: chat template, thinking = 0
+main: model loaded
+main: server is listening on http://127.0.0.1:3176
+main: starting the main loop...
+srv  update_slots: all slots are idle
+srv  params_from_: Chat format: Content-only
+slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = -1
+slot launch_slot_: id  3 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  3 | task 0 | processing task, is_child = 0
+slot update_slots: id  3 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 0, task.n_tokens = 12
+slot update_slots: id  3 | task 0 | n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  3 | task 0 | prompt processing progress, n_tokens = 12, batch.n_tokens = 12, progress = 1.000000
+slot update_slots: id  3 | task 0 | prompt done, n_tokens = 12, batch.n_tokens = 12
+slot init_sampler: id  3 | task 0 | init sampler, took 0.01 ms, tokens: text = 12, total = 12
+ggml_metal_synchronize: error: command buffer 0 failed with status 5
+/Users/yenhaohuang/Desktop/others/llama.cpp/ggml/src/ggml-metal/ggml-metal-context.m:249: fatal error
+WARNING: Using native backtrace. Set GGML_BACKTRACE_LLDB for more info.
+WARNING: GGML_BACKTRACE_LLDB may cause native MacOS Terminal.app to crash.
+See: https://github.com/ggml-org/llama.cpp/pull/17869
+error: Insufficient Memory (00000008:kIOGPUCommandBufferCallbackErrorOutOfMemory)
+0   llama-server                        0x000000010116b854 ggml_print_backtrace + 276
+1   llama-server                        0x000000010116ba40 ggml_abort + 156
+2   llama-server                        0x000000010115fc8c ggml_metal_synchronize + 208
+3   llama-server                        0x00000001011889b8 ggml_backend_sched_synchronize + 84
+4   llama-server                        0x0000000100fb1da8 _ZN13llama_context11synchronizeEv + 28
+5   llama-server                        0x0000000100e52930 _Z21common_sampler_sampleP14common_samplerP13llama_contextib + 48
+6   llama-server                        0x0000000100d2a1b4 _ZN19server_context_impl12update_slotsEv + 4744
+7   llama-server                        0x0000000100ceec54 _ZN12server_queue10start_loopEx + 504
+8   llama-server                        0x0000000100c76ae4 main + 12636
+9   dyld                                0x000000018f069d54 start + 7184

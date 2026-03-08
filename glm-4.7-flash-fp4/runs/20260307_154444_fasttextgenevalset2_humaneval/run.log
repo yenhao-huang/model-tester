@@ -1,0 +1,4 @@
+server_pid=82491
+server ready; eval humaneval start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154444_fasttextgenevalset2_humaneval
