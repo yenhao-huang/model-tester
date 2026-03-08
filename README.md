@@ -69,20 +69,33 @@ Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 ### Accuracy
 
 #### all
-> Latest conservative run (2026-03-05). Target was 100 questions per benchmark, but current dataset caps are: MMLU=50, Geo=20, Law=20, GSM8K=50, HumanEval=50 (max total = 190/model).
+> Latest 100-question results per benchmark (5 benchmarks, total 500/model).
+> Note: `gpt-oss-20b-gguf` / `qwen3.5_35b_a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count).
 
-| Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval | Total |
+| Model | MMLU | GSM8K | Geo MMLU High School | Law MMLU Professional | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| gpt-oss-20b-gguf | 46/50 | 18/20 | 13/20 | 50/50 | 48/50 | **175/190** |
-| qwen3.5_35b_a3b | 28/50 | 19/20 | 17/20 | 49/50 | 47/50 | **160/190** |
-| lfm2-24b | 24/50 | 16/20 | 11/20 | 46/50 | 46/50 | **143/190** |
-| glm-4.7-flash-fp4 | 22/50 | 14/20 | 9/20 | 43/50 | 46/50 | **134/190** |
+| qwen3.5_35b_a3b | 83/100 | 95/100 | 95/100 | 68/100 | 92/100 | **433/500** |
+| gpt-oss-20b-gguf | 83/100 | 94/100 | 88/100 | 51/100 | 96/100 | **412/500** |
+| glm-4.7-flash-fp4 | 72/100 | 92/100 | 86/100 | 54/100 | 76/100 | **380/500** |
+| lfm2-24b | 74/100 | 86/100 | 81/100 | 57/100 | 80/100 | **378/500** |
 
 Run folders:
-- `/Users/yenhaohuang/Desktop/model-tester/lfm2-24b/runs/20260305_142353_500q`
-- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260305_143033_500q`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260305_154017_500q`
-- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260305_154017_500q`
+- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_125451_fasttextgenevalset2_mmlu`
+- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_131727_fasttextgenevalset2_gsm8k`
+- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_133912_fasttextgenevalset2_geo-mmlu-high-school`
+- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_135147_fasttextgenevalset2_law-mmlu-professional`
+- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_145155_fasttextgenevalset2_humaneval`
+- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152832_fasttextgenevalset2_mmlu`
+- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152958_fasttextgenevalset2_gsm8k`
+- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154146_fasttextgenevalset2_geo-mmlu-high-school`
+- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154245_fasttextgenevalset2_law-mmlu-professional`
+- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154444_fasttextgenevalset2_humaneval`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155157_fasttextgenevalset2_mmlu`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155337_fasttextgenevalset2_gsm8k`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162211_fasttextgenevalset2_geo-mmlu-high-school`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162324_fasttextgenevalset2_law-mmlu-professional`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162542_fasttextgenevalset2_humaneval`
+- `/Users/yenhaohuang/Desktop/model-tester/lfm2-24b/runs/20260306_114503_fasttextgenevalset2_500q`
 
 #### fast
 | Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval |
