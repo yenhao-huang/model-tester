@@ -21,9 +21,11 @@
 ### Benchmarks
 | Benchmark | 題型 | 評分方式 |
 |---|---|---|
-| MMLU | 數學題 (大學) | 字母完全匹配 |
+| MMLU | 通識 | 字母完全匹配 |
 | GSM8K | 數學題 (高中) | 最後數字匹配 |
 | HumanEval | 程市題 | `exec()` 執行測試通過 |
+| geo-mmlu| 地理 | x |
+| law-mmlu | 法律 | x |
 
 ### 快速使用
 ```bash
@@ -60,11 +62,12 @@ Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 ## Results
 
 ### Speed
-| Model | Prompt Eval Time | Prompt Tokens | Prompt ms/token | Prompt tok/s | Eval Time | Eval Tokens | Eval ms/token | Eval tok/s | Total Time | Total Tokens |
+device; mac-mini m4 chip
+| Model | Prompt Eval Time (ms) | Prompt Tokens | Prompt ms/token | Prompt tok/s | Eval Time (ms) | Eval Tokens | Eval ms/token | Eval tok/s | Total Time | Total Tokens |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| qwen3.5-27b | 275075.89 ms | 15057 | 18.27 | 54.74 | 28220.04 ms | 112 | 251.96 | 3.97 | 303295.93 ms | 15169 |
-| glm-4.7-flash-fp4 | 138437.94 ms | 14785 | 9.36 | 106.80 | 6395.09 ms | 83 | 77.05 | 12.98 | 144833.02 ms | 14868 |
-| lfm2-24b | 2354.28 ms | 511 | 4.61 | 217.05 | 4984.87 ms | 180 | 27.69 | 36.11 | 7339.15 ms | 691 |
+| qwen3.5-27b | 275075.89  | 15057 | 18.27 | 54.74 | 28220.04  | 112 | 251.96 | 3.97 | 303295.93  | 15169 |
+| glm-4.7-flash-fp4 | 138437.94  | 14785 | 9.36 | 106.80 | 6395.09  | 83 | 77.05 | 12.98 | 144833.02  | 14868 |
+| lfm2-24b | 2354.28  | 511 | 4.61 | 217.05 | 4984.87  | 180 | 27.69 | 36.11 | 7339.15  | 691 |
 
 ### Accuracy
 
@@ -80,22 +83,7 @@ Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 | lfm2-24b | 74% (74/100) | 86% (86/100) | 81% (81/100) | 57% (57/100) | 80% (80/100) | **75.6% (378/500)** |
 
 Run folders:
-- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_125451_fasttextgenevalset2_mmlu`
-- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_131727_fasttextgenevalset2_gsm8k`
-- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_133912_fasttextgenevalset2_geo-mmlu-high-school`
-- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_135147_fasttextgenevalset2_law-mmlu-professional`
-- `/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_145155_fasttextgenevalset2_humaneval`
-- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152832_fasttextgenevalset2_mmlu`
-- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152958_fasttextgenevalset2_gsm8k`
-- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154146_fasttextgenevalset2_geo-mmlu-high-school`
-- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154245_fasttextgenevalset2_law-mmlu-professional`
-- `/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154444_fasttextgenevalset2_humaneval`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155157_fasttextgenevalset2_mmlu`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155337_fasttextgenevalset2_gsm8k`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162211_fasttextgenevalset2_geo-mmlu-high-school`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162324_fasttextgenevalset2_law-mmlu-professional`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162542_fasttextgenevalset2_humaneval`
-- `/Users/yenhaohuang/Desktop/model-tester/lfm2-24b/runs/20260306_114503_fasttextgenevalset2_500q`
+- `/Users/yenhaohuang/Desktop/model-tester/results/`
 
 #### fast
 | Model | MMLU | Geo MMLU High School | Law MMLU Professional | GSM8K | HumanEval |
