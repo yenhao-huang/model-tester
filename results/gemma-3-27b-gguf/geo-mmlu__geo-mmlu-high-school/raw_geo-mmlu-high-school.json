@@ -1,10 +1,10 @@
 {
   "benchmark": "geo-mmlu-high-school",
-  "total": 20,
-  "correct": 17,
-  "accuracy": 0.85,
-  "accuracy_pct": "85.0%",
-  "elapsed_sec": 30.71,
+  "total": 100,
+  "correct": 86,
+  "accuracy": 0.86,
+  "accuracy_pct": "86.0%",
+  "elapsed_sec": 125.19,
   "results": [
     {
       "idx": 1,
@@ -185,6 +185,726 @@
       "skipped": false,
       "prompt": "Question:\nWhich of the following best illustrates the definition of a functional region?\n\nChoices:\nA. A map showing Atlanta as a hub for Delta Airlines\nB. An article describing the region referred to as the South\nC. A map showing North Carolina's one hundred counties\nD. An essay explaining the region known as the Bible Belt\n\nAnswer with only one letter: A, B, C, or D.",
       "response": "A"
+    },
+    {
+      "idx": 21,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is NOT an important environmental factor influencing a country's agriculture?\n\nChoices:\nA. Number of frost-free days per year\nB. Availability of sufficient rainfall\nC. Reliability of sufficient rainfall\nD. Amount of fertilizer produced in the country\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 22,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe process of devolution involves\n\nChoices:\nA. the change of government from a democracy to a communist dictatorship.\nB. the movement of power from the central government to regional governments in the country.\nC. the movement of power from a monarchy to a military dictatorship.\nD. the movement of power from regional governments to central governments.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 23,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following statements is NOT part of Gunnar Myrdal's theory of cumulative causation?\n\nChoices:\nA. Developing and developed regions share similarly in wealth through trade.\nB. The core will always dominate the periphery.\nC. Growth and prosperity of the core exists at the expense of the periphery.\nD. Regions with initial advantage keep and expand it as they attract labor, capital, and trade.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 24,
+      "gold": "A",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following factors does NOT play a role in gender relationships in a culture or society?\n\nChoices:\nA. Biology\nB. Advancements in technological development\nC. Religion\nD. Custom\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 25,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA strong movement away from all religions is called\n\nChoices:\nA. secularism.\nB. heathenism.\nC. sacrilege.\nD. nationalism.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 26,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhat type of countries generally possesses a greater variety of climates and resources than other countries?\n\nChoices:\nA. Perforated states\nB. Fragmented states\nC. Elongated states\nD. Prorupt states\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 27,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following statements is true concerning folklore?\n\nChoices:\nA. It is the written tradition of a group.\nB. It encourages changing the old values and customs.\nC. It serves to blend all cultures into one.\nD. It expresses in words the shared values of a group by expressing their ideals.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 28,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is NOT a key milestone reached by the EU?\n\nChoices:\nA. The introduction of a common currency used by many EU countries\nB. A customs union\nC. A single market\nD. A common European language\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 29,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe theory that every society develops economically according to a five-stage pattern of growth is attributed to\n\nChoices:\nA. Rostow.\nB. Ravenstein.\nC. von Thünen.\nD. Burgess.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 30,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe migration streams into the United States between 1980 and the present have been primarily composed of emigrants from which of the following regions?\n\nChoices:\nA. Europe and North Africa\nB. Asia and Latin America\nC. Sub-Saharan Africa and Oceania\nD. Central Europe and Australia\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 31,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe majority of Kurds are found in which country?\n\nChoices:\nA. Iran\nB. Iraq\nC. Turkey\nD. Egypt\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 32,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe multiplier effect is\n\nChoices:\nA. the addition of non-basic workers to an urban economy that has added more basic workers.\nB. a ratio of urban to rural workers in an economy.\nC. the ratio of city workers to farm workers in an economy.\nD. the addition of rural jobs created by the urban economy.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 33,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe tendency for a population to continue to grow long after replacement fertility has been achieved is called\n\nChoices:\nA. zero population growth.\nB. rapid growth rate.\nC. homeostatic plateau.\nD. demographic momentum.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 34,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nNational sports teams, flags, national anthems, and national holidays all promote\n\nChoices:\nA. nationalism.\nB. sectarianism.\nC. political unrest.\nD. functional disputes.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 35,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe construction of freeways leads to all but which of the following results?\n\nChoices:\nA. Urban sprawl\nB. Traffic increase\nC. Traffic congestion\nD. Decreased dependency on cars\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 36,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the statements below correctly describes immigrants living in Europe?\n\nChoices:\nA. Most find citizenship easy to get in host countries.\nB. Muslims immigrants from North Africa are well integrated in France.\nC. Immigrants to European cities rarely bring their families.\nD. They are usually restricted to certain neighborhoods.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 37,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn which country does language pose a centrifugal force?\n\nChoices:\nA. Canada\nB. United States\nC. Brazil\nD. Norway\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 38,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following items is NOT a challenge to the state?\n\nChoices:\nA. Transnational corporations\nB. EU\nC. World Trade Organization\nD. Good transportation network\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 39,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn which of the following Asian countries would one find special economic zones (SEZs)?\n\nChoices:\nA. Japan\nB. South Korea\nC. China\nD. Vietnam\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 40,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat do the terms apartheid, ethnic cleansing, and integration all have in common?\n\nChoices:\nA. They all occurred in Nazi Germany during World War I.\nB. They are all forms of residential segregation.\nC. They are all ways to integrate different ethnic populations in neighborhoods.\nD. They are different expressions for the same concept.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 41,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe largest exporter of agricultural goods in the world is\n\nChoices:\nA. China.\nB. Mexico.\nC. Chile.\nD. the United States.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 42,
+      "gold": "D",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following industries does NOT need to be close to its markets?\n\nChoices:\nA. Dairy foods\nB. Bulk-gaining products\nC. Single-market products\nD. Bulk-reducing products\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 43,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nPart of the boundary between the United States and Mexico is the Rio Grande, an example of\n\nChoices:\nA. a water divider.\nB. a watercourse.\nC. an artificial boundary.\nD. a natural boundary.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 44,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhen a country combines its religion with its government, it is called a\n\nChoices:\nA. dictatorship.\nB. theocracy.\nC. democracy.\nD. autocracy.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 45,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat is the most abundant fossil fuel?\n\nChoices:\nA. Phosphate\nB. Oil\nC. Petroleum\nD. Coal\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 46,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following activities are NOT secondary economic activities?\n\nChoices:\nA. Assembling automotive parts\nB. Sewing shirts\nC. Mining copper\nD. Binding books\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 47,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nAnkara, Turkey and Islamabad, Pakistan are both examples of\n\nChoices:\nA. desert cities.\nB. forward-thrust capitals.\nC. old colonial capitals.\nD. rival cities.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 48,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat is the population statistic that tells us the level of fertility at which a population will have just enough births to replace parents and compensate for early deaths?\n\nChoices:\nA. Crude birth rate\nB. Replacement level\nC. Mortality rate\nD. Total fertility rate\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 49,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following world regions is NOT considered one of the world's most densely populated regions?\n\nChoices:\nA. South Asia\nB. Europe\nC. South America\nD. Northeast United States\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 50,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is a characteristic of a developed country?\n\nChoices:\nA. Over 50% of workforce engaged in agriculture\nB. Women held in inferior place in society\nC. Main disease related to age and lifestyle\nD. High birth and death rates\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 51,
+      "gold": "D",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nAll of the following are non-basic jobs in the city EXCEPT\n\nChoices:\nA. city firefighter.\nB. social worker.\nC. dry cleaner.\nD. garment factory worker.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 52,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is MOST likely to experience population pressure?\n\nChoices:\nA. An industrial society with abundant natural resources and large imports of food\nB. A society with a highly mechanized agricultural sector\nC. A non-ecumene\nD. A slash-and-burn agricultural society\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 53,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe voluntary association of three or more countries willing to give up some measure of sovereignty is called\n\nChoices:\nA. nationalism.\nB. devolution.\nC. supranationalism.\nD. complementarity.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 54,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is a push factor?\n\nChoices:\nA. Dissatisfaction with current jobs\nB. Higher-paying jobs elsewhere\nC. An attractive retirement community elsewhere\nD. A pleasant climate\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 55,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is an example of a bulk-gaining industry?\n\nChoices:\nA. Steel\nB. Bottled orange juice\nC. Paper\nD. Copper\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 56,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA rejection of or indifference to religion in a country is called\n\nChoices:\nA. polytheism.\nB. animism.\nC. secularism.\nD. monotheism.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 57,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn which of the following regions is subsistence agriculture being replaced by large-scale commercial development?\n\nChoices:\nA. The Swiss Alps\nB. The Amazon Basin\nC. North Africa\nD. The Alaskan tundra\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 58,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich type of transportation system created the star-shaped city pattern?\n\nChoices:\nA. Highways to airports that link cities\nB. Interstate highways that link cities\nC. Beltways around cities\nD. Streetcar and trolley lines extending from the CBD\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 59,
+      "gold": "B",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following factors has little or no impact on mortality rates in the developing countries?\n\nChoices:\nA. New medicines\nB. Improved birth control methods\nC. Pesticides\nD. Famine relief\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 60,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe process of invasion and succession is a process involving migration and is best described as when\n\nChoices:\nA. new residents tear down and rebuild housing units.\nB. new residents live peacefully with old residents.\nC. new residents assimilate with old residents completely.\nD. new residents move into areas occupied by older resident groups.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 61,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following countries is actively trying to preserve the purity of their native language from contamination by English or other languages?\n\nChoices:\nA. Italy\nB. Russia\nC. Japan\nD. Brazil\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 62,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhen a new fashion design is introduced globally, the information initially travels through a process known as\n\nChoices:\nA. contagious diffusion\nB. relocation diffusion\nC. innovative diffusion\nD. hierarchical diffusion\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 63,
+      "gold": "B",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nZero population growth (ZPG) is achieved when\n\nChoices:\nA. CBR – CDR 5 2.\nB. Births 1 immigration 5 deaths 1 emigration.\nC. Total fertility 5 3.\nD. Replacement fertility is achieved.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 64,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat is the chief religion practiced in Europe?\n\nChoices:\nA. Christianity\nB. Islam\nC. Hinduism\nD. Animism\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 65,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe theory that cities grow outward from a core utilizing several nodes of growth was proposed by\n\nChoices:\nA. Rostow.\nB. Ravenstein.\nC. von Thünen.\nD. Harris and Ullmann.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 66,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the following organizations is NOT a supranational organization?\n\nChoices:\nA. UN\nB. NATO\nC. ASEAN\nD. PLO\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 67,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following countries is NOT a federal state?\n\nChoices:\nA. Canada\nB. United States\nC. France\nD. People's Republic of China\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 68,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn a postindustrial economy, which of the following resources is considered most important to increase productivity?\n\nChoices:\nA. Energy\nB. Labor\nC. Information\nD. Specialization\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 69,
+      "gold": "B",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nThe process whereby immigrants learn the values, language, and customs of their new country is called\n\nChoices:\nA. assimilation.\nB. acculturation.\nC. adaptation.\nD. amalgamation.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 70,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA city that is more than twice as large as the next largest city in a country is called a\n\nChoices:\nA. global city.\nB. world leader city.\nC. megalopolis.\nD. primate city.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 71,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following entities is a state?\n\nChoices:\nA. Antarctica\nB. American Samoa\nC. Egypt\nD. Marshall Islands\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 72,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the following statements does NOT correctly describe transnational companies (TNCs)?\n\nChoices:\nA. Many TNCs operate in areas of electronics, chemicals, pharmaceuticals and petroleum.\nB. Most TNCs produce and sell manufactured goods.\nC. Most TNCs are headquartered in the United States, Japan, and the European Union.\nD. TNCs are generally controlled by foreign governments.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 73,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat family do most European languages belong to?\n\nChoices:\nA. Ural-Altaic\nB. Basque\nC. Indo-European\nD. Phoenician\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 74,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is LEAST self-sufficient in the natural resources needed for modern industry?\n\nChoices:\nA. United States\nB. Japan\nC. France\nD. United Kingdom\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 75,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nJohnny and Susie are moving to Scotland to renovate and live in the family castle. What makes their move a migration?\n\nChoices:\nA. They are crossing another country's borders.\nB. They are not taking anything with them.\nC. They are moving permanently.\nD. They will be gone more than one year.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 76,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA person who practices the Hindu religion would be most likely to\n\nChoices:\nA. visit a shrine built on the shore of a lake.\nB. pray five times a day.\nC. bathe in the Ganges River.\nD. make a pilgrimage to Jerusalem.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 77,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the following demographic factors characterizes stages 4 and 5 in the demographic transition model?\n\nChoices:\nA. Zero population growth\nB. High mortality rates\nC. High birth rates\nD. High sex ratios\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 78,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIf I wanted to ship a small piece of very valuable jewelry to my aunt who lives in Poughkeepsie, which mode of transportation makes the most sense?\n\nChoices:\nA. Truck\nB. Air\nC. Ship\nD. Railroad\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 79,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nEarly settlements and high population density along coastlines and rivers are best attributed to which of the following?\n\nChoices:\nA. Mediterranean climate\nB. Limited forest cover\nC. Growth of manufacturing\nD. Access to trade routes\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 80,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following characteristics is NOT true of a state?\n\nChoices:\nA. Independent territory\nB. Internationally recognized\nC. Boundaries\nD. A national language\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 81,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich factor in the last quarter century greatly destabilized Eastern Europe and led to ethnic conflict?\n\nChoices:\nA. The introduction of new languages\nB. The end of the Cold War\nC. The invasion by the Soviets\nD. The acceptance of many Eastern European countries into the EU\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 82,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe key factor Thomas Malthus failed to recognize in his population theory was\n\nChoices:\nA. population is limited by their means of subsistence.\nB. all populations have the potential to increase more than the actual rate of increase.\nC. wars and famine inhibit population's reproductive capacity.\nD. technology's ability to raise the Earth's carrying capacity.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 83,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is NOT an example of syncretism?\n\nChoices:\nA. Halloween\nB. Foreign cuisine changed to suit American tastes\nC. Hasidic Judaism\nD. Catholicism in Louisiana\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 84,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following countries is situated in the region of tectonic activity known as the Pacific Ring of Fire?\n\nChoices:\nA. Brazil\nB. Australia\nC. Chile\nD. India\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 85,
+      "gold": "D",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the following is NOT an advantage of urban agriculture?\n\nChoices:\nA. Helping to solve the problem of solid waste disposal\nB. Fresh produce for sale to others\nC. Beautification of a dingy urban area\nD. Renewed or purified water supplies\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 86,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is NOT used by geographers to determine absolute location?\n\nChoices:\nA. Longitude\nB. Latitude\nC. Equator\nD. Distance to the nearest city\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 87,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nChina and Vietnam's dispute over the Spratley Islands is\n\nChoices:\nA. a positional dispute.\nB. a territorial dispute.\nC. a resource dispute.\nD. a functional dispute.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 88,
+      "gold": "D",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following jobs is in the non-basic employment sector?\n\nChoices:\nA. Software engineer\nB. F-10 pickup truck assembly-line worker\nC. Oil refinery worker\nD. Parking lot attendant\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 89,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following factors would be considered a \"pull\" factor for Riva when considering a move from India to the United States?\n\nChoices:\nA. Abject poverty\nB. Better job and higher wages\nC. India's caste system\nD. Violence in her neighborhood\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 90,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe world systems theory divides the world into\n\nChoices:\nA. core, periphery, and semi-periphery.\nB. rich and poor.\nC. developed and undeveloped.\nD. haves and have-nots.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 91,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe most rapidly urbanizing area of the world is:\n\nChoices:\nA. Europe\nB. East Asia\nC. Sub-Saharan Africa\nD. South Asia\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 92,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIf you wanted to find the global distribution of coal, you would use a\n\nChoices:\nA. reference map.\nB. topographic map.\nC. thematic map.\nD. location map.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 93,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich pair of religions below share a long-held tradition of cremating their dead?\n\nChoices:\nA. Hindu and Buddhist\nB. Hindu and Muslim\nC. Muslim and Jewish\nD. Christian and Buddhist\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 94,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich one of the following statements does NOT correctly describe the Green Revolution?\n\nChoices:\nA. It changed centuries-old methods of farming.\nB. It was an attempt to feed a growing world population.\nC. It centered on increased rice, wheat, and maize yields.\nD. It greatly improved crop yields in sub-Saharan Africa.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 95,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA chief factor that contributed to the Second Agricultural Revolution was\n\nChoices:\nA. the Industrial Revolution.\nB. World War I.\nC. World War II.\nD. the discovery of the plow.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 96,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhen we talk about diffusion of a cultural trait, what do we mean by \"hearth\"?\n\nChoices:\nA. Destination\nB. Origin point\nC. All locations along the diffusion path\nD. Axis point\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 97,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe distance north and south of the equator is the\n\nChoices:\nA. global grid system.\nB. Prime Meridian\nC. latitude.\nD. longitude.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 98,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is NOT a characteristic of a city in the developing world?\n\nChoices:\nA. Contains modern centers of commerce\nB. Has a well-developed infrastructure\nC. Experiences large in-migrations of rural people into the city\nD. Produces a large share of its country's GDI\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 99,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich type of economic activity is most closely tied to the physical environment?\n\nChoices:\nA. Primary\nB. Secondary\nC. Tertiary\nD. Quaternary\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 100,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following statements is TRUE concerning women in the labor force?\n\nChoices:\nA. Most women work in agriculture\nB. The percentage of women economically active in the labor force declined worldwide\nC. The percentage of women in the total labor force declined\nD. Women spend more hours per day working than men in all regions except Anglo America and Australia\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
     }
   ]
 }
