@@ -1,0 +1,190 @@
+{
+  "benchmark": "law-mmlu-professional",
+  "total": 20,
+  "correct": 11,
+  "accuracy": 0.55,
+  "accuracy_pct": "55.0%",
+  "elapsed_sec": 105.38,
+  "results": [
+    {
+      "idx": 1,
+      "gold": "A",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nA driver was having trouble finding a place to park his car near a store at which he needed to make a quick stop to purchase something. He decided to just park along the road next to the store, even though there was not really a lane or space there intended for parking. The driver pulled his car as far off the roadway as he could and figured that it would be fine because he would only be in the store for a few minutes. While the driver was in the store, a car driven by a woman approached the spot where the driver had left his car. When the woman saw the driver's car and realized it was partially obstructing the road, she tried to avoid hitting it but crashed into it. The accident caused $5,000 worth of damage to the driver's car and $1,000 worth of damage to the woman's car. Assume that the jurisdiction follows traditional contributory negligence rules and that the woman had the last clear chance to avoid the collision. How much, if anything, could the driver recover in a lawsuit against the woman for negligence?\n\nChoices:\nA. $5,000, or the full amount of damages to his car.\nB. $4,000, or the full amount of his damages, minus the woman's damages.\nC. $2,500, or half of his damages.\nD. Nothing, because the driver was contributorily negligent for parking his car so that part of it stuck out into the street.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 2,
+      "gold": "B",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nA state enacted a statute that authorized the payment of state funds to any private institution of higher learning within the state that meets certain minimum criteria and refrains from awarding only seminarian or theological degrees. The aid is in the form of annual subsidies to qualified institutions. The grants are non-categorical but may not, under an added provision, be utilized by the institutions for sectarian purposes. A state agency determines the eligibility of applicant institutions. Eight state taxpayers, all avowed atheists, bring suit in federal court to enjoin the payments of subsidies under the statute to all church-affiliated institutions in the state. The federal district court will most likely\n\nChoices:\nA. dismiss the action for lack of standing.\nB. uphold the validity of the statute as nonviolative of the establishment clause.\nC. invalidate the statute as violative of the establishment clause.\nD. uphold the validity of the statute as a valid exercise of the state's power to subsidize education.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 3,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nLandowner's property was landlocked. He had to go to court to ask the court to compel the adjacent landowner to give him an easement of necessity for ingress and egress to the highway. The court granted the easement of necessity to Landowner. Over a decade later, another access route to the highway opened up through public improvements. The adjacent landowner sued to stop Landowner from continuing to use his land for ingress and egress. What will the court most likely rule in this case?\n\nChoices:\nA. The holder of the easement has a right to insist on its uninterrupted continuance.\nB. The easement continues because its purpose of access to the property still exists.\nC. The easement is terminated because it cannot exceed five years in length, without being formally renewed by both parties.\nD. The equities favor the termination of the easement where another route is available.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 4,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA police officer received a call from a friend who owned a business. The friend told him that a former employee, who was a \"hothead\", was making harassing phone calls and threats. He faxed the officer a oneparagraph summary of the matter. The officer questioned the prior employee, who became verbally abusive and vehemently denied making the calls. The officer arrested him for criminal harassment and wrongful use of a communications device, stating, \"I'm going to teach you a lesson.\" The criminal case was thrown out, however, at the preliminary hearing when the police could not produce proof that the former employee made any phone calls to the business. The former employee then sued the police officer and the business owner for the tort of malicious prosecution. Leaving aside any considerations of immunity for the officer, can the former employee allege facts sufficient to support a malicious prosecution case?\n\nChoices:\nA. No, because the officer received enough facts from the owner to establish the elements of the criminal charges that he filed against the former employee.\nB. Yes, there were sufficient facts for the former employee to establish the basic elements of the malicious prosecution tort.\nC. No, because the business owner knew that it was the former employee who made the calls even if he could not prove it.\nD. Yes, the officer committed abuse of legal process when he improperly initiated the case.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 5,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nBuyer purchases an item from a merchant that turns out to be unfit, defective and unsafe for its ordinary purposes. Assuming no other warranties, which of the following can be invoked by the buyer?\n\nChoices:\nA. Express warranty\nB. Implied warranty\nC. Warranty of title\nD. Warranty of merchantability\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 6,
+      "gold": "B",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nA pharmacist was employed by a drug store. A long-time customer of the drug store presented a prescription to the pharmacist for the medication Clinoril, which was prescribed by her physician to treat her arthritic condition. The pharmacist was in a rush that day because of a backlog of prescriptions to fill, and he misread the customer's prescription. He filled her prescription with Clinitest, a caustic substance not for internal use. He labeled the container with the instructions for Clinoril: \"Take one tablet twice a day. \"The customer followed the instructions, consumed the Clinitest, and suffered severe injuries to her stomach and esophagus. If the customer brings a strict liability in tort action against the pharmacist, what is his best defense?\n\nChoices:\nA. It was the cashier and not he who personally received the money for the medication.\nB. He was not a seller of the product upon whom strict liability may be imposed.\nC. He exercised reasonable care under the circumstances.\nD. The drug store was not the manufacturer upon whom ultimate liability falls.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 7,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWilshire Street is a public thoroughfare, designated as a one-way street for northbound traffic. Wilshire and Figueroa Streets intersect at right angles. The intersection is controlled by traffic lights. A businessman was driving his car east on Figueroa Street and did not see the traffic light. He entered the intersection at a time when the light was red for eastbound traffic and green for northbound traffic. A woman, in violation of statute, was proceeding south on Wilshire Street, and she entered the intersection without looking for any cross traffic and struck the businessman's car. The businessman suffered damages in the amount of $5,000. The woman, on the other hand, suffered damages in the amount of $1,000. The businessman brought suit against the woman to recover his damages. The woman denied liability and filed a counterclaim against the businessman for her damages. Both drivers were negligent with 30 percent of the negligence attributable to the woman and 70 percent of the negligence attributable to the businessman. A statute in the jurisdiction provides: \"A failure to exercise ordinary care, which contributes to personal injury or property damage, shall not bar recovery of damages by the injured party, but damages shall be diminished in proportion to the amount of negligence attributable to the person injured. There shall be no set-off of damages between the respective parties. \" Which of the following is the appropriate judgment in the case?\n\nChoices:\nA. The businessman recovers $5,000 from the woman, and the woman recovers $1,000 from the businessman.\nB. The businessman recovers $3,500 from the woman, and the woman recovers $300 from the businessman.\nC. The businessman recovers $1,500 from the woman, and the woman recovers $700 from the businessman.\nD. The businessman recovers $800 from the woman, and the woman recovers nothing from the businessman.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 8,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA patient filed a medical malpractice action against a hospital in federal court, alleging that hospital staff had failed to diagnose the patient's cancer based on an X-ray that had been taken at the hospital. The patient's cancer was diagnosed six months later, based on the same X-ray, when the patient sought a second opinion. In the interim, the cancer had spread. Fact and expert discovery have been completed in the action. The hospital has moved for summary judgment. In support of its motion, the hospital has submitted a memorandum identifying facts that it claims are not in dispute. It has also cited and attached supporting exhibits, including a report from the hospital's radiologist, who found no signs of cancer on the X-ray. What is the best way for the patient to raise a genuine dispute of material fact?\n\nChoices:\nA. Submit a report from the patient's expert radiologist contradicting the findings in the report of the hospital's radiologist.\nB. Submit an affidavit from the patient's attorney detailing his conversations with the patient's expert radiologist.\nC. Submit an affidavit from the patient's expert radiologist with findings that contradict the report of the hospital's radiologist.\nD. Submit the patient's medical records showing the patient's current cancer diagnosis.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 9,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA seller signed an agreement to sell a residential parcel to a prospective purchaser. The agreement required her to convey good and marketable title. The title search revealed an open mortgage from a previous owner to a local bank. It was recorded 25 years ago. The mortgagor could not be found and the bank lost its records. The purchase agreement gave the seller 90 days extra in such a situation to clear title by bringing a quiet title action. The seller did not follow that provision and went to settlement with the bad title and demanded more extra time to file a quiet title action. The buyer decided not to wait and demanded her down payment be returned and that the deal be rescinded. Will litigation most likely favor the buyer's position?\n\nChoices:\nA. Yes, because the seller breached the agreement by not following the procedure stated in the purchase agreement.\nB. No, because the seller always has the right to bring an action for adverse possession against the holder of the open mortgage.\nC. Yes, because the open mortgage is so old that it would be declared void by all courts.\nD. No, because the buyer did not act in good faith when it refused to give the seller additional time at the closing.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 10,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn which of the following situations does the best evidence rule generally not apply?\n\nChoices:\nA. Collateral matters\nB. Public records\nC. When it's not offered to prove the contents of the document\nD. All of the above.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 11,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA pilot was flying his small plane when he experienced engine trouble and was forced to make an emergency landing. He landed the plane safely in a large yard behind a home located in a relatively remote area. Unfortunately, when he disembarked from the plane, he was attacked and injured by two large dogs kept by the homeowner to discourage trespassers. The homeowner, who had seen the plane land, had ordered the dogs to attack. Several months earlier, the homeowner had posted large signs around the perimeter of the yard warning of the dogs. Does the pilot have a viable claim against the homeowner for battery?\n\nChoices:\nA. No, because the homeowner had provided adequate warning.\nB. No, because the pilot was a trespasser.\nC. Yes, because the pilot can invoke the privilege of necessity.\nD. Yes, because the pilot could not reasonably have been expected to see the warning signs posted by the homeowner.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 12,
+      "gold": "D",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nIn which of the following situations would the defendant's intoxication NOT be able to negate his criminal culpability?\n\nChoices:\nA. A defendant had consumed a fifth of bourbon. Later that same day, he approached a victim and, brandishing a knife, told her to accompany him or he would stab her. He led the victim to his car and then ordered her to disrobe. As the victim was removing her pantyhose, she kicked the defendant in the head, temporarily dazing him. The victim then safely ran from the car. The defendant is arrested and charged with the crime of assault with the intent to commit rape.\nB. A defendant attended a wedding reception at a hotel, where he drank several vodka daiquiris. Following the reception, the defendant engaged in a violent argument with the hotel's parking lot attendant. The defendant took a tire iron from his car and threw it at the attendant. The tire iron missed the attendant and hit a victim as he was entering the hotel. The defendant is arrested and charged with assault with the intent to commit battery.\nC. A defendant had been drinking liquor all evening at a bar with three of his buddies. An undercover detective overheard the defendant and his buddies plot to rob the bar after closing hours. When the defendant attempted to draw a gun from his coat, he was quickly disarmed and placed under arrest by the detective. The defendant is charged with the crime of conspiracy to commit robbery.\nD. At his law school graduation party, a defendant drank two six-packs of beer. Around midnight, the defendant was approached by a girl, who asked him to drive her home. Although the girl was only 15 years old, she had the appearance of a woman in her mid-to-late twenties. The defendant, who had had his eye on the girl all night, quickly agreed, and he showed her the way to his car. Once inside, they engaged in sexual intercourse. The age of consent in this jurisdiction is 17 years old for females. The defendant is subsequently arrested and charged with statutory rape.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 13,
+      "gold": "A",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nThe local jurisdiction has a modified comparative negligence statutein effect that provides:\"Contributory negligence shall not bar recovery in any action by any person or his legal representative to recover damages for negligence resulting in death or injury to person or property, if such negligence was not as great as the negligence of the person against whom recovery is sought, but any damages allowed shall be diminished in proportion to the amount of negligence attributable to the person for whose injury, damage, or death recovery is made. \"In addition, this jurisdiction follows joint and several liability for joint tortfeasors. A buyer recently purchased an undeveloped beachfront lot in the jurisdiction. He hired a building contractor to construct a new house on the property. Thereafter, the contractor employed a subcontractor to provide on-site maintenance. The contractor contracted with a cement company to supply concrete for the foundation of the structure. After excavation started, an employee of the cement company delivered a load of concrete to the construction site. To facilitate delivery, the contractor and the subcontractor had built an access ramp extending from the street to the lot. As the employee was driving over the ramp, it suddenly collapsed and caused the truck to overturn, seriously injuring the employee. A subsequent investigation determined that the contractor and the subcontractor negligently used substandard materials in constructing the ramp. In addition, the employee was partially at fault for driving while intoxicated. The employee brought suit against the contractor and the subcontractor to recover damages for his injuries. A special trial was held on the issue of negligence, and it was adjudged that each party was contributorily negligent as follows:PARTY DEGREE OF NEGLIGENCEPlaintiff: (the EE) 40%Defendant: (the contractor) 35%Defendant: (the subcontractor) 25%The employee, who suffered damages in the amount of $100,000, brings a personal injury action against the contractor individually. He will most likely\n\nChoices:\nA. recover nothing, because he was more at fault than the contractor.\nB. recover $100,000.\nC. recover $55,000.\nD. recover $35,000.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 14,
+      "gold": "B",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nA retiree was the record title owner in fee simple absolute of a 100-acre farm. In 1998, the retiree devised the property to his daughter and his friend as joint tenants with right of survivorship. The next year, the daughter executed a deed to a co-worker as follows:\"I hereby convey all of my right, title, and interest in the northeast quarter of the farm to the co-worker and his heirs. \"Thereafter, the daughter borrowed $100,000 from a lender, and a promissory note was executed as evidence of the debt. In 2008, the daughter defaulted on the loan, and the lender, as judgment creditor, levied upon and sold to his nephew on execution sale all of \"(the daughter's) right, title and interest in the south half of the farm. \" In December 2009, the daughter died intestate, leaving her husband as her sole surviving heir. Who owns the farm?\n\nChoices:\nA. The friend and the co-worker are tenants in common of the northeast quarter of the farm; the friend and the husband are tenants in common of the northwest quarter of the farm; and the friend and the nephew are tenants in common of the south half of the farm.\nB. The friend and the co-worker are tenants in common of the northeast quarter of the farm; the friend is the owner in fee of the northwest quarter of the farm; and the friend and the nephew are tenants in common of the south half of the farm.\nC. The friend and the co-worker are tenants in common of the northeast quarter of the farm; the friend and the husband are tenants in common of the northwest quarter of the farm; and the nephew is the owner in fee of the south half of the farm.\nD. The friend and the co-worker are tenants in common of the northeast quarter of the farm; and the friend is the owner in fee of the remaining three-quarters of the farm.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 15,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA defendant who is an accountant has been charged with fraud for allegedly helping a client file false income tax returns by shifting substantial medical expenses from one year to another. The defendant has pleaded not guilty, claiming that he made an honest mistake as to the date the expenses were paid. At trial, the prosecutor offers evidence of the defendant's involvement in an earlier scheme to help a different client falsify tax returns in the same way. Is the evidence of the defendant's involvement in the earlier scheme admissible?\n\nChoices:\nA. No, because it is impermissible character evidence.\nB. No, because it is not relevant to the issues in this case.\nC. Yes, to show absence of mistake.\nD. Yes, to show the defendant's propensity to commit the crime.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 16,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA land-development company was the owner of a400-acre tract of land in the Southwest. Over the course of time, the land-development company developed two residential subdivisions of the land, an eastern tract and a western tract, each of which contained 150 acres. These subdivisions were created by separate plats that made no reference to each other. The restrictions in the plats were, however, substantially identical. The plats and each deed provided that \"the use of the land herein conveyed is restricted to single-family dwellings only, and this covenant is intended to apply to each and every lot in the subdivision and runs with the land, binding every lot owner, his heirs, and assigns. \"After all but four lots in each subdivision had been sold by the land-development company, it sold 50 acres of the remaining 100 acres of land to a country club by a deed containing the following provisions:\"This deed is executed and accepted with the understanding that the property above described is hereby restricted so that(1) said property may be used as a country club, with a golf course, pool, tennis courts, club house, eating facilities, and other improvements appropriate to a country club. (2) said property may also be subdivided and platted as a residential subdivision similar to the eastern tract and the property shall thereafter be used in accordance with and conveyed subject to residential restrictions that shall conform with those restrictions in force against the eastern tract. (3) the restrictions herein contained shall be deemed covenants running with the land, and for breach of any covenant herein, the land-development company, its successors and assigns may, at its option, re-enter and terminate the estate conveyed hereby. \"At the time of this conveyance, the land- development company retained title to the remaining 50 acres in the original 400-acre tract. Thereafter, the land-development company developed an exclusive shopping center on 25 acres of the retained land. In February 2001, the land-development company sold the remaining eight residential lots in the eastern tract and the western tract. The next month, the land-development company executed the following instrument to the country club:\"The land-development company, for itself, its successors, and assigns, does hereby release,surrender and quitclaim all rights, title, or other property interest in that certain acres owned by the country club. \"At the time this instrument was executed, the country club had built a club house, golf course, and tennis courts on a portion of its land, and it had 25 acres of vacant land remaining. The country club wishes to commence construction of a new high- rise complex (containing a hotel, shopping mall, apartments, etc. ) on the 25 acres of vacant land it possesses. In an action by one of the homeowners in the western tract to enjoin construction of the complex, plaintiff will most likely\n\nChoices:\nA. succeed, because the homeowner (or any other landowner in the eastern tract or the western tract) as assignee of the land development company could re-enter the land upon breach of condition subsequent.\nB. succeed, because a common development scheme had been established for the entire 400-acre tract, and the country club's proposed complex would constitute a non-conforming use.\nC. not succeed, because the land development company's instrument of March 2001 effectuated an abrogation of the deed restrictions on the country club's use of its property.\nD. not succeed, because in accordance with deed restriction (b), only a homeowner in the eastern tract would have standing to challenge the country club's proposed construction plan.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 17,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nDoug Dogman had a domesticated golden retriever named Rover. Rover was a good, friendly dog who loved to run and chase cars but had never hurt anyone. One dark evening before the street lights turned on, Rover was chasing cars in the street, and Ginny Grandmother, aged 85, swerved to avoid hitting the dog. As she swerved, Ginny hit a parked car and suffered a head injury. If Ginny brings suit against Doug Dogman under a strict liability theory, the court will likely find for\n\nChoices:\nA. Ginny, because Doug's dog was a cause in fact of Ginny's injuries.\nB. Doug, because Retriever is a domesticated animal.\nC. Doug, unless a statute or ordinance bans unleashed dogs on public streets.\nD. Doug, because the strict liability rule for dogs would not include dogs not displaying vicious propensities.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 18,
+      "gold": "C",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nThe police suspected a woman of dealing in stolen credit cards. An undercover police officer knocked on the woman's door and told her that he was willing to pay for usable credit cards. When the woman asked if he was a police officer, the officer replied, \"No,\" giving her a false name and saying, \"You can call Harvey he'll vouch for me.\" The woman admitted him to her house. After she left the room to call Harvey, the officer lifted some papers off a desk and underneath discovered three credit cards bearing different names. He seized the cards, and when the woman returned, he arrested her. The woman has moved to suppress the evidence seized on the ground that her Fourth Amendment rights were violated. Should the court grant the motion to suppress?\n\nChoices:\nA. No, because it was immediately apparent that the cards were stolen.\nB. No, because the woman assumed the risk that the officer would seize items in plain sight.\nC. Yes, because the woman's rights were violated when the officer lifted the papers.\nD. Yes, because the woman's rights were violated when the officer obtained entry by deceit.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 19,
+      "gold": "B",
+      "pred": "C",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nA patient in a hospital was placed in a wheelchair with his broken leg extended straight out in front of him. As a nurse employed by the hospital was pushing the wheelchair through a set of automatic doors at a normal pace, the doors closed on the patient's foot, injuring it. The nurse attempted to pull the wheelchair back through the doors. This action caused the doors to close more tightly on the patient's foot, injuring it further. The patient sued the hospital, alleging improper maintenance of the doors. The patient has produced no evidence of specific conduct or neglect on the part of the hospital that would have caused the automatic doors to malfunction. The hospital has moved for summary judgment. Should the court grant the hospital's motion?\n\nChoices:\nA. No, because a jury could find that there was a latent defect in the doors.\nB. No, because a jury could find the hospital liable for negligence based on res ipsa loquitur.\nC. Yes, because proof of an accident, by itself, does not establish that an injured person was a victim of negligence.\nD. Yes, because the nurse's action was a superseding cause of the injury. \n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 20,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA store owner noticed that an expensive electronic device was missing from the store. He assumed that a shoplifter had taken it. Later that day, the store owner was cleaning up the small room in the back of the store that the employees of the store used to store their personal items while they were at work. The store owner was straightening up the coat rack in the back room, when he accidentally knocked one of the employee's coats off the hanger. As the coat fell onto the floor, the missing electronic device fell out of the pocket of the coat. It was still in its original packaging, and the store owner checked the serial number on the package to confirm that it was the device missing from the store's shelves. The store owner knew that the coat belonged to a woman who worked as a cashier in the store. The store owner felt bad, but decided that he had no choice but to call the police. Two police officers arrived at the store. They gathered information from the store owner, who signed a criminal complaint against the woman. The officers then discussed the matter with the woman. Although she denied stealing anything, the officers arrested her and informed her that they would need to take her to the police station. After the police took the woman away, another employee of the store found out that the woman had been arrested. That employee immediately went to the store owner and admitted that he was actually the one who had stolen the device, and that he had hidden it in the woman's coat, intending to retrieve it later before the end of the woman's work shift. The store owner promptly called the police and told them that there had been a mistake and that the theft charge against the woman was invalid. The police released the woman, who spent a total of approximately 30 minutes in police custody. If the woman asserts a claim for false imprisonment against the arresting officers, will the woman prevail?\n\nChoices:\nA. Yes, because the woman had not committed a crime at the time she was arrested.\nB. Yes, because the woman was arrested and held in custody.\nC. No, because the woman was detained for only 30 minutes.\nD. No, because the officers had probable cause to arrest the woman based on the store owner's complaint and honest belief that the woman had stolen the device.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    }
+  ]
+}

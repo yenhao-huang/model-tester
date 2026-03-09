@@ -41,6 +41,15 @@ Generated at: 2026-03-08T09:52:11.020554
 - law-mmlu: **57.0%** (57/100)  \n  - folder: `lfm2-24b/law-mmlu__law-mmlu-professional`
 - HumanEval: **80.0%** (80/100)  \n  - folder: `lfm2-24b/HumanEval__humaneval`
 
+## gemma-3-27b-gguf
+- MMLU: **75.0%** (15/20)  \n  - folder: `gemma-3-27b-gguf/MMLU__mmlu`
+- GSM8K: **76.0%** (76/100)  \n  - folder: `gemma-3-27b-gguf/GSM8K__gsm8k`
+- geo-mmlu: **85.0%** (17/20)  \n  - folder: `gemma-3-27b-gguf/geo-mmlu__geo-mmlu-high-school`
+- law-mmlu: **55.0%** (11/20)  \n  - folder: `gemma-3-27b-gguf/law-mmlu__law-mmlu-professional`
+- HumanEval: **63.0%** (63/100)  \n  - folder: `gemma-3-27b-gguf/HumanEval__humaneval`
+
+> Note: 目前為混合題數（MMLU/geo/law 為 20 題舊 cache；GSM8K/HumanEval 為 100 題新跑）。
+
 ## Average score (simple mean of 5 benchmarks)
 1. **qwen3.5-35b-a3b**: 86.60% (N=5)
 2. **gpt-oss-20b**: 82.40% (N=5)

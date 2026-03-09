@@ -1,0 +1,190 @@
+{
+  "benchmark": "geo-mmlu-high-school",
+  "total": 20,
+  "correct": 17,
+  "accuracy": 0.85,
+  "accuracy_pct": "85.0%",
+  "elapsed_sec": 30.71,
+  "results": [
+    {
+      "idx": 1,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following statements does NOT describe a factor that contributed to suburbanization in the United States?\n\nChoices:\nA. A shorter workweek made time for a commute possible.\nB. Changes in the housing mortgage regulations made home ownership easier.\nC. Fixed-route public transit routes increased in importance.\nD. Improved automobiles made transportation easier and less limited.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 2,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe Rhine River is an example of which type of boundary?\n\nChoices:\nA. Geometric\nB. Artificial\nC. Natural\nD. Relict\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 3,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following countries does NOT have a well-known example of a relict boundary?\n\nChoices:\nA. Vietnam\nB. United Kingdom\nC. Germany\nD. Bolivia\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 4,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe climate of Great Britain is milder than most other places along the same latitude for which of the following reasons?\n\nChoices:\nA. The Gulf Stream brings warm waters to Great Britain, raising the temperature of winds that blow onto the island.\nB. Hot springs throughout the country raise the temperature of the surrounding land and air.\nC. Mountain ranges in the north of Great Britain act as a barrier to cold winds blowing from the Arctic.\nD. Small landmasses generate their own local climate and are largely unaffected by latitude.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 5,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich group represents the Persian (Iranian) variation of Islam and believes in the infallibility and divine right to authority of the Imams descended from Ali?\n\nChoices:\nA. Sunni\nB. Shiite\nC. Imam\nD. Untouchables\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 6,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following statements about East Asia's industrial regions is true?\n\nChoices:\nA. Japan has a rich natural resource base.\nB. China lacks natural resources but has a massive labor force.\nC. China is industrializing rapidly.\nD. Taiwan lacks industrial enterprise and an educated workforce.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 7,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following would NOT be considered a barrier to diffusion of a cultural trait?\n\nChoices:\nA. Language\nB. Religion\nC. Oceans\nD. Tolerant complaisant citizens\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 8,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nOne of the effects of the east–west orientation of the Alpine mountain system and the northern plains of western and central Europe is that it\n\nChoices:\nA. limits the marine climate of Europe to coastal areas\nB. provides a corridor for communication between southern and northern Europe\nC. enables marine-like climatic conditions to extend eastward into Germany and Poland\nD. effectively prevents population movement between parts of the Mediterranean region\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 9,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nAccording to Alfred Weber's least-cost theory, which one of the following costs of production is the most important factor in locating an industry?\n\nChoices:\nA. Labor\nB. Transport\nC. Raw materials\nD. Agglomeration costs\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 10,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich group enacted the first effective settlement in the eastern United States?\n\nChoices:\nA. French\nB. British (English, Scotch-Irish, Welsh, Scottish)\nC. Russian\nD. Chinese\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 11,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nQuebec is a strong example of which of the following situations?\n\nChoices:\nA. Irredentism\nB. Secession\nC. Ethnonationalism\nD. A colony\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 12,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following items below is an absolute location?\n\nChoices:\nA. 10 miles east of Pittsburgh\nB. Washington\nC. 3 degrees south\nD. 479 Elm Street, Muncie, Indiana\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 13,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich pair of religions are both universalizing religions?\n\nChoices:\nA. Islam and Judaism\nB. Judaism and Buddhism\nC. Hinduism and Buddhism\nD. Christianity and Buddhism\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 14,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn what country are the most Basque speakers found?\n\nChoices:\nA. Denmark\nB. Finland\nC. Luxembourg\nD. Spain\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 15,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nThe use and spread of English in nineteenth-century India is an example of what type of diffusion?\n\nChoices:\nA. Stimulus\nB. Contagious\nC. Hierarchal\nD. Relocation\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 16,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is a centrifugal force in a country?\n\nChoices:\nA. Religious differences\nB. A national holiday\nC. An attack by another country\nD. A charismatic national leader\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 17,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich form of migration below are farm workers from another country most likely to be practicing during the year?\n\nChoices:\nA. Chain migration\nB. Cluster migration\nC. Circular migration\nD. International migration\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 18,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich urban model theorizes that high-rent residential areas grow outward from the center of the city along major highways with lower-rent inhabitants taking over sequentially?\n\nChoices:\nA. Concentric zone model\nB. Central place model\nC. Urban realms model\nD. Sector model\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 19,
+      "gold": "C",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nIn which zone of Burgess's concentric zone model would one find better houses, single-family homes, and higher-rent apartments?\n\nChoices:\nA. First\nB. Second\nC. Third\nD. Fourth\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 20,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following best illustrates the definition of a functional region?\n\nChoices:\nA. A map showing Atlanta as a hub for Delta Airlines\nB. An article describing the region referred to as the South\nC. A map showing North Carolina's one hundred counties\nD. An essay explaining the region known as the Bible Belt\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    }
+  ]
+}

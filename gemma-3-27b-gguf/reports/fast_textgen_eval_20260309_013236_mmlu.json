@@ -1,0 +1,190 @@
+{
+  "benchmark": "mmlu",
+  "total": 20,
+  "correct": 15,
+  "accuracy": 0.75,
+  "accuracy_pct": "75.0%",
+  "elapsed_sec": 53.29,
+  "results": [
+    {
+      "idx": 1,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA company that produces a single product using a continuous process had no work in process on April 1. During the month of April 10000 units were started and 9000 completed units were transferred. The ending work-in-process inventory was complete as to materials and 50% complete as to conversion. The cost of direct materials was $114000 and the cost of direct labor amounted to $38000. Manufacturing overhead is assigned at the rate of 50% of direct materials. For the purpose of determining the cost of goods manufactured in April what is the cost per equivalent whole unit?\n\nChoices:\nA. $23.22\nB. $21.40\nC. $20.90\nD. 15.4\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 2,
+      "gold": "D",
+      "pred": "A",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nAnton has two species of ants, Species A and Species B, in his ant farm. The two species are identical in appearance, but Anton knows that every day, there are twice as many ants of Species A than before, while there are three times as many ants of Species B. On Day 0, Anton counts that there are 30 ants in his ant farm. On Day 5, Anton counts that there are 3281 ants in his ant farm. How many of these are of Species A?\n\nChoices:\nA. 211\nB. 2321\nC. 11\nD. 608\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 3,
+      "gold": "C",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nOverall, the growth rate of average incomes in less developed countries between 1960 and 1995\n\nChoices:\nA. was approximately zero\nB. exceeded that of high income countries\nC. exceeded that of Britain during the industrial revolution\nD. was approximately 3.0% per year\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 4,
+      "gold": "A",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nA defendant was charged with and tried for murder. At trial, the defendant testified that he had acted in self-defense. The trial court instructed the jury that the defendant had the burden of proving by a preponderance of the evidence that he had acted in self-defense. The defendant objected, arguing that this instruction violated the constitutional requirement that the prosecution prove the offense beyond a reasonable doubt. Did the trial court's instruction violate the defendant's federal constitutional rights?\n\nChoices:\nA. No, because due process does not preclude requiring a defendant to prove self-defense by a preponderance of the evidence.\nB. No, because due process does not regulate the burdens of proof in criminal cases.\nC. Yes, because due process precludes placing any evidentiary burden on a criminal defendant.\nD. Yes, because due process precludes requiring a criminal defendant to bear the burden on an issue that would make an act lawful.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 5,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\n Which of the following means placing your product or service in as many outlets or locations as possible, in order to maximize the opportunity for customers to find the good or service?\n\nChoices:\nA. Exclusive distribution.\nB. Intensive distribution.\nC. Selective distribution.\nD. Direct distribution.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 6,
+      "gold": "C",
+      "pred": "C",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nFor which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | the skate park was closed for the day so I left did not enter. Scenario 2 | I wrote a love letter to my married coworker.\n\nChoices:\nA. Wrong, Wrong\nB. Wrong, Not wrong\nC. Not wrong, Wrong\nD. Not wrong, Not wrong\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "C"
+    },
+    {
+      "idx": 7,
+      "gold": "D",
+      "pred": "B",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nAn off-duty police officer was standing on a street corner waiting for a bus. A man came up from behind and stole the police officer's wallet from his pants pocket. As the man was running away with the wallet, the police officer pulled out his service revolver. The police officer yelled at the man to stop and then fired several shots in the man's direction. The police officer did not aim directly at the man but shot at the pavement intending to frighten him. One of the bullets ricocheted off the sidewalk and struck the man, killing him. The police officer is guilty of\n\nChoices:\nA. assault with a deadly weapon.\nB. involuntary manslaughter.\nC. voluntary manslaughter.\nD. murder.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 8,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhat one of these is not a recognised type of authority?\n\nChoices:\nA. Executive\nB. Functional\nC. Line management\nD. Supplier\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 9,
+      "gold": "A",
+      "pred": "A",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nFor which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I poured a cup of hot coffee on my baby. Scenario 2 | I volunteered my 99-year-old granny to enter the abandoned mine to rescue the lost children.\n\nChoices:\nA. Wrong, Wrong\nB. Wrong, Not wrong\nC. Not wrong, Wrong\nD. Not wrong, Not wrong\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "A"
+    },
+    {
+      "idx": 10,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nWhich of the following is the point at which an impulse is transmitted from one neuron to another neuron?\n\nChoices:\nA. Dendrite\nB. Glial cell\nC. Nerve center\nD. Synapse\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 11,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThe order condition is\n\nChoices:\nA. A necessary and sufficient condition for identification\nB. A necessary but not sufficient condition for identification\nC. A sufficient but not necessary condition for identification\nD. A condition that is nether necessary nor sufficient for identification\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 12,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nAn individual is born with a mutation causing her to partially retain a form of fetal hemoglobin into adulthood. Compared to a normal individual, this person would exhibit:\n\nChoices:\nA. no differences from a normal adult.\nB. significantly reduced oxygen binding in the lungs.\nC. no symptoms, since retention of fetal hemoglobin would be fatal.\nD. increased oxygen binding to hemoglobin in the tissues.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 13,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA 10-year-old girl decided to go sledding during a heavy snow and ice storm. She planned to go sledding down Hill Street, a steep and winding thoroughfare. Hill Street, which was located around the corner from the girl's home, was a popular sledding site because of its precipitous incline. The girl's parents had given her permission to sled down Hill Street. On the way to Hill Street, the girl met a classmate, who was 12, and asked if she wanted to join her. The classmate agreed, and the two girls walked to the top of Hill Street together. There, the youngsters mounted the sled. The girl was sitting in front and controlling the steering mechanism while the classmate was behind her. They started their descent at a relatively good speed. As they were about halfway down the road, they approached the intersection of Hill Street and Maple Drive. A driver, who was driving his car along Maple Drive, entered the intersection at the same time as the girls on the sled. When the classmate saw the driver's auto cross into their path, she shouted to the girl to fall off the sled. The girl became frightened and refused to jump off. Just before the sled collided with the car, the classmate pushed the girl off the sled. Her push caused the girl to fall and break her leg. The classmate couldn't get off the sled in time and was struck and injured by the driver's car. If the girl's parents, on behalf of their daughter, assert a claim against the classmate to recover damages for the girl's broken leg, will they prevail?\n\nChoices:\nA. No, if the classmate believed that the girl was in imminent peril when she pushed her off the sled.\nB. No, unless the classmate acted unreasonably when she pushed the girl off the sled.\nC. No, if the driver was driving negligently.\nD. No, because the classmate had the girl's implied consent to act in an emergency.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 14,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nPeter is in a group of 25 people. All 25 people went fishing in boats. There were 5 people in each boat. How can Peter find the number of boats the group used?\n\nChoices:\nA. Add 5 to 25\nB. Divide 25 by 5\nC. Multiply 25 by 5\nD. Subtract 5 from 25\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 15,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nFor which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I tossed the small child 10 feet into the air over my head. Scenario 2 | I sat outside to spy on the animals that came out at night.\n\nChoices:\nA. Wrong, Wrong\nB. Wrong, Not wrong\nC. Not wrong, Wrong\nD. Not wrong, Not wrong\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 16,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nA keloid is:\n\nChoices:\nA. evidence of infection.\nB. a firm mass of scar tissue.\nC. a fine, hairline scar.\nD. formed if a wound drain is removed too soon.\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 17,
+      "gold": "D",
+      "pred": "D",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nIn what sense might exceptionalism link isolationist and internationalist strategies?\n\nChoices:\nA. Both encourage world government\nB. Both focus on the decline of the American power\nC. It doesn't - the two are fundamentally opposed\nD. Both can be viewed as different means of achieving the same liberal ends\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 18,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nThis question refers to the following information.\n\"MAHATMA GANDHI'S MESSAGE.\nREMAIN NON-VIOLENT\nThe following message was sent by Mahatma Gandhi from Waltair:—\nMaulana Mohamed AH was arrested at Waltair under sections 107 and 108 to be called upon to give security, to be of good behaviour for one year. The place and date of trial is unknown.\nThe Begum Saheba and Mr. Hayat were permitted to see him after arrest.\nHe and I were going to address a meeting outside the station. He was arrested. I continued going to the meeting and addressed them. There is no cause for sorrow, but every cause for congratulation. There should be no hartal. Perfect peace and calmness should be observed. I regard the arrest as a prelude to Swaraj and the redress of the Khilafat and the Punjab wrongs, if we can remain non-violent. Retain Hindu-Muslim Unity despite the madness of some Moplahs, and fulfil the Swadeshi programme.\nI hope every Indian, man or woman, will completely boycott foreign cloth and take up spinning or weaving during every spare minute.\nBy striving like the Maulana, be insistent on religious and national rights.\nLet us earn imprisonment. I am conscious of the Maulana's innocence and I am sure the imprisonment of the innocent will enable the nation to reach the cherished goal.\"\nMohandas Gandhi, The Pilgrims' March, 1921\nWhich of the following historical developments from the period 1450–1750 C.E. most inspired the instructions indicated in the fifth paragraph to boycott foreign cloth?\n\nChoices:\nA. The conquest of India by rival Muslim empires\nB. The development of joint-stock companies\nC. The importation of food crops from the New World\nD. The African slave trade\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    },
+    {
+      "idx": 19,
+      "gold": "C",
+      "pred": "D",
+      "passed": false,
+      "skipped": false,
+      "prompt": "Question:\nWhich statement about dietary fibre is most correct?\n\n\nChoices:\nA. The end products of it fermentation is mainly malic, succinic and propionic acids\nB. Fermentation studies in vitro, with human faeces, have shown that soluble and insoluble forms are fermented completely within 24 hours\nC. Fibre sources, such as hemicelluloses, pectins and inulin are rapidly fermented to short chain fatty acids, which have trophic effects on the colon\nD. Stool bulking occurs mainly through the action of insoluble fibres such as cellulose\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "D"
+    },
+    {
+      "idx": 20,
+      "gold": "B",
+      "pred": "B",
+      "passed": true,
+      "skipped": false,
+      "prompt": "Question:\nFor which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I left from the prison without checking out. Scenario 2 | I consider model building to be a serious hobby.\n\nChoices:\nA. Wrong, Wrong\nB. Wrong, Not wrong\nC. Not wrong, Wrong\nD. Not wrong, Not wrong\n\nAnswer with only one letter: A, B, C, or D.",
+      "response": "B"
+    }
+  ]
+}
