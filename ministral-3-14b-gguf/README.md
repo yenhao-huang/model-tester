@@ -6,22 +6,23 @@
   - `bash ~/Desktop/llama-bash/ministral314b.sh`
   - 內部轉呼叫 `~/Desktop/llama-bash/run_ministral314b.sh`（port `3172`）
 
-## full-textgen-evalset（每 benchmark 100 題）
+## full-textgen-evalset（每 benchmark 100 題，final）
 
 | Benchmark | Result | Status |
 |---|---:|---|
 | mmlu | 48.0% (48/100) | ✅ 完成 |
 | geo-mmlu-high-school | 88.0% (88/100) | ✅ 完成 |
 | law-mmlu-professional | 48.0% (48/100) | ✅ 完成 |
-| gsm8k | 0.0% (0/100) | ✅ 完成 |
-| humaneval | 54.0% (54/100) | ✅ 完成 |
+| gsm8k | 2.0% (2/100) | ✅ 完成 |
+| humaneval (rerun) | 88.0% (88/100) | ✅ 完成 |
 
-輸出檔案（`reports_100`）：
-- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_034611_mmlu.json`
-- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_034611_geo-mmlu-high-school.json`
-- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_034611_law-mmlu-professional.json`
-- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_044130_gsm8k.json`
-- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_051110_humaneval.json`
+輸出檔案（`reports_100_rerun`）：
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_054415_mmlu.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_054415_geo-mmlu-high-school.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_054415_law-mmlu-professional.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_062817_gsm8k.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_090157_humaneval.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_090157_all.json`
 
 > 每題輸出已包含 `prompt`（query）、`response`、`error`（成功時通常為 `null`）。
 
@@ -40,5 +41,5 @@ prompt eval time =    3969.39 ms /   540 tokens (    7.35 ms per token,   136.04
 
 ## 備註
 
-1. evaluator HTTP timeout 已設為 10 秒（`utils/eval_fast_textgen_eval.py`）。
-2. HumanEval 增加單題執行 timeout 保護，避免模型回傳程式碼造成無限執行。
+1. evaluator HTTP timeout 已設為 180 秒（`utils/eval_fast_textgen_eval.py`）。
+2. HumanEval 單題執行有 timeout 保護（`signal.alarm(3)`），避免模型回傳程式碼造成無限執行。
