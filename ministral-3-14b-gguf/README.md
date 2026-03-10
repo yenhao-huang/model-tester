@@ -13,7 +13,7 @@
 | mmlu | 48.0% (48/100) | ✅ 完成 |
 | geo-mmlu-high-school | 88.0% (88/100) | ✅ 完成 |
 | law-mmlu-professional | 48.0% (48/100) | ✅ 完成 |
-| gsm8k | 2.0% (2/100) | ✅ 完成 |
+| gsm8k (latest rerun) | 2.0% (2/100) | ✅ 完成 |
 | humaneval (rerun) | 88.0% (88/100) | ✅ 完成 |
 
 輸出檔案（`reports_100_rerun`）：
@@ -25,6 +25,13 @@
 - `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100_rerun/fast_textgen_eval_20260310_090157_all.json`
 
 > 每題輸出已包含 `prompt`（query）、`response`、`error`（成功時通常為 `null`）。
+
+### gsm8k rerun 歷史（100 題）
+
+- 2026-03-10 14:28 (UTC+8): **2.0% (2/100)**
+  - `reports_100_rerun/archived_gsm8k/fast_textgen_eval_20260310_062817_gsm8k.json`
+- 2026-03-10 18:47 (UTC+8, latest): **2.0% (2/100)**
+  - `reports_100_rerun/fast_textgen_eval_20260310_104715_all.json`（gsm8k section）
 
 ## 速度樣本（llama-server）
 
