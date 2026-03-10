@@ -6,22 +6,24 @@
   - `bash ~/Desktop/llama-bash/ministral314b.sh`
   - 內部轉呼叫 `~/Desktop/llama-bash/run_ministral314b.sh`（port `3172`）
 
-## fast-textgen-evalset（每 benchmark 100 題）
+## full-textgen-evalset（每 benchmark 100 題）
 
-| Benchmark | Result |
-|---|---:|
-| mmlu | 48.0% (48/100) |
-| geo-mmlu-high-school | 88.0% (88/100) |
-| law-mmlu-professional | 48.0% (48/100) |
-| gsm8k | 未完成（長時間執行，尚未產出 100 題最終檔） |
-| humaneval | 未完成（等待 gsm8k 完成後才會開始） |
+| Benchmark | Result | Status |
+|---|---:|---|
+| mmlu | 48.0% (48/100) | ✅ 完成 |
+| geo-mmlu-high-school | 88.0% (88/100) | ✅ 完成 |
+| law-mmlu-professional | 48.0% (48/100) | ✅ 完成 |
+| gsm8k | 0.0% (0/100) | ✅ 完成 |
+| humaneval | 54.0% (54/100) | ✅ 完成 |
 
-輸出檔案：
+輸出檔案（`reports_100`）：
 - `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_034611_mmlu.json`
 - `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_034611_geo-mmlu-high-school.json`
 - `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_034611_law-mmlu-professional.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_044130_gsm8k.json`
+- `~/Desktop/model-tester/ministral-3-14b-gguf/reports_100/fast_textgen_eval_20260310_051110_humaneval.json`
 
-> 每題輸出已包含 `prompt`（query）、`response`、`error`（成功時為 `null`）。
+> 每題輸出已包含 `prompt`（query）、`response`、`error`（成功時通常為 `null`）。
 
 ## 速度樣本（llama-server）
 
@@ -36,9 +38,7 @@ prompt eval time =    3969.39 ms /   540 tokens (    7.35 ms per token,   136.04
 - 原始回應: `~/Desktop/model-tester/ministral-3-14b-gguf/speed_sample_response.json`
 - 指標摘錄: `~/Desktop/model-tester/ministral-3-14b-gguf/speed_metrics.txt`
 
-## 已知限制
+## 備註
 
-1. 在本機 CPU llama-server 配置下，`gsm8k` 單題耗時過長；100 題完整跑完需要數小時，容易被 timeout/中斷。
-2. `humaneval` 排在 `gsm8k` 後面執行，因此在同一輪 full-run 中尚未開始。
-3. 為避免長時間卡住，已把 evaluator 的 HTTP timeout 由 120 秒調整為 10 秒：
-   - `~/Desktop/model-tester/utils/eval_fast_textgen_eval.py`
+1. evaluator HTTP timeout 已設為 10 秒（`utils/eval_fast_textgen_eval.py`）。
+2. HumanEval 增加單題執行 timeout 保護，避免模型回傳程式碼造成無限執行。

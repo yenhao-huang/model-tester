@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import signal
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -81,6 +82,8 @@ def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) 
                 return content
             return (msg.get("reasoning_content") or "").strip()
     except TimeoutError:
+        return ""
+    except Exception:
         return ""
 
 
@@ -148,9 +151,19 @@ def _run_humaneval_case(
         candidate_src = _build_candidate(repaired)
 
     program = candidate_src + "\n" + test_code + f"\ncheck({entry_point})\n"
+
+    class _CaseTimeout(Exception):
+        pass
+
+    def _alarm_handler(signum, frame):
+        raise _CaseTimeout("execution timed out")
+
+    old_handler = signal.signal(signal.SIGALRM, _alarm_handler)
     g: dict = {}
     try:
+        signal.alarm(3)
         exec(program, g, g)  # noqa: S102
+        signal.alarm(0)
         return True, None, syntax_repaired
     except IndentationError:
         repaired = _normalize_indent(code)
@@ -158,12 +171,19 @@ def _run_humaneval_case(
         program = candidate_src + "\n" + test_code + f"\ncheck({entry_point})\n"
         g = {}
         try:
+            signal.alarm(3)
             exec(program, g, g)  # noqa: S102
+            signal.alarm(0)
             return True, None, True
         except Exception as e:
+            signal.alarm(0)
             return False, f"{type(e).__name__}: {e}", True
     except Exception as e:
+        signal.alarm(0)
         return False, f"{type(e).__name__}: {e}", syntax_repaired
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
 
 
 # ---------------------------------------------------------------------------
@@ -224,7 +244,7 @@ def score_gsm8k(cfg: dict) -> dict:
         pred = _extract_last_number(out) or ""
         ok = pred == gold
         correct += int(ok)
-        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out})
+        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out, "error": None})
         print(f"  gsm8k {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
     acc = correct / len(rows) if rows else None
     return {
