@@ -74,7 +74,7 @@ def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) 
         method="POST",
     )
     try:
-        with urllib_request.urlopen(req, timeout=10) as resp:
+        with urllib_request.urlopen(req, timeout=180) as resp:
             body = json.loads(resp.read().decode("utf-8"))
             msg = body["choices"][0]["message"]
             content = (msg.get("content") or "").strip()
