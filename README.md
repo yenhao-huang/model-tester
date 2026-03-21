@@ -59,6 +59,46 @@ python utils/eval_fast_textgen_eval.py \
 
 Report 自動存為 `<out-dir>/fast_textgen_eval_<timestamp>.json`。ß
 
+## Vision Benchmark 介紹
+
+目前 vision 評測固定三個任務（各 100 題）：
+
+- **OCR**：`PokemonCards_train_300`，判斷卡片文字（name/hp）是否命中
+- **Classification**：`cifar10_classification`，10 類單標籤分類
+- **Detection**：`object_detection`（CPPE5），判斷 PPE 類別集合是否完全匹配
+
+資料集預設路徑：
+- `~/Desktop/datasets/vision-dataset/PokemonCards_train_300`
+- `~/Desktop/datasets/vision-dataset/cifar10_classification`
+- `~/Desktop/datasets/vision-dataset/object_detection`
+
+## 快速評估 Vision Benchmark
+
+### 1) 啟動模型（OpenAI-compatible + mmproj）
+```bash
+llama-server \
+  -m <model.gguf> \
+  --mmproj <mmproj.gguf> \
+  --port 3172
+```
+
+### 2) 跑三項 benchmark（各 100 題）
+```bash
+~/Desktop/python-venvs/qwen35vision/bin/python ~/Desktop/model-tester/utils/eval_vision.py \
+  --api http://127.0.0.1:3172/v1/chat/completions \
+  --model <model-name> \
+  --num 100 \
+  --tasks ocr,classification,detection \
+  --out-dir ~/Desktop/model-tester/<model-name>/vision/results
+```
+
+### 3) 看結果
+- 彙總：`summary_100.json`
+- 逐題：`ocr_*.jsonl` / `classification_*.jsonl` / `detection_*.jsonl`
+- 範例圖與回覆：`examples/<task>/`
+
+> 注意：切換模型時，先停舊 server，並用 `/v1/chat/completions` 做 ready gate（HTTP 200）後再開始正式評測，避免 `503 Loading model`。
+
 ## Results
 
 ### Speed
