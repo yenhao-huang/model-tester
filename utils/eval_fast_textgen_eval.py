@@ -207,7 +207,7 @@ def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
         pred = m.group(0) if m else ""
         ok = pred == gold
         correct += int(ok)
-        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out})
+        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out, "error": None})
         print(f"  {benchmark} {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
     acc = correct / len(rows) if rows else None
     return {

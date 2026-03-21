@@ -1,0 +1,15 @@
+[2026-03-07 12:05:39] START key=gpt-oss-20b-gguf bench=mmlu
+server_pid=70491
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_120539_fasttextgenevalset2_mmlu
+[2026-03-07 12:27:44] DONE  key=gpt-oss-20b-gguf bench=mmlu
+[2026-03-07 12:27:44] START key=gpt-oss-20b-gguf bench=gsm8k
+server_pid=71790
+server ready; eval gsm8k start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_122744_fasttextgenevalset2_gsm8k
+[2026-03-07 12:49:20] DONE  key=gpt-oss-20b-gguf bench=gsm8k
+[2026-03-07 12:49:20] START key=gpt-oss-20b-gguf bench=truthfulqa
+server_pid=73024
+server ready; eval truthfulqa start

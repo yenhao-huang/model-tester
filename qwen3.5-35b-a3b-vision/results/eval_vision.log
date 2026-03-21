@@ -1,0 +1,58 @@
+OCR 10/100 pass=0
+OCR 20/100 pass=0
+OCR 30/100 pass=0
+OCR 40/100 pass=0
+OCR 50/100 pass=0
+OCR 60/100 pass=0
+OCR 70/100 pass=0
+OCR 80/100 pass=0
+OCR 90/100 pass=0
+OCR 100/100 pass=0
+CLS 10/100 pass=0
+CLS 20/100 pass=0
+CLS 30/100 pass=0
+CLS 40/100 pass=0
+CLS 50/100 pass=0
+CLS 60/100 pass=0
+CLS 70/100 pass=0
+CLS 80/100 pass=0
+CLS 90/100 pass=0
+CLS 100/100 pass=0
+DET 10/100 pass=0
+DET 20/100 pass=0
+DET 30/100 pass=0
+DET 40/100 pass=0
+DET 50/100 pass=0
+DET 60/100 pass=0
+DET 70/100 pass=0
+DET 80/100 pass=0
+DET 90/100 pass=0
+DET 100/100 pass=0
+{
+  "model": "Qwen3.5-35B-A3B",
+  "api": "http://127.0.0.1:3172/v1/chat/completions",
+  "num_per_task": 100,
+  "examples_per_task": 5,
+  "tasks": [
+    "classification",
+    "detection",
+    "ocr"
+  ],
+  "timestamp": "2026-03-21 22:44:08",
+  "elapsed_sec": 7.67,
+  "ocr": {
+    "total": 100,
+    "passed": 0,
+    "accuracy": 0.0
+  },
+  "classification": {
+    "total": 100,
+    "passed": 0,
+    "accuracy": 0.0
+  },
+  "detection": {
+    "total": 100,
+    "passed": 0,
+    "accuracy": 0.0
+  }
+}

@@ -6467,3 +6467,8 @@ prompt eval time =     986.31 ms /   236 tokens (    4.18 ms per token,   239.28
 slot      release: id  2 | task 8888 | stop processing: n_tokens = 319, truncated = 0
 srv  update_slots: all slots are idle
 srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv    operator(): operator(): cleaning up before exit...
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free     self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - MTL0 (Apple M4)    | 25559 = 5794 + (19763 = 18863 +     411 +     489) +           0 |
+llama_memory_breakdown_print: |   - Host               |                   539 =   515 +       0 +      24                |
+ggml_metal_free: deallocating

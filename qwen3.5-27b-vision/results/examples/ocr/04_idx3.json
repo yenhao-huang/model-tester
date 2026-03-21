@@ -1,0 +1,12 @@
+{
+  "idx": 3,
+  "query": "OCR task: read this Pokemon card and answer strictly JSON with keys \"name\" and \"hp\" (hp as integer).",
+  "gold": {
+    "name": "Caterpie",
+    "hp": 50
+  },
+  "pred": null,
+  "passed": false,
+  "response": "[ERROR] HTTP 503: {\"error\":{\"message\":\"Loading model\",\"type\":\"unavailable_error\",\"code\":503}}",
+  "image": "04_idx3.png"
+}

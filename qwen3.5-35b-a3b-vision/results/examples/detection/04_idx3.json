@@ -1,0 +1,12 @@
+{
+  "idx": 3,
+  "query": "Object detection task: list which PPE classes are present in the image from [Coverall, Face_Shield, Gloves, Goggles, Mask]. Return comma-separated class names only.",
+  "gold": [
+    "Face_Shield",
+    "Mask"
+  ],
+  "pred": null,
+  "passed": false,
+  "response": "[ERROR] HTTP 503: {\"error\":{\"message\":\"Loading model\",\"type\":\"unavailable_error\",\"code\":503}}",
+  "image": "04_idx3.png"
+}

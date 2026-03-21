@@ -1,0 +1,28 @@
+{
+  "model": "Qwen3.5-27B",
+  "api": "http://127.0.0.1:3172/v1/chat/completions",
+  "num_per_task": 100,
+  "examples_per_task": 5,
+  "tasks": [
+    "classification",
+    "detection",
+    "ocr"
+  ],
+  "timestamp": "2026-03-21 22:43:14",
+  "elapsed_sec": 4549.49,
+  "ocr": {
+    "total": 100,
+    "passed": 89,
+    "accuracy": 0.89
+  },
+  "classification": {
+    "total": 100,
+    "passed": 79,
+    "accuracy": 0.79
+  },
+  "detection": {
+    "total": 100,
+    "passed": 60,
+    "accuracy": 0.6
+  }
+}

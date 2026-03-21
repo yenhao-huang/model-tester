@@ -1,0 +1,9 @@
+{
+  "idx": 3,
+  "query": "Image classification task: choose one label from [airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck]. Output one label only.",
+  "gold": "bird",
+  "pred": "cat",
+  "passed": false,
+  "response": "cat",
+  "image": "04_idx3.png"
+}

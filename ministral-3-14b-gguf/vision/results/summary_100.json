@@ -1,0 +1,22 @@
+{
+  "model": "ministral-3-14b",
+  "timestamp": "2026-03-21 17:51:16",
+  "ocr": {
+    "total": 100,
+    "passed": 89,
+    "accuracy": 0.89,
+    "errors": 0
+  },
+  "classification": {
+    "total": 100,
+    "passed": 82,
+    "accuracy": 0.82,
+    "errors": 0
+  },
+  "detection": {
+    "total": 100,
+    "passed": 51,
+    "accuracy": 0.51,
+    "errors": 0
+  }
+}

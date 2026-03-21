@@ -1,0 +1,9 @@
+{
+  "idx": 1,
+  "query": "Image classification task: choose one label from [airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck]. Output one label only.",
+  "gold": "frog",
+  "pred": null,
+  "passed": false,
+  "response": "[ERROR] HTTP 503: {\"error\":{\"message\":\"Loading model\",\"type\":\"unavailable_error\",\"code\":503}}",
+  "image": "02_idx1.png"
+}

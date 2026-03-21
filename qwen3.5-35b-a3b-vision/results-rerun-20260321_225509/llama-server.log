@@ -1,0 +1,691 @@
+ggml_metal_device_init: tensor API disabled for pre-M5 and pre-A19 devices
+ggml_metal_library_init: using embedded metal library
+ggml_metal_library_init: loaded in 0.009 sec
+ggml_metal_rsets_init: creating a residency set collection (keep_alive = 180 s)
+ggml_metal_device_init: GPU name:   MTL0
+ggml_metal_device_init: GPU family: MTLGPUFamilyApple9  (1009)
+ggml_metal_device_init: GPU family: MTLGPUFamilyCommon3 (3003)
+ggml_metal_device_init: GPU family: MTLGPUFamilyMetal4  (5002)
+ggml_metal_device_init: simdgroup reduction   = true
+ggml_metal_device_init: simdgroup matrix mul. = true
+ggml_metal_device_init: has unified memory    = true
+ggml_metal_device_init: has bfloat            = true
+ggml_metal_device_init: has tensor            = false
+ggml_metal_device_init: use residency sets    = true
+ggml_metal_device_init: use shared buffers    = true
+ggml_metal_device_init: recommendedMaxWorkingSetSize  = 26800.60 MB
+main: n_parallel is set to auto, using n_parallel = 4 and kv_unified = true
+build: 8140 (39fb81f87) with AppleClang 17.0.0.17000604 for Darwin arm64
+system info: n_threads = 4, n_threads_batch = 4, total_threads = 10
+
+system_info: n_threads = 4 (n_threads_batch = 4) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | REPACK = 1 | 
+
+Running without SSL
+init: using 9 threads for HTTP server
+start: binding port with default address family
+main: loading model
+srv    load_model: loading model '/Users/yenhaohuang/Desktop/models/unsloth-qwen35/Qwen3.5-35B-A3B-GGUF/Qwen3.5-35B-A3B-MXFP4_MOE.gguf'
+common_init_result: fitting params to device memory, for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on
+llama_params_fit_impl: projected to use 19408 MiB of device memory vs. 25307 MiB of free device memory
+llama_params_fit_impl: will leave 5899 >= 1024 MiB of free device memory, no changes needed
+llama_params_fit: successfully fit params to free device memory
+llama_params_fit: fitting params to free memory took 0.22 seconds
+llama_model_load_from_file_impl: using device MTL0 (Apple M4) (unknown id) - 25558 MiB free
+llama_model_loader: loaded meta data with 48 key-value pairs and 733 tensors from /Users/yenhaohuang/Desktop/models/unsloth-qwen35/Qwen3.5-35B-A3B-GGUF/Qwen3.5-35B-A3B-MXFP4_MOE.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = qwen35moe
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                     general.sampling.top_k i32              = 20
+llama_model_loader: - kv   3:                     general.sampling.top_p f32              = 0.950000
+llama_model_loader: - kv   4:                      general.sampling.temp f32              = 1.000000
+llama_model_loader: - kv   5:                               general.name str              = Qwen3.5-35B-A3B
+llama_model_loader: - kv   6:                           general.basename str              = Qwen3.5-35B-A3B
+llama_model_loader: - kv   7:                       general.quantized_by str              = Unsloth
+llama_model_loader: - kv   8:                         general.size_label str              = 35B-A3B
+llama_model_loader: - kv   9:                            general.license str              = apache-2.0
+llama_model_loader: - kv  10:                       general.license.link str              = https://huggingface.co/Qwen/Qwen3.5-3...
+llama_model_loader: - kv  11:                           general.repo_url str              = https://huggingface.co/unsloth
+llama_model_loader: - kv  12:                   general.base_model.count u32              = 1
+llama_model_loader: - kv  13:                  general.base_model.0.name str              = Qwen3.5 35B A3B
+llama_model_loader: - kv  14:          general.base_model.0.organization str              = Qwen
+llama_model_loader: - kv  15:              general.base_model.0.repo_url str              = https://huggingface.co/Qwen/Qwen3.5-3...
+llama_model_loader: - kv  16:                               general.tags arr[str,2]       = ["unsloth", "image-text-to-text"]
+llama_model_loader: - kv  17:                      qwen35moe.block_count u32              = 40
+llama_model_loader: - kv  18:                   qwen35moe.context_length u32              = 262144
+llama_model_loader: - kv  19:                 qwen35moe.embedding_length u32              = 2048
+llama_model_loader: - kv  20:             qwen35moe.attention.head_count u32              = 16
+llama_model_loader: - kv  21:          qwen35moe.attention.head_count_kv u32              = 2
+llama_model_loader: - kv  22:          qwen35moe.rope.dimension_sections arr[i32,4]       = [11, 11, 10, 0]
+llama_model_loader: - kv  23:                   qwen35moe.rope.freq_base f32              = 10000000.000000
+llama_model_loader: - kv  24: qwen35moe.attention.layer_norm_rms_epsilon f32              = 0.000001
+llama_model_loader: - kv  25:                     qwen35moe.expert_count u32              = 256
+llama_model_loader: - kv  26:                qwen35moe.expert_used_count u32              = 8
+llama_model_loader: - kv  27:             qwen35moe.attention.key_length u32              = 256
+llama_model_loader: - kv  28:           qwen35moe.attention.value_length u32              = 256
+llama_model_loader: - kv  29:       qwen35moe.expert_feed_forward_length u32              = 512
+llama_model_loader: - kv  30: qwen35moe.expert_shared_feed_forward_length u32              = 512
+llama_model_loader: - kv  31:                  qwen35moe.ssm.conv_kernel u32              = 4
+llama_model_loader: - kv  32:                   qwen35moe.ssm.state_size u32              = 128
+llama_model_loader: - kv  33:                  qwen35moe.ssm.group_count u32              = 16
+llama_model_loader: - kv  34:               qwen35moe.ssm.time_step_rank u32              = 32
+llama_model_loader: - kv  35:                   qwen35moe.ssm.inner_size u32              = 4096
+llama_model_loader: - kv  36:          qwen35moe.full_attention_interval u32              = 4
+llama_model_loader: - kv  37:             qwen35moe.rope.dimension_count u32              = 64
+llama_model_loader: - kv  38:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  39:                         tokenizer.ggml.pre str              = qwen35
+llama_model_loader: - kv  40:                      tokenizer.ggml.tokens arr[str,248320]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  41:                  tokenizer.ggml.token_type arr[i32,248320]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  42:                      tokenizer.ggml.merges arr[str,247587]  = ["Ġ Ġ", "ĠĠ ĠĠ", "i n", "Ġ t",...
+llama_model_loader: - kv  43:                tokenizer.ggml.eos_token_id u32              = 248046
+llama_model_loader: - kv  44:            tokenizer.ggml.padding_token_id u32              = 248055
+llama_model_loader: - kv  45:                    tokenizer.chat_template str              = {%- set image_count = namespace(value...
+llama_model_loader: - kv  46:               general.quantization_version u32              = 2
+llama_model_loader: - kv  47:                          general.file_type u32              = 38
+llama_model_loader: - type  f32:  301 tensors
+llama_model_loader: - type q8_0:  312 tensors
+llama_model_loader: - type mxfp4:  120 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = MXFP4 MoE
+print_info: file size   = 18.42 GiB (4.57 BPW) 
+load: 0 unused tokens
+load: printing all EOG tokens:
+load:   - 248044 ('<|endoftext|>')
+load:   - 248046 ('<|im_end|>')
+load:   - 248063 ('<|fim_pad|>')
+load:   - 248064 ('<|repo_name|>')
+load:   - 248065 ('<|file_sep|>')
+load: special tokens cache size = 33
+load: token to piece cache size = 1.7581 MB
+print_info: arch                  = qwen35moe
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 262144
+print_info: n_embd                = 2048
+print_info: n_embd_inp            = 2048
+print_info: n_layer               = 40
+print_info: n_head                = 16
+print_info: n_head_kv             = 2
+print_info: n_rot                 = 64
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: n_embd_head_k         = 256
+print_info: n_embd_head_v         = 256
+print_info: n_gqa                 = 8
+print_info: n_embd_k_gqa          = 512
+print_info: n_embd_v_gqa          = 512
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-06
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: n_ff                  = 0
+print_info: n_expert              = 256
+print_info: n_expert_used         = 8
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = 0
+print_info: rope type             = 40
+print_info: rope scaling          = linear
+print_info: freq_base_train       = 10000000.0
+print_info: freq_scale_train      = 1
+print_info: n_ctx_orig_yarn       = 262144
+print_info: rope_yarn_log_mul     = 0.0000
+print_info: rope_finetuned        = unknown
+print_info: mrope sections        = [11, 11, 10, 0]
+print_info: ssm_d_conv            = 4
+print_info: ssm_d_inner           = 4096
+print_info: ssm_d_state           = 128
+print_info: ssm_dt_rank           = 32
+print_info: ssm_n_group           = 16
+print_info: ssm_dt_b_c_rms        = 0
+print_info: model type            = ?B
+print_info: model params          = 34.66 B
+print_info: general.name          = Qwen3.5-35B-A3B
+print_info: vocab type            = BPE
+print_info: n_vocab               = 248320
+print_info: n_merges              = 247587
+print_info: BOS token             = 11 ','
+print_info: EOS token             = 248046 '<|im_end|>'
+print_info: EOT token             = 248046 '<|im_end|>'
+print_info: PAD token             = 248055 '<|vision_pad|>'
+print_info: LF token              = 198 'Ċ'
+print_info: FIM PRE token         = 248060 '<|fim_prefix|>'
+print_info: FIM SUF token         = 248062 '<|fim_suffix|>'
+print_info: FIM MID token         = 248061 '<|fim_middle|>'
+print_info: FIM PAD token         = 248063 '<|fim_pad|>'
+print_info: FIM REP token         = 248064 '<|repo_name|>'
+print_info: FIM SEP token         = 248065 '<|file_sep|>'
+print_info: EOG token             = 248044 '<|endoftext|>'
+print_info: EOG token             = 248046 '<|im_end|>'
+print_info: EOG token             = 248063 '<|fim_pad|>'
+print_info: EOG token             = 248064 '<|repo_name|>'
+print_info: EOG token             = 248065 '<|file_sep|>'
+print_info: max token length      = 256
+load_tensors: loading model tensors, this can take a while... (mmap = true, direct_io = false)
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 39 repeating layers to GPU
+load_tensors: offloaded 41/41 layers to GPU
+load_tensors:   CPU_Mapped model buffer size =   515.31 MiB
+load_tensors:  MTL0_Mapped model buffer size = 18863.10 MiB
+.................................................................................................
+common_init_result: added <|endoftext|> logit bias = -inf
+common_init_result: added <|im_end|> logit bias = -inf
+common_init_result: added <|fim_pad|> logit bias = -inf
+common_init_result: added <|repo_name|> logit bias = -inf
+common_init_result: added <|file_sep|> logit bias = -inf
+llama_context: constructing llama_context
+llama_context: n_seq_max     = 4
+llama_context: n_ctx         = 16384
+llama_context: n_ctx_seq     = 16384
+llama_context: n_batch       = 2048
+llama_context: n_ubatch      = 512
+llama_context: causal_attn   = 1
+llama_context: flash_attn    = auto
+llama_context: kv_unified    = true
+llama_context: freq_base     = 10000000.0
+llama_context: freq_scale    = 1
+llama_context: n_ctx_seq (16384) < n_ctx_train (262144) -- the full capacity of the model will not be utilized
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M4
+ggml_metal_init: picking default device: Apple M4
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+llama_context:        CPU  output buffer size =     3.79 MiB
+llama_kv_cache:       MTL0 KV buffer size =   320.00 MiB
+llama_kv_cache: size =  320.00 MiB ( 16384 cells,  10 layers,  4/1 seqs), K (f16):  160.00 MiB, V (f16):  160.00 MiB
+llama_memory_recurrent:       MTL0 RS buffer size =   251.25 MiB
+llama_memory_recurrent: size =  251.25 MiB (     4 cells,  40 layers,  4 seqs), R (f32):   11.25 MiB, S (f32):  240.00 MiB
+sched_reserve: reserving ...
+sched_reserve: Flash Attention was auto, set to enabled
+sched_reserve:       MTL0 compute buffer size =   489.00 MiB
+sched_reserve:        CPU compute buffer size =    40.02 MiB
+sched_reserve: graph nodes  = 6699 (with bs=512), 4389 (with bs=1)
+sched_reserve: graph splits = 2
+sched_reserve: reserve took 52.24 ms, sched copies = 1
+common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+clip_model_loader: model name:   Qwen3.5-35B-A3B
+clip_model_loader: description:  
+clip_model_loader: GGUF version: 3
+clip_model_loader: alignment:    32
+clip_model_loader: n_tensors:    334
+clip_model_loader: n_kv:         35
+
+clip_model_loader: has vision encoder
+ggml_metal_init: allocating
+ggml_metal_init: found device: Apple M4
+ggml_metal_init: picking default device: Apple M4
+ggml_metal_init: use fusion         = true
+ggml_metal_init: use concurrency    = true
+ggml_metal_init: use graph optimize = true
+clip_ctx: CLIP using MTL0 backend
+load_hparams: Qwen-VL models require at minimum 1024 image tokens to function correctly on grounding tasks
+load_hparams: if you encounter problems with accuracy, try adding --image-min-tokens 1024
+load_hparams: more info: https://github.com/ggml-org/llama.cpp/issues/16842
+
+load_hparams: projector:          qwen3vl_merger
+load_hparams: n_embd:             1152
+load_hparams: n_head:             16
+load_hparams: n_ff:               4304
+load_hparams: n_layer:            27
+load_hparams: ffn_op:             gelu
+load_hparams: projection_dim:     2048
+
+--- vision hparams ---
+load_hparams: image_size:         768
+load_hparams: patch_size:         16
+load_hparams: has_llava_proj:     0
+load_hparams: minicpmv_version:   0
+load_hparams: n_merge:            2
+load_hparams: n_wa_pattern: 0
+load_hparams: image_min_pixels:   8192
+load_hparams: image_max_pixels:   4194304
+
+load_hparams: model size:         860.98 MiB
+load_hparams: metadata size:      0.12 MiB
+warmup: warmup with image size = 1472 x 1472
+alloc_compute_meta:       MTL0 compute buffer size =   241.90 MiB
+alloc_compute_meta:        CPU compute buffer size =    62.12 MiB
+alloc_compute_meta: graph splits = 3, nodes = 823
+warmup: flash attention is enabled
+warmup: *****************************************************************
+warmup: WARNING: the CLIP graph uses unsupported operators by the backend
+warmup:          the performance will be suboptimal                      
+warmup:          list of unsupported ops (backend=MTL0):
+warmup:          UPSCALE: type = f32, ne = [92 92 1152 1]
+warmup: flash attention is enabled
+warmup: please report this on github as an issue
+warmup: ref: https://github.com/ggml-org/llama.cpp/pull/16837#issuecomment-3461676118
+warmup: *****************************************************************
+srv    load_model: loaded multimodal model, '/Users/yenhaohuang/Desktop/models/unsloth-qwen35/Qwen3.5-35B-A3B-GGUF/mmproj-BF16.gguf'
+srv    load_model: initializing slots, n_slots = 4
+common_speculative_is_compat: the target context does not support partial sequence removal
+srv    load_model: speculative decoding not supported by this context
+slot   load_model: id  0 | task -1 | new slot, n_ctx = 16384
+slot   load_model: id  1 | task -1 | new slot, n_ctx = 16384
+slot   load_model: id  2 | task -1 | new slot, n_ctx = 16384
+slot   load_model: id  3 | task -1 | new slot, n_ctx = 16384
+srv    load_model: prompt cache is enabled, size limit: 8192 MiB
+srv    load_model: use `--cache-ram 0` to disable the prompt cache
+srv    load_model: for more info see https://github.com/ggml-org/llama.cpp/pull/16391
+init: chat template, example_format: '<|im_start|>system
+You are a helpful assistant<|im_end|>
+<|im_start|>user
+Hello<|im_end|>
+<|im_start|>assistant
+Hi there<|im_end|>
+<|im_start|>user
+How are you?<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+'
+srv          init: init: chat template, thinking = 1
+main: model loaded
+main: server is listening on http://127.0.0.1:3172
+main: starting the main loop...
+srv  update_slots: all slots are idle
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = -1
+slot launch_slot_: id  3 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  3 | task 0 | processing task, is_child = 0
+slot update_slots: id  3 | task 0 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 13
+slot update_slots: id  3 | task 0 | n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  3 | task 0 | prompt processing progress, n_tokens = 13, batch.n_tokens = 13, progress = 1.000000
+slot update_slots: id  3 | task 0 | prompt done, n_tokens = 13, batch.n_tokens = 13
+slot init_sampler: id  3 | task 0 | init sampler, took 0.00 ms, tokens: text = 13, total = 13
+slot print_timing: id  3 | task 0 | 
+prompt eval time =     187.83 ms /    13 tokens (   14.45 ms per token,    69.21 tokens per second)
+       eval time =     415.95 ms /     8 tokens (   51.99 ms per token,    19.23 tokens per second)
+      total time =     603.79 ms /    21 tokens
+slot      release: id  3 | task 0 | stop processing: n_tokens = 20, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/pl3/1_hires.png'
+srv  handle_media: downloaded 860508 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  2 | task -1 | selected slot by LRU, t_last = -1
+slot launch_slot_: id  2 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  2 | task 9 | processing task, is_child = 0
+slot update_slots: id  2 | task 9 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  2 | task 9 | n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  2 | task 9 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  2 | task 9 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  2 | task 9 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  2 | task 9 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1091 ms
+decoding image batch 1/1, n_tokens_batch = 494
+find_slot: non-consecutive token position 29 after 28 for sequence 2 with 494 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 2 with 494 new tokens
+image decoded (batch 1/1) in 11 ms
+srv  process_chun: image processed in 1102 ms
+slot update_slots: id  2 | task 9 | prompt processing progress, n_tokens = 533, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  2 | task 9 | prompt done, n_tokens = 533, batch.n_tokens = 10
+slot init_sampler: id  2 | task 9 | init sampler, took 0.01 ms, tokens: text = 39, total = 533
+find_slot: non-consecutive token position 64 after 29 for sequence 2 with 10 new tokens
+find_slot: non-consecutive token position 64 after 29 for sequence 2 with 10 new tokens
+slot print_timing: id  2 | task 9 | 
+prompt eval time =    3089.58 ms /   533 tokens (    5.80 ms per token,   172.52 tokens per second)
+       eval time =    1330.86 ms /    26 tokens (   51.19 ms per token,    19.54 tokens per second)
+      total time =    4420.44 ms /   559 tokens
+slot      release: id  2 | task 9 | stop processing: n_tokens = 558, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/ex12/1_hires.png'
+srv  handle_media: downloaded 857790 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  1 | task -1 | selected slot by LRU, t_last = -1
+slot launch_slot_: id  1 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  1 | task 38 | processing task, is_child = 0
+slot update_slots: id  1 | task 38 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  1 | task 38 | n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  1 | task 38 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  1 | task 38 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  1 | task 38 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  1 | task 38 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1081 ms
+decoding image batch 1/1, n_tokens_batch = 494
+find_slot: non-consecutive token position 29 after 28 for sequence 1 with 494 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 1 with 494 new tokens
+image decoded (batch 1/1) in 17 ms
+srv  process_chun: image processed in 1098 ms
+slot update_slots: id  1 | task 38 | prompt processing progress, n_tokens = 533, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  1 | task 38 | prompt done, n_tokens = 533, batch.n_tokens = 10
+slot init_sampler: id  1 | task 38 | init sampler, took 0.01 ms, tokens: text = 39, total = 533
+find_slot: non-consecutive token position 64 after 29 for sequence 1 with 10 new tokens
+find_slot: non-consecutive token position 64 after 29 for sequence 1 with 10 new tokens
+slot print_timing: id  1 | task 38 | 
+prompt eval time =    3094.34 ms /   533 tokens (    5.81 ms per token,   172.25 tokens per second)
+       eval time =    1490.52 ms /    29 tokens (   51.40 ms per token,    19.46 tokens per second)
+      total time =    4584.86 ms /   562 tokens
+slot      release: id  1 | task 38 | stop processing: n_tokens = 561, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/xy5/1_hires.png'
+srv  handle_media: downloaded 670644 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  0 | task 70 | processing task, is_child = 0
+slot update_slots: id  0 | task 70 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 775
+slot update_slots: id  0 | task 70 | n_tokens = 0, memory_seq_rm [0, end)
+slot update_slots: id  0 | task 70 | prompt processing progress, n_tokens = 29, batch.n_tokens = 29, progress = 0.037419
+slot update_slots: id  0 | task 70 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1844 ms
+decoding image batch 1/1, n_tokens_batch = 736
+find_slot: non-consecutive token position 29 after 28 for sequence 0 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 0 with 224 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 0 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 0 with 224 new tokens
+image decoded (batch 1/1) in 1662 ms
+srv  process_chun: image processed in 3506 ms
+slot update_slots: id  0 | task 70 | prompt processing progress, n_tokens = 775, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  0 | task 70 | prompt done, n_tokens = 775, batch.n_tokens = 10
+slot init_sampler: id  0 | task 70 | init sampler, took 0.00 ms, tokens: text = 39, total = 775
+find_slot: non-consecutive token position 70 after 29 for sequence 0 with 10 new tokens
+find_slot: non-consecutive token position 70 after 29 for sequence 0 with 10 new tokens
+slot print_timing: id  0 | task 70 | 
+prompt eval time =    4622.73 ms /   775 tokens (    5.96 ms per token,   167.65 tokens per second)
+       eval time =    1402.77 ms /    27 tokens (   51.95 ms per token,    19.25 tokens per second)
+      total time =    6025.50 ms /   802 tokens
+slot      release: id  0 | task 70 | stop processing: n_tokens = 801, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/mcd19/1_hires.png'
+srv  handle_media: downloaded 1807020 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = 83899673474
+slot launch_slot_: id  3 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  3 | task 99 | processing task, is_child = 0
+slot update_slots: id  3 | task 99 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 775
+slot update_slots: id  3 | task 99 | n_tokens = 3, memory_seq_rm [3, end)
+slot update_slots: id  3 | task 99 | failed to truncate tokens with position >= 3 - clearing the memory
+slot prompt_clear: id  3 | task 99 | clearing prompt with 3 tokens
+slot update_slots: id  3 | task 99 | prompt processing progress, n_tokens = 29, batch.n_tokens = 29, progress = 0.037419
+slot update_slots: id  3 | task 99 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1836 ms
+decoding image batch 1/1, n_tokens_batch = 736
+find_slot: non-consecutive token position 29 after 28 for sequence 3 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 3 with 224 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 3 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 3 with 224 new tokens
+image decoded (batch 1/1) in 1665 ms
+srv  process_chun: image processed in 3501 ms
+slot update_slots: id  3 | task 99 | prompt processing progress, n_tokens = 775, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  3 | task 99 | prompt done, n_tokens = 775, batch.n_tokens = 10
+slot init_sampler: id  3 | task 99 | init sampler, took 0.00 ms, tokens: text = 39, total = 775
+find_slot: non-consecutive token position 70 after 29 for sequence 3 with 10 new tokens
+find_slot: non-consecutive token position 70 after 29 for sequence 3 with 10 new tokens
+slot print_timing: id  3 | task 99 | 
+prompt eval time =    4818.49 ms /   775 tokens (    6.22 ms per token,   160.84 tokens per second)
+       eval time =    1391.24 ms /    27 tokens (   51.53 ms per token,    19.41 tokens per second)
+      total time =    6209.73 ms /   802 tokens
+slot      release: id  3 | task 99 | stop processing: n_tokens = 801, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/ex7/1_hires.png'
+srv  handle_media: downloaded 1137634 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  2 | task -1 | selected slot by LRU, t_last = 83905789989
+slot launch_slot_: id  2 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  2 | task 128 | processing task, is_child = 0
+slot update_slots: id  2 | task 128 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  2 | task 128 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  2 | task 128 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  2 | task 128 | clearing prompt with 29 tokens
+slot update_slots: id  2 | task 128 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  2 | task 128 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  2 | task 128 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  2 | task 128 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1083 ms
+decoding image batch 1/1, n_tokens_batch = 494
+find_slot: non-consecutive token position 29 after 28 for sequence 2 with 494 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 2 with 494 new tokens
+image decoded (batch 1/1) in 10 ms
+srv  process_chun: image processed in 1093 ms
+slot update_slots: id  2 | task 128 | prompt processing progress, n_tokens = 533, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  2 | task 128 | prompt done, n_tokens = 533, batch.n_tokens = 10
+slot init_sampler: id  2 | task 128 | init sampler, took 0.00 ms, tokens: text = 39, total = 533
+find_slot: non-consecutive token position 64 after 29 for sequence 2 with 10 new tokens
+find_slot: non-consecutive token position 64 after 29 for sequence 2 with 10 new tokens
+slot print_timing: id  2 | task 128 | 
+prompt eval time =    3096.43 ms /   533 tokens (    5.81 ms per token,   172.13 tokens per second)
+       eval time =    1376.12 ms /    27 tokens (   50.97 ms per token,    19.62 tokens per second)
+      total time =    4472.55 ms /   560 tokens
+slot      release: id  2 | task 128 | stop processing: n_tokens = 559, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/det1/1_hires.png'
+srv  handle_media: downloaded 605959 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  1 | task -1 | selected slot by LRU, t_last = 83911274051
+slot launch_slot_: id  1 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  1 | task 158 | processing task, is_child = 0
+slot update_slots: id  1 | task 158 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 775
+slot update_slots: id  1 | task 158 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  1 | task 158 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  1 | task 158 | clearing prompt with 29 tokens
+slot update_slots: id  1 | task 158 | prompt processing progress, n_tokens = 29, batch.n_tokens = 29, progress = 0.037419
+slot update_slots: id  1 | task 158 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1847 ms
+decoding image batch 1/1, n_tokens_batch = 736
+find_slot: non-consecutive token position 29 after 28 for sequence 1 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 1 with 224 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 1 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 1 with 224 new tokens
+image decoded (batch 1/1) in 1660 ms
+srv  process_chun: image processed in 3508 ms
+slot update_slots: id  1 | task 158 | prompt processing progress, n_tokens = 775, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  1 | task 158 | prompt done, n_tokens = 775, batch.n_tokens = 10
+slot init_sampler: id  1 | task 158 | init sampler, took 0.01 ms, tokens: text = 39, total = 775
+find_slot: non-consecutive token position 70 after 29 for sequence 1 with 10 new tokens
+find_slot: non-consecutive token position 70 after 29 for sequence 1 with 10 new tokens
+slot print_timing: id  1 | task 158 | 
+prompt eval time =    4629.65 ms /   775 tokens (    5.97 ms per token,   167.40 tokens per second)
+       eval time =    1438.16 ms /    28 tokens (   51.36 ms per token,    19.47 tokens per second)
+      total time =    6067.81 ms /   803 tokens
+slot      release: id  1 | task 158 | stop processing: n_tokens = 802, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/ru1/1_hires.png'
+srv  handle_media: downloaded 864862 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 83918676197
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  0 | task 188 | processing task, is_child = 0
+slot update_slots: id  0 | task 188 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  0 | task 188 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  0 | task 188 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  0 | task 188 | clearing prompt with 29 tokens
+slot update_slots: id  0 | task 188 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  0 | task 188 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  0 | task 188 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  0 | task 188 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1082 ms
+decoding image batch 1/1, n_tokens_batch = 494
+find_slot: non-consecutive token position 29 after 28 for sequence 0 with 494 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 0 with 494 new tokens
+image decoded (batch 1/1) in 10 ms
+srv  process_chun: image processed in 1092 ms
+slot update_slots: id  0 | task 188 | prompt processing progress, n_tokens = 533, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  0 | task 188 | prompt done, n_tokens = 533, batch.n_tokens = 10
+slot init_sampler: id  0 | task 188 | init sampler, took 0.01 ms, tokens: text = 39, total = 533
+find_slot: non-consecutive token position 64 after 29 for sequence 0 with 10 new tokens
+find_slot: non-consecutive token position 64 after 29 for sequence 0 with 10 new tokens
+slot print_timing: id  0 | task 188 | 
+prompt eval time =    3088.53 ms /   533 tokens (    5.79 ms per token,   172.57 tokens per second)
+       eval time =    1431.01 ms /    28 tokens (   51.11 ms per token,    19.57 tokens per second)
+      total time =    4519.54 ms /   561 tokens
+slot      release: id  0 | task 188 | stop processing: n_tokens = 560, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/ex3/1_hires.png'
+srv  handle_media: downloaded 1369217 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = 83926418126
+slot launch_slot_: id  3 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  3 | task 219 | processing task, is_child = 0
+slot update_slots: id  3 | task 219 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 775
+slot update_slots: id  3 | task 219 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  3 | task 219 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  3 | task 219 | clearing prompt with 29 tokens
+slot update_slots: id  3 | task 219 | prompt processing progress, n_tokens = 29, batch.n_tokens = 29, progress = 0.037419
+slot update_slots: id  3 | task 219 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1839 ms
+decoding image batch 1/1, n_tokens_batch = 736
+find_slot: non-consecutive token position 29 after 28 for sequence 3 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 3 with 224 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 3 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 3 with 224 new tokens
+image decoded (batch 1/1) in 1660 ms
+srv  process_chun: image processed in 3499 ms
+slot update_slots: id  3 | task 219 | prompt processing progress, n_tokens = 775, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  3 | task 219 | prompt done, n_tokens = 775, batch.n_tokens = 10
+slot init_sampler: id  3 | task 219 | init sampler, took 0.01 ms, tokens: text = 39, total = 775
+find_slot: non-consecutive token position 70 after 29 for sequence 3 with 10 new tokens
+find_slot: non-consecutive token position 70 after 29 for sequence 3 with 10 new tokens
+slot print_timing: id  3 | task 219 | 
+prompt eval time =    4613.60 ms /   775 tokens (    5.95 ms per token,   167.98 tokens per second)
+       eval time =    1340.01 ms /    26 tokens (   51.54 ms per token,    19.40 tokens per second)
+      total time =    5953.62 ms /   801 tokens
+slot      release: id  3 | task 219 | stop processing: n_tokens = 800, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/hgss4/1_hires.png'
+srv  handle_media: downloaded 826572 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  2 | task -1 | selected slot by LRU, t_last = 83932036998
+slot launch_slot_: id  2 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  2 | task 247 | processing task, is_child = 0
+slot update_slots: id  2 | task 247 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 775
+slot update_slots: id  2 | task 247 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  2 | task 247 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  2 | task 247 | clearing prompt with 29 tokens
+slot update_slots: id  2 | task 247 | prompt processing progress, n_tokens = 29, batch.n_tokens = 29, progress = 0.037419
+slot update_slots: id  2 | task 247 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1839 ms
+decoding image batch 1/1, n_tokens_batch = 736
+find_slot: non-consecutive token position 29 after 28 for sequence 2 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 2 with 224 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 2 with 512 new tokens
+find_slot: non-consecutive token position 29 after 29 for sequence 2 with 224 new tokens
+image decoded (batch 1/1) in 1667 ms
+srv  process_chun: image processed in 3506 ms
+slot update_slots: id  2 | task 247 | prompt processing progress, n_tokens = 775, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  2 | task 247 | prompt done, n_tokens = 775, batch.n_tokens = 10
+slot init_sampler: id  2 | task 247 | init sampler, took 0.01 ms, tokens: text = 39, total = 775
+find_slot: non-consecutive token position 70 after 29 for sequence 2 with 10 new tokens
+find_slot: non-consecutive token position 70 after 29 for sequence 2 with 10 new tokens
+slot print_timing: id  2 | task 247 | 
+prompt eval time =    4620.91 ms /   775 tokens (    5.96 ms per token,   167.72 tokens per second)
+       eval time =    1472.70 ms /    28 tokens (   52.60 ms per token,    19.01 tokens per second)
+      total time =    6093.62 ms /   803 tokens
+slot      release: id  2 | task 247 | stop processing: n_tokens = 802, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/ex11/1_hires.png'
+srv  handle_media: downloaded 1001086 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  1 | task -1 | selected slot by LRU, t_last = 83940270651
+slot launch_slot_: id  1 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  1 | task 277 | processing task, is_child = 0
+slot update_slots: id  1 | task 277 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  1 | task 277 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  1 | task 277 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  1 | task 277 | clearing prompt with 29 tokens
+slot update_slots: id  1 | task 277 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  1 | task 277 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  1 | task 277 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  1 | task 277 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1089 ms
+decoding image batch 1/1, n_tokens_batch = 494
+find_slot: non-consecutive token position 29 after 28 for sequence 1 with 494 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 1 with 494 new tokens
+image decoded (batch 1/1) in 11 ms
+srv  process_chun: image processed in 1100 ms
+slot update_slots: id  1 | task 277 | prompt processing progress, n_tokens = 533, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  1 | task 277 | prompt done, n_tokens = 533, batch.n_tokens = 10
+slot init_sampler: id  1 | task 277 | init sampler, took 0.01 ms, tokens: text = 39, total = 533
+find_slot: non-consecutive token position 64 after 29 for sequence 1 with 10 new tokens
+find_slot: non-consecutive token position 64 after 29 for sequence 1 with 10 new tokens
+slot print_timing: id  1 | task 277 | 
+prompt eval time =    3100.35 ms /   533 tokens (    5.82 ms per token,   171.92 tokens per second)
+       eval time =    1371.06 ms /    27 tokens (   50.78 ms per token,    19.69 tokens per second)
+      total time =    4471.41 ms /   560 tokens
+slot      release: id  1 | task 277 | stop processing: n_tokens = 559, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/base4/1_hires.png'
+srv  handle_media: downloaded 851261 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 83945359628
+slot launch_slot_: id  0 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  0 | task 307 | processing task, is_child = 0
+slot update_slots: id  0 | task 307 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  0 | task 307 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  0 | task 307 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  0 | task 307 | clearing prompt with 29 tokens
+slot update_slots: id  0 | task 307 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  0 | task 307 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  0 | task 307 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  0 | task 307 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...
+image slice encoded in 1085 ms
+decoding image batch 1/1, n_tokens_batch = 494
+find_slot: non-consecutive token position 29 after 28 for sequence 0 with 494 new tokens
+find_slot: non-consecutive token position 29 after 28 for sequence 0 with 494 new tokens
+image decoded (batch 1/1) in 10 ms
+srv  process_chun: image processed in 1095 ms
+slot update_slots: id  0 | task 307 | prompt processing progress, n_tokens = 533, batch.n_tokens = 10, progress = 1.000000
+slot update_slots: id  0 | task 307 | prompt done, n_tokens = 533, batch.n_tokens = 10
+slot init_sampler: id  0 | task 307 | init sampler, took 0.01 ms, tokens: text = 39, total = 533
+find_slot: non-consecutive token position 64 after 29 for sequence 0 with 10 new tokens
+find_slot: non-consecutive token position 64 after 29 for sequence 0 with 10 new tokens
+slot print_timing: id  0 | task 307 | 
+prompt eval time =    3081.85 ms /   533 tokens (    5.78 ms per token,   172.95 tokens per second)
+       eval time =    1425.99 ms /    28 tokens (   50.93 ms per token,    19.64 tokens per second)
+      total time =    4507.84 ms /   561 tokens
+slot      release: id  0 | task 307 | stop processing: n_tokens = 560, truncated = 0
+srv  update_slots: all slots are idle
+srv  log_server_r: done request: POST /v1/chat/completions 127.0.0.1 200
+srv  handle_media: downloading image from 'https://images.pokemontcg.io/pl1/1_hires.png'
+srv  handle_media: downloaded 908047 bytes
+srv  params_from_: Chat format: peg-constructed
+slot get_availabl: id  3 | task -1 | selected slot by LRU, t_last = 83952174409
+slot launch_slot_: id  3 | task -1 | sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> ?min-p -> ?xtc -> temp-ext -> dist 
+slot launch_slot_: id  3 | task 338 | processing task, is_child = 0
+slot update_slots: id  3 | task 338 | new prompt, n_ctx_slot = 16384, n_keep = 0, task.n_tokens = 533
+slot update_slots: id  3 | task 338 | n_tokens = 29, memory_seq_rm [29, end)
+slot update_slots: id  3 | task 338 | failed to truncate tokens with position >= 29 - clearing the memory
+slot prompt_clear: id  3 | task 338 | clearing prompt with 29 tokens
+slot update_slots: id  3 | task 338 | prompt processing progress, n_tokens = 21, batch.n_tokens = 21, progress = 0.039400
+slot update_slots: id  3 | task 338 | n_tokens = 21, memory_seq_rm [21, end)
+slot update_slots: id  3 | task 338 | prompt processing progress, n_tokens = 29, batch.n_tokens = 8, progress = 0.054409
+slot update_slots: id  3 | task 338 | n_tokens = 29, memory_seq_rm [29, end)
+srv  process_chun: processing image...
+encoding image slice...

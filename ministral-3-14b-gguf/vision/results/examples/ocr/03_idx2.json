@@ -1,0 +1,12 @@
+{
+  "idx": 2,
+  "query": "OCR task: read this Pokemon card and answer strictly JSON with keys \"name\" and \"hp\" (hp as integer).",
+  "gold": {
+    "name": "Weedle",
+    "hp": 50
+  },
+  "pred": "```json\n{\n  \"name\": \"Weedle\",\n  \"hp\": 50\n}\n```",
+  "passed": true,
+  "response": "```json\n{\n  \"name\": \"Weedle\",\n  \"hp\": 50\n}\n```",
+  "image": "03_idx2.png"
+}

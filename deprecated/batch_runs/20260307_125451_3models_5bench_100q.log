@@ -1,0 +1,91 @@
+[2026-03-07 12:54:51] START key=gpt-oss-20b-gguf bench=mmlu
+server_pid=73417
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_125451_fasttextgenevalset2_mmlu
+[2026-03-07 13:17:27] DONE  key=gpt-oss-20b-gguf bench=mmlu
+[2026-03-07 13:17:27] START key=gpt-oss-20b-gguf bench=gsm8k
+server_pid=74616
+server ready; eval gsm8k start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_131727_fasttextgenevalset2_gsm8k
+[2026-03-07 13:39:12] DONE  key=gpt-oss-20b-gguf bench=gsm8k
+[2026-03-07 13:39:12] START key=gpt-oss-20b-gguf bench=geo-mmlu-high-school
+server_pid=75746
+server ready; eval geo-mmlu-high-school start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_133912_fasttextgenevalset2_geo-mmlu-high-school
+[2026-03-07 13:51:47] DONE  key=gpt-oss-20b-gguf bench=geo-mmlu-high-school
+[2026-03-07 13:51:47] START key=gpt-oss-20b-gguf bench=law-mmlu-professional
+server_pid=76447
+server ready; eval law-mmlu-professional start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_135147_fasttextgenevalset2_law-mmlu-professional
+[2026-03-07 14:51:55] DONE  key=gpt-oss-20b-gguf bench=law-mmlu-professional
+[2026-03-07 14:51:55] START key=gpt-oss-20b-gguf bench=humaneval
+server_pid=79555
+server ready; eval humaneval start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/gpt-oss-20b-gguf/runs/20260307_145155_fasttextgenevalset2_humaneval
+[2026-03-07 15:28:32] DONE  key=gpt-oss-20b-gguf bench=humaneval
+[2026-03-07 15:28:32] START key=glm-4.7-flash-fp4 bench=mmlu
+server_pid=81499
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152832_fasttextgenevalset2_mmlu
+[2026-03-07 15:29:58] DONE  key=glm-4.7-flash-fp4 bench=mmlu
+[2026-03-07 15:29:58] START key=glm-4.7-flash-fp4 bench=gsm8k
+server_pid=81631
+server ready; eval gsm8k start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_152958_fasttextgenevalset2_gsm8k
+[2026-03-07 15:41:46] DONE  key=glm-4.7-flash-fp4 bench=gsm8k
+[2026-03-07 15:41:46] START key=glm-4.7-flash-fp4 bench=geo-mmlu-high-school
+server_pid=82267
+server ready; eval geo-mmlu-high-school start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154146_fasttextgenevalset2_geo-mmlu-high-school
+[2026-03-07 15:42:45] DONE  key=glm-4.7-flash-fp4 bench=geo-mmlu-high-school
+[2026-03-07 15:42:45] START key=glm-4.7-flash-fp4 bench=law-mmlu-professional
+server_pid=82358
+server ready; eval law-mmlu-professional start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154245_fasttextgenevalset2_law-mmlu-professional
+[2026-03-07 15:44:44] DONE  key=glm-4.7-flash-fp4 bench=law-mmlu-professional
+[2026-03-07 15:44:44] START key=glm-4.7-flash-fp4 bench=humaneval
+server_pid=82491
+server ready; eval humaneval start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/glm-4.7-flash-fp4/runs/20260307_154444_fasttextgenevalset2_humaneval
+[2026-03-07 15:51:57] DONE  key=glm-4.7-flash-fp4 bench=humaneval
+[2026-03-07 15:51:57] START key=qwen3.5_35b_a3b bench=mmlu
+server_pid=82917
+server ready; eval mmlu start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155157_fasttextgenevalset2_mmlu
+[2026-03-07 15:53:37] DONE  key=qwen3.5_35b_a3b bench=mmlu
+[2026-03-07 15:53:37] START key=qwen3.5_35b_a3b bench=gsm8k
+server_pid=83057
+server ready; eval gsm8k start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_155337_fasttextgenevalset2_gsm8k
+[2026-03-07 16:22:11] DONE  key=qwen3.5_35b_a3b bench=gsm8k
+[2026-03-07 16:22:11] START key=qwen3.5_35b_a3b bench=geo-mmlu-high-school
+server_pid=84641
+server ready; eval geo-mmlu-high-school start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162211_fasttextgenevalset2_geo-mmlu-high-school
+[2026-03-07 16:23:24] DONE  key=qwen3.5_35b_a3b bench=geo-mmlu-high-school
+[2026-03-07 16:23:24] START key=qwen3.5_35b_a3b bench=law-mmlu-professional
+server_pid=84758
+server ready; eval law-mmlu-professional start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162324_fasttextgenevalset2_law-mmlu-professional
+[2026-03-07 16:25:42] DONE  key=qwen3.5_35b_a3b bench=law-mmlu-professional
+[2026-03-07 16:25:42] START key=qwen3.5_35b_a3b bench=humaneval
+server_pid=84930
+server ready; eval humaneval start
+eval done
+done run_dir=/Users/yenhaohuang/Desktop/model-tester/qwen3.5_35b_a3b/runs/20260307_162542_fasttextgenevalset2_humaneval
+[2026-03-07 16:35:08] DONE  key=qwen3.5_35b_a3b bench=humaneval
+[2026-03-07 16:35:08] ALL_DONE

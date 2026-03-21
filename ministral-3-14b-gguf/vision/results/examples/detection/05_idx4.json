@@ -1,0 +1,11 @@
+{
+  "idx": 4,
+  "query": "Object detection task: list which PPE classes are present in the image from [Coverall, Face_Shield, Gloves, Goggles, Mask]. Return comma-separated class names only.",
+  "gold": [
+    "Mask"
+  ],
+  "pred": "Mask",
+  "passed": true,
+  "response": "Mask",
+  "image": "05_idx4.png"
+}
