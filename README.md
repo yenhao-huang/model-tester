@@ -73,9 +73,9 @@ device; mac-mini m4 chip
 
 ### Accuracy
 
-#### all
+#### Text (all)
 > Latest 100-question results per benchmark (5 benchmarks, total 500/model).
-> Note: `gpt-oss-20b-gguf` / `qwen3.5_35b_a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count).
+> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count).
 
 | Model | MMLU | GSM8K | Geo MMLU High School | Law MMLU Professional | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -86,5 +86,15 @@ device; mac-mini m4 chip
 | gemma-3-27b-gguf | 79% (79/100) | 76% (76/100) | 86% (86/100) | 57% (57/100) | 63% (63/100) | **72.2% (361/500)** |
 | ministral-3-14b-gguf | 48% (48/100) | 2% (2/100) | 88% (88/100) | 48% (48/100) | 88% (88/100) | **54.8% (274/500)** |
 
+#### Vision (100 題/任務)
+> Tasks: OCR (PokemonCards), Classification (CIFAR10), Detection (CPPE5)
+
+| Model | OCR | Classification | Detection | Avg (3 tasks) | Result Path |
+|---|---:|---:|---:|---:|---|
+| qwen3.5-27b | 89% (89/100) | 79% (79/100) | 60% (60/100) | **76.0%** | `qwen3.5-27b/vision/results/summary_100.json` |
+| qwen3.5-35b-a3b | 92% (92/100) | 70% (70/100) | 59% (59/100) | **73.7%** | `qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/summary_100.json` |
+
 Run folders:
 - `/Users/yenhaohuang/Desktop/model-tester/results/`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-27b/vision/results/`
+- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/`
