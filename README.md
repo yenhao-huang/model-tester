@@ -132,9 +132,11 @@ Device: Mac-Mini M4 Chip
 | ministral-3-14b-gguf | 89% (89/100) | 82% (82/100) | 51% (51/100) | **74.0%** | `ministral-3-14b-gguf/vision/results/summary_100.json` |
 | qwen3.5-35b-a3b | 92% (92/100) | 70% (70/100) | 59% (59/100) | **73.7%** | `qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/summary_100.json` |
 | gemma-3-27b-gguf | 91% (91/100) | 82% (82/100) | 47% (47/100) | **73.3%** | `gemma-3-27b-gguf/vision/results-20260322_002456/summary_100.json` |
+| lfm2.5-vl-1.6b | 87% (87/100) | 76% (76/100) | 18% (18/100) | **60.3%** | `lfm2.5-vl-1.6b/vision/results-20260322_083607/summary_100.json` |
 
 Run folders:
 - `/Users/yenhaohuang/Desktop/model-tester/results/`
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-27b/vision/results/`
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/`
 - `/Users/yenhaohuang/Desktop/model-tester/gemma-3-27b-gguf/vision/results-20260322_002456/`
+- `/Users/yenhaohuang/Desktop/model-tester/lfm2.5-vl-1.6b/vision/results-20260322_083607/`
