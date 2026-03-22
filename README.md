@@ -103,23 +103,23 @@ Device: Mac-Mini M4 Chip
 | Model | Prompt ms/token | Prompt token/s | Eval ms/token | Eval token/s |
 |---|---:|---:|---:|---:|
 | qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 |
-| qwen3.5-35b-a3b | 3.44 | 290.58 | 52.82 | 18.93 |
+| qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
 | lfm2-24b | 4.61 | 217.05 | 27.69 | 36.11 |
-| lfm2.5-vl-1.6b | 0.63 | 1586.02 | 23.07 | 43.34 |
+| lfm2.5-vl-1.6b | 0.79 | 1266.33 | 24.19 | 41.33 |
 | gemma-3-27b-gguf | 18.37 | 54.45 | 193.85 | 5.16 |
 | ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 |
 
 Latest raw llama-server samples (2026-03-22):
 
 - qwen3.5-35b-a3b
-  - `prompt eval time = 1287.07 ms / 374 tokens (3.44 ms per token, 290.58 tokens per second)`
-  - `eval time = 9506.88 ms / 180 tokens (52.82 ms per token, 18.93 tokens per second)`
-  - `total time = 10793.95 ms / 554 tokens`
+  - `prompt eval time = 617.61 ms / 102 tokens (6.05 ms per token, 165.15 tokens per second)`
+  - `eval time = 9637.80 ms / 180 tokens (53.54 ms per token, 18.68 tokens per second)`
+  - `total time = 10255.41 ms / 282 tokens`
 - lfm2.5-vl-1.6b
-  - `prompt eval time = 322.19 ms / 511 tokens (0.63 ms per token, 1586.02 tokens per second)`
-  - `eval time = 4152.91 ms / 180 tokens (23.07 ms per token, 43.34 tokens per second)`
-  - `total time = 4475.10 ms / 691 tokens`
+  - `prompt eval time = 87.66 ms / 111 tokens (0.79 ms per token, 1266.33 tokens per second)`
+  - `eval time = 4354.88 ms / 180 tokens (24.19 ms per token, 41.33 tokens per second)`
+  - `total time = 4442.54 ms / 291 tokens`
 
 ### Accuracy
 
