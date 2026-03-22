@@ -100,7 +100,7 @@ llama-server \
 ### Speed
 Device: Mac-Mini M4 Chip
 
-| Model | Prompt ms/token | Prompt tok/s | Eval ms/token | Eval tok/s |
+| Model | Prompt ms/token | Prompt token/s | Eval ms/token | Eval token/s |
 |---|---:|---:|---:|---:|
 | qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
@@ -131,8 +131,10 @@ Device: Mac-Mini M4 Chip
 | qwen3.5-27b | 89% (89/100) | 79% (79/100) | 60% (60/100) | **76.0%** | `qwen3.5-27b/vision/results/summary_100.json` |
 | ministral-3-14b-gguf | 89% (89/100) | 82% (82/100) | 51% (51/100) | **74.0%** | `ministral-3-14b-gguf/vision/results/summary_100.json` |
 | qwen3.5-35b-a3b | 92% (92/100) | 70% (70/100) | 59% (59/100) | **73.7%** | `qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/summary_100.json` |
+| gemma-3-27b-gguf | 91% (91/100) | 82% (82/100) | 47% (47/100) | **73.3%** | `gemma-3-27b-gguf/vision/results-20260322_002456/summary_100.json` |
 
 Run folders:
 - `/Users/yenhaohuang/Desktop/model-tester/results/`
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-27b/vision/results/`
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/`
+- `/Users/yenhaohuang/Desktop/model-tester/gemma-3-27b-gguf/vision/results-20260322_002456/`
