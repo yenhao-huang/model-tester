@@ -125,7 +125,7 @@ Latest raw llama-server samples (2026-03-22):
 
 #### Text (100 題/任務)
 > Latest 100-question results per benchmark (5 benchmarks, total 500/model).
-> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count).
+> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count); `lfm2.5-vl-1.6b` is from run `results/text_eval/fast_textgen_eval_20260322_015737_all.json`.
 
 | Model | MMLU | GSM8K | Geo MMLU High School | Law MMLU Professional | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -134,6 +134,7 @@ Latest raw llama-server samples (2026-03-22):
 | glm-4.7-flash-fp4 | 72% (72/100) | 92% (92/100) | 86% (86/100) | 54% (54/100) | 76% (76/100) | **76.0% (380/500)** |
 | lfm2-24b | 74% (74/100) | 86% (86/100) | 81% (81/100) | 57% (57/100) | 80% (80/100) | **75.6% (378/500)** |
 | gemma-3-27b-gguf | 79% (79/100) | 76% (76/100) | 86% (86/100) | 57% (57/100) | 63% (63/100) | **72.2% (361/500)** |
+| lfm2.5-vl-1.6b | 51% (51/100) | 65% (65/100) | 52% (52/100) | 28% (28/100) | 56% (56/100) | **50.4% (252/500)** |
 | ministral-3-14b-gguf | 48% (48/100) | 2% (2/100) | 88% (88/100) | 48% (48/100) | 88% (88/100) | **54.8% (274/500)** |
 
 #### Vision (100 題/任務)
