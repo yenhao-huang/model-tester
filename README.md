@@ -103,8 +103,10 @@ Device: Mac-Mini M4 Chip
 | Model | Prompt ms/token | Prompt token/s | Eval ms/token | Eval token/s |
 |---|---:|---:|---:|---:|
 | qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 |
+| qwen3.5-35b-a3b | 6.81 | 146.84 | 53.30 | 18.76 |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
 | lfm2-24b | 4.61 | 217.05 | 27.69 | 36.11 |
+| lfm2.5-vl-1.6b | 0.83 | 1200.87 | 23.19 | 43.12 |
 | gemma-3-27b-gguf | 18.37 | 54.45 | 193.85 | 5.16 |
 | ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 |
 
