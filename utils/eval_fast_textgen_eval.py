@@ -54,7 +54,7 @@ def read_jsonl(path: Path) -> list[dict]:
 # Inference
 # ---------------------------------------------------------------------------
 
-def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) -> str:
+def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) -> dict:
     payload = {
         "model": model,
         "messages": [
@@ -78,13 +78,16 @@ def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) 
             body = json.loads(resp.read().decode("utf-8"))
             msg = body["choices"][0]["message"]
             content = (msg.get("content") or "").strip()
-            if content:
-                return content
-            return (msg.get("reasoning_content") or "").strip()
+            thinking = (msg.get("reasoning_content") or "").strip()
+            return {
+                "content": content,
+                "thinking": thinking,
+                "usage": body.get("usage"),
+            }
     except TimeoutError:
-        return ""
+        return {"content": "", "thinking": "", "usage": None}
     except Exception:
-        return ""
+        return {"content": "", "thinking": "", "usage": None}
 
 
 # ---------------------------------------------------------------------------
@@ -202,12 +205,25 @@ def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
             f"Choices:\nA. {choices[0]}\nB. {choices[1]}\nC. {choices[2]}\nD. {choices[3]}\n\n"
             "Answer with only one letter: A, B, C, or D."
         )
-        out = chat(prompt, **cfg["chat_kwargs"])
+        out_obj = chat(prompt, **cfg["chat_kwargs"])
+        out = out_obj.get("content", "")
+        thinking = out_obj.get("thinking", "")
         m = re.search(r"[ABCD]", out.upper())
         pred = m.group(0) if m else ""
         ok = pred == gold
         correct += int(ok)
-        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out, "error": None})
+        results.append({
+            "idx": i,
+            "gold": gold,
+            "pred": pred,
+            "passed": ok,
+            "skipped": False,
+            "prompt": prompt,
+            "response": out,
+            "thinking": thinking,
+            "usage": out_obj.get("usage"),
+            "error": None,
+        })
         print(f"  {benchmark} {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
     acc = correct / len(rows) if rows else None
     return {
@@ -240,11 +256,24 @@ def score_gsm8k(cfg: dict) -> dict:
     for i, row in enumerate(rows, 1):
         gold = _extract_last_number(row["answer"]) or ""
         prompt = f"Solve this math problem. End your answer with #### <number>.\n\nQuestion:\n{row['question']}"
-        out = chat(prompt, **cfg["chat_kwargs"])
+        out_obj = chat(prompt, **cfg["chat_kwargs"])
+        out = out_obj.get("content", "")
+        thinking = out_obj.get("thinking", "")
         pred = _extract_last_number(out) or ""
         ok = pred == gold
         correct += int(ok)
-        results.append({"idx": i, "gold": gold, "pred": pred, "passed": ok, "skipped": False, "prompt": prompt, "response": out, "error": None})
+        results.append({
+            "idx": i,
+            "gold": gold,
+            "pred": pred,
+            "passed": ok,
+            "skipped": False,
+            "prompt": prompt,
+            "response": out,
+            "thinking": thinking,
+            "usage": out_obj.get("usage"),
+            "error": None,
+        })
         print(f"  gsm8k {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
     acc = correct / len(rows) if rows else None
     return {
@@ -269,7 +298,9 @@ def score_humaneval(cfg: dict) -> dict:
             "You may return either the full function definition or only the function body.\n\n"
             f"{row['prompt']}"
         )
-        out = chat(query, **cfg["chat_kwargs"])
+        out_obj = chat(query, **cfg["chat_kwargs"])
+        out = out_obj.get("content", "")
+        thinking = out_obj.get("thinking", "")
         ok, err, repaired = _run_humaneval_case(row["prompt"], row["entry_point"], row["test"], out)
         correct += int(ok)
         results.append({
@@ -281,6 +312,8 @@ def score_humaneval(cfg: dict) -> dict:
             "syntax_repaired": repaired,
             "prompt": query,
             "response": out,
+            "thinking": thinking,
+            "usage": out_obj.get("usage"),
             "error": err,
         })
         print(f"  humaneval {i}/{len(rows)}  {row.get('task_id', '')} {'OK' if ok else 'FAIL'}{' [repaired]' if repaired else ''}")
