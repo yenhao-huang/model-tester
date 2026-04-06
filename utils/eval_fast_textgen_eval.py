@@ -54,7 +54,7 @@ def read_jsonl(path: Path) -> list[dict]:
 # Inference
 # ---------------------------------------------------------------------------
 
-def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) -> dict:
+def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int, timeout_sec: int) -> dict:
     payload = {
         "model": model,
         "messages": [
@@ -73,8 +73,9 @@ def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) 
         },
         method="POST",
     )
+    t0 = time.time()
     try:
-        with urllib_request.urlopen(req, timeout=900) as resp:
+        with urllib_request.urlopen(req, timeout=timeout_sec) as resp:
             body = json.loads(resp.read().decode("utf-8"))
             msg = body["choices"][0]["message"]
             content = (msg.get("content") or "").strip()
@@ -83,11 +84,12 @@ def chat(prompt: str, base_url: str, api_key: str, model: str, max_tokens: int) 
                 "content": content,
                 "thinking": thinking,
                 "usage": body.get("usage"),
+                "elapsed_sec": round(time.time() - t0, 2),
             }
     except TimeoutError:
-        return {"content": "", "thinking": "", "usage": None}
+        return {"content": "", "thinking": "", "usage": None, "elapsed_sec": round(time.time() - t0, 2)}
     except Exception:
-        return {"content": "", "thinking": "", "usage": None}
+        return {"content": "", "thinking": "", "usage": None, "elapsed_sec": round(time.time() - t0, 2)}
 
 
 # ---------------------------------------------------------------------------
@@ -222,6 +224,7 @@ def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
             "response": out,
             "thinking": thinking,
             "usage": out_obj.get("usage"),
+            "elapsed_sec": out_obj.get("elapsed_sec"),
             "error": None,
         })
         print(f"  {benchmark} {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
@@ -272,6 +275,7 @@ def score_gsm8k(cfg: dict) -> dict:
             "response": out,
             "thinking": thinking,
             "usage": out_obj.get("usage"),
+            "elapsed_sec": out_obj.get("elapsed_sec"),
             "error": None,
         })
         print(f"  gsm8k {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
@@ -314,6 +318,7 @@ def score_humaneval(cfg: dict) -> dict:
             "response": out,
             "thinking": thinking,
             "usage": out_obj.get("usage"),
+            "elapsed_sec": out_obj.get("elapsed_sec"),
             "error": err,
         })
         print(f"  humaneval {i}/{len(rows)}  {row.get('task_id', '')} {'OK' if ok else 'FAIL'}{' [repaired]' if repaired else ''}")
@@ -357,6 +362,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--api-key", default="dummy", help="API key (default: dummy)")
     p.add_argument("--n", type=int, default=20, help="max cases per benchmark (default: 20)")
     p.add_argument("--max-tokens", type=int, default=4096, help="max tokens per response (default: 4096)")
+    p.add_argument("--timeout-sec", type=int, default=900, help="request timeout in seconds (default: 900)")
     p.add_argument("--out-dir", default=_DEFAULT_OUT_DIR, help="output directory")
     p.add_argument("--dataset-root", default=_DEFAULT_DATASET_ROOT, help="dataset root path")
     return p.parse_args()
@@ -373,6 +379,7 @@ def main() -> None:
             "api_key": args.api_key,
             "model": args.model,
             "max_tokens": args.max_tokens,
+            "timeout_sec": args.timeout_sec,
         },
     }
 
@@ -388,6 +395,7 @@ def main() -> None:
             "dataset_root": args.dataset_root,
             "max_cases_per_benchmark": args.n,
             "max_tokens": args.max_tokens,
+            "timeout_sec": args.timeout_sec,
             "benchmarks": args.benchmarks,
         },
     }
