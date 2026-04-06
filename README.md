@@ -103,6 +103,7 @@ Device: Mac-Mini M4 Chip
 | Model | Prompt ms/token | Prompt token/s | Eval ms/token | Eval token/s |
 |---|---:|---:|---:|---:|
 | lfm2.5-vl-1.6b | 0.79 | 1266.33 | 24.19 | 41.33 |
+| gemma-4-26b-a4b-gguf | 8.97 | 111.46 | 40.07 | 24.96 |
 | lfm2-24b | 4.61 | 217.05 | 27.69 | 36.11 |
 | qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
@@ -120,12 +121,16 @@ Latest raw llama-server samples (2026-03-22):
   - `prompt eval time = 87.66 ms / 111 tokens (0.79 ms per token, 1266.33 tokens per second)`
   - `eval time = 4354.88 ms / 180 tokens (24.19 ms per token, 41.33 tokens per second)`
   - `total time = 4442.54 ms / 291 tokens`
+- gemma-4-26b-a4b-gguf (2026-04-04 speed sample)
+  - `prompt eval time = 394.78 ms / 44 tokens (8.97 ms per token, 111.46 tokens per second)`
+  - `eval time = 7212.55 ms / 180 tokens (40.07 ms per token, 24.96 tokens per second)`
+  - `total time = 7607.32 ms / 224 tokens`
 
 ### Accuracy
 
 #### Text (100 題/任務)
 > Latest 100-question results per benchmark (5 benchmarks, total 500/model).
-> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count); `lfm2.5-vl-1.6b` is from run `results/text_eval/fast_textgen_eval_20260322_015737_all.json`.
+> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count); `lfm2.5-vl-1.6b` is from run `results/text_eval/fast_textgen_eval_20260322_015737_all.json`; `gemma-4-26b-a4b-gguf` is from `gemma-4-26b-a4b-gguf/text/results/full_20260405_103126_max8192/`.
 
 | Model | MMLU | GSM8K | Geo MMLU High School | Law MMLU Professional | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -134,14 +139,18 @@ Latest raw llama-server samples (2026-03-22):
 | glm-4.7-flash-fp4 | 72% (72/100) | 92% (92/100) | 86% (86/100) | 54% (54/100) | 76% (76/100) | **76.0% (380/500)** |
 | lfm2-24b | 74% (74/100) | 86% (86/100) | 81% (81/100) | 57% (57/100) | 80% (80/100) | **75.6% (378/500)** |
 | gemma-3-27b-gguf | 79% (79/100) | 76% (76/100) | 86% (86/100) | 57% (57/100) | 63% (63/100) | **72.2% (361/500)** |
+| gemma-4-26b-a4b-gguf | 81% (81/100) | 59% (59/100) | 89% (89/100) | 41% (41/100) | 70% (70/100) | **68.0% (340/500)** |
 | ministral-3-14b-gguf | 48% (48/100) | 2% (2/100) | 88% (88/100) | 48% (48/100) | 88% (88/100) | **54.8% (274/500)** |
 | lfm2.5-vl-1.6b | 51% (51/100) | 65% (65/100) | 52% (52/100) | 28% (28/100) | 56% (56/100) | **50.4% (252/500)** |
+
+* gemma-27b 程式能力差
 
 #### Vision (100 題/任務)
 > Tasks: OCR (PokemonCards), Classification (CIFAR10), Detection (CPPE5)
 
 | Model | OCR | Classification | Detection | Avg (3 tasks) | Result Path |
 |---|---:|---:|---:|---:|---|
+| gemma-4-26b-a4b-gguf | 92% (92/100) | 88% (88/100) | 61% (61/100) | **80.3%** | `gemma-4-26b-a4b-gguf/vision/results/full_20260404_094301/summary_100.json` |
 | qwen3.5-27b | 89% (89/100) | 79% (79/100) | 60% (60/100) | **76.0%** | `qwen3.5-27b/vision/results/summary_100.json` |
 | ministral-3-14b-gguf | 89% (89/100) | 82% (82/100) | 51% (51/100) | **74.0%** | `ministral-3-14b-gguf/vision/results/summary_100.json` |
 | qwen3.5-35b-a3b | 92% (92/100) | 70% (70/100) | 59% (59/100) | **73.7%** | `qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/summary_100.json` |
@@ -153,4 +162,5 @@ Run folders:
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-27b/vision/results/`
 - `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/`
 - `/Users/yenhaohuang/Desktop/model-tester/gemma-3-27b-gguf/vision/results-20260322_002456/`
+- `/Users/yenhaohuang/Desktop/model-tester/gemma-4-26b-a4b-gguf/vision/results/full_20260404_094301/`
 - `/Users/yenhaohuang/Desktop/model-tester/lfm2.5-vl-1.6b/vision/results-20260322_083607/`
