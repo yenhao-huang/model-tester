@@ -1,6 +1,0 @@
-{
-  "model": "gemma-4-26b-a4b-gguf",
-  "task": "text-summary",
-  "note": "placeholder summary file for push target",
-  "updated_at": "2026-04-07T07:08:00Z"
-}
