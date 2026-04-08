@@ -210,8 +210,7 @@ def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
         out_obj = chat(prompt, **cfg["chat_kwargs"])
         out = out_obj.get("content", "")
         thinking = out_obj.get("thinking", "")
-        m = re.search(r"[ABCD]", out.upper())
-        pred = m.group(0) if m else ""
+        pred = _extract_choice_letter(out) or ""
         ok = pred == gold
         correct += int(ok)
         results.append({
@@ -337,6 +336,27 @@ def score_humaneval(cfg: dict) -> dict:
 def _extract_last_number(text: str) -> str | None:
     m = re.findall(r"-?\d+(?:\.\d+)?", text.replace(",", ""))
     return m[-1] if m else None
+
+
+def _extract_choice_letter(text: str) -> str | None:
+    if not text:
+        return None
+
+    t = text.strip()
+
+    # Prefer explicit answer markers, e.g. "Answer: C" / "Final answer C"
+    marked = re.findall(r"(?im)^(?:final\s*answer|answer)\s*[:：]?\s*([ABCD])\b", t)
+    if marked:
+        return marked[-1].upper()
+
+    # Then prefer standalone single-letter lines (often the final line)
+    single_line = re.findall(r"(?im)^\s*([ABCD])\s*$", t)
+    if single_line:
+        return single_line[-1].upper()
+
+    # Fallback: last standalone choice letter token in the whole response
+    tokens = re.findall(r"(?<![A-Z])[ABCD](?![A-Z])", t.upper())
+    return tokens[-1] if tokens else None
 
 
 SCORERS = {
