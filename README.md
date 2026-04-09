@@ -130,7 +130,7 @@ Latest raw llama-server samples (2026-03-22):
 
 #### Text (100 題/任務)
 > Latest 100-question results per benchmark (5 benchmarks, total 500/model).
-> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count); `lfm2.5-vl-1.6b` is from run `results/text_eval/fast_textgen_eval_20260322_015737_all.json`; `gemma-4-26b-a4b-gguf` is from `gemma-4-26b-a4b-gguf/text/results/full_20260405_103126_max8192/`.
+> Note: `gpt-oss-20b-gguf` / `qwen3.5-35b-a3b` / `glm-4.7-flash-fp4` are from the unified run on 2026-03-07; `lfm2-24b` is from the latest complete prior run (same benchmark set and question count); `lfm2.5-vl-1.6b` is from run `results/text_eval/fast_textgen_eval_20260322_015737_all.json`; `gemma-4-26b-a4b-gguf` is from `gemma-4-26b-a4b-gguf/text/results/full_20260405_103126_max8192/`; `omnicoder-9b-gguf` is from `omnicoder-9b-gguf/text/results/rerun_ctx16384_low_full_n100_20260408_212750/`.
 
 | Model | MMLU | GSM8K | Geo MMLU High School | Law MMLU Professional | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -138,6 +138,7 @@ Latest raw llama-server samples (2026-03-22):
 | gpt-oss-20b-gguf | 83% (83/100) | 94% (94/100) | 88% (88/100) | 51% (51/100) | 96% (96/100) | **82.4% (412/500)** |
 | glm-4.7-flash-fp4 | 72% (72/100) | 92% (92/100) | 86% (86/100) | 54% (54/100) | 76% (76/100) | **76.0% (380/500)** |
 | lfm2-24b | 74% (74/100) | 86% (86/100) | 81% (81/100) | 57% (57/100) | 80% (80/100) | **75.6% (378/500)** |
+| omnicoder-9b-gguf | 57% (57/100) | 86% (86/100) | 78% (78/100) | 62% (62/100) | 84% (84/100) | **73.4% (367/500)** |
 | gemma-3-27b-gguf | 79% (79/100) | 76% (76/100) | 86% (86/100) | 57% (57/100) | 63% (63/100) | **72.2% (361/500)** |
 | gemma-4-26b-a4b-gguf | 81% (81/100) | 69% (69/100) | 89% (89/100) |  | 72% (72/100) | **68.0% (340/500)** |
 | ministral-3-14b-gguf | 48% (48/100) | 2% (2/100) | 88% (88/100) | 48% (48/100) | 88% (88/100) | **54.8% (274/500)** |
