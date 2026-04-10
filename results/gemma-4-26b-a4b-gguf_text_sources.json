@@ -1,0 +1,44 @@
+{
+  "model": "gemma-4-26b-a4b-gguf",
+  "task": "text",
+  "readme_row": {
+    "mmlu": "81% (81/100)",
+    "gsm8k": "69% (69/100)",
+    "geo_mmlu_high_school": "89% (89/100)",
+    "law_mmlu_professional": "46% (46/100)",
+    "humaneval": "72% (72/100)",
+    "total": "71.4% (357/500)"
+  },
+  "mixed_source": true,
+  "notes": [
+    "README row is assembled from multiple per-benchmark runs.",
+    "Law score uses the later redownload rerun instead of the older summary copy."
+  ],
+  "sources": [
+    {
+      "benchmark": "mmlu",
+      "score": "81% (81/100)",
+      "source_json": "gemma-4-26b-a4b-gguf/text/results/summary/fast_textgen_eval_20260405_023141_mmlu.json"
+    },
+    {
+      "benchmark": "gsm8k",
+      "score": "69% (69/100)",
+      "source_json": "gemma-4-26b-a4b-gguf/text/results/summary/fast_textgen_eval_20260406_165225_gsm8k.json"
+    },
+    {
+      "benchmark": "geo-mmlu-high-school",
+      "score": "89% (89/100)",
+      "source_json": "gemma-4-26b-a4b-gguf/text/results/summary/fast_textgen_eval_20260405_023141_geo-mmlu-high-school.json"
+    },
+    {
+      "benchmark": "law-mmlu-professional",
+      "score": "46% (46/100)",
+      "source_json": "gemma-4-26b-a4b-gguf/text/results/rerun_ctx16384_law_redownload_n100_20260410_084645/fast_textgen_eval_20260410_004700_law-mmlu-professional.json"
+    },
+    {
+      "benchmark": "humaneval",
+      "score": "72% (72/100)",
+      "source_json": "gemma-4-26b-a4b-gguf/text/results/summary/fast_textgen_eval_20260406_023200_humaneval.json"
+    }
+  ]
+}
