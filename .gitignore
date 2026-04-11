@@ -2,3 +2,8 @@
 *.png
 *.wav
 *.json
+
+data
+exp
+.env
+deprecated
