@@ -381,7 +381,7 @@ def parse_args() -> argparse.Namespace:
                    help="OpenAI-compatible endpoint base URL (default: http://127.0.0.1:8080/v1)")
     p.add_argument("--api-key", default="dummy", help="API key (default: dummy)")
     p.add_argument("--n", type=int, default=20, help="max cases per benchmark (default: 20)")
-    p.add_argument("--max-tokens", type=int, default=4096, help="max tokens per response (default: 4096)")
+    p.add_argument("--max-tokens", type=int, default=12096, help="max tokens per response (default: 12096)")
     p.add_argument("--timeout-sec", type=int, default=900, help="request timeout in seconds (default: 900)")
     p.add_argument("--out-dir", default=_DEFAULT_OUT_DIR, help="output directory")
     p.add_argument("--dataset-root", default=_DEFAULT_DATASET_ROOT, help="dataset root path")
