@@ -197,9 +197,18 @@ def _run_humaneval_case(
 
 def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
     rows = read_jsonl(cfg["dataset_root"] / dataset_subdir / "test.jsonl")[: cfg["n"]]
+    only_indices: set[int] | None = cfg.get("only_indices")
+    prior_results: dict[int, dict] = cfg.get("prior_results", {})
     correct, results = 0, []
     t0 = time.time()
     for i, row in enumerate(rows, 1):
+        if only_indices is not None and i not in only_indices:
+            # reuse prior result
+            if i in prior_results:
+                r = prior_results[i]
+                correct += int(r.get("passed", False))
+                results.append(r)
+            continue
         choices = row["choices"]
         gold = ["A", "B", "C", "D"][int(row["answer"])]
         prompt = (
@@ -227,6 +236,7 @@ def _score_mmlu_like(cfg: dict, benchmark: str, dataset_subdir: str) -> dict:
             "error": None,
         })
         print(f"  {benchmark} {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
+    results.sort(key=lambda r: r["idx"])
     acc = correct / len(rows) if rows else None
     return {
         "benchmark": benchmark,
@@ -253,9 +263,17 @@ def score_law_mmlu_professional(cfg: dict) -> dict:
 
 def score_gsm8k(cfg: dict) -> dict:
     rows = read_jsonl(cfg["dataset_root"] / "gsm8k-main" / "test.jsonl")[: cfg["n"]]
+    only_indices: set[int] | None = cfg.get("only_indices")
+    prior_results: dict[int, dict] = cfg.get("prior_results", {})
     correct, results = 0, []
     t0 = time.time()
     for i, row in enumerate(rows, 1):
+        if only_indices is not None and i not in only_indices:
+            if i in prior_results:
+                r = prior_results[i]
+                correct += int(r.get("passed", False))
+                results.append(r)
+            continue
         gold = _extract_last_number(row["answer"]) or ""
         prompt = f"Solve this math problem. End your answer with #### <number>.\n\nQuestion:\n{row['question']}"
         out_obj = chat(prompt, **cfg["chat_kwargs"])
@@ -278,6 +296,7 @@ def score_gsm8k(cfg: dict) -> dict:
             "error": None,
         })
         print(f"  gsm8k {i}/{len(rows)}  gold={gold} pred={pred} {'OK' if ok else 'FAIL'}")
+    results.sort(key=lambda r: r["idx"])
     acc = correct / len(rows) if rows else None
     return {
         "benchmark": "gsm8k",
@@ -293,9 +312,17 @@ def score_gsm8k(cfg: dict) -> dict:
 
 def score_humaneval(cfg: dict) -> dict:
     rows = read_jsonl(cfg["dataset_root"] / "humaneval" / "test.jsonl")[: cfg["n"]]
+    only_indices: set[int] | None = cfg.get("only_indices")
+    prior_results: dict[int, dict] = cfg.get("prior_results", {})
     correct, results = 0, []
     t0 = time.time()
     for i, row in enumerate(rows, 1):
+        if only_indices is not None and i not in only_indices:
+            if i in prior_results:
+                r = prior_results[i]
+                correct += int(r.get("passed", False))
+                results.append(r)
+            continue
         query = (
             "Complete the following Python function. Return only Python code, no markdown fences. "
             "You may return either the full function definition or only the function body.\n\n"
@@ -321,6 +348,7 @@ def score_humaneval(cfg: dict) -> dict:
             "error": err,
         })
         print(f"  humaneval {i}/{len(rows)}  {row.get('task_id', '')} {'OK' if ok else 'FAIL'}{' [repaired]' if repaired else ''}")
+    results.sort(key=lambda r: r["idx"])
     acc = correct / len(rows) if rows else None
     return {
         "benchmark": "humaneval",
@@ -385,7 +413,26 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--timeout-sec", type=int, default=900, help="request timeout in seconds (default: 900)")
     p.add_argument("--out-dir", default=_DEFAULT_OUT_DIR, help="output directory")
     p.add_argument("--dataset-root", default=_DEFAULT_DATASET_ROOT, help="dataset root path")
+    p.add_argument(
+        "--failed-from", default=None,
+        help="path to a previous out-dir; only re-run questions that failed (passed=false), "
+             "merging passing results from the prior run",
+    )
     return p.parse_args()
+
+
+def _load_prior_bench_results(prior_dir: Path, bench: str) -> tuple[set[int], dict[int, dict]] | tuple[None, None]:
+    """Return (failed_indices, prior_results_by_idx) from the latest cached result for *bench* in *prior_dir*.
+
+    Returns (None, None) if no cached file is found.
+    """
+    candidates = sorted(prior_dir.glob(f"*{bench}.json"))
+    if not candidates:
+        return None, None
+    data = json.loads(candidates[-1].read_text(encoding="utf-8"))
+    prior_by_idx: dict[int, dict] = {r["idx"]: r for r in data.get("results", [])}
+    failed_indices: set[int] = {idx for idx, r in prior_by_idx.items() if not r.get("passed", False)}
+    return failed_indices, prior_by_idx
 
 
 def main() -> None:
@@ -419,18 +466,33 @@ def main() -> None:
             "benchmarks": args.benchmarks,
         },
     }
+    if args.failed_from:
+        report["meta"]["retry_failed_from"] = args.failed_from
 
     ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
 
     for bench in args.benchmarks:
-        existing = sorted(out_dir.glob(f"*{bench}.json"))
-        if existing:
-            cached_path = existing[-1]
-            print(f"\n[{bench}] skipping — cache found: {cached_path.name}")
-            report[bench] = json.loads(cached_path.read_text(encoding="utf-8"))
-            r = report[bench]
-            print(f"  => {r.get('accuracy_pct', 'N/A')} ({r['correct']}/{r['total']})")
-            continue
+        # When retrying failed questions, skip the normal cache check so we always re-run.
+        if not args.failed_from:
+            existing = sorted(out_dir.glob(f"*{bench}.json"))
+            if existing:
+                cached_path = existing[-1]
+                print(f"\n[{bench}] skipping — cache found: {cached_path.name}")
+                report[bench] = json.loads(cached_path.read_text(encoding="utf-8"))
+                r = report[bench]
+                print(f"  => {r.get('accuracy_pct', 'N/A')} ({r['correct']}/{r['total']})")
+                continue
+
+        if args.failed_from:
+            failed_indices, prior_by_idx = _load_prior_bench_results(Path(args.failed_from), bench)
+            if failed_indices is None:
+                print(f"\n[{bench}] no prior result found in {args.failed_from}, running full benchmark")
+                cfg.pop("only_indices", None)
+                cfg.pop("prior_results", None)
+            else:
+                cfg["only_indices"] = failed_indices
+                cfg["prior_results"] = prior_by_idx
+                print(f"\n[{bench}] retrying {len(failed_indices)} failed question(s): {sorted(failed_indices)}")
 
         print(f"\n[{bench}]")
         try:
@@ -439,6 +501,9 @@ def main() -> None:
             report[bench] = {"benchmark": bench, "error": f"{type(e).__name__}: {e}"}
             print(f"  ERROR: {e}")
             continue
+        finally:
+            cfg.pop("only_indices", None)
+            cfg.pop("prior_results", None)
 
         bench_path = out_dir / f"fast_textgen_eval_{ts}_{bench}.json"
         bench_path.write_text(json.dumps(report[bench], ensure_ascii=False, indent=2), encoding="utf-8")
