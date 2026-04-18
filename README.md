@@ -111,26 +111,9 @@ Device: Mac-Mini M4 Chip
 | gemma-3-27b-gguf | 18.37 | 54.45 | 193.85 | 5.16 |
 | qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 |
 
-Latest raw llama-server samples (2026-03-22):
-
-- qwen3.5-35b-a3b
-  - `prompt eval time = 617.61 ms / 102 tokens (6.05 ms per token, 165.15 tokens per second)`
-  - `eval time = 9637.80 ms / 180 tokens (53.54 ms per token, 18.68 tokens per second)`
-  - `total time = 10255.41 ms / 282 tokens`
-- lfm2.5-vl-1.6b
-  - `prompt eval time = 87.66 ms / 111 tokens (0.79 ms per token, 1266.33 tokens per second)`
-  - `eval time = 4354.88 ms / 180 tokens (24.19 ms per token, 41.33 tokens per second)`
-  - `total time = 4442.54 ms / 291 tokens`
-- gemma-4-26b-a4b-gguf (2026-04-04 speed sample)
-  - `prompt eval time = 394.78 ms / 44 tokens (8.97 ms per token, 111.46 tokens per second)`
-  - `eval time = 7212.55 ms / 180 tokens (40.07 ms per token, 24.96 tokens per second)`
-  - `total time = 7607.32 ms / 224 tokens`
-
 ### Accuracy
 
 #### Text (100 題/任務)
-> Latest 100-question results per benchmark (5 benchmarks, total 500/model).
-> Note: No-think runs: gemma-4-26b-a4b (`gemma-4-26b-a4b-gguf/no_think/text/.../results/`), qwen3.5-27b (`qwen3.5-27b/no_think/text/.../results/`), qwen3.5-35b-a3b (`qwen3.5-35b-a3b/no_think/text/.../results/`). All use `--chat-template-kwargs '{"enable_thinking": false}'`. Other models are thinking-mode runs from prior unified runs.
 
 | Model | MMLU | GSM8K | Geo MMLU HS | Law MMLU Prof | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -147,7 +130,6 @@ Latest raw llama-server samples (2026-03-22):
 | ministral-3-14b-gguf | 48% | 2% | 88% | 48% | 88% | **54.8%** |
 | lfm2.5-vl-1.6b | 51% | 65% | 52% | 28% | 56% | **50.4%** |
 
-* No-think runs: `--chat-template-kwargs '{"enable_thinking": false}'`.
 
 #### Vision (100 題/任務)
 > Tasks: OCR (PokemonCards), Classification (CIFAR10), Detection (CPPE5)
@@ -160,15 +142,3 @@ Latest raw llama-server samples (2026-03-22):
 | qwen3.5-35b-a3b | 92% (92/100) | 70% (70/100) | 59% (59/100) | **73.7%** | `qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/summary_100.json` |
 | gemma-3-27b | 91% (91/100) | 82% (82/100) | 47% (47/100) | **73.3%** | `gemma-3-27b-gguf/vision/results-20260322_002456/summary_100.json` |
 | lfm2.5-vl-1.6b | 87% (87/100) | 76% (76/100) | 18% (18/100) | **60.3%** | `lfm2.5-vl-1.6b/vision/results-20260322_083607/summary_100.json` |
-
-Run folders:
-- `/Users/yenhaohuang/Desktop/model-tester/results/`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-27b/vision/results/`
-- `/Users/yenhaohuang/Desktop/model-tester/qwen3.5-35b-a3b/vision/results-rerun-20260321_225509/`
-- `/Users/yenhaohuang/Desktop/model-tester/gemma-3-27b-gguf/vision/results-20260322_002456/`
-- `/Users/yenhaohuang/Desktop/model-tester/gemma-4-26b-a4b-gguf/vision/results/full_20260404_094301/`
-- `/Users/yenhaohuang/Desktop/model-tester/lfm2.5-vl-1.6b/vision/results-20260322_083607/`
-
-Parameters
-- gemma-4-26b-a4b-gguf: Q4
-- ministral-3-14b-gguf: Q8
