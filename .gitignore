@@ -2,16 +2,6 @@
 *.png
 *.wav
 *.json
-<<<<<<< HEAD
 
-data
-exp
-.env
-deprecated
-=======
-.env
 
-exp
-
-data
->>>>>>> 41a9977 (doc: update readme)
+qwen-image-2512
