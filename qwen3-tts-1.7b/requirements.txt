@@ -1,4 +1,0 @@
-qwen-tts
-soundfile
-huggingface_hub[cli]
-datasets
