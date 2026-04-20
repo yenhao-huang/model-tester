@@ -108,9 +108,11 @@ Device: Mac-Mini M4 Chip
 | qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
 | ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 |
+| gemma-4-31b (no think) | 39.30 | 29.44 | 179.40 | 5.63 |
 | gemma-3-27b-gguf | 18.37 | 54.45 | 193.85 | 5.16 |
 | qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 |
 
+> 備註：`gemma-4-31b (no think)` 速度來自 `llama-server-8094.log` 的 token 加權平均。
 ### Accuracy
 
 #### Text (100 題/任務)
