@@ -118,6 +118,7 @@ Device: Mac-Mini M4 Chip
 | Model | MMLU | GSM8K | Geo MMLU HS | Law MMLU Prof | HumanEval | Total |
 |---|---:|---:|---:|---:|---:|---:|
 | gemma-4-31b (thinking) | 96% | 89% | 92% | 80% | 92% | **89.8%** |
+| gemma-4-31b (no think) | 83% | **98%** | 89% | 80% | 97% | **89.4%** |
 | gemma-4-26b-a4b (no think) | 91% | 93% | 91% | 70% | **99%** | **88.8%** |
 | qwen3.5-27b (no think) | 79% | **97%** | 91% | 75% | 95% | **87.4%** |
 | qwen3.5-35b-a3b (thinking) | 83% | 95% | 95% | 68% | 92% | **86.6%** |
@@ -130,6 +131,7 @@ Device: Mac-Mini M4 Chip
 | ministral-3-14b-gguf | 48% | 2% | 88% | 48% | 88% | **54.8%** |
 | lfm2.5-vl-1.6b | 51% | 65% | 52% | 28% | 56% | **50.4%** |
 
+> 備註：`gemma-4-31b (no think)` 來自 `gemma-4-31b-gguf/text/results/no_think_20260420_151309/`，五項 text benchmark 皆為 100 題。
 
 #### Vision (100 題/任務)
 > Tasks: OCR (PokemonCards), Classification (CIFAR10), Detection (CPPE5)
