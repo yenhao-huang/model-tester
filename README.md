@@ -126,6 +126,7 @@ Device: Mac-Mini M4 Chip
 | qwen3.5-35b-a3b (thinking) | 83% | 95% | 95% | 68% | 92% | **86.6%** |
 | qwen3.5-35b-a3b (no think) | 63% | **98%** | 93% | 68% | 92% | **82.8%** |
 | gpt-oss-20b | 83% | 94% | 88% | 51% | 96% | **82.4%** |
+| qwen3.6-35b-a3b (no think) | 60% | **98%** | 92% | 71% | 98% | **83.8%** |
 | glm-4.7-flash-fp4 | 72% | 92% | 86% | 54% | 76% | **76.0%** |
 | lfm2-24b | 74% | 86% | 81% | 57% | 80% | **75.6%** |
 | omnicoder-9b-gguf | 57% | 86% | 78% | 62% | 84% | **73.4%** |
@@ -133,7 +134,9 @@ Device: Mac-Mini M4 Chip
 | ministral-3-14b-gguf | 48% | 2% | 88% | 48% | 88% | **54.8%** |
 | lfm2.5-vl-1.6b | 51% | 65% | 52% | 28% | 56% | **50.4%** |
 
-> 備註：`gemma-4-31b (no think)` 來自 `gemma-4-31b-gguf/text/results/no_think_20260420_151309/`，五項 text benchmark 皆為 100 題。
+> 備註（2026-04-20）：`gemma-4-31b (no think)` 來自 `gemma-4-31b-gguf/text/results/no_think_20260420_151309/`，五項 text benchmark 皆為 100 題。
+>
+> 備註（2026-04-21）：`qwen3.6-35b-a3b (no think)` 來自 `qwen3.6-35b-a3b/results/no_think_20260421_153833/`，五項 text benchmark 皆為 100 題；此輪需使用 **server nohup + eval nohup** 才能避免 OpenClaw session 中斷影響結果。
 
 #### Vision (100 題/任務)
 > Tasks: OCR (PokemonCards), Classification (CIFAR10), Detection (CPPE5)
