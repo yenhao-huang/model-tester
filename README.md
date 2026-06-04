@@ -171,7 +171,7 @@ MTP `draft-mtp n=1` averaged **1.09x** the non-MTP baseline on Alpaca generation
 >
 > 備註（2026-05-21）：`gemma-e4b (no think)` 來自 `gemma-e4b/text/results/text_eval_20260521_182757/fast_textgen_eval_20260521_110507_all.json`；source index 為 `results/gemma-e4b_text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `gemma-e4b/logs/speed_metrics_20260521_182757.txt`。
 >
-> 備註（2026-06-04）：`gemma-3-12b-it-gguf` 來自 `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_all.json`；source index 為 `results/gemma-3-12b-it-gguf_text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `gemma-3-12b-it-gguf/text/results/speed_llama_log_tail.txt`。
+> 備註（2026-06-04）：`gemma-3-12b-it-gguf` 來自 `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_all.json`；source index 為 `results/gemma-3-12b-it-gguf/text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `results/gemma-3-12b-it-gguf/text/results/speed_llama_log_tail.txt`。
 
 #### Text-Arch (100 題/任務)
 

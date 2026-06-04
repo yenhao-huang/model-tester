@@ -11,11 +11,11 @@
 
 | benchmark | accuracy | correct/total | elapsed_sec | source |
 |---|---:|---:|---:|---|
-| mmlu | 33.0% | 33/100 | 96.82 | `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_mmlu.json` |
-| geo-mmlu-high-school | 81.0% | 81/100 | 85.3 | `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_geo-mmlu-high-school.json` |
-| law-mmlu-professional | 38.0% | 38/100 | 256.52 | `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_law-mmlu-professional.json` |
-| gsm8k | 79.0% | 79/100 | 1472.49 | `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_gsm8k.json` |
-| humaneval | 89.0% | 89/100 | 1638.3 | `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_humaneval.json` |
+| mmlu | 33.0% | 33/100 | 96.82 | `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_mmlu.json` |
+| geo-mmlu-high-school | 81.0% | 81/100 | 85.3 | `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_geo-mmlu-high-school.json` |
+| law-mmlu-professional | 38.0% | 38/100 | 256.52 | `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_law-mmlu-professional.json` |
+| gsm8k | 79.0% | 79/100 | 1472.49 | `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_gsm8k.json` |
+| humaneval | 89.0% | 89/100 | 1638.3 | `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_humaneval.json` |
 
 ## Speed sample
 
