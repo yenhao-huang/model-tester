@@ -111,6 +111,7 @@ Device: Mac-Mini M4 Chip
 | qwen3.6-35b-a3b-mtp | pending | pending | pending | pending | — |
 | gemma-4-26b-a4b-mtp | pending | pending | pending | pending | — |
 | qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 | — |
+| gemma-3-12b-it-gguf | 8.90 | 112.40 | 76.35 | 13.10 | — |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 | — |
 | ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 | — |
 | qwen3.6-27b-mtp (no think, draft-mtp n=1) | — | — | — | — | **6.42** |
@@ -158,6 +159,7 @@ MTP `draft-mtp n=1` averaged **1.09x** the non-MTP baseline on Alpaca generation
 | omnicoder-9b-gguf | 57% | 86% | 78% | 62% | 84% | **73.4%** |
 | gemma-e4b (no think) | 46% | 88% | 83% | 51% | 93% | **72.2%** |
 | gemma-3-27b-gguf | 79% | 76% | 86% | 57% | 63% | **72.2%** |
+| gemma-3-12b-it-gguf | 33% | 79% | 81% | 38% | 89% | **64.0%** |
 | ministral-3-14b-gguf | 48% | 2% | 88% | 48% | 88% | **54.8%** |
 | lfm2.5-vl-1.6b | 51% | 65% | 52% | 28% | 56% | **50.4%** |
 
@@ -168,6 +170,8 @@ MTP `draft-mtp n=1` averaged **1.09x** the non-MTP baseline on Alpaca generation
 > 備註（2026-04-30）：`qwen3.6-27b (no think)` 來自 `qwen3.6-27b/results/no_think_20260430_101759/`，五項 Text-Englsih benchmark 皆為 100 題。
 >
 > 備註（2026-05-21）：`gemma-e4b (no think)` 來自 `gemma-e4b/text/results/text_eval_20260521_182757/fast_textgen_eval_20260521_110507_all.json`；source index 為 `results/gemma-e4b_text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `gemma-e4b/logs/speed_metrics_20260521_182757.txt`。
+>
+> 備註（2026-06-04）：`gemma-3-12b-it-gguf` 來自 `gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_all.json`；source index 為 `results/gemma-3-12b-it-gguf_text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `gemma-3-12b-it-gguf/text/results/speed_llama_log_tail.txt`。
 
 #### Text-Arch (100 題/任務)
 
