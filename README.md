@@ -100,26 +100,26 @@ llama-server \
 ### Speed
 Device: Mac-Mini M4 Chip
 
-| Model | Prompt ms/token | Prompt token/s | Eval ms/token | Eval token/s | Alpaca eval tok/s |
-|---|---:|---:|---:|---:|---:|
-| lfm2.5-vl-1.6b | 0.79 | 1266.33 | 24.19 | 41.33 | — |
-| lfm2-24b | 4.61 | 217.05 | 27.69 | 36.11 | — |
-| gemma-e4b (no think) | 4.64 | 215.50 | 34.11 | 29.32 | — |
-| qwen3.6-35b-a3b (no think) | 4.74 | 227.20 | 40.74 | 24.73 | — |
-| gemma-4-26b-a4b-gguf | 8.97 | 111.46 | 40.07 | 24.96 | — |
-| qwen3.6-35b-a3b-mtp (no think, draft-mtp n=6) | 14.85 | 67.35 | 69.23 | 14.44 | — |
-| qwen3.6-35b-a3b-mtp | pending | pending | pending | pending | — |
-| gemma-4-26b-a4b-mtp | pending | pending | pending | pending | — |
-| qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 | — |
-| gemma-3-12b-it-gguf | 8.90 | 112.40 | 76.35 | 13.10 | — |
-| glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 | — |
-| ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 | — |
-| qwen3.6-27b-mtp (no think, draft-mtp n=1) | — | — | — | — | **6.42** |
-| gemma-4-31b (no think) | 39.30 | 29.44 | 179.40 | 5.63 | — |
-| qwen3.6-27b (no think) | 21.13 | 47.34 | 182.99 | 5.46 | **5.87** |
-| qwen3.6-27b-mtp (no think, draft-mtp n=6) | 55.72 | 17.95 | 362.87 | 2.76 | — |
-| gemma-3-27b-gguf | 18.37 | 54.45 | 193.85 | 5.16 | — |
-| qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 | — |
+| Model | Prompt ms/token | Prompt token/s | Eval ms/token | Eval token/s |
+|---|---:|---:|---:|---:|
+| lfm2.5-vl-1.6b | 0.79 | 1266.33 | 24.19 | 41.33 |
+| lfm2-24b | 4.61 | 217.05 | 27.69 | 36.11 |
+| gemma-e4b (no think) | 4.64 | 215.50 | 34.11 | 29.32 |
+| qwen3.6-35b-a3b (no think) | 4.74 | 227.20 | 40.74 | 24.73 |
+| gemma-4-26b-a4b-gguf | 8.97 | 111.46 | 40.07 | 24.96 |
+| qwen3.6-35b-a3b-mtp (no think, draft-mtp n=6) | 14.85 | 67.35 | 69.23 | 14.44 |
+| qwen3.6-35b-a3b-mtp | pending | pending | pending | pending |
+| gemma-4-26b-a4b-mtp | pending | pending | pending | pending |
+| qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 |
+| gemma-3-12b-it-gguf | 8.90 | 112.40 | 76.35 | 13.10 |
+| glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
+| ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 |
+| qwen3.6-27b-mtp (no think, draft-mtp n=1) | — | — | — | — |
+| gemma-4-31b (no think) | 39.30 | 29.44 | 179.40 | 5.63 |
+| qwen3.6-27b (no think) | 21.13 | 47.34 | 182.99 | 5.46 |
+| qwen3.6-27b-mtp (no think, draft-mtp n=6) | 55.72 | 17.95 | 362.87 | 2.76 |
+| gemma-3-27b-gguf | 18.37 | 54.45 | 193.85 | 5.16 |
+| qwen3.5-27b | 18.27 | 54.74 | 251.96 | 3.97 |
 
 > 備註：`gemma-4-31b (no think)`、`qwen3.6-35b-a3b (no think)` 與 `qwen3.6-27b (no think)` 速度皆來自 llama-server log 的 token 加權平均。`qwen3.6-27b (no think)` 使用 `qwen36_27b_server.log` 中本輪 Text-Englsih 500 題對應的 timing pair。
 >
