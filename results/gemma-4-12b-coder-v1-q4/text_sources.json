@@ -1,0 +1,30 @@
+[
+  {
+    "model": "gemma-4-12b-coder-v1-q4",
+    "benchmark": "mmlu",
+    "score": 0.83,
+    "source_json": "results/gemma-4-12b-coder-v1-q4/raw/fast_textgen_eval_20260626_045232_mmlu.json",
+    "notes": "n=100; original run; raw per-question response retained"
+  },
+  {
+    "model": "gemma-4-12b-coder-v1-q4",
+    "benchmark": "gsm8k",
+    "score": 0.98,
+    "source_json": "results/gemma-4-12b-coder-v1-q4/raw/fast_textgen_eval_20260626_054103_gsm8k.json",
+    "notes": "n=100; original run; raw per-question response retained"
+  },
+  {
+    "model": "gemma-4-12b-coder-v1-q4",
+    "benchmark": "truthfulqa",
+    "score": 0.76,
+    "source_json": "results/gemma-4-12b-coder-v1-q4-no-think/raw/truthfulqa_mcq_20260630_065647_truthfulqa.json",
+    "notes": "corrected no-think run; earlier 3% score was invalid because thinking mode left content empty"
+  },
+  {
+    "model": "gemma-4-12b-coder-v1-q4",
+    "benchmark": "humaneval",
+    "score": 0.87,
+    "source_json": "results/gemma-4-12b-coder-v1-q4-no-think/raw/fast_textgen_eval_20260630_065847_humaneval.json",
+    "notes": "corrected no-think run; earlier 11% score was invalid because thinking mode caused explanation/markdown outputs"
+  }
+]

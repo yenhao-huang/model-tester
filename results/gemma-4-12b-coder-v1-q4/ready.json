@@ -1,0 +1,6 @@
+{
+  "ready": true,
+  "attempt": 5,
+  "checked_at": "2026-06-26T12:52:32+08:00",
+  "response_preview": "{\"choices\":[{\"finish_reason\":\"length\",\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"\",\"reasoning_content\":\"The user wants me to\"}}],\"created\":1782449552,\"model\":\"gemma4-coding-Q4_K_M.gguf\",\"system_fingerprint\":\"b9020-a4701c98f\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":8,\"prompt_tokens\":18,\"total_tokens\":26,\"prompt_tokens_details\":{\"cached_tokens\":0}},\"id\":\"chatcmpl-ZhSQH2eMDIEF1REAItAXdo5xWQfLwmok\",\"timings\":{\"cache_n\":0,\"prompt_n\":18,\"prompt_ms\":479.995,\"prompt_per_token_ms\""
+}

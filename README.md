@@ -111,6 +111,7 @@ Device: Mac-Mini M4 Chip
 | qwen3.6-35b-a3b-mtp | pending | pending | pending | pending |
 | gemma-4-26b-a4b-mtp | pending | pending | pending | pending |
 | qwen3.5-35b-a3b | 6.05 | 165.15 | 53.54 | 18.68 |
+| gemma-4-12b-coder-v1-q4 | 9.72 | 102.86 | 77.91 | 12.84 |
 | gemma-3-12b-it-gguf | 8.90 | 112.40 | 76.35 | 13.10 |
 | glm-4.7-flash-fp4 | 9.36 | 106.80 | 77.05 | 12.98 |
 | ministral-3-14b-gguf | 7.35 | 136.04 | 144.78 | 6.91 |
@@ -172,6 +173,12 @@ MTP `draft-mtp n=1` averaged **1.09x** the non-MTP baseline on Alpaca generation
 > 備註（2026-05-21）：`gemma-e4b (no think)` 來自 `gemma-e4b/text/results/text_eval_20260521_182757/fast_textgen_eval_20260521_110507_all.json`；source index 為 `results/gemma-e4b_text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `gemma-e4b/logs/speed_metrics_20260521_182757.txt`。
 >
 > 備註（2026-06-04）：`gemma-3-12b-it-gguf` 來自 `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_all.json`；source index 為 `results/gemma-3-12b-it-gguf/text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `results/gemma-3-12b-it-gguf/text/results/speed_llama_log_tail.txt`。
+
+#### Coder / Truthfulness spot checks (100 題/任務)
+
+| Model | MMLU | GSM8K | TruthfulQA | HumanEval | Notes |
+|---|---:|---:|---:|---:|---|
+| gemma-4-12b-coder-v1-q4 | 83% | 98% | 76% | 87% | TruthfulQA/HumanEval use corrected no-think rerun (`--reasoning off`, `enable_thinking=false`); earlier thinking-enabled scores were invalid: TruthfulQA 3%, HumanEval 11%. Sources: `results/gemma-4-12b-coder-v1-q4/text_sources.json` and `results/gemma-4-12b-coder-v1-q4-no-think/text_sources.json`. |
 
 #### Text-Arch (100 題/任務)
 

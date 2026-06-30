@@ -1,0 +1,7 @@
+{
+  "job_id": "gemma-4-12b-coder-v1-q4-no-think-rerun-truthfulqa-humaneval",
+  "status": "completed",
+  "progress": 1.0,
+  "current_step": "completed no-think rerun for TruthfulQA and HumanEval",
+  "updated_at": "2026-06-30T15:08:07.524170+08:00"
+}

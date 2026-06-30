@@ -5,3 +5,16 @@
 
 
 qwen-image-2512
+
+# ignore model directories at repo root by default; keep curated result/source dirs trackable
+/*/
+!/results/
+!/results/**
+!/scripts/
+!/scripts/**
+!/utils/
+!/utils/**
+!/eval_speed/
+!/eval_speed/**
+!README.md
+!.gitignore
