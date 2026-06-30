@@ -148,6 +148,7 @@ MTP `draft-mtp n=1` averaged **1.09x** the non-MTP baseline on Alpaca generation
 |---|---:|---:|---:|---:|---:|---:|
 | gemma-4-31b (thinking) | 96% | 89% | 92% | 80% | 92% | **89.8%** |
 | gemma-4-31b (no think) | 83% | **98%** | 89% | 80% | 97% | **89.4%** |
+| gemma-4-12b-coder-v1-q4 (no think) | 83% | **98%** | — | — | 87% | **89.3%*** |
 | gemma-4-26b-a4b (no think) | 91% | 93% | 91% | 70% | **99%** | **88.8%** |
 | qwen3.5-27b (no think) | 79% | **97%** | 91% | 75% | 95% | **87.4%** |
 | qwen3.5-35b-a3b (thinking) | 83% | 95% | 95% | 68% | 92% | **86.6%** |
@@ -173,12 +174,9 @@ MTP `draft-mtp n=1` averaged **1.09x** the non-MTP baseline on Alpaca generation
 > 備註（2026-05-21）：`gemma-e4b (no think)` 來自 `gemma-e4b/text/results/text_eval_20260521_182757/fast_textgen_eval_20260521_110507_all.json`；source index 為 `results/gemma-e4b_text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `gemma-e4b/logs/speed_metrics_20260521_182757.txt`。
 >
 > 備註（2026-06-04）：`gemma-3-12b-it-gguf` 來自 `results/gemma-3-12b-it-gguf/text/results/full_dataset_20260604_155307/fast_textgen_eval_20260604_075307_all.json`；source index 為 `results/gemma-3-12b-it-gguf/text_sources.json`，五項 Text-English benchmark 皆為 100 題。速度來源為 `results/gemma-3-12b-it-gguf/text/results/speed_llama_log_tail.txt`。
+>
+> 備註（2026-06-30）：`gemma-4-12b-coder-v1-q4 (no think)` 目前只有 MMLU/GSM8K/TruthfulQA/HumanEval 各 100 題；Geo MMLU HS 與 Law MMLU Prof 尚未跑，因此 Total `89.3%` 是 4 項已測 benchmark 平均。TruthfulQA/HumanEval 採用 corrected no-think rerun（`--reasoning off`, `enable_thinking=false`）；早先 thinking-enabled 分數 TruthfulQA 3%、HumanEval 11% 為無效格式問題。來源：`results/gemma-4-12b-coder-v1-q4/text_sources.json`、`results/gemma-4-12b-coder-v1-q4-no-think/text_sources.json`。
 
-#### Coder / Truthfulness spot checks (100 題/任務)
-
-| Model | MMLU | GSM8K | TruthfulQA | HumanEval | Notes |
-|---|---:|---:|---:|---:|---|
-| gemma-4-12b-coder-v1-q4 | 83% | 98% | 76% | 87% | TruthfulQA/HumanEval use corrected no-think rerun (`--reasoning off`, `enable_thinking=false`); earlier thinking-enabled scores were invalid: TruthfulQA 3%, HumanEval 11%. Sources: `results/gemma-4-12b-coder-v1-q4/text_sources.json` and `results/gemma-4-12b-coder-v1-q4-no-think/text_sources.json`. |
 
 #### Text-Arch (100 題/任務)
 
